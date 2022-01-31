@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>4 - lister, oppslag og numpy</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>2 - funksjoner</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <style type="text/css">
   pre { line-height: 125%; }
@@ -13,22 +13,22 @@ td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: #ffffcc }
 .highlight { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
@@ -41,15 +41,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .kt { color: #B00040 } /* Keyword.Type */
 .highlight .m { color: #666666 } /* Literal.Number */
 .highlight .s { color: #BA2121 } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .na { color: #687822 } /* Name.Attribute */
 .highlight .nb { color: #008000 } /* Name.Builtin */
 .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
 .highlight .no { color: #880000 } /* Name.Constant */
 .highlight .nd { color: #AA22FF } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
 .highlight .nf { color: #0000FF } /* Name.Function */
-.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nl { color: #767600 } /* Name.Label */
 .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
 .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
 .highlight .nv { color: #19177C } /* Name.Variable */
@@ -66,11 +66,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
 .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
 .highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
@@ -13048,10 +13048,8 @@ div#notebook {
   }
 }
 </style>
-
-
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML-full,Safe"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     init_mathjax = function() {
@@ -13075,11 +13073,6 @@ div#notebook {
                     linebreaks: { 
                     automatic: true 
                     }
-                },
-                "HTML-CSS": {
-                    linebreaks: { 
-                    automatic: true 
-                    }
                 }
             });
         
@@ -13096,29 +13089,29 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="&lt;-Forrige-----|-----Neste-&gt;"><a href="3%20-%20matplotlib.html">&lt; Forrige</a>     |     <a href="5%20-%20Sympy.html">Neste &gt;</a><a class="anchor-link" href="#&lt;-Forrige-----|-----Neste-&gt;">&#182;</a></h5>
+<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="1%20-%20variabler.html">&lt; Forrige</a>     |     <a href="3%20-%20eksponent%20og%20log.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="4---Lister,-datastrukturer-og-Numpy">4 - Lister, datastrukturer og Numpy<a class="anchor-link" href="#4---Lister,-datastrukturer-og-Numpy">&#182;</a></h1>
+<h1 id="2---Funksjoner">2 - Funksjoner<a class="anchor-link" href="#2---Funksjoner">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>En liste er en <em>datastruktur</em>, som igjen er en organisering av <em>objekter</em>. Slike datastrukturer er helt sentralt i alle programmeringsspråk, og alle språk har ulike typer strukturer til ulike formål. I noen datastrukturer kan du putte alle typer objekter sammen, slik som tekst, funksjoner og tall og nye datastrukturer.</p>
-<p>I andre datastrukturer kan du kun putte tall. Slike datastrukturer er vanligvis det vi i matematikken kaller <em>vektorer</em> og <em>matriser</em>. Disse kommer vi tilbake til når vi skal snakke om Numpy.</p>
-<p>Det vi skal se på først er de innebygde datastrukturene til Python. Alle de innebygde strukturene kan inneholde alle typer objekter, men de har noen viktige egenskaper som skiller dem:</p>
-<ul>
-<li><code>list</code> (liste): Hvert element har en bestemt plassering i listen, Tilgang fås ved å referere til plasseringen (indeksen) i form av et heltall <code>int</code>. </li>
-<li><code>Tuple</code>: Lik lister, men kan ikke forandres når den er skapt. Hovedsakelig til bruk i forbindelse med funksjoner.</li>
-<li><code>dict</code>(dictionary, oppslag): Elementene har ikke en bestemt plassering. Tilgang fås ved å referere til en nøkkel (vanligvis en streng <code>str</code>)</li>
-</ul>
-<p>Vi starter med å se på lister.</p>
+<h2 id="%C3%85-bruke-funksjoner">&#197; bruke funksjoner<a class="anchor-link" href="#%C3%85-bruke-funksjoner">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Funksjoner er helt sentralt i all slags programmering. Et program uten egendefinerte funksjoner er bare en liste med kommandoer, og det er svært begrenset hva du kan få til med det. Heldigvis er det ekstremt enkelt å lage egne funksjoner i Python.</p>
+<p>En vanlig nybegynnerfeil i programmering er å ikke utnytte muligheten til å lage egne funksjoner tilstrekkelig. Hovedregelen er at om det er noe av koden din som repeteres, så skal du lage en ny funksjon som håndterer dette. Målet er at antall linjer i hver funksjon skal være så lite som mulig. Men før vi lærer å lage egne funksjoner, skal vi se litt på hvordan funksjoner brukes.</p>
 
 </div>
 </div>
@@ -13126,8 +13119,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Lister">Lister<a class="anchor-link" href="#Lister">&#182;</a></h2><p>Lister lages med klammeparenteser. Her er noen lister med navn, forkortelse (Ticker), aksjekurs, markedsverdi, PE og gjeldsgrad for noen aksjer på Oslo Børs. Tallene er fra 27. november 2020 (kilde <a href="https://tilon.uit.no">https://tilon.uit.no</a>).</p>
-<p>PE er "Price/Earnings", som er forholdet mellom selskapenes inntjening og prisen. Gjeldsgrad er hvor stor andel av total kapital som er gjeld. Det som ikke er gjeld er egenkapital.</p>
+<h2 id="Innebygde-funksjoner">Innebygde funksjoner<a class="anchor-link" href="#Innebygde-funksjoner">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python kommer med en rekke innebygde funksjoner. I tillegg kan du importere pakker som har en lang rekke funksjoner. Her er noen innebygde funksjoner i Python:</p>
 <h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
 </div>
 </div>
@@ -13137,13 +13136,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">equinor</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Statoil&#39;</span><span class="p">,</span> <span class="s1">&#39;EQNR&#39;</span><span class="p">,</span> <span class="mf">167.554919090282</span><span class="p">,</span> <span class="mf">376883380048.5</span><span class="p">,</span> <span class="mf">6.14609823076753</span><span class="p">,</span> <span class="mf">0.617893838660362</span><span class="p">]</span>
-<span class="n">dnb</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;DNB&#39;</span><span class="p">,</span> <span class="s1">&#39;DNB&#39;</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">259169427140</span><span class="p">,</span> <span class="mf">11.1121822724349</span><span class="p">,</span> <span class="mf">0.914999939276725</span><span class="p">]</span>
-<span class="n">telenor</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Telenor&#39;</span><span class="p">,</span> <span class="s1">&#39;TEL&#39;</span><span class="p">,</span> <span class="mf">148.737572948101</span><span class="p">,</span> <span class="mf">227115017138.4</span><span class="p">,</span> <span class="mf">13.0211568133471</span><span class="p">,</span> <span class="mf">0.715300723576896</span><span class="p">]</span>
-<span class="n">marine_harvest</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Marine Harvest&#39;</span><span class="p">,</span> <span class="s1">&#39;MHG&#39;</span><span class="p">,</span> <span class="mf">225.589705235372</span><span class="p">,</span> <span class="mf">118004750966.2</span><span class="p">,</span> <span class="mf">21.6878893009616</span><span class="p">,</span> <span class="mf">0.440427599611273</span><span class="p">]</span>
-<span class="n">aker_bp</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Aker BP&#39;</span><span class="p">,</span> <span class="s1">&#39;AKERBP&#39;</span><span class="p">,</span> <span class="mf">272.499264741749</span><span class="p">,</span> <span class="mi">103712690592</span><span class="p">,</span> <span class="mf">26.7636558040214</span><span class="p">,</span> <span class="mf">0.722568840028356</span><span class="p">]</span>
-<span class="n">yara_international</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yara International&#39;</span><span class="p">,</span> <span class="s1">&#39;YAR&#39;</span><span class="p">,</span> <span class="mf">333.328922090651</span><span class="p">,</span> <span class="mf">99481443032.4</span><span class="p">,</span> <span class="mf">86.741957363663</span><span class="p">,</span> <span class="mf">0.465057636887608</span><span class="p">]</span>
-<span class="n">gjensidige_forsikring</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Gjensidige Forsikring&#39;</span><span class="p">,</span> <span class="s1">&#39;GJF&#39;</span><span class="p">,</span> <span class="mf">172.830508474576</span><span class="p">,</span> <span class="mi">92125000000</span><span class="p">,</span> <span class="mf">24.9404407385348</span><span class="p">,</span> <span class="mf">0.847890127134592</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="nb">max</span><span class="p">(</span><span class="mf">2.4</span><span class="p">,</span><span class="mf">2.0</span><span class="p">)</span>   <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">min</span><span class="p">(</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>  <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">2.4</span><span class="p">)</span>      <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;abcde&quot;</span><span class="p">)</span>   <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13154,28 +13150,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi kan nå få tilgang til listene ved å referere til plasseringen med klammeparentes. Om vi vil referere navnet til equinor, som ligger på plass 0, kan vi for eksempel skrive <code>equinor[0]</code> (første element er alltid på plass 0 i Python):</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">equinor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ser at navnet er feil, dette er det gamle navnet til Equinor. Dette kan vi enkelt endre ved å sette element 0 i <code>equinor</code>-listen lik <code>'Equinor'</code>:</p>
+<p>Legg merke til at funksjonene <code>max</code>, <code>min</code>, <code>abs</code> og <code>len</code> alle er omsluttet av funksjonen <code>print</code> som sørger for at resultatet skrives ut nedenfor. En funksjon kan altså <em>returnere noe</em>, slik som  <code>max</code>, <code>min</code>, <code>abs</code> og <code>len</code>, eller <em>gjøre noe</em> slik som <code>print</code>, eller begge deler.</p>
+<p>Funksjonen <code>len</code> angir antall bokstaver, men kan også angi lengde på en liste. En liste i python skriver du som <code>[1,'hei',a]</code>. En liste kan altså bestå av flere ulike typer variabler og konstanter. De to første elementene her er konstanter, og den tredje er en variabel som er satt lik et flyttal i eksemplet under.</p>
 <h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">&#182;</a></h4>
 </div>
 </div>
@@ -13185,9 +13161,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">equinor</span><span class="p">)</span>
-<span class="n">equinor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;Equinor&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">equinor</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="mf">50.8</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;hei&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">])</span>
+<span class="nb">len</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;hei&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13198,7 +13174,17 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Men vi kan legge hvilke som helst objekter inn i en liste, så vi kan også lage en liste av listene over.</p>
+<h2 id="Eksponentialfunksjonene">Eksponentialfunksjonene<a class="anchor-link" href="#Eksponentialfunksjonene">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I Python er det svært enkelt å <em>importere</em> ferdig pakker for som kan kjøre ferdige funksjoner. Vi skal her se på et eksempel med noe som heter eksponentialfunksjonen. Denne finnes blant annet i pakken <code>numpy</code>. Dette er en svært nyttig pakke for matematiske beregninger.</p>
+<p>Som vi skal se lenger ned, så er eksponentialfunksjonen viktig innen økonomifaget fordi den brukes i vekstberegninger, for eksempel for befolkning eller produksjon.</p>
+<p>Som nevnt tidligere så er <em>potensen</em> $y^x$ et <em>grunntall</em> $y$ opphøyet i en eksponent $x$. Når vi snakker om <em>eksponenten</em> i bestemt form, så betyr det at grunntallet er et bestemt tall. Dette tallet kalles $e$, etter matematikeren Euler, og er tilnærmet $e\approx2.71828$ (det er egentlig en uendelig rekke med siffer etter komma)</p>
+<p>Siden Python ikke har noen innebygd funksjon for eksponenten, importerer vi altså først <code>numpy</code>-pakken, som har en slik funksjon. For å få mindre skriving senere, er det vanlig å importere <code>numpy</code> som aliaset <code>np</code>. Dette gjør vi slik:</p>
 <h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">&#182;</a></h4>
 </div>
 </div>
@@ -13208,8 +13194,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stocks</span><span class="o">=</span><span class="p">[</span><span class="n">equinor</span><span class="p">,</span><span class="n">dnb</span><span class="p">,</span><span class="n">telenor</span><span class="p">,</span><span class="n">marine_harvest</span><span class="p">,</span><span class="n">aker_bp</span><span class="p">,</span><span class="n">yara_international</span><span class="p">,</span><span class="n">gjensidige_forsikring</span><span class="p">]</span>
-<span class="n">stocks</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
     </div>
@@ -13220,7 +13205,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Aker BP-askjen er element nummer fem i denne listen. Om vi nå skal referere til den, så bruker vi indeks 4, siden vi starter på null.</p>
+<p>Navnet på eksponent-funksjonen i numpy er exp. Skal vi for eksempel finne hva $e^2=2.71828^2$ er, skriver vi</p>
 <h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">&#182;</a></h4>
 </div>
 </div>
@@ -13230,7 +13215,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stocks</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13241,7 +13226,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Om du vil referere til siste element, bruker du indeks -1. Vil du referere til nest siste, bruker du indeks -2, og så videre:</p>
+<p>Om vi ønsker å vite hva eksponenten er med litt mer enn fem desimaler, kan vi finne eksponenten av 1, siden ethvert tall opphøyd i 1 er seg selv:</p>
 <h4 id="Eksempel-5:">Eksempel 5:<a class="anchor-link" href="#Eksempel-5:">&#182;</a></h4>
 </div>
 </div>
@@ -13251,8 +13236,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">stocks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">stocks</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13263,7 +13247,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Du kan også referere til flere elementer som står ved siden av hverandre med en såkalt <code>slice</code>, eller skjære som vi kan kalle det på norsk:</p>
+<p>Eksponenten til 5 er for eksempel 2.71828 opphøyet i 5:</p>
 <h4 id="Eksempel-6:">Eksempel 6:<a class="anchor-link" href="#Eksempel-6:">&#182;</a></h4>
 </div>
 </div>
@@ -13273,8 +13257,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Fra element to til og med tre:</span>
-<span class="n">stocks</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">5</span>
 </pre></div>
 
     </div>
@@ -13287,22 +13270,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Fra og med nest siste element:</span>
-<span class="n">stocks</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Til og med nest siste element:</span>
-<span class="n">stocks</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13313,7 +13281,31 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Og vi kan referere til en liste inne i en liste:</p>
+<p>For å opphøye noe bruker vi altså dobbelt gangetegn <code>**</code>.</p>
+<p><em>Logartimen</em> er det eksakt motsatte av eksponentialfunksjonen. Tar vi logaritmen av eksponentialfunksjon, får vi argumentet til sistnevnte. Tar vi eksponentialfunksjonen av logartimen får vi også argumentet til logartimen. I en av oppgavene under skal du vise dette.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lage-egne-funksjoner---renteregning">Lage egne funksjoner - renteregning<a class="anchor-link" href="#Lage-egne-funksjoner---renteregning">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vi skal her se hvordan vi kan lage egne funksjoner for renteregning.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La oss starte med å lage en funksjon for et lån uten avdrag. Om banken legger til renten én gang i året og renten er r, så er lånet på x om T år gitt som $x\cdot (1+r)^{T}$. Dette kan vi programmere som følgende funksjon:</p>
 <h4 id="Eksempel-7:">Eksempel 7:<a class="anchor-link" href="#Eksempel-7:">&#182;</a></h4>
 </div>
 </div>
@@ -13323,7 +13315,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Det tredje selskapet er </span><span class="si">{</span><span class="n">stocks</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">account_balance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">**</span><span class="n">T</span>
 </pre></div>
 
     </div>
@@ -13334,8 +13327,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Det tredje selskapet, altså Equinor, har indeks to, siden Python starter indekseringen på 0.</p>
-<p>Det er enkelt å utvide lister, vi bruker bare <code>+</code>. Om vi for eksempel vil legge til selskapet <code>['Tomra Systems', 'TOM', 276.409619134278, 41208789715.2, 52.8996016883184, 0.454299114121939]</code>, kan vi gjøre det slik:</p>
+<p>Nøkkelordet <code>return</code>sørger for at det som står etter <code>return</code> returneres av funksjonen. Dersom funksjonen ikke har <code>return</code>i seg, returneres <code>None</code>, som representerer "ingenting" i Python.</p>
+<p>Om renten på lånet er 20%=0.2 og innskuddet er 100, så er beløpet om to år dermed:</p>
 <h4 id="Eksempel-8:">Eksempel 8:<a class="anchor-link" href="#Eksempel-8:">&#182;</a></h4>
 </div>
 </div>
@@ -13345,9 +13338,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tomra_systems</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Tomra Systems&#39;</span><span class="p">,</span> <span class="s1">&#39;TOM&#39;</span><span class="p">,</span> <span class="mf">276.409619134278</span><span class="p">,</span> <span class="mf">41208789715.2</span><span class="p">,</span> <span class="mf">52.8996016883184</span><span class="p">,</span> <span class="mf">0.454299114121939</span><span class="p">]</span>
-<span class="n">stocks</span><span class="o">=</span><span class="n">stocks</span><span class="o">+</span><span class="p">[</span><span class="n">tomra_systems</span><span class="p">]</span>
-<span class="n">stocks</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13358,23 +13349,19 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Unng&#229;-u&#248;nsket-endring-av-objekter">Unng&#229; u&#248;nsket endring av objekter<a class="anchor-link" href="#Unng&#229;-u&#248;nsket-endring-av-objekter">&#182;</a></h2><p>En veldig vanlig nybegynnerfeil i Python er å glemme at selv om et objekt, slik som en liste, har fått nytt navn, så er det fortsatt det samme objektet. Dette er spesielt lett å glemme når du objektet er et argument i en funksjon. Her er for eksempel en funksjon som opererer på argumentet:</p>
+<p>La oss nå tenke oss at banken legger til renter n ganger i året. Om for eksempel n=12, så legger banken til renter måndedlig. Vi kan da regne ut lånet ved ulik antall forrentninger per år. Formelen for dette er $x\cdot (1+\frac{r}{n})^{T\cdot n}$.</p>
+<p>Formelen har en enkel og intuitiv forklaring: Vi deler rentesatsen på antall perioder, samtidig som renten legges til i hver periode. Renten i hver periode er dermed $\frac{r}{n}$, og dette forrentes totalt $T\cdot n$ ganger. Dette kan programmeres i pyton som</p>
 <h4 id="Eksempel-9:">Eksempel 9:<a class="anchor-link" href="#Eksempel-9:">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#This function removes element i it</span>
-<span class="k">def</span> <span class="nf">pop_and_print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
-    <span class="n">last_element</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">last_element</span><span class="p">)</span>
-    
-<span class="n">pop_and_print</span><span class="p">(</span><span class="n">stocks</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">stocks</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">account_balance_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13385,9 +13372,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Over brukes <code>pop</code>-metoden til listeobjektet. En "metode" er en funksjon som kan henges på et bestemt objekt. Liste-objektet har altså en metode <code>pop</code>, som vi kan henge på listeobjektet med et punktum. <code>pop</code>-metoden fjerner elementet angitt av argumentet (siste element <code>-1</code> i eksemplet under), og returnerer det fjernede elementet.</p>
-<p>Kjører du koden over mange nok ganger, vil du se at alle elementene til slutt er borte og du får feilmelding.</p>
-<p>Av og til vil du at funksjonen skal operere på argumentet, men om det ikke er meningen at argumentet skal være endret når funksjonen er ferdigkjørt, så kan du ta en kopi inne i funksjonen. Det gjøres enklest ved å bruke <em>typen</em> til objektet som funksjon. Du danner da et nytt objekt av samme type. For eksempel for en liste som <code>stocks</code>bruker du <code>list</code>som funksjon</p>
+<p>La oss nå sammenligne å legge til renten hver måned, med å legge den til årlig:</p>
 <h4 id="Eksempel-10:">Eksempel 10:<a class="anchor-link" href="#Eksempel-10:">&#182;</a></h4>
 </div>
 </div>
@@ -13397,17 +13382,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#This function removes element i it</span>
-<span class="k">def</span> <span class="nf">pop_and_print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
-    <span class="c1">#making a copy:</span>
-    <span class="n">a</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    
-    <span class="c1">#doing the rest:</span>
-    <span class="n">last_element</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">last_element</span><span class="p">)</span>
-    
-<span class="n">pop_and_print</span><span class="p">(</span><span class="n">stocks</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">stocks</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">account_balance_n</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">account_balance_n</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13418,22 +13394,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Denne koden kan kjøres så mange ganger du vil, uten at stocks endres</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Tuple">Tuple<a class="anchor-link" href="#Tuple">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>En <code>tuple</code> fungerer ganske likt som en liste når du skal hente noe fra den. Men i motsetning til en liste, så går det ikke an å endre på en <code>tuple</code> etter at den er skapt. Du kan lage en tuple enten ved å bruke den innebygde funksjonen  <code>tuple()</code> eller ved å lage en liste med en vanlig parentes:</p>
+<p>Vi ser at det lønner seg en god del å legge til renten hver måned. La oss nå anta at rentene legges til hvert sekund i året. Det er 31 536 000 sekunder i et år. I så fall er innskuddet om to år verdt:</p>
 <h4 id="Eksempel-11:">Eksempel 11:<a class="anchor-link" href="#Eksempel-11:">&#182;</a></h4>
 </div>
 </div>
@@ -13443,10 +13404,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">equinor</span><span class="p">)</span>
-<span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Equinor&#39;</span><span class="p">,</span> <span class="s1">&#39;EQNR&#39;</span><span class="p">,</span> <span class="mf">146.85</span><span class="p">,</span> <span class="mi">315357973561</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">account_balance_n</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">31536000</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13457,18 +13415,18 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi kan <em>få tak i</em> innholdet, men det går ikke an å <em>endre</em> på innholdet i en <code>tuple</code>etter at den er skapt:</p>
+<p>Banken vil altså tjene litt på å gjøre det. I stedet for å regne ut med daglig forrentning kan vi bruke kontinuerlig, som vil si at vi bruker eksponentialfunksjonen</p>
 <h4 id="Eksempel-12:">Eksempel 12:<a class="anchor-link" href="#Eksempel-12:">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;Statoil&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">account_balance_exponential</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13479,24 +13437,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Tuple er mest brukt i forbindelse med funksjoner, og er ikke noe vi kommer til å bruke mye tid på i dette kurset.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Numpy">Numpy<a class="anchor-link" href="#Numpy">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Numpy er en pakke som kan gjøre matematiske beregninger på store datasett svært effektivt. Vi starter med å importere pakken, og konvertere listen vi har brukt til en numpy-matrise kalt <code>ndarray</code>. En <em>matrise</em> er en liste der alle rader har like mangee elementer, og det er jo tilfelle med vår <code>stocks</code>-liste.</p>
-<p>Vi starter med å definere en liste av liste med informasjon om aksjene:</p>
-<h4 id="Eksempel-13:">Eksempel 13:<a class="anchor-link" href="#Eksempel-13:">&#182;</a></h4>
+<p>Dette gir oss verdien på lånet når renten legges til "kontinuerlig", altså oftere enn hvert sekund. La oss nå regne ut verdien av gjelden om to år med kontinuerlig forrentning:</p>
+<h4 id="Eksempel-13">Eksempel 13<a class="anchor-link" href="#Eksempel-13">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13505,20 +13447,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stocks</span><span class="o">=</span><span class="p">[</span>
-<span class="p">[</span><span class="s1">&#39;Equinor&#39;</span><span class="p">,</span> <span class="s1">&#39;EQNR&#39;</span><span class="p">,</span> <span class="mf">167.554919090282</span><span class="p">,</span> <span class="mf">376883380048.5</span><span class="p">,</span> <span class="mf">6.14609823076753</span><span class="p">,</span> <span class="mf">0.617893838660362</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">[</span><span class="s1">&#39;DNB&#39;</span><span class="p">,</span> <span class="s1">&#39;DNB&#39;</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">259169427140</span><span class="p">,</span> <span class="mf">11.1121822724349</span><span class="p">,</span> <span class="mf">0.914999939276725</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">[</span><span class="s1">&#39;Telenor&#39;</span><span class="p">,</span> <span class="s1">&#39;TEL&#39;</span><span class="p">,</span> <span class="mf">148.737572948101</span><span class="p">,</span> <span class="mf">227115017138.4</span><span class="p">,</span> <span class="mf">13.0211568133471</span><span class="p">,</span> <span class="mf">0.715300723576896</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">[</span><span class="s1">&#39;Marine Harvest&#39;</span><span class="p">,</span> <span class="s1">&#39;MHG&#39;</span><span class="p">,</span> <span class="mf">225.589705235372</span><span class="p">,</span> <span class="mf">118004750966.2</span><span class="p">,</span> <span class="mf">21.6878893009616</span><span class="p">,</span> <span class="mf">0.440427599611273</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">[</span><span class="s1">&#39;Aker BP&#39;</span><span class="p">,</span> <span class="s1">&#39;AKERBP&#39;</span><span class="p">,</span> <span class="mf">272.499264741749</span><span class="p">,</span> <span class="mi">103712690592</span><span class="p">,</span> <span class="mf">26.7636558040214</span><span class="p">,</span> <span class="mf">0.722568840028356</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">[</span><span class="s1">&#39;Yara International&#39;</span><span class="p">,</span> <span class="s1">&#39;YAR&#39;</span><span class="p">,</span> <span class="mf">333.328922090651</span><span class="p">,</span> <span class="mf">99481443032.4</span><span class="p">,</span> <span class="mf">86.741957363663</span><span class="p">,</span> <span class="mf">0.465057636887608</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">[</span><span class="s1">&#39;Gjensidige Forsikring&#39;</span><span class="p">,</span> <span class="s1">&#39;GJF&#39;</span><span class="p">,</span> <span class="mf">172.830508474576</span><span class="p">,</span> <span class="mi">92125000000</span><span class="p">,</span> <span class="mf">24.9404407385348</span><span class="p">,</span> <span class="mf">0.847890127134592</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">[</span><span class="s1">&#39;Orkla&#39;</span><span class="p">,</span> <span class="s1">&#39;ORK&#39;</span><span class="p">,</span> <span class="mf">86.5857852597003</span><span class="p">,</span> <span class="mf">89087299091.2</span><span class="p">,</span> <span class="mf">26.5615083754323</span><span class="p">,</span> <span class="mf">0.350968405416214</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">[</span><span class="s1">&#39;Norsk Hydro&#39;</span><span class="p">,</span> <span class="s1">&#39;NHY&#39;</span><span class="p">,</span> <span class="mf">31.4389402413895</span><span class="p">,</span> <span class="mf">67532103728.64</span><span class="p">,</span> <span class="mf">15.6215830970715</span><span class="p">,</span> <span class="mf">0.439195576287418</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">[</span><span class="s1">&#39;SalMar&#39;</span><span class="p">,</span> <span class="s1">&#39;SALM&#39;</span><span class="p">,</span> <span class="mf">449.3</span><span class="p">,</span> <span class="mf">50905689550.7</span><span class="p">,</span> <span class="mf">14.222545257898</span><span class="p">,</span> <span class="mf">0.396134627028104</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">[</span><span class="s1">&#39;Tomra Systems&#39;</span><span class="p">,</span> <span class="s1">&#39;TOM&#39;</span><span class="p">,</span> <span class="mf">276.409619134278</span><span class="p">,</span> <span class="mf">41208789715.2</span><span class="p">,</span> <span class="mf">52.8996016883184</span><span class="p">,</span> <span class="mf">0.454299114121939</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">[</span><span class="s1">&#39;Aker&#39;</span><span class="p">,</span> <span class="s1">&#39;AKER&#39;</span><span class="p">,</span> <span class="mf">514.200494811093</span><span class="p">,</span> <span class="mi">40393931997</span><span class="p">,</span> <span class="mf">43.4343354806452</span><span class="p">,</span> <span class="mf">0.548092886866901</span><span class="p">]</span> <span class="p">,</span> 
-<span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">account_balance_exponential</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13529,7 +13458,16 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Som du ser, så består listen av tolv rader og fire kolonner. Dette er altså en 12x6-matrise. Den kan enkelt konverteres til en numpy-matrise med funksjonen <code>np.array()</code> slik som her:</p>
+<p>Vi ser at dette er omtrent identisk med når vi la til renten hvert sekund. Eksponentialfunksjonen er altså en måte å regne ut vekst når økningen legges til veldig hyppig. Forrentning hvert sekund og kontinuerlig forrentig gir altså omtrent det samme resultatet. "Kontinuerlig forrentning" er et abstrakt begrep, men det betyr i realiteten bare at vi legger til veksten "veldig hyppig".</p>
+<p>Årsaken til at vi ofte bruker logaritmen og eksponentialfunksjonen istedet for å legge til veksten hvert sekund, ar et det er veldig mye enklere å regne med logartimer enn vanlig prosentregning.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Mer-om-funksjoner">Mer om funksjoner<a class="anchor-link" href="#Mer-om-funksjoner">&#182;</a></h1><p>La oss definere en enkel funksjon som dobler et tall:</p>
 <h4 id="Eksempel-14:">Eksempel 14:<a class="anchor-link" href="#Eksempel-14:">&#182;</a></h4>
 </div>
 </div>
@@ -13539,8 +13477,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">stocks_np</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">stocks</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
 </pre></div>
 
     </div>
@@ -13551,11 +13489,12 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Listen er nå lagret som en numpy 12x6-matrise i objektet <code>stocks_np</code>. Vi kan imidlertid ikke utføre noen matematiske beregninger slik denne matrisen står, fordi alle tall er i tekstformat. Som vi har sett tidligere går det bare an å regne med <code>float</code>, <code>int</code> og <code>bool</code>. At det er tekst ser vi ved at det er enkle anførselstegn <code>'</code> rundt alle elementene.</p>
-<p>Heldigvis er det veldig enkelt å hente ut informasjon fra numpy-matriser, fordi mulighetene til å skjære utsnitt er langt større enn for vanlige lister. Numpy-lister kan nemlig skjæres i flere dimensjoner.</p>
-<p>I motsetning til vanlige lister, kan vi for eksempel velge ut kolonner. I en liste av lister velger du, som vi har sett, rad 2 og kolonne 0 med <code>stocks[2][0]</code>. Med numpy-matriser separerer du de to indeksene med et komma, <code>stocks[2,0]</code>.</p>
-<p>Men enda viktigere, du kan velge alle elementer ved å sette inn kolon <code>:</code> i stedet for tall. Dermed kan du velge hele kolonne 0 med <code>stocks_np[:,0]</code>.</p>
-<p>Her er vi mest interessert i de to siste kolonnene. Det er disse som inneholder tall. For å plukke ut disse velger vi alle radene (<code>:</code>) og alle kolonnene fra og med kolonne 2 (<code>2:</code>). Da får vi</p>
+<p>La oss nå sjekke følgende:</p>
+<ol>
+<li>Hvilket resultat gir funksjonen?</li>
+<li>Hva slags objekt er funksjonen?</li>
+<li>Hva slags objekt returnerer funksjonen?</li>
+</ol>
 <h4 id="Eksempel-15:">Eksempel 15:<a class="anchor-link" href="#Eksempel-15:">&#182;</a></h4>
 </div>
 </div>
@@ -13565,7 +13504,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stocks_np</span><span class="p">[:,</span><span class="mi">2</span><span class="p">:]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>            <span class="c1"># printer resultatet av funksjonen når argumentet er 8</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>         <span class="c1"># printer hvilken type objekt det er</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>      <span class="c1"># printer hvilken type resultate av funksjonen er</span>
 </pre></div>
 
     </div>
@@ -13576,7 +13517,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sist i matrisen over, står det <code>dtype='&lt;U21'</code>. Det betyr at dette er tekstrenger på 21 eller færre tegn. Vi må imidlertid ha dette over i tallformat for å kunne jobbe med det. Det gjør vi slik:</p>
+<p>Funksjonen dobler argumentet, så med 8 som argument blir resultatet 16. Symbolet <code>f</code> representerer nå en funksjon (<code>function</code>), som vi ser er resultatet av <code>print(type(f))</code>. Men dersom vi <em>kaller</em> funksjonen med for eksemple argumentet 5, får vi resultatet av funksjonen, som er av type <code>int</code>. Funksjoner trenger imidlertid ikke retunere noe. Dette er også en funksjon:</p>
 <h4 id="Eksempel-16:">Eksempel 16:<a class="anchor-link" href="#Eksempel-16:">&#182;</a></h4>
 </div>
 </div>
@@ -13586,8 +13527,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stocks_numbers</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">stocks_np</span><span class="p">[:,</span><span class="mi">2</span><span class="p">:],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
-<span class="n">stocks_numbers</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
+
+<span class="n">hello</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13598,8 +13541,16 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Når vi konverterte listen til en <code>ndarray</code>, så brukte vi altså funksjonen <code>np.array()</code>, slik som i Eksempel 14. Men denne gangen legger vi til det valgfrie argument <code>dtype=float</code> for å eksplisitt gi beskjed om at vi ønsker strengene konvertert til flyttal.</p>
-<p>Nå kan vi begynne å bruke tallene. For eksempel kan vi se grafisk om det er en sammenheng mellom gjeldsgrad og pris-inntjeningstraten (PE). Dette er de to siste kolonnene i datamatrisen:</p>
+<p>Vi ser at denne funksjonen ikke har <code>return</code>-nøkkelordet. Dermed returneres ingen verdi. I stedet for å returnere noe, så <em>gjør</em> denne funksjonen noe, nemlig å skrive ut 'Hello world"' til skjermen.</p>
+<p>Du kaller funksjoner ved å skrive funksjonen med argumentet i parentes etter navnet. Som vi ser her, når det ikke er noen argumenter, skriver du tomme parenteser.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En funksjon er også en variabel og et objekt. Du kan for eksempel definere en ny variabel som en tidligere definert funksjon:</p>
 <h4 id="Eksempel-17:">Eksempel 17:<a class="anchor-link" href="#Eksempel-17:">&#182;</a></h4>
 </div>
 </div>
@@ -13609,11 +13560,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;PE&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hi</span><span class="o">=</span><span class="n">hello</span>
+<span class="n">hi</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13624,37 +13572,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ser du en sammenheng?</p>
-<p>Det er også enkelt å regne med Numpy. Vi kan bruke alle de vanlige regneartene med numpy-matriser:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
-<span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">23</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="c1">#Kvadratroten</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Oppslag">Oppslag<a class="anchor-link" href="#Oppslag">&#182;</a></h2><p>Et oppslag, eller <em>dictionary</em> har symbol <code>dict</code> i Python. Dette er en datastruktur der hvert element ikke identifiseres med hvor det er plassert, men med et nøkkelord (<code>key</code>). Å bruke oppslag i stedet for lister gjør ofte koden mer lesbar. Det finnes to måter å lage oppslag på; enten ved å bruke funksjonen <code>dict()</code>:</p>
+<p>Av og til ønsker du at argumentene til en funksjon skal være valgfrie. Da kan du definere en standard ("default") verdi for argumentet:</p>
 <h4 id="Eksempel-18:">Eksempel 18:<a class="anchor-link" href="#Eksempel-18:">&#182;</a></h4>
 </div>
 </div>
@@ -13664,10 +13582,12 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">dict</span><span class="p">()</span>
-<span class="n">a</span><span class="p">[</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">a</span><span class="p">[</span><span class="s1">&#39;PE&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="mf">1.02e+2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Innehaveren krevde i utgangspunkltet </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="si">}</span><span class="s2"> kroner for fem epler.</span><span class="se">\n</span><span class="s2">&quot;</span>
+     <span class="sa">f</span><span class="s2">&quot;Det var alt for mye, så jeg tilbydde </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mf">1.02e-2</span><span class="p">)</span><span class="si">}</span><span class="s2"> kroner.</span><span class="se">\n</span><span class="s2">&quot;</span>
+     <span class="sa">f</span><span class="s2">&quot;Vi ble til slutt enige om </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mf">1.02e+1</span><span class="p">)</span><span class="si">}</span><span class="s2"> kroner.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13678,7 +13598,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Som vi ser, blir dette et objekt av type <code>dict</code>. Alternativt kan vi definere elementer inne i en krølleparentes på formen <code>{nøkkel: objekt}</code>, slik som dette:</p>
+<p>Legg merke til at argumentene til en funksjon settes inn i en parentes. For <code>f(x,y)</code> for eksempel, så er <code>x</code> og <code>y</code> argumenter til funksjonen <code>f</code>. Disse står inne i en parentes <code>(x,y)</code>. Denne parentesen er et objekt i seg selv og kalles en <code>tuple</code>. Det går derfor an å definere alle argumentene <em>først</em>, og så la funksjonen evaluere dem. La oss for eksempel si at <code>x=20</code> og <code>y=50</code>, slik at <code>(x,y)=(20,50)</code>. Vi kan da definere variablene først og så evaluere funksjonen på følgende måte</p>
 
 </div>
 </div>
@@ -13688,12 +13608,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="p">{</span>
-    <span class="s1">&#39;gjeldsrate&#39;</span><span class="p">:</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
-    <span class="s1">&#39;PE&#39;</span><span class="p">:</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> 
-  <span class="p">}</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13704,8 +13620,24 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Her er det altså to elementer med nøkler <code>'gjeldsrate'</code> og <code>'PE'</code>, og tilhørende objekter fra <code>stocks_numbers</code>.</p>
-<p>Vi legger merke til at dette også er en objekt av type <code>dict</code>. Med oppslag blir det enklere å bruke variablene, siden vi kan referere til dem med navn i stedet for indeks. Her er plottet i Eksempel 17 gjort med oppslag:</p>
+<p>Dette er en mulighet som kan være veldig nyttig i mange sammenhenger. En <code>tuple</code>skiller seg fra en liste (<code>list</code>) ved at sistnevnte defineres med hakeparenteser <code>[]</code> i stedet for runde parenteser <code>()</code>. Vi skal senere komme tilbake til flere forskjeller på en liste og en tuple.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Tilbud-og-ettersp%C3%B8rsel">Tilbud og ettersp&#248;rsel<a class="anchor-link" href="#Tilbud-og-ettersp%C3%B8rsel">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La oss definere en tilbud- og etterspørselsfunksjon. Disse funksjonene skal vise hvilken <strong><em>pris</em></strong> konsumentene maksimalt er villige til å betale for en gitt mengde, og hvor mye produsentene minimum må ha for å selge varen.</p>
+<p>Den høyeste prisen er det bare noen få konsumenter som er villige til å betale, så desto større kvantum <code>x</code> som skal selges, desto lavere må prisen være. Etterspørselsfunksjonen må derfor være fallende (lavere pris ved høyere kvantum).</p>
+<p>Her er et forslag til etterspørselsfunksjon:</p>
 <h4 id="Eksempel-19:">Eksempel 19:<a class="anchor-link" href="#Eksempel-19:">&#182;</a></h4>
 </div>
 </div>
@@ -13715,9 +13647,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;PE&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;PE&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Creating a function that returns total demand given a price p</span>
+<span class="k">def</span> <span class="nf">demand</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">125</span><span class="o">/</span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13728,20 +13660,20 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Når du først har laget en dict, er det enkelt å legge til nye elementer. Det gjør du enkelt ved å bruke en nøkkel som ikke finnes, for eksempel <code>'Pris'</code>, og dette elementet lik ønsket objekt:</p>
+<p>Den laveste prisen er det bare den mest effektive bedriften som klarer å produsere lønnsomt for. Ettersom kvantum <code>x</code> øker vil flere, men mindre effektive bedrifter, tilby varen. Desto større kvantum, desto høyere pris kreves per enhet. Tilbudsfunksjonen bør derfor være stigende (høyere pris ved høyere kvantum).</p>
+<p>Her er forslag til tilbudsfunksjoner:</p>
 <h4 id="Eksempel-20:">Eksempel 20:<a class="anchor-link" href="#Eksempel-20:">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;Pris&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pris&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;Pris&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Creating a function that returns total supply given a price p</span>
+<span class="k">def</span> <span class="nf">supply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
 </pre></div>
 
     </div>
@@ -13752,28 +13684,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>dict</code>-objektet er helt sentralt i selve byggeklossene til Python. Alle variabler du lager er faktisk elementer i to <code>dict</code> som du kan få frem med funksjonene <code>locals()</code> og <code>globals()</code>, som kaller de lokalt og globalt definerte variablene i miljøet du befinner deg. Dette eksemplet viser at objektet <code>stocks</code> som vi har definert i Eksempel 13, er identisk med elementet <code>'stocks'</code> i <code>locals()</code>.</p>
-<h4 id="Eksempel-21:">Eksempel 21:<a class="anchor-link" href="#Eksempel-21:">&#182;</a></h4>
+<h2 id="Oppgaver:">Oppgaver:<a class="anchor-link" href="#Oppgaver:">&#182;</a></h2>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">locals</span><span class="p">()[</span><span class="s1">&#39;stocks&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">stocks</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ser at disse objektene egentlig er det samme, ved at den logiske testen om disse er like, returnerer sann (<code>True</code>).</p>
+<h4 id="Oppgave-1:">Oppgave 1:<a class="anchor-link" href="#Oppgave-1:">&#182;</a></h4><p>Sjekk med nummeriske eksempler at tilbudskurven faktisk er økende og etterspørselskurven faktisk er fallende.</p>
+<p><em>Du lager en ny celle du kan kjøre kode i, ved å trykke "b" mens denne cellen er markert (enkeltklikk på denne cellen, ikke dobbelklikk)</em></p>
 
 </div>
 </div>
@@ -13781,56 +13700,20 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Oppgaver">Oppgaver<a class="anchor-link" href="#Oppgaver">&#182;</a></h2>
+<h4 id="Oppgave-2:">Oppgave 2:<a class="anchor-link" href="#Oppgave-2:">&#182;</a></h4><p>Finn med prøving og feiling eller på annen måte hvilket kvantum som gir likhet mellom tilbud og etterspørsel. Hvilken pris gir slik kvantum?</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Det er enkelt å konvertere en pandas dataramme til numpy. Vi skal bruke skolegangeksemplet fra forelesning "3 - matplotlib".  Vi henter inn dataene og konverterer dem til numpy slik:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/schooling-gdp.csv&#39;</span><span class="p">)</span>
-<span class="n">schooling</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="n">schooling</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Bytt ut navnet til "Ireland" med "Republic of Ireland" og "United States" med "United States of America"</li>
-<li>Print data for "Luxembourg"</li>
-<li>Print data for "Liberia" ved å referere til nest siste element. </li>
-<li>Print BNP per capita for de tre siste elementene i <code>schooling</code> (ligger i kolonne med indeks 2)</li>
-<li>Print BNP per capita for de tre siste elementene i <code>schooling</code> men hent kolonnen ved å refere til tredje siste kolonne. </li>
-<li>Plukk ut de tre siste kolonnene i <code>schooling</code>, som representerer BNP per capita, skolegang og befolkning, og konverter dem til datatype <code>float</code>. </li>
-<li>Lag et oppslag (dictionary) med de tre siste kolonnene og passende navn som nøkler. Kall det <code>schooling_dict</code>. </li>
-<li>Lag en ny variabel i oppslaget med navn "Total schooling" som er produktet av skolegang og befolkning.</li>
-<li>Lag en ny variabel "Total GDP" som er produktet av BNP per capita og befolkning. </li>
-<li>Lag et scatterplot med de to variablene du nettopp lagde. </li>
-<li>Lag en ny variabel "GDP per schooling" som er BNP per capita delt på skolegang.</li>
-<li><p>Lag et liggende stolpediagram med navn på land og "GDP per schooling". Du bruker da funksjonen <code>plt.barh</code> på denne måten:</p>
-
-<pre><code>plt.barh(names,values)</code></pre>
-<p>Hvor <code>names</code> er en liste med navnene og <code>values</code> er de tilhørende verdiene.</p>
+<h4 id="Oppgave-3:">Oppgave 3:<a class="anchor-link" href="#Oppgave-3:">&#182;</a></h4><ol>
+<li><p>Lag en funksjon som hvor mange penger du har i gjen når du har brukt x penger av et budsjett på b</p>
 </li>
-<li><p>Dette blir ikke pent. Velg kun de 20 første landene, og forsøk på nytt.</p>
+<li><p>Lag en funksjon som returnerer hvor mye parkeringen kostet når du har stått en tidsperiode angitt av argumentet <code>time_period</code>, og en pris per time angitt av argumentet <code>p</code>. Funksjonen skal forvente at time_period er på formatet "hh:mm:ss" (en streng). Du kan trekke ut timer, minutter og sekunder fra en tekstreng på det foreslåtte formatet, ved å bruke koden <code>hh,mm,ss=int(timestr[0:2]),int(timestr[3:5]),int(timestr[6:])</code>. Du må  konvertere tiden til timer på desimalform for å regne ut kostnad. Det kan du gjøre med denne formelen: <code>tt_dec=hh+mm/60+ss/(60*60)</code>.</p>
+</li>
+<li><p>Lag en funksjon som tar en liste med adjektiv som argument. Kall argumentet for  <code>adj_list</code>. Funksjonen skal returnere et tilfeldig element fra listen. Du kan for eksempel teste funksjonen med denne listen <code>['dyr', 'billig', 'pareto optimal', 'høy', 'lav', 'ineffektiv']</code>. For å plukke et tilfeldig element fra en liste <code>adj_list</code> med <code>4</code>elementer, skriver du <code>adj_list[np.random.randint(4)]</code>.</p>
 </li>
 </ol>
 
@@ -13840,7 +13723,24 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="&lt;-Forrige-----|-----Neste-&gt;"><a href="3%20-%20matplotlib.html">&lt; Forrige</a>     |     <a href="5%20-%20Sympy.html">Neste &gt;</a><a class="anchor-link" href="#&lt;-Forrige-----|-----Neste-&gt;">&#182;</a></h5>
+<h4 id="Oppgave-4:">Oppgave 4:<a class="anchor-link" href="#Oppgave-4:">&#182;</a></h4><p>a) Bruk eksponentialfunksjonen og log-funksjonen i numpy til å vise at log-funksjonen er det motsatte av eksponentialfunksjoenn.</p>
+<p>b) Regn ut hvor mange prosent 205,210,220,230 og 240 er av 200. Regn også ut logaritmen av 205/200, 210/200 ... osv. og kommenter resultatet.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Oppgave-5:">Oppgave 5:<a class="anchor-link" href="#Oppgave-5:">&#182;</a></h4><p>Lag en funksjon som returnerer det høyeste av funksjonene <code>account_balance_exponential</code> og <code>account_balance</code>. Er dette en nyttig funksjon?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="1%20-%20variabler.html">&lt; Forrige</a>     |     <a href="3%20-%20eksponent%20og%20log.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
 </div>
 </div>
 </div>

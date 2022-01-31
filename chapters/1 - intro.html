@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>2 - funksjoner</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>1 - intro</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <style type="text/css">
   pre { line-height: 125%; }
@@ -13,22 +13,22 @@ td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: #ffffcc }
 .highlight { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
@@ -41,15 +41,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .kt { color: #B00040 } /* Keyword.Type */
 .highlight .m { color: #666666 } /* Literal.Number */
 .highlight .s { color: #BA2121 } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .na { color: #687822 } /* Name.Attribute */
 .highlight .nb { color: #008000 } /* Name.Builtin */
 .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
 .highlight .no { color: #880000 } /* Name.Constant */
 .highlight .nd { color: #AA22FF } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
 .highlight .nf { color: #0000FF } /* Name.Function */
-.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nl { color: #767600 } /* Name.Label */
 .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
 .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
 .highlight .nv { color: #19177C } /* Name.Variable */
@@ -66,11 +66,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
 .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
 .highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
@@ -13048,10 +13048,8 @@ div#notebook {
   }
 }
 </style>
-
-
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML-full,Safe"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     init_mathjax = function() {
@@ -13075,11 +13073,6 @@ div#notebook {
                     linebreaks: { 
                     automatic: true 
                     }
-                },
-                "HTML-CSS": {
-                    linebreaks: { 
-                    automatic: true 
-                    }
                 }
             });
         
@@ -13096,29 +13089,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="&lt;-Forrige-----|-----Neste-&gt;"><a href="1%20-%20variabler.html">&lt; Forrige</a>     |     <a href="3%20-%20eksponent%20og%20log.html">Neste &gt;</a><a class="anchor-link" href="#&lt;-Forrige-----|-----Neste-&gt;">&#182;</a></h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2---Funksjoner">2 - Funksjoner<a class="anchor-link" href="#2---Funksjoner">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#197;-bruke-funksjoner">&#197; bruke funksjoner<a class="anchor-link" href="#&#197;-bruke-funksjoner">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Funksjoner er helt sentralt i all slags programmering. Et program uten egendefinerte funksjoner er bare en liste med kommandoer, og det er svært begrenset hva du kan få til med det. Heldigvis er det ekstremt enkelt å lage egne funksjoner i Python.</p>
-<p>En vanlig nybegynnerfeil i programmering er å ikke utnytte muligheten til å lage egne funksjoner tilstrekkelig. Hovedregelen er at om det er noe av koden din som repeteres, så skal du lage en ny funksjon som håndterer dette. Målet er at antall linjer i hver funksjon skal være så lite som mulig. Men før vi lærer å lage egne funksjoner, skal vi se litt på hvordan funksjoner brukes.</p>
+<h5><span style="color:lightgrey">$<$Forrige</span>     |     <a href="1%20-%20variabler.html">Neste &gt;</a></h5>
 
 </div>
 </div>
@@ -13126,39 +13097,85 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Innebygde-funksjoner">Innebygde funksjoner<a class="anchor-link" href="#Innebygde-funksjoner">&#182;</a></h2>
+<h1 id="1---Introduksjon">1 - Introduksjon<a class="anchor-link" href="#1---Introduksjon">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Python kommer med en rekke innebygde funksjoner. I tillegg kan du importere pakker som har en lang rekke funksjoner. Her er noen innebygde funksjoner i Python:</p>
+<h2 id="Om-kurset">Om kurset<a class="anchor-link" href="#Om-kurset">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I dette kurset har vi ikke pensumbok. Det er først og fremst fordi det ikke er skrevet noen norsk bok om pythonprogrammering og øknomi. Det finnes også veldig lite litteratur på engelsk.</p>
+<p>I stedet er disse notatene på github pensum, i tillegg til DataCamp, som vi skal komme tilbake til.</p>
+<p>Informasjon om arbeidskrav, forelesninger og innleveringer finner du enkelt her på github. Alle oppgaver på github er arbeidskrav, og i tillegg vil det komme et par mindre oppgaver som dekker pensum som ikke finnes på DataCamp.</p>
+<p>Karakter settes ut fra et prosjekt dere lager, og en muntlig presentasjon av prosjektet. På presentasjonen kan dere også få programmeringsfaglige spørsmål fra pensum. Dere skal levere inn en prosjektskisse 22/10 og frist for innlevering av selve prosjektet er 3/12. Det vil komme mer beskjed om prosjektet senere, men det vil involvere at dere innhenter noe data som analyseres grafisk, helst knyttet til økonomifaget.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hvorfor-python?">Hvorfor python?<a class="anchor-link" href="#Hvorfor-python?">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>R og python er to av de ledende programmeringsspråkene i dag. I motsetning til R er Python et "ordentlig" programmeringsspråk i den forstand at du kan skape objekter og klasser. R er et enklere språk med mindre muligheter når det gjelder programmering, men har til gjengjeld et langt større utvalg pakker innenfor statistikk og økonometri. For statistisk analyse er derfor R ofte foretrukket, men dersom du skal gjøre noe litt annet enn som tilbys i R-pakker, er det en fordel med et mer avansert programmeringsspråk som Python.</p>
+<p>Python har mange fordeler. De viktigste er at det er:</p>
+<ul>
+<li>Enkelt, intuitivt og lett og forstå</li>
+<li>Det er svært effektvit om en bruker de rette pakkene (numpy, pandas)</li>
+<li>Det er et "ekte" programmeringsspråk der man kan skape objekter og klasser (dette er ikke noe vi lærer om i dette kurset)</li>
+<li>stort utvalg av pakker (dog betydelig færre enn R innenfor statistikk og økonometri).</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Programmeringsspr%C3%A5k">Programmeringsspr&#229;k<a class="anchor-link" href="#Programmeringsspr%C3%A5k">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Da de første datamaskinene kom på 40-tallet, måtte brukerne gi maskinene instruksjoner i form av maskinkode. Datamaskiner er binære og forstår kun to tegn; 1 og 0, det vil si "av" og "på". Brukeren måtte derfor forklare maskinen hva den skulle gjøre ved å skrive ned problemet som en lang rekke enere og nuller. Det ble raskt klart at dette var en ekstremt krevende oppgave. Programmeringsspråk ble derfor funnet opp for at mennesker skulle kunne gi instruksjoner til datamaskiner på en forståelig måte.</p>
+<p>Stort sett alle programmeringsspråk henter syntaksen fra engelsk. Koden oversettes så til maskinspråk, noe som kalles å "kompilere" ("compile" på engelsk). Datamaskinen kan så behandle den kompilerte maskinkoden.</p>
+<h2 id="Lav--og-h%C3%B8yniv%C3%A5spr%C3%A5k">Lav- og h&#248;yniv&#229;spr&#229;k<a class="anchor-link" href="#Lav--og-h%C3%B8yniv%C3%A5spr%C3%A5k">&#182;</a></h2><p>Programmeringsspråk deles inn i høynivå- og lavnivåspråk. Forskjellen på høy- og lavnivå er hvor mye støtte språket gir til brukeren. Slik støtte gjør det enklere å programmere, men er kostbart fordi det gir en mindre effektiv kode.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lavnivåspråk er gir svært effektiv og rask kode, men er mer krevende og mindre intuitive å programmere. C++ er et lavnivåspråk. Eksemplet under skriver ut tallene 0 til og med 4:</p>
 <h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="nb">max</span><span class="p">(</span><span class="mf">2.4</span><span class="p">,</span><span class="mf">2.0</span><span class="p">)</span>   <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="nb">min</span><span class="p">(</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>  <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">2.4</span><span class="p">)</span>      <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;abcde&quot;</span><span class="p">)</span>   <span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Legg merke til at funksjonene <code>max</code>, <code>min</code>, <code>abs</code> og <code>len</code> alle er omsluttet av funksjonen <code>print</code> som sørger for at resultatet skrives ut nedenfor. En funksjon kan altså <em>returnere noe</em>, slik som  <code>max</code>, <code>min</code>, <code>abs</code> og <code>len</code>, eller <em>gjøre noe</em> slik som <code>print</code>, eller begge deler.</p>
-<p>Funksjonen <code>len</code> angir antall bokstaver, men kan også angi lengde på en liste. En liste i python skriver du som <code>[1,'hei',a]</code>. En liste kan altså bestå av flere ulike typer variabler og konstanter. De to første elementene her er konstanter, og den tredje er en variabel som er satt lik et flyttal i eksemplet under.</p>
+
+<pre><code>    for (int i = 0; i &lt; 5; i++) {
+      std::cout &lt;&lt; i &lt;&lt; "\n";
+    }
+
+</code></pre>
+<p>Vi kan sammenligne dette med tilsvarende kode i Python, som er et høynivåspråk:</p>
 <h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">&#182;</a></h4>
 </div>
 </div>
@@ -13168,9 +13185,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="mf">50.8</span>
-<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;hei&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">])</span>
-<span class="nb">len</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;hei&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13181,115 +13197,12 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Eksponentialfunksjonene">Eksponentialfunksjonene<a class="anchor-link" href="#Eksponentialfunksjonene">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I Python er det svært enkelt å <em>importere</em> ferdig pakker for som kan kjøre ferdige funksjoner. Vi skal her se på et eksempel med noe som heter eksponentialfunksjonen. Denne finnes blant annet i pakken <code>numpy</code>. Dette er en svært nyttig pakke for matematiske beregninger.</p>
-<p>Som vi skal se lenger ned, så er eksponentialfunksjonen viktig innen økonomifaget fordi den brukes i vekstberegninger, for eksempel for befolkning eller produksjon.</p>
-<p>Som nevnt tidligere så er <em>potensen</em> $y^x$ et <em>grunntall</em> $y$ opphøyet i en eksponent $x$. Når vi snakker om <em>eksponenten</em> i bestemt form, så betyr det at grunntallet er et bestemt tall. Dette tallet kalles $e$, etter matematikeren Euler, og er tilnærmet $e\approx2.71828$ (det er egentlig en uendelig rekke med siffer etter komma)</p>
-<p>Siden Python ikke har noen innebygd funksjon for eksponenten, importerer vi altså først <code>numpy</code>-pakken, som har en slik funksjon. For å få mindre skriving senere, er det vanlig å importere <code>numpy</code> som aliaset <code>np</code>. Dette gjør vi slik:</p>
-<h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Navnet på eksponent-funksjonen i numpy er exp. Skal vi for eksempel finne hva $e^2=2.71828^2$ er, skriver vi</p>
-<h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Om vi ønsker å vite hva eksponenten er med litt mer enn fem desimaler, kan vi finne eksponenten av 1, siden ethvert tall opphøyd i 1 er seg selv:</p>
-<h4 id="Eksempel-5:">Eksempel 5:<a class="anchor-link" href="#Eksempel-5:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Eksponenten til 5 er for eksempel 2.71828 opphøyet i 5:</p>
-<h4 id="Eksempel-6:">Eksempel 6:<a class="anchor-link" href="#Eksempel-6:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">5</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>For å opphøye noe bruker vi altså dobbelt gangetegn <code>**</code>.</p>
-<p><em>Logartimen</em> er det eksakt motsatte av eksponentialfunksjonen. Tar vi logaritmen av eksponentialfunksjon, får vi argumentet til sistnevnte. Tar vi eksponentialfunksjonen av logartimen får vi også argumentet til logartimen. I en av oppgavene under skal du vise dette.</p>
+<p>Om du har åpnet denne filen i Jupyter notebook (se under for instruksjoner), kan du kjøre Pythonkoden ved å trykke SHIFT+ENTER.</p>
+<p>Vi ser at Python-koden er langt enklere, og har en syntaks som ligner mer på vanlig engelsk. Generelt er Python et svært intuitivt språk som er enkelt å programmere i. Språket ble funnet opp av Guido van Rossum i 1989 og er i dag verdens mest populære programmeringsspråk rangert ut fra googlesøk.</p>
+<p>Selv om Python er er et høynivåspråk, er det svært effektivt på grunn av et stort antall bibliotek hvor mye er skrevet direkte i C eller C++. Ett slik bibliotek heter "Numpy", og har svært effektive metoder for matriseoperasjoner. "Pandas" er et svært effektivt bibliotek for databehandling, og "Statsmodels" er et kraftfullt verktøy for dataanalyse.</p>
+<h2 id="Innrykk-og-linjeskift">Innrykk og linjeskift<a class="anchor-link" href="#Innrykk-og-linjeskift">&#182;</a></h2><p>Én ting som gjør det enklere å programmere i Python enn andre språk kan du allerede se av det lille eksemplet over. De fleste språk bruker ulike typer parenteser for å markere at noe tilhører en bestemt operasjon. Operasjonen over er en <em>løkke</em>, og vi ser fra Eksempel 1 at C bruker {} for å markere hva som er en del av løkken. I Python markeres tilhørighet til løkken med innrykk. Vi ser i Eksempel 1 at <code>print(i)</code> tilhører løkken fordi denne setningen er rykket ett hakk inn.</p>
+<p>Det har etterhvert etablert seg som god skikk og bruk innen programmering å ha et innrykk for kode som tilhører en operasjon. Vi ser det av Eksempel 1, der innholdet i løkken også er rykket inn. Forskjellen mellom C og Python er imidlertid at i C har hverken linjeskift eller innrykk noen som helst betydning for hvordan koden fungerer. Eksempel 1 kunne like gjerne vært skrevet på en linje som <code>for (int i = 0; i &lt; 5; i++) {std::cout &lt;&lt; i &lt;&lt; "\n";}</code>, og det ville fungert like bra.</p>
+<p>I Python markeres imidlertid linjeskift et skille mellom setninger, og innrykk markere hva som tilhører hva. Det gir en kode som er enklere å lese og mer intuitiv.</p>
 
 </div>
 </div>
@@ -13297,176 +13210,17 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Lage-egne-funksjoner---renteregning">Lage egne funksjoner - renteregning<a class="anchor-link" href="#Lage-egne-funksjoner---renteregning">&#182;</a></h2>
+<h2 id="Jupyter">Jupyter<a class="anchor-link" href="#Jupyter">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi skal her se hvordan vi kan lage egne funksjoner for renteregning.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>La oss starte med å lage en funksjon for et lån uten avdrag. Om banken legger til renten én gang i året og renten er r, så er lånet på x om T år gitt som $x\cdot (1+r)^{T}$. Dette kan vi programmere som følgende funksjon:</p>
-<h4 id="Eksempel-7:">Eksempel 7:<a class="anchor-link" href="#Eksempel-7:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">account_balance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="p">)</span><span class="o">**</span><span class="n">T</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Nøkkelordet <code>return</code>sørger for at det som står etter <code>return</code> returneres av funksjonen. Dersom funksjonen ikke har <code>return</code>i seg, returneres <code>None</code>, som representerer "ingenting" i Python.</p>
-<p>Om renten på lånet er 20%=0.2 og innskuddet er 100, så er beløpet om to år dermed:</p>
-<h4 id="Eksempel-8:">Eksempel 8:<a class="anchor-link" href="#Eksempel-8:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>La oss nå tenke oss at banken legger til renter n ganger i året. Om for eksempel n=12, så legger banken til renter måndedlig. Vi kan da regne ut lånet ved ulik antall forrentninger per år. Formelen for dette er $x\cdot (1+\frac{r}{n})^{T\cdot n}$.</p>
-<p>Formelen har en enkel og intuitiv forklaring: Vi deler rentesatsen på antall perioder, samtidig som renten legges til i hver periode. Renten i hver periode er dermed $\frac{r}{n}$, og dette forrentes totalt $T\cdot n$ ganger. Dette kan programmeres i pyton som</p>
-<h4 id="Eksempel-9:">Eksempel 9:<a class="anchor-link" href="#Eksempel-9:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">account_balance_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>La oss nå sammenligne å legge til renten hver måned, med å legge den til årlig:</p>
-<h4 id="Eksempel-10:">Eksempel 10:<a class="anchor-link" href="#Eksempel-10:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">account_balance_n</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">account_balance_n</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ser at det lønner seg en god del å legge til renten hver måned. La oss nå anta at rentene legges til hvert sekund i året. Det er 31 536 000 sekunder i et år. I så fall er innskuddet om to år verdt:</p>
-<h4 id="Eksempel-11:">Eksempel 11:<a class="anchor-link" href="#Eksempel-11:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">account_balance_n</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">31536000</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Banken vil altså tjene litt på å gjøre det. I stedet for å regne ut med daglig forrentning kan vi bruke kontinuerlig, som vil si at vi bruker eksponentialfunksjonen</p>
-<h4 id="Eksempel-12:">Eksempel 12:<a class="anchor-link" href="#Eksempel-12:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">account_balance_exponential</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">T</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Dette gir oss verdien på lånet når renten legges til "kontinuerlig", altså oftere enn hvert sekund. La oss nå regne ut verdien av gjelden om to år med kontinuerlig forrentning:</p>
-<h4 id="Eksempel-13">Eksempel 13<a class="anchor-link" href="#Eksempel-13">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">account_balance_exponential</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ser at dette er omtrent identisk med når vi la til renten hvert sekund. Eksponentialfunksjonen er altså en måte å regne ut vekst når økningen legges til veldig hyppig. Forrentning hvert sekund og kontinuerlig forrentig gir altså omtrent det samme resultatet. "Kontinuerlig forrentning" er et abstrakt begrep, men det betyr i realiteten bare at vi legger til veksten "veldig hyppig".</p>
-<p>Årsaken til at vi ofte bruker logaritmen og eksponentialfunksjonen istedet for å legge til veksten hvert sekund, ar et det er veldig mye enklere å regne med logartimer enn vanlig prosentregning.</p>
+<p><a href="https://jupyter.uit.no/"><img align="left" src="../assets/jupyter.png" style="padding:10px;"></a>
+For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gjør at du kan kjøre koden som ligger i dokumentene, og at du kan endre og skrive din egen kode. Undervisningen i dette kurset vil hovedsakelig gjøres i Jupyter.</p>
+<p>Det finnes flere ulike måter å kjøre Jupyter på. Det kan kjøres lokalt på PC'en eller på nettet. Vi skal bruke løsningen på uit.no som du finner <a href="https://jupyter.uit.no/">her</a>.</p>
+<p>Om du nå har åpnet Jupyter, så er neste steg å få tilgang på dette og de andre forelesningsnotatene. Disse ligger på noe som heter github.</p>
 
 </div>
 </div>
@@ -13474,82 +13228,34 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Mer-om-funksjoner">Mer om funksjoner<a class="anchor-link" href="#Mer-om-funksjoner">&#182;</a></h1><p>La oss definere en enkel funksjon som dobler et tall:</p>
-<h4 id="Eksempel-14:">Eksempel 14:<a class="anchor-link" href="#Eksempel-14:">&#182;</a></h4>
+<h2 id="Hente-kursmateriell-fra-github">Hente kursmateriell fra github<a class="anchor-link" href="#Hente-kursmateriell-fra-github">&#182;</a></h2>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La oss nå sjekke følgende:</p>
+<p><a href="https://github.com/uit-sok-1003-h21/notebooks"><img align="right" src="../assets/github.png" style="padding:20px;"></a>Github er et av mange nettsteder som tilbyr "versjonskontroll" på git-platformen. Git er et åpen-kildekode-prosjekt som organiserer programmeringsprosjekt. I et typisk prosjekt er det flere personer som samarbeider og som kan endre koden. Git gjør det mulig å holde orden på hvem som endret hva når. Det gjør det også enkelt å gå tilbake til tidligere versjoner, og du kan "forke", eller "gafle" på norsk, som vil si å lage en ny gren med en annen kode en hovedgrenen.</p>
+<p>Forelesningsnotatene for dette kurset er altså lagret i et "repositorie" på github.com, eller "repo" som det ofte kalles. Du kan se filene i nettleseren her: <a href="https://github.com/uit-sok-1003-h21/notebooks">https://github.com/uit-sok-1003-h21/notebooks</a>. Du kan laste dem direkte ned derfra, men det er mye bedre å bruke git-verktøyet til å laste dem ned. Da kan du med en enkel kommando oppdatere filene når jeg gjør endringer i notatene.</p>
+<p>For å hente filene til Jupyter gjør du slik:</p>
 <ol>
-<li>Hvilket resultat gir funksjonen?</li>
-<li>Hva slags objekt er funksjonen?</li>
-<li>Hva slags objekt returnerer funksjonen?</li>
+<li><a href="https://uit-sok-1003-h21.github.io/notebooks/instruksjoner/Terminal.html">Åpne et "terminalvindu"</a></li>
+<li><p>Lag en ny mappe på ditt hjemmeområde ved å skrive inn i terminalvinduet</p>
+
+<pre><code> [user@jupty02 ~]$ mkdir sok-1003</code></pre>
+</li>
+<li><p>Gå så inn i den mappen du har laget ved å skrive</p>
+
+<pre><code> [user@jupty02 ~]$ cd sok-1003</code></pre>
+</li>
+<li><p>Last ned kursmateriellet ved å kopiere inn følgende kommando i kommandovinduet:</p>
+
+<pre><code> [user@jupty02 sok-1003]$ git clone https://github.com/uit-sok-1003-h21/notebooks/</code></pre>
+</li>
 </ol>
-<h4 id="Eksempel-15:">Eksempel 15:<a class="anchor-link" href="#Eksempel-15:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>            <span class="c1"># printer resultatet av funksjonen når argumentet er 8</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>         <span class="c1"># printer hvilken type objekt det er</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>      <span class="c1"># printer hvilken type resultate av funksjonen er</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Funksjonen dobler argumentet, så med 8 som argument blir resultatet 16. Symbolet <code>f</code> representerer nå en funksjon (<code>function</code>), som vi ser er resultatet av <code>print(type(f))</code>. Men dersom vi <em>kaller</em> funksjonen med for eksemple argumentet 5, får vi resultatet av funksjonen, som er av type <code>int</code>. Funksjoner trenger imidlertid ikke retunere noe. Dette er også en funksjon:</p>
-<h4 id="Eksempel-16:">Eksempel 16:<a class="anchor-link" href="#Eksempel-16:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
-
-<span class="n">hello</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ser at denne funksjonen ikke har <code>return</code>-nøkkelordet. Dermed returneres ingen verdi. I stedet for å returnere noe, så <em>gjør</em> denne funksjonen noe, nemlig å skrive ut 'Hello world"' til skjermen.</p>
-<p>Du kaller funksjoner ved å skrive funksjonen med argumentet i parentes etter navnet. Som vi ser her, når det ikke er noen argumenter, skriver du tomme parenteser.</p>
+<p>Legg merke til at mappen du "er i" alltid står til sist i klameparentesen i komandolinjen.</p>
+<p>Kursmateriellet skal nå ligge under sok-1003/notebooks, som du kan klikke deg frem til i filmenyen til venstre. Åpne dette dokumentet, som altså heter "Komme i gang med python.ipynb".</p>
+<p><a href="https://uit-sok-1003-h21.github.io/notebooks/instruksjoner/git.html">Her finner du de mest brukte git-kommandoene</a></p>
 
 </div>
 </div>
@@ -13557,55 +13263,58 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>En funksjon er også en variabel og et objekt. Du kan for eksempel definere en ny variabel som en tidligere definert funksjon:</p>
-<h4 id="Eksempel-17:">Eksempel 17:<a class="anchor-link" href="#Eksempel-17:">&#182;</a></h4>
+<h2 id="Hvordan-s%C3%B8rge-for-at-du-alltid-har-siste-versjon?">Hvordan s&#248;rge for at du alltid har siste versjon?<a class="anchor-link" href="#Hvordan-s%C3%B8rge-for-at-du-alltid-har-siste-versjon?">&#182;</a></h2>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hi</span><span class="o">=</span><span class="n">hello</span>
-<span class="n">hi</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Av og til ønsker du at argumentene til en funksjon skal være valgfrie. Da kan du definere en standard ("default") verdi for argumentet:</p>
-<h4 id="Eksempel-18:">Eksempel 18:<a class="anchor-link" href="#Eksempel-18:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="mf">1.02e+2</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span>
+<p>Det kommer til å bli endringer i notatene undervegs, så det vil bli behov for å laste ned fra <code>github</code> på nytt ofte. Det kan derfor være lurt å ha to mapper; én med notebooks-filene uendret, og én der du kan redigere og eventuelt kopiere filer fra orginalmappen.</p>
+<p>For å gjøre det endrer du navn på notebooks-mappen du nettopp klonet til <code>notebooks_endr</code> (høyreklikk-&gt;Rename). Så følger du punkt 4. i prosedyren over (sørg for at du er i sok-1003-mappen i terminalen, det skal stå "sok-1003" sist i <code>[user@jupty02 sok-1003]$</code>. Gjør det ikke det så skriv enten <code>cd ..</code> for å gå opp et hakk eller <code>cd sok-1003</code> for å gå ned i denne mappen.</p>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Innehaveren krevde i utgangspunkltet </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="si">}</span><span class="s2"> kroner for fem epler.</span><span class="se">\n</span><span class="s2">&quot;</span>
-     <span class="sa">f</span><span class="s2">&quot;Det var alt for mye, så jeg tilbydde </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mf">1.02e-2</span><span class="p">)</span><span class="si">}</span><span class="s2"> kroner.</span><span class="se">\n</span><span class="s2">&quot;</span>
-     <span class="sa">f</span><span class="s2">&quot;Vi ble til slutt enige om </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mf">1.02e+1</span><span class="p">)</span><span class="si">}</span><span class="s2"> kroner.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Legg merke til at argumentene til en funksjon settes inn i en parentes. For <code>f(x,y)</code> for eksempel, så er <code>x</code> og <code>y</code> argumenter til funksjonen <code>f</code>. Disse står inne i en parentes <code>(x,y)</code>. Denne parentesen er et objekt i seg selv og kalles en <code>tuple</code>. Det går derfor an å definere alle argumentene <em>først</em>, og så la funksjonen evaluere dem. La oss for eksempel si at <code>x=20</code> og <code>y=50</code>, slik at <code>(x,y)=(20,50)</code>. Vi kan da definere variablene først og så evaluere funksjonen på følgende måte</p>
+<p>Når skal <code>notebooks</code> aldri endres, der skal filene alltid være identisk med det som ligger på github. I mappen <code>notebooks_endr</code> kan du gjøre hva du vil, og du vil alltid kunne kopiere orginalene fra <code>notebooks</code>.</p>
+<p>Når du får beskjed om at <code>notebooks</code> på github er oppdatert, navigerer du til <code>notebooks</code>med <code>cd noteboks</code> og henter siste versjon slik:</p>
+
+<pre><code>[user@jupty02 notebooks]$ git reset --hard
+[user@jupty02 notebooks]$ git pull</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span style="color:red">MERK!!!!! alt innhold i den mappen du er i vil BLI SLETTET og ERSTATTET med innholdet i `notebooks` på github. Vær derfor HELT sikker på at du er i riktig mappe (det SKAL stå `notebooks` sist i promtet slik: `[user@jupty02 notebooks]$`)</span></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Når <code>notebooks</code>-mappen er oppdatert, kan du eventuelt kopiere de filene som er endret til <code>notebooks_endr</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%C3%85pne-notebook-dokument-i-Jupyter">&#197;pne notebook-dokument i Jupyter<a class="anchor-link" href="#%C3%85pne-notebook-dokument-i-Jupyter">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Du skal nå forhåpentligvis lese dette dokumentet interaktivt. Det første du kan prøve på er å trykke i cellen under og kjøre koden ved å trykke SHIFT+ENTER. Om ikke teksten "Hello World!" dukker opp under, så, gå gjennom prosedyren over én gang til.</p>
 
 </div>
 </div>
@@ -13615,8 +13324,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hallo verden!&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13627,7 +13335,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Dette er en mulighet som kan være veldig nyttig i mange sammenhenger. En <code>tuple</code>skiller seg fra en liste (<code>list</code>) ved at sistnevnte defineres med hakeparenteser <code>[]</code> i stedet for runde parenteser <code>()</code>. Vi skal senere komme tilbake til flere forskjeller på en liste og en tuple.</p>
+<p>Legg merke til funksjonen <code>print()</code>. Den viser frem resultatet under cellen der den er brukt, og er en funksjon vi kommer til å bruke mye.</p>
+<p>Den siste linjen vises alltid, så <code>print</code> har virkning i Jupyter når den ikke står i siste setning. Forsøk å skrive to linjer med 'Hallo verden!' med og uten <code>print</code>i forskjellige rekkefølger for å se dette. Det vil fra nå av forutsettes at du leser disse notatene interaktivt i Jupyter Lab eller Notebook.</p>
+<p><em>print</em>, i betydningen å skrive ut til skjermen, har vi forøvrig ikke noe godt norsk ord for, så dette vil heretter kalles for å <em>printe</em>.</p>
 
 </div>
 </div>
@@ -13635,17 +13345,50 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Tilbud-og-ettersp&#248;rsel">Tilbud og ettersp&#248;rsel<a class="anchor-link" href="#Tilbud-og-ettersp&#248;rsel">&#182;</a></h1>
+<h2 id="DataCamp">DataCamp<a class="anchor-link" href="#DataCamp">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La oss definere en tilbud- og etterspørselsfunksjon. Disse funksjonene skal vise hvilken <strong><em>pris</em></strong> konsumentene maksimalt er villige til å betale for en gitt mengde, og hvor mye produsentene minimum må ha for å selge varen.</p>
-<p>Den høyeste prisen er det bare noen få konsumenter som er villige til å betale, så desto større kvantum <code>x</code> som skal selges, desto lavere må prisen være. Etterspørselsfunksjonen må derfor være fallende (lavere pris ved høyere kvantum).</p>
-<p>Her er et forslag til etterspørselsfunksjon:</p>
-<h4 id="Eksempel-19:">Eksempel 19:<a class="anchor-link" href="#Eksempel-19:">&#182;</a></h4>
+<p><img align="right" width="250" src="../assets/datacamp.png" style="padding:10px;">Vi kommer i utstrakt grad til å bruke <a href="https://www.datacamp.com/">DataCamp</a> i dette kurset. DataCamp er en plattform med nettleksjoner i programmering, med selvrettende øvelser. En del av pensum og obligatoriske øvelser i dette kurset vil hentes fra DataCamp.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Alternative-m%C3%A5ter-%C3%A5-bruke-Python-p%C3%A5">Alternative m&#229;ter &#229; bruke Python p&#229;<a class="anchor-link" href="#Alternative-m%C3%A5ter-%C3%A5-bruke-Python-p%C3%A5">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img align="right" width="250" src="../assets/command.png" style="padding:10px;"> Det finnes flere alternative måter å installere og jobbe med Python. Vi kommer som nevnt til å bruke Jupyter og Anaconda, men det kan være greit å være klar over alternative oppsett. Kanskje er det noen av dere som også ønsker å gjøre ting utover hva dette kurset dekker, og da kan det hende at det blir behov for andre verktøy enn Jupyter.</p>
+<p>Den enkleste installasjonen er å kun installere selve Python-programmet  direkte fra <a href="https://www.python.org/">https://www.python.org/</a> og koden kjøres fra kommandolinje (bildet til høyre). Python startes med kommandoen "python". På mac må man ofte legge til versjonsnummeret, for eksempel "python38" for versjon 3.8. Dette gir en interaktiv økt der pythonkoden kjøres hver gang du trykker ENTER.</p>
+<p><img align="left" width="250" src="../assets/visualcode.png" style="padding:10px;">Å bruke en såkalt "IDE" gir imidlertid langt mer fleksibilitet. En IDE er et program som hjelper deg å lage og redigere python-filer. Dersom du skal lage et mer omfattende program i Python er det hensiktsmessig å lage filer. Hver fil er en modul som du kan kalle opp dersom du arbeider i samme mappe. Det går for eksempel an å samle noen funksjoner du bruker mye i en fil, og så importere denne filen når du skriver kode i Jupyter.</p>
+<p>Det finnes flere ulike alternativer for IDE'er, men et godt og gratis alternativ er <a href="https://code.visualstudio.com/download">Visual Studio Code</a>. VS Code støtter også flere andre programmeringsspråk. Men, som nevnt, detter er ikke noe du trenger til dette kurset.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Spr%C3%A5k">Spr&#229;k<a class="anchor-link" href="#Spr%C3%A5k">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python, som de fleste andre programmeringsspråk, er basert på engelsk språk. Det er naturlig, siden engelsk er det overlegent største andrespråket i verden og de fleste programmeringsspråk har blitt utviklet i USA (her er Python et unntak). Av samme grunn bør all kode i utgangspunktet skriver på engelsk. Kode bør kunne deles globalt, og da bør den skrives på et språk flest mulig forstår.</p>
+<p>Men selv om koden er engelsk, så er ofte brukergrensesnittet på lokalt språk. Du har kanskje norsk som språk i nettleseren din men bortsett fra navnene i menyene er all kode på engelsk.</p>
+<p>I dette kurset skal vi gjøre det på tilsvarende måte. All kode skal i hovedsak skrives på engelsk. Printing kan imidlertid gjøres på norsk, slik som dette:</p>
+
 </div>
 </div>
 </div>
@@ -13654,9 +13397,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Creating a function that returns total demand given a price p</span>
-<span class="k">def</span> <span class="nf">demand</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">125</span><span class="o">/</span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="n">x</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#let us make a simple program</span>
+<span class="n">my_sentence</span><span class="o">=</span><span class="s2">&quot;Her er det lov å skrive norsk, for dette skal ut til skjermen!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_sentence</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13667,39 +13410,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Den laveste prisen er det bare den mest effektive bedriften som klarer å produsere lønnsomt for. Ettersom kvantum <code>x</code> øker vil flere, men mindre effektive bedrifter, tilby varen. Desto større kvantum, desto høyere pris kreves per enhet. Tilbudsfunksjonen bør derfor være stigende (høyere pris ved høyere kvantum).</p>
-<p>Her er forslag til tilbudsfunksjoner:</p>
-<h4 id="Eksempel-20:">Eksempel 20:<a class="anchor-link" href="#Eksempel-20:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Creating a function that returns total supply given a price p</span>
-<span class="k">def</span> <span class="nf">supply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Oppgaver:">Oppgaver:<a class="anchor-link" href="#Oppgaver:">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Oppgave-1:">Oppgave 1:<a class="anchor-link" href="#Oppgave-1:">&#182;</a></h4><p>Sjekk med nummeriske eksempler at tilbudskurven faktisk er økende og etterspørselskurven faktisk er fallende.</p>
-<p><em>Du lager en ny celle du kan kjøre kode i, ved å trykke "b" mens denne cellen er markert (enkeltklikk på denne cellen, ikke dobbelklikk)</em></p>
+<p>Legg merke til den første setningen i programmet, <code>#let us make a simple program</code>. Hash-tenget <code>#</code> først, angir at denne linjen ikke skal oppfattes som en del av programmet. Pyhon overser dermed denne setningen. Denne funksjonen finnes, slik at vi kan <em>dokumentere</em> koden. Det vil si at vi skriver inn i koden hva som skjer.</p>
+<p>Program blir ofte veldig fort veldig komplekse og uoversiktlige. Uten noen forklaring blir det fort vanskelig eller uoverkommelig for andre å forstå hva du har tenkt. Da blir det veldig vanskelig for andre å komme inn eller ta over prosjektet ditt. Det er også enklere for deg selv å gå tilbake og lese din egen kode, om du har vært flink å dokumentere den med kommentarer.</p>
 
 </div>
 </div>
@@ -13707,21 +13419,27 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Oppgave-2:">Oppgave 2:<a class="anchor-link" href="#Oppgave-2:">&#182;</a></h4><p>Finn med prøving og feiling eller på annen måte hvilket kvantum som gir likhet mellom tilbud og etterspørsel. Hvilken pris gir slik kvantum?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Oppgave-3:">Oppgave 3:<a class="anchor-link" href="#Oppgave-3:">&#182;</a></h4><ol>
-<li><p>Lag en funksjon som hvor mange penger du har i gjen når du har brukt x penger av et budsjett på b</p>
-</li>
-<li><p>Lag en funksjon som returnerer hvor mye parkeringen kostet når du har stått en tidsperiode angitt av argumentet <code>time_period</code>, og en pris per time angitt av argumentet <code>p</code>. Funksjonen skal forvente at time_period er på formatet "hh:mm:ss" (en streng). Du kan trekke ut timer, minutter og sekunder fra en tekstreng på det foreslåtte formatet, ved å bruke koden <code>hh,mm,ss=int(timestr[0:2]),int(timestr[3:5]),int(timestr[6:])</code>. Du må  konvertere tiden til timer på desimalform for å regne ut kostnad. Det kan du gjøre med denne formelen: <code>tt_dec=hh+mm/60+ss/(60*60)</code>.</p>
-</li>
-<li><p>Lag en funksjon som tar en liste med adjektiv som argument. Kall argumentet for  <code>adj_list</code>. Funksjonen skal returnere et tilfeldig element fra listen. Du kan for eksempel teste funksjonen med denne listen <code>['dyr', 'billig', 'pareto optimal', 'høy', 'lav', 'ineffektiv']</code>. For å plukke et tilfeldig element fra en liste <code>adj_list</code> med <code>4</code>elementer, skriver du <code>adj_list[np.random.randint(4)]</code>.</p>
-</li>
+<h2 id="Gode-programmeringsvaner">Gode programmeringsvaner<a class="anchor-link" href="#Gode-programmeringsvaner">&#182;</a></h2><p>For å gjøre koden så godt leselig som mulig for andre, er det noen prinsipper som bør følges. Det er lite hensiktsmessig å gå detaljert inn på disse nå, før vi har lært litt mer, men vi tar med de generelle prinsippene som skaperen av Python, Guido van Rossum har laget, som du kan kikke tilbake på etterhvert som du lærer mer:</p>
+<ol>
+<li>Pen er bedre enn stygt.</li>
+<li>Eksplisitt er bedre enn implisitt.</li>
+<li>Enkelt er bedre enn komplekst.</li>
+<li>Komplekst er bedre enn komplisert.</li>
+<li>Flat er bedre enn nøstet.</li>
+<li>Luftig er bedre enn tett.</li>
+<li>Leselighet betyr noe.</li>
+<li>Spesialtifeller er ikke spesielle nok til å bryte regelene.
+Selv om praktiske hensyn slår renhet.</li>
+<li>Feil bør aldri passere i det stille,
+med mindre de er eksplisitt dempet.</li>
+<li>Når du møter tvilstilfeller, ikke fall for fristelsen å gjette.</li>
+<li>Det bør være én og helst bare én åpenbar måte å gjøre det på,
+selv om den måten kanskje ikke er åpenbar umiddelbart for de som ikke er Nederelendere</li>
+<li>Nå er bedre aldri,
+selv om aldri ofte er bedre enn <em>akkurat</em> nå.</li>
+<li>Om implementeringen er vanskelig å forstå, så er det en dårlig idé. </li>
+<li>Om implementeringen er lett å forstå, så er det en god idé.  </li>
+<li><code>namespaces</code> er en fantastisk idé, -- la oss gjøre mer av det!</li>
 </ol>
 
 </div>
@@ -13730,24 +13448,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Oppgave-4:">Oppgave 4:<a class="anchor-link" href="#Oppgave-4:">&#182;</a></h4><p>a) Bruk eksponentialfunksjonen og log-funksjonen i numpy til å vise at log-funksjonen er det motsatte av eksponentialfunksjoenn.</p>
-<p>b) Regn ut hvor mange prosent 205,210,220,230 og 240 er av 200. Regn også ut logaritmen av 205/200, 210/200 ... osv. og kommenter resultatet.</p>
+<h5><span style="color:lightgrey">$<$Forrige</span>     |     <a href="1%20-%20variabler.html">Neste &gt;</a></h5>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Oppgave-5:">Oppgave 5:<a class="anchor-link" href="#Oppgave-5:">&#182;</a></h4><p>Lag en funksjon som returnerer det høyeste av funksjonene <code>account_balance_exponential</code> og <code>account_balance</code>. Er dette en nyttig funksjon?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="&lt;-Forrige-----|-----Neste-&gt;"><a href="1%20-%20variabler.html">&lt; Forrige</a>     |     <a href="3%20-%20eksponent%20og%20log.html">Neste &gt;</a><a class="anchor-link" href="#&lt;-Forrige-----|-----Neste-&gt;">&#182;</a></h5>
 </div>
 </div>
 </div>

@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>1 - intro</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>4 - lister, oppslag og numpy</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <style type="text/css">
   pre { line-height: 125%; }
@@ -13,22 +13,22 @@ td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: #ffffcc }
 .highlight { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
@@ -41,15 +41,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .kt { color: #B00040 } /* Keyword.Type */
 .highlight .m { color: #666666 } /* Literal.Number */
 .highlight .s { color: #BA2121 } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .na { color: #687822 } /* Name.Attribute */
 .highlight .nb { color: #008000 } /* Name.Builtin */
 .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
 .highlight .no { color: #880000 } /* Name.Constant */
 .highlight .nd { color: #AA22FF } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
 .highlight .nf { color: #0000FF } /* Name.Function */
-.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nl { color: #767600 } /* Name.Label */
 .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
 .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
 .highlight .nv { color: #19177C } /* Name.Variable */
@@ -66,11 +66,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
 .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
 .highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
@@ -13048,10 +13048,8 @@ div#notebook {
   }
 }
 </style>
-
-
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML-full,Safe"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     init_mathjax = function() {
@@ -13075,11 +13073,6 @@ div#notebook {
                     linebreaks: { 
                     automatic: true 
                     }
-                },
-                "HTML-CSS": {
-                    linebreaks: { 
-                    automatic: true 
-                    }
                 }
             });
         
@@ -13096,54 +13089,29 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5><span style="color:lightgrey">$<$Forrige</span>     |     <a href="1%20-%20variabler.html">Neste &gt;</a></h5>
-
+<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="3%20-%20matplotlib.html">&lt; Forrige</a>     |     <a href="5%20-%20Sympy.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1---Introduksjon">1 - Introduksjon<a class="anchor-link" href="#1---Introduksjon">&#182;</a></h1>
+<h1 id="4---Lister,-datastrukturer-og-Numpy">4 - Lister, datastrukturer og Numpy<a class="anchor-link" href="#4---Lister,-datastrukturer-og-Numpy">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Om-kurset">Om kurset<a class="anchor-link" href="#Om-kurset">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I dette kurset har vi ikke pensumbok. Det er først og fremst fordi det ikke er skrevet noen norsk bok om pythonprogrammering og øknomi. Det finnes også veldig lite litteratur på engelsk.</p>
-<p>I stedet er disse notatene på github pensum, i tillegg til DataCamp, som vi skal komme tilbake til.</p>
-<p>Informasjon om arbeidskrav, forelesninger og innleveringer finner du enkelt her på github. Alle oppgaver på github er arbeidskrav, og i tillegg vil det komme et par mindre oppgaver som dekker pensum som ikke finnes på DataCamp.</p>
-<p>Karakter settes ut fra et prosjekt dere lager, og en muntlig presentasjon av prosjektet. På presentasjonen kan dere også få programmeringsfaglige spørsmål fra pensum. Dere skal levere inn en prosjektskisse 22/10 og frist for innlevering av selve prosjektet er 3/12. Det vil komme mer beskjed om prosjektet senere, men det vil involvere at dere innhenter noe data som analyseres grafisk, helst knyttet til økonomifaget.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hvorfor-python?">Hvorfor python?<a class="anchor-link" href="#Hvorfor-python?">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>R og python er to av de ledende programmeringsspråkene i dag. I motsetning til R er Python et "ordentlig" programmeringsspråk i den forstand at du kan skape objekter og klasser. R er et enklere språk med mindre muligheter når det gjelder programmering, men har til gjengjeld et langt større utvalg pakker innenfor statistikk og økonometri. For statistisk analyse er derfor R ofte foretrukket, men dersom du skal gjøre noe litt annet enn som tilbys i R-pakker, er det en fordel med et mer avansert programmeringsspråk som Python.</p>
-<p>Python har mange fordeler. De viktigste er at det er:</p>
+<p>En liste er en <em>datastruktur</em>, som igjen er en organisering av <em>objekter</em>. Slike datastrukturer er helt sentralt i alle programmeringsspråk, og alle språk har ulike typer strukturer til ulike formål. I noen datastrukturer kan du putte alle typer objekter sammen, slik som tekst, funksjoner og tall og nye datastrukturer.</p>
+<p>I andre datastrukturer kan du kun putte tall. Slike datastrukturer er vanligvis det vi i matematikken kaller <em>vektorer</em> og <em>matriser</em>. Disse kommer vi tilbake til når vi skal snakke om Numpy.</p>
+<p>Det vi skal se på først er de innebygde datastrukturene til Python. Alle de innebygde strukturene kan inneholde alle typer objekter, men de har noen viktige egenskaper som skiller dem:</p>
 <ul>
-<li>Enkelt, intuitivt og lett og forstå</li>
-<li>Det er svært effektvit om en bruker de rette pakkene (numpy, pandas)</li>
-<li>Det er et "ekte" programmeringsspråk der man kan skape objekter og klasser (dette er ikke noe vi lærer om i dette kurset)</li>
-<li>stort utvalg av pakker (dog betydelig færre enn R innenfor statistikk og økonometri).</li>
+<li><code>list</code> (liste): Hvert element har en bestemt plassering i listen, Tilgang fås ved å referere til plasseringen (indeksen) i form av et heltall <code>int</code>. </li>
+<li><code>Tuple</code>: Lik lister, men kan ikke forandres når den er skapt. Hovedsakelig til bruk i forbindelse med funksjoner.</li>
+<li><code>dict</code>(dictionary, oppslag): Elementene har ikke en bestemt plassering. Tilgang fås ved å referere til en nøkkel (vanligvis en streng <code>str</code>)</li>
 </ul>
+<p>Vi starter med å se på lister.</p>
 
 </div>
 </div>
@@ -13151,38 +13119,56 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Programmeringsspr&#229;k">Programmeringsspr&#229;k<a class="anchor-link" href="#Programmeringsspr&#229;k">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Da de første datamaskinene kom på 40-tallet, måtte brukerne gi maskinene instruksjoner i form av maskinkode. Datamaskiner er binære og forstår kun to tegn; 1 og 0, det vil si "av" og "på". Brukeren måtte derfor forklare maskinen hva den skulle gjøre ved å skrive ned problemet som en lang rekke enere og nuller. Det ble raskt klart at dette var en ekstremt krevende oppgave. Programmeringsspråk ble derfor funnet opp for at mennesker skulle kunne gi instruksjoner til datamaskiner på en forståelig måte.</p>
-<p>Stort sett alle programmeringsspråk henter syntaksen fra engelsk. Koden oversettes så til maskinspråk, noe som kalles å "kompilere" ("compile" på engelsk). Datamaskinen kan så behandle den kompilerte maskinkoden.</p>
-<h2 id="Lav--og-h&#248;yniv&#229;spr&#229;k">Lav- og h&#248;yniv&#229;spr&#229;k<a class="anchor-link" href="#Lav--og-h&#248;yniv&#229;spr&#229;k">&#182;</a></h2><p>Programmeringsspråk deles inn i høynivå- og lavnivåspråk. Forskjellen på høy- og lavnivå er hvor mye støtte språket gir til brukeren. Slik støtte gjør det enklere å programmere, men er kostbart fordi det gir en mindre effektiv kode.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Lavnivåspråk er gir svært effektiv og rask kode, men er mer krevende og mindre intuitive å programmere. C++ er et lavnivåspråk. Eksemplet under skriver ut tallene 0 til og med 4:</p>
+<h2 id="Lister">Lister<a class="anchor-link" href="#Lister">&#182;</a></h2><p>Lister lages med klammeparenteser. Her er noen lister med navn, forkortelse (Ticker), aksjekurs, markedsverdi, PE og gjeldsgrad for noen aksjer på Oslo Børs. Tallene er fra 27. november 2020 (kilde <a href="https://tilon.uit.no">https://tilon.uit.no</a>).</p>
+<p>PE er "Price/Earnings", som er forholdet mellom selskapenes inntjening og prisen. Gjeldsgrad er hvor stor andel av total kapital som er gjeld. Det som ikke er gjeld er egenkapital.</p>
 <h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">equinor</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Statoil&#39;</span><span class="p">,</span> <span class="s1">&#39;EQNR&#39;</span><span class="p">,</span> <span class="mf">167.554919090282</span><span class="p">,</span> <span class="mf">376883380048.5</span><span class="p">,</span> <span class="mf">6.14609823076753</span><span class="p">,</span> <span class="mf">0.617893838660362</span><span class="p">]</span>
+<span class="n">dnb</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;DNB&#39;</span><span class="p">,</span> <span class="s1">&#39;DNB&#39;</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">259169427140</span><span class="p">,</span> <span class="mf">11.1121822724349</span><span class="p">,</span> <span class="mf">0.914999939276725</span><span class="p">]</span>
+<span class="n">telenor</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Telenor&#39;</span><span class="p">,</span> <span class="s1">&#39;TEL&#39;</span><span class="p">,</span> <span class="mf">148.737572948101</span><span class="p">,</span> <span class="mf">227115017138.4</span><span class="p">,</span> <span class="mf">13.0211568133471</span><span class="p">,</span> <span class="mf">0.715300723576896</span><span class="p">]</span>
+<span class="n">marine_harvest</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Marine Harvest&#39;</span><span class="p">,</span> <span class="s1">&#39;MHG&#39;</span><span class="p">,</span> <span class="mf">225.589705235372</span><span class="p">,</span> <span class="mf">118004750966.2</span><span class="p">,</span> <span class="mf">21.6878893009616</span><span class="p">,</span> <span class="mf">0.440427599611273</span><span class="p">]</span>
+<span class="n">aker_bp</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Aker BP&#39;</span><span class="p">,</span> <span class="s1">&#39;AKERBP&#39;</span><span class="p">,</span> <span class="mf">272.499264741749</span><span class="p">,</span> <span class="mi">103712690592</span><span class="p">,</span> <span class="mf">26.7636558040214</span><span class="p">,</span> <span class="mf">0.722568840028356</span><span class="p">]</span>
+<span class="n">yara_international</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yara International&#39;</span><span class="p">,</span> <span class="s1">&#39;YAR&#39;</span><span class="p">,</span> <span class="mf">333.328922090651</span><span class="p">,</span> <span class="mf">99481443032.4</span><span class="p">,</span> <span class="mf">86.741957363663</span><span class="p">,</span> <span class="mf">0.465057636887608</span><span class="p">]</span>
+<span class="n">gjensidige_forsikring</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Gjensidige Forsikring&#39;</span><span class="p">,</span> <span class="s1">&#39;GJF&#39;</span><span class="p">,</span> <span class="mf">172.830508474576</span><span class="p">,</span> <span class="mi">92125000000</span><span class="p">,</span> <span class="mf">24.9404407385348</span><span class="p">,</span> <span class="mf">0.847890127134592</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Vi kan nå få tilgang til listene ved å referere til plasseringen med klammeparentes. Om vi vil referere navnet til equinor, som ligger på plass 0, kan vi for eksempel skrive <code>equinor[0]</code> (første element er alltid på plass 0 i Python):</p>
 
-<pre><code>    for (int i = 0; i &lt; 5; i++) {
-      std::cout &lt;&lt; i &lt;&lt; "\n";
-    }
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">equinor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
 
-</code></pre>
-<p>Vi kan sammenligne dette med tilsvarende kode i Python, som er et høynivåspråk:</p>
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vi ser at navnet er feil, dette er det gamle navnet til Equinor. Dette kan vi enkelt endre ved å sette element 0 i <code>equinor</code>-listen lik <code>'Equinor'</code>:</p>
 <h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">&#182;</a></h4>
 </div>
 </div>
@@ -13192,8 +13178,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">equinor</span><span class="p">)</span>
+<span class="n">equinor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;Equinor&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">equinor</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13204,12 +13191,227 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Om du har åpnet denne filen i Jupyter notebook (se under for instruksjoner), kan du kjøre Pythonkoden ved å trykke SHIFT+ENTER.</p>
-<p>Vi ser at Python-koden er langt enklere, og har en syntaks som ligner mer på vanlig engelsk. Generelt er Python et svært intuitivt språk som er enkelt å programmere i. Språket ble funnet opp av Guido van Rossum i 1989 og er i dag verdens mest populære programmeringsspråk rangert ut fra googlesøk.</p>
-<p>Selv om Python er er et høynivåspråk, er det svært effektivt på grunn av et stort antall bibliotek hvor mye er skrevet direkte i C eller C++. Ett slik bibliotek heter "Numpy", og har svært effektive metoder for matriseoperasjoner. "Pandas" er et svært effektivt bibliotek for databehandling, og "Statsmodels" er et kraftfullt verktøy for dataanalyse.</p>
-<h2 id="Innrykk-og-linjeskift">Innrykk og linjeskift<a class="anchor-link" href="#Innrykk-og-linjeskift">&#182;</a></h2><p>Én ting som gjør det enklere å programmere i Python enn andre språk kan du allerede se av det lille eksemplet over. De fleste språk bruker ulike typer parenteser for å markere at noe tilhører en bestemt operasjon. Operasjonen over er en <em>løkke</em>, og vi ser fra Eksempel 1 at C bruker {} for å markere hva som er en del av løkken. I Python markeres tilhørighet til løkken med innrykk. Vi ser i Eksempel 1 at <code>print(i)</code> tilhører løkken fordi denne setningen er rykket ett hakk inn.</p>
-<p>Det har etterhvert etablert seg som god skikk og bruk innen programmering å ha et innrykk for kode som tilhører en operasjon. Vi ser det av Eksempel 1, der innholdet i løkken også er rykket inn. Forskjellen mellom C og Python er imidlertid at i C har hverken linjeskift eller innrykk noen som helst betydning for hvordan koden fungerer. Eksempel 1 kunne like gjerne vært skrevet på en linje som <code>for (int i = 0; i &lt; 5; i++) {std::cout &lt;&lt; i &lt;&lt; "\n";}</code>, og det ville fungert like bra.</p>
-<p>I Python markeres imidlertid linjeskift et skille mellom setninger, og innrykk markere hva som tilhører hva. Det gir en kode som er enklere å lese og mer intuitiv.</p>
+<p>Men vi kan legge hvilke som helst objekter inn i en liste, så vi kan også lage en liste av listene over.</p>
+<h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stocks</span><span class="o">=</span><span class="p">[</span><span class="n">equinor</span><span class="p">,</span><span class="n">dnb</span><span class="p">,</span><span class="n">telenor</span><span class="p">,</span><span class="n">marine_harvest</span><span class="p">,</span><span class="n">aker_bp</span><span class="p">,</span><span class="n">yara_international</span><span class="p">,</span><span class="n">gjensidige_forsikring</span><span class="p">]</span>
+<span class="n">stocks</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Aker BP-askjen er element nummer fem i denne listen. Om vi nå skal referere til den, så bruker vi indeks 4, siden vi starter på null.</p>
+<h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stocks</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Om du vil referere til siste element, bruker du indeks -1. Vil du referere til nest siste, bruker du indeks -2, og så videre:</p>
+<h4 id="Eksempel-5:">Eksempel 5:<a class="anchor-link" href="#Eksempel-5:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">stocks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stocks</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Du kan også referere til flere elementer som står ved siden av hverandre med en såkalt <code>slice</code>, eller skjære som vi kan kalle det på norsk:</p>
+<h4 id="Eksempel-6:">Eksempel 6:<a class="anchor-link" href="#Eksempel-6:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Fra element to til og med tre:</span>
+<span class="n">stocks</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Fra og med nest siste element:</span>
+<span class="n">stocks</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Til og med nest siste element:</span>
+<span class="n">stocks</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Og vi kan referere til en liste inne i en liste:</p>
+<h4 id="Eksempel-7:">Eksempel 7:<a class="anchor-link" href="#Eksempel-7:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Det tredje selskapet er </span><span class="si">{</span><span class="n">stocks</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Det tredje selskapet, altså Equinor, har indeks to, siden Python starter indekseringen på 0.</p>
+<p>Det er enkelt å utvide lister, vi bruker bare <code>+</code>. Om vi for eksempel vil legge til selskapet <code>['Tomra Systems', 'TOM', 276.409619134278, 41208789715.2, 52.8996016883184, 0.454299114121939]</code>, kan vi gjøre det slik:</p>
+<h4 id="Eksempel-8:">Eksempel 8:<a class="anchor-link" href="#Eksempel-8:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tomra_systems</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Tomra Systems&#39;</span><span class="p">,</span> <span class="s1">&#39;TOM&#39;</span><span class="p">,</span> <span class="mf">276.409619134278</span><span class="p">,</span> <span class="mf">41208789715.2</span><span class="p">,</span> <span class="mf">52.8996016883184</span><span class="p">,</span> <span class="mf">0.454299114121939</span><span class="p">]</span>
+<span class="n">stocks</span><span class="o">=</span><span class="n">stocks</span><span class="o">+</span><span class="p">[</span><span class="n">tomra_systems</span><span class="p">]</span>
+<span class="n">stocks</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Unng%C3%A5-u%C3%B8nsket-endring-av-objekter">Unng&#229; u&#248;nsket endring av objekter<a class="anchor-link" href="#Unng%C3%A5-u%C3%B8nsket-endring-av-objekter">&#182;</a></h2><p>En veldig vanlig nybegynnerfeil i Python er å glemme at selv om et objekt, slik som en liste, har fått nytt navn, så er det fortsatt det samme objektet. Dette er spesielt lett å glemme når du objektet er et argument i en funksjon. Her er for eksempel en funksjon som opererer på argumentet:</p>
+<h4 id="Eksempel-9:">Eksempel 9:<a class="anchor-link" href="#Eksempel-9:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#This function removes element i it</span>
+<span class="k">def</span> <span class="nf">pop_and_print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">last_element</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">last_element</span><span class="p">)</span>
+    
+<span class="n">pop_and_print</span><span class="p">(</span><span class="n">stocks</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">stocks</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Over brukes <code>pop</code>-metoden til listeobjektet. En "metode" er en funksjon som kan henges på et bestemt objekt. Liste-objektet har altså en metode <code>pop</code>, som vi kan henge på listeobjektet med et punktum. <code>pop</code>-metoden fjerner elementet angitt av argumentet (siste element <code>-1</code> i eksemplet under), og returnerer det fjernede elementet.</p>
+<p>Kjører du koden over mange nok ganger, vil du se at alle elementene til slutt er borte og du får feilmelding.</p>
+<p>Av og til vil du at funksjonen skal operere på argumentet, men om det ikke er meningen at argumentet skal være endret når funksjonen er ferdigkjørt, så kan du ta en kopi inne i funksjonen. Det gjøres enklest ved å bruke <em>typen</em> til objektet som funksjon. Du danner da et nytt objekt av samme type. For eksempel for en liste som <code>stocks</code>bruker du <code>list</code>som funksjon</p>
+<h4 id="Eksempel-10:">Eksempel 10:<a class="anchor-link" href="#Eksempel-10:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#This function removes element i it</span>
+<span class="k">def</span> <span class="nf">pop_and_print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
+    <span class="c1">#making a copy:</span>
+    <span class="n">a</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    
+    <span class="c1">#doing the rest:</span>
+    <span class="n">last_element</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">last_element</span><span class="p">)</span>
+    
+<span class="n">pop_and_print</span><span class="p">(</span><span class="n">stocks</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">stocks</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Denne koden kan kjøres så mange ganger du vil, uten at stocks endres</p>
 
 </div>
 </div>
@@ -13217,17 +13419,60 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Jupyter">Jupyter<a class="anchor-link" href="#Jupyter">&#182;</a></h2>
+<h1 id="Tuple">Tuple<a class="anchor-link" href="#Tuple">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://jupyter.uit.no/"><img align="left" src="assets/jupyter.png" style="padding:10px;"></a>
-For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gjør at du kan kjøre koden som ligger i dokumentene, og at du kan endre og skrive din egen kode. Undervisningen i dette kurset vil hovedsakelig gjøres i Jupyter.</p>
-<p>Det finnes flere ulike måter å kjøre Jupyter på. Det kan kjøres lokalt på PC'en eller på nettet. Vi skal bruke løsningen på uit.no som du finner <a href="https://jupyter.uit.no/">her</a>.</p>
-<p>Om du nå har åpnet Jupyter, så er neste steg å få tilgang på dette og de andre forelesningsnotatene. Disse ligger på noe som heter github.</p>
+<p>En <code>tuple</code> fungerer ganske likt som en liste når du skal hente noe fra den. Men i motsetning til en liste, så går det ikke an å endre på en <code>tuple</code> etter at den er skapt. Du kan lage en tuple enten ved å bruke den innebygde funksjonen  <code>tuple()</code> eller ved å lage en liste med en vanlig parentes:</p>
+<h4 id="Eksempel-11:">Eksempel 11:<a class="anchor-link" href="#Eksempel-11:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">equinor</span><span class="p">)</span>
+<span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Equinor&#39;</span><span class="p">,</span> <span class="s1">&#39;EQNR&#39;</span><span class="p">,</span> <span class="mf">146.85</span><span class="p">,</span> <span class="mi">315357973561</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vi kan <em>få tak i</em> innholdet, men det går ikke an å <em>endre</em> på innholdet i en <code>tuple</code>etter at den er skapt:</p>
+<h4 id="Eksempel-12:">Eksempel 12:<a class="anchor-link" href="#Eksempel-12:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;Statoil&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tuple er mest brukt i forbindelse med funksjoner, og er ikke noe vi kommer til å bruke mye tid på i dette kurset.</p>
 
 </div>
 </div>
@@ -13235,93 +13480,145 @@ For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gj�
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hente-kursmateriell-fra-github">Hente kursmateriell fra github<a class="anchor-link" href="#Hente-kursmateriell-fra-github">&#182;</a></h2>
+<h1 id="Numpy">Numpy<a class="anchor-link" href="#Numpy">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://github.com/uit-sok-1003-h21/notebooks"><img align="right" src="assets/github.png" style="padding:20px;"></a>Github er et av mange nettsteder som tilbyr "versjonskontroll" på git-platformen. Git er et åpen-kildekode-prosjekt som organiserer programmeringsprosjekt. I et typisk prosjekt er det flere personer som samarbeider og som kan endre koden. Git gjør det mulig å holde orden på hvem som endret hva når. Det gjør det også enkelt å gå tilbake til tidligere versjoner, og du kan "forke", eller "gafle" på norsk, som vil si å lage en ny gren med en annen kode en hovedgrenen.</p>
-<p>Forelesningsnotatene for dette kurset er altså lagret i et "repositorie" på github.com, eller "repo" som det ofte kalles. Du kan se filene i nettleseren her: <a href="https://github.com/uit-sok-1003-h21/notebooks">https://github.com/uit-sok-1003-h21/notebooks</a>. Du kan laste dem direkte ned derfra, men det er mye bedre å bruke git-verktøyet til å laste dem ned. Da kan du med en enkel kommando oppdatere filene når jeg gjør endringer i notatene.</p>
-<p>For å hente filene til Jupyter gjør du slik:</p>
-<ol>
-<li><a href="https://uit-sok-1003-h21.github.io/notebooks/instruksjoner/Terminal.html">Åpne et "terminalvindu"</a></li>
-<li><p>Lag en ny mappe på ditt hjemmeområde ved å skrive inn i terminalvinduet</p>
-
-<pre><code> [user@jupty02 ~]$ mkdir sok-1003</code></pre>
-</li>
-<li><p>Gå så inn i den mappen du har laget ved å skrive</p>
-
-<pre><code> [user@jupty02 ~]$ cd sok-1003</code></pre>
-</li>
-<li><p>Last ned kursmateriellet ved å kopiere inn følgende kommando i kommandovinduet:</p>
-
-<pre><code> [user@jupty02 sok-1003]$ git clone https://github.com/uit-sok-1003-h21/notebooks/</code></pre>
-</li>
-</ol>
-<p>Legg merke til at mappen du "er i" alltid står til sist i klameparentesen i komandolinjen.</p>
-<p>Kursmateriellet skal nå ligge under sok-1003/notebooks, som du kan klikke deg frem til i filmenyen til venstre. Åpne dette dokumentet, som altså heter "Komme i gang med python.ipynb".</p>
-<p><a href="https://uit-sok-1003-h21.github.io/notebooks/instruksjoner/git.html">Her finner du de mest brukte git-kommandoene</a></p>
-
+<p>Numpy er en pakke som kan gjøre matematiske beregninger på store datasett svært effektivt. Vi starter med å importere pakken, og konvertere listen vi har brukt til en numpy-matrise kalt <code>ndarray</code>. En <em>matrise</em> er en liste der alle rader har like mangee elementer, og det er jo tilfelle med vår <code>stocks</code>-liste.</p>
+<p>Vi starter med å definere en liste av liste med informasjon om aksjene:</p>
+<h4 id="Eksempel-13:">Eksempel 13:<a class="anchor-link" href="#Eksempel-13:">&#182;</a></h4>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stocks</span><span class="o">=</span><span class="p">[</span>
+<span class="p">[</span><span class="s1">&#39;Equinor&#39;</span><span class="p">,</span> <span class="s1">&#39;EQNR&#39;</span><span class="p">,</span> <span class="mf">167.554919090282</span><span class="p">,</span> <span class="mf">376883380048.5</span><span class="p">,</span> <span class="mf">6.14609823076753</span><span class="p">,</span> <span class="mf">0.617893838660362</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">[</span><span class="s1">&#39;DNB&#39;</span><span class="p">,</span> <span class="s1">&#39;DNB&#39;</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">259169427140</span><span class="p">,</span> <span class="mf">11.1121822724349</span><span class="p">,</span> <span class="mf">0.914999939276725</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">[</span><span class="s1">&#39;Telenor&#39;</span><span class="p">,</span> <span class="s1">&#39;TEL&#39;</span><span class="p">,</span> <span class="mf">148.737572948101</span><span class="p">,</span> <span class="mf">227115017138.4</span><span class="p">,</span> <span class="mf">13.0211568133471</span><span class="p">,</span> <span class="mf">0.715300723576896</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">[</span><span class="s1">&#39;Marine Harvest&#39;</span><span class="p">,</span> <span class="s1">&#39;MHG&#39;</span><span class="p">,</span> <span class="mf">225.589705235372</span><span class="p">,</span> <span class="mf">118004750966.2</span><span class="p">,</span> <span class="mf">21.6878893009616</span><span class="p">,</span> <span class="mf">0.440427599611273</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">[</span><span class="s1">&#39;Aker BP&#39;</span><span class="p">,</span> <span class="s1">&#39;AKERBP&#39;</span><span class="p">,</span> <span class="mf">272.499264741749</span><span class="p">,</span> <span class="mi">103712690592</span><span class="p">,</span> <span class="mf">26.7636558040214</span><span class="p">,</span> <span class="mf">0.722568840028356</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">[</span><span class="s1">&#39;Yara International&#39;</span><span class="p">,</span> <span class="s1">&#39;YAR&#39;</span><span class="p">,</span> <span class="mf">333.328922090651</span><span class="p">,</span> <span class="mf">99481443032.4</span><span class="p">,</span> <span class="mf">86.741957363663</span><span class="p">,</span> <span class="mf">0.465057636887608</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">[</span><span class="s1">&#39;Gjensidige Forsikring&#39;</span><span class="p">,</span> <span class="s1">&#39;GJF&#39;</span><span class="p">,</span> <span class="mf">172.830508474576</span><span class="p">,</span> <span class="mi">92125000000</span><span class="p">,</span> <span class="mf">24.9404407385348</span><span class="p">,</span> <span class="mf">0.847890127134592</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">[</span><span class="s1">&#39;Orkla&#39;</span><span class="p">,</span> <span class="s1">&#39;ORK&#39;</span><span class="p">,</span> <span class="mf">86.5857852597003</span><span class="p">,</span> <span class="mf">89087299091.2</span><span class="p">,</span> <span class="mf">26.5615083754323</span><span class="p">,</span> <span class="mf">0.350968405416214</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">[</span><span class="s1">&#39;Norsk Hydro&#39;</span><span class="p">,</span> <span class="s1">&#39;NHY&#39;</span><span class="p">,</span> <span class="mf">31.4389402413895</span><span class="p">,</span> <span class="mf">67532103728.64</span><span class="p">,</span> <span class="mf">15.6215830970715</span><span class="p">,</span> <span class="mf">0.439195576287418</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">[</span><span class="s1">&#39;SalMar&#39;</span><span class="p">,</span> <span class="s1">&#39;SALM&#39;</span><span class="p">,</span> <span class="mf">449.3</span><span class="p">,</span> <span class="mf">50905689550.7</span><span class="p">,</span> <span class="mf">14.222545257898</span><span class="p">,</span> <span class="mf">0.396134627028104</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">[</span><span class="s1">&#39;Tomra Systems&#39;</span><span class="p">,</span> <span class="s1">&#39;TOM&#39;</span><span class="p">,</span> <span class="mf">276.409619134278</span><span class="p">,</span> <span class="mf">41208789715.2</span><span class="p">,</span> <span class="mf">52.8996016883184</span><span class="p">,</span> <span class="mf">0.454299114121939</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">[</span><span class="s1">&#39;Aker&#39;</span><span class="p">,</span> <span class="s1">&#39;AKER&#39;</span><span class="p">,</span> <span class="mf">514.200494811093</span><span class="p">,</span> <span class="mi">40393931997</span><span class="p">,</span> <span class="mf">43.4343354806452</span><span class="p">,</span> <span class="mf">0.548092886866901</span><span class="p">]</span> <span class="p">,</span> 
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hvordan-s&#248;rge-for-at-du-alltid-har-siste-versjon?">Hvordan s&#248;rge for at du alltid har siste versjon?<a class="anchor-link" href="#Hvordan-s&#248;rge-for-at-du-alltid-har-siste-versjon?">&#182;</a></h2>
+<p>Som du ser, så består listen av tolv rader og fire kolonner. Dette er altså en 12x6-matrise. Den kan enkelt konverteres til en numpy-matrise med funksjonen <code>np.array()</code> slik som her:</p>
+<h4 id="Eksempel-14:">Eksempel 14:<a class="anchor-link" href="#Eksempel-14:">&#182;</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Det kommer til å bli endringer i notatene undervegs, så det vil bli behov for å laste ned fra <code>github</code> på nytt ofte. Det kan derfor være lurt å ha to mapper; én med notebooks-filene uendret, og én der du kan redigere og eventuelt kopiere filer fra orginalmappen.</p>
-<p>For å gjøre det endrer du navn på notebooks-mappen du nettopp klonet til <code>notebooks_endr</code> (høyreklikk-&gt;Rename). Så følger du punkt 4. i prosedyren over (sørg for at du er i sok-1003-mappen i terminalen, det skal stå "sok-1003" sist i <code>[user@jupty02 sok-1003]$</code>. Gjør det ikke det så skriv enten <code>cd ..</code> for å gå opp et hakk eller <code>cd sok-1003</code> for å gå ned i denne mappen.</p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">stocks_np</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">stocks</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 </div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Når skal <code>notebooks</code> aldri endres, der skal filene alltid være identisk med det som ligger på github. I mappen <code>notebooks_endr</code> kan du gjøre hva du vil, og du vil alltid kunne kopiere orginalene fra <code>notebooks</code>.</p>
-<p>Når du får beskjed om at <code>notebooks</code> på github er oppdatert, navigerer du til <code>notebooks</code>med <code>cd noteboks</code> og henter siste versjon slik:</p>
+<p>Listen er nå lagret som en numpy 12x6-matrise i objektet <code>stocks_np</code>. Vi kan imidlertid ikke utføre noen matematiske beregninger slik denne matrisen står, fordi alle tall er i tekstformat. Som vi har sett tidligere går det bare an å regne med <code>float</code>, <code>int</code> og <code>bool</code>. At det er tekst ser vi ved at det er enkle anførselstegn <code>'</code> rundt alle elementene.</p>
+<p>Heldigvis er det veldig enkelt å hente ut informasjon fra numpy-matriser, fordi mulighetene til å skjære utsnitt er langt større enn for vanlige lister. Numpy-lister kan nemlig skjæres i flere dimensjoner.</p>
+<p>I motsetning til vanlige lister, kan vi for eksempel velge ut kolonner. I en liste av lister velger du, som vi har sett, rad 2 og kolonne 0 med <code>stocks[2][0]</code>. Med numpy-matriser separerer du de to indeksene med et komma, <code>stocks[2,0]</code>.</p>
+<p>Men enda viktigere, du kan velge alle elementer ved å sette inn kolon <code>:</code> i stedet for tall. Dermed kan du velge hele kolonne 0 med <code>stocks_np[:,0]</code>.</p>
+<p>Her er vi mest interessert i de to siste kolonnene. Det er disse som inneholder tall. For å plukke ut disse velger vi alle radene (<code>:</code>) og alle kolonnene fra og med kolonne 2 (<code>2:</code>). Da får vi</p>
+<h4 id="Eksempel-15:">Eksempel 15:<a class="anchor-link" href="#Eksempel-15:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stocks_np</span><span class="p">[:,</span><span class="mi">2</span><span class="p">:]</span>
+</pre></div>
 
-<pre><code>[user@jupty02 notebooks]$ git reset --hard
-[user@jupty02 notebooks]$ git pull</code></pre>
-
+    </div>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><span style="color:red">MERK!!!!! alt innhold i den mappen du er i vil BLI SLETTET og ERSTATTET med innholdet i `notebooks` på github. Vær derfor HELT sikker på at du er i riktig mappe (det SKAL stå `notebooks` sist i promtet slik: `[user@jupty02 notebooks]$`)</span></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Når <code>notebooks</code>-mappen er oppdatert, kan du eventuelt kopiere de filene som er endret til <code>notebooks_endr</code>.</p>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sist i matrisen over, står det <code>dtype='&lt;U21'</code>. Det betyr at dette er tekstrenger på 21 eller færre tegn. Vi må imidlertid ha dette over i tallformat for å kunne jobbe med det. Det gjør vi slik:</p>
+<h4 id="Eksempel-16:">Eksempel 16:<a class="anchor-link" href="#Eksempel-16:">&#182;</a></h4>
 </div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stocks_numbers</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">stocks_np</span><span class="p">[:,</span><span class="mi">2</span><span class="p">:],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">stocks_numbers</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#197;pne-notebook-dokument-i-Jupyter">&#197;pne notebook-dokument i Jupyter<a class="anchor-link" href="#&#197;pne-notebook-dokument-i-Jupyter">&#182;</a></h2>
+<p>Når vi konverterte listen til en <code>ndarray</code>, så brukte vi altså funksjonen <code>np.array()</code>, slik som i Eksempel 14. Men denne gangen legger vi til det valgfrie argument <code>dtype=float</code> for å eksplisitt gi beskjed om at vi ønsker strengene konvertert til flyttal.</p>
+<p>Nå kan vi begynne å bruke tallene. For eksempel kan vi se grafisk om det er en sammenheng mellom gjeldsgrad og pris-inntjeningstraten (PE). Dette er de to siste kolonnene i datamatrisen:</p>
+<h4 id="Eksempel-17:">Eksempel 17:<a class="anchor-link" href="#Eksempel-17:">&#182;</a></h4>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;PE&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Du skal nå forhåpentligvis lese dette dokumentet interaktivt. Det første du kan prøve på er å trykke i cellen under og kjøre koden ved å trykke SHIFT+ENTER. Om ikke teksten "Hello World!" dukker opp under, så, gå gjennom prosedyren over én gang til.</p>
+<p>Ser du en sammenheng?</p>
+<p>Det er også enkelt å regne med Numpy. Vi kan bruke alle de vanlige regneartene med numpy-matriser:</p>
 
 </div>
 </div>
@@ -13331,7 +13628,15 @@ For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gj�
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hallo verden!&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">23</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="c1">#Kvadratroten</span>
 </pre></div>
 
     </div>
@@ -13342,59 +13647,31 @@ For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gj�
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Legg merke til funksjonen <code>print()</code>. Den viser frem resultatet under cellen der den er brukt, og er en funksjon vi kommer til å bruke mye.</p>
-<p>Den siste linjen vises alltid, så <code>print</code> har virkning i Jupyter når den ikke står i siste setning. Forsøk å skrive to linjer med 'Hallo verden!' med og uten <code>print</code>i forskjellige rekkefølger for å se dette. Det vil fra nå av forutsettes at du leser disse notatene interaktivt i Jupyter Lab eller Notebook.</p>
-<p><em>print</em>, i betydningen å skrive ut til skjermen, har vi forøvrig ikke noe godt norsk ord for, så dette vil heretter kalles for å <em>printe</em>.</p>
+<h2 id="Oppslag">Oppslag<a class="anchor-link" href="#Oppslag">&#182;</a></h2><p>Et oppslag, eller <em>dictionary</em> har symbol <code>dict</code> i Python. Dette er en datastruktur der hvert element ikke identifiseres med hvor det er plassert, men med et nøkkelord (<code>key</code>). Å bruke oppslag i stedet for lister gjør ofte koden mer lesbar. Det finnes to måter å lage oppslag på; enten ved å bruke funksjonen <code>dict()</code>:</p>
+<h4 id="Eksempel-18:">Eksempel 18:<a class="anchor-link" href="#Eksempel-18:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">dict</span><span class="p">()</span>
+<span class="n">a</span><span class="p">[</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">a</span><span class="p">[</span><span class="s1">&#39;PE&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 </div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="DataCamp">DataCamp<a class="anchor-link" href="#DataCamp">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img align="right" width="250" src="assets/datacamp.png" style="padding:10px;">Vi kommer i utstrakt grad til å bruke <a href="https://www.datacamp.com/">DataCamp</a> i dette kurset. DataCamp er en plattform med nettleksjoner i programmering, med selvrettende øvelser. En del av pensum og obligatoriske øvelser i dette kurset vil hentes fra DataCamp.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Alternative-m&#229;ter-&#229;-bruke-Python-p&#229;">Alternative m&#229;ter &#229; bruke Python p&#229;<a class="anchor-link" href="#Alternative-m&#229;ter-&#229;-bruke-Python-p&#229;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img align="right" width="250" src="assets/command.png" style="padding:10px;"> Det finnes flere alternative måter å installere og jobbe med Python. Vi kommer som nevnt til å bruke Jupyter og Anaconda, men det kan være greit å være klar over alternative oppsett. Kanskje er det noen av dere som også ønsker å gjøre ting utover hva dette kurset dekker, og da kan det hende at det blir behov for andre verktøy enn Jupyter.</p>
-<p>Den enkleste installasjonen er å kun installere selve Python-programmet  direkte fra <a href="https://www.python.org/">https://www.python.org/</a> og koden kjøres fra kommandolinje (bildet til høyre). Python startes med kommandoen "python". På mac må man ofte legge til versjonsnummeret, for eksempel "python38" for versjon 3.8. Dette gir en interaktiv økt der pythonkoden kjøres hver gang du trykker ENTER.</p>
-<p><img align="left" width="250" src="assets/visualcode.png" style="padding:10px;">Å bruke en såkalt "IDE" gir imidlertid langt mer fleksibilitet. En IDE er et program som hjelper deg å lage og redigere python-filer. Dersom du skal lage et mer omfattende program i Python er det hensiktsmessig å lage filer. Hver fil er en modul som du kan kalle opp dersom du arbeider i samme mappe. Det går for eksempel an å samle noen funksjoner du bruker mye i en fil, og så importere denne filen når du skriver kode i Jupyter.</p>
-<p>Det finnes flere ulike alternativer for IDE'er, men et godt og gratis alternativ er <a href="https://code.visualstudio.com/download">Visual Studio Code</a>. VS Code støtter også flere andre programmeringsspråk. Men, som nevnt, detter er ikke noe du trenger til dette kurset.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Spr&#229;k">Spr&#229;k<a class="anchor-link" href="#Spr&#229;k">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Python, som de fleste andre programmeringsspråk, er basert på engelsk språk. Det er naturlig, siden engelsk er det overlegent største andrespråket i verden og de fleste programmeringsspråk har blitt utviklet i USA (her er Python et unntak). Av samme grunn bør all kode i utgangspunktet skriver på engelsk. Kode bør kunne deles globalt, og da bør den skrives på et språk flest mulig forstår.</p>
-<p>Men selv om koden er engelsk, så er ofte brukergrensesnittet på lokalt språk. Du har kanskje norsk som språk i nettleseren din men bortsett fra navnene i menyene er all kode på engelsk.</p>
-<p>I dette kurset skal vi gjøre det på tilsvarende måte. All kode skal i hovedsak skrives på engelsk. Printing kan imidlertid gjøres på norsk, slik som dette:</p>
+<p>Som vi ser, blir dette et objekt av type <code>dict</code>. Alternativt kan vi definere elementer inne i en krølleparentes på formen <code>{nøkkel: objekt}</code>, slik som dette:</p>
 
 </div>
 </div>
@@ -13404,9 +13681,12 @@ For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gj�
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#let us make a simple program</span>
-<span class="n">my_sentence</span><span class="o">=</span><span class="s2">&quot;Her er det lov å skrive norsk, for dette skal ut til skjermen!&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_sentence</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;gjeldsrate&#39;</span><span class="p">:</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+    <span class="s1">&#39;PE&#39;</span><span class="p">:</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> 
+  <span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13417,8 +13697,76 @@ For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gj�
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Legg merke til den første setningen i programmet, <code>#let us make a simple program</code>. Hash-tenget <code>#</code> først, angir at denne linjen ikke skal oppfattes som en del av programmet. Pyhon overser dermed denne setningen. Denne funksjonen finnes, slik at vi kan <em>dokumentere</em> koden. Det vil si at vi skriver inn i koden hva som skjer.</p>
-<p>Program blir ofte veldig fort veldig komplekse og uoversiktlige. Uten noen forklaring blir det fort vanskelig eller uoverkommelig for andre å forstå hva du har tenkt. Da blir det veldig vanskelig for andre å komme inn eller ta over prosjektet ditt. Det er også enklere for deg selv å gå tilbake og lese din egen kode, om du har vært flink å dokumentere den med kommentarer.</p>
+<p>Her er det altså to elementer med nøkler <code>'gjeldsrate'</code> og <code>'PE'</code>, og tilhørende objekter fra <code>stocks_numbers</code>.</p>
+<p>Vi legger merke til at dette også er en objekt av type <code>dict</code>. Med oppslag blir det enklere å bruke variablene, siden vi kan referere til dem med navn i stedet for indeks. Her er plottet i Eksempel 17 gjort med oppslag:</p>
+<h4 id="Eksempel-19:">Eksempel 19:<a class="anchor-link" href="#Eksempel-19:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;PE&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;PE&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Når du først har laget en dict, er det enkelt å legge til nye elementer. Det gjør du enkelt ved å bruke en nøkkel som ikke finnes, for eksempel <code>'Pris'</code>, og dette elementet lik ønsket objekt:</p>
+<h4 id="Eksempel-20:">Eksempel 20:<a class="anchor-link" href="#Eksempel-20:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;Pris&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">stocks_numbers</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pris&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;gjeldsrate&#39;</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;Pris&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>dict</code>-objektet er helt sentralt i selve byggeklossene til Python. Alle variabler du lager er faktisk elementer i to <code>dict</code> som du kan få frem med funksjonene <code>locals()</code> og <code>globals()</code>, som kaller de lokalt og globalt definerte variablene i miljøet du befinner deg. Dette eksemplet viser at objektet <code>stocks</code> som vi har definert i Eksempel 13, er identisk med elementet <code>'stocks'</code> i <code>locals()</code>.</p>
+<h4 id="Eksempel-21:">Eksempel 21:<a class="anchor-link" href="#Eksempel-21:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">locals</span><span class="p">()[</span><span class="s1">&#39;stocks&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">stocks</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vi ser at disse objektene egentlig er det samme, ved at den logiske testen om disse er like, returnerer sann (<code>True</code>).</p>
 
 </div>
 </div>
@@ -13426,27 +13774,57 @@ For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gj�
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Gode-programmeringsvaner">Gode programmeringsvaner<a class="anchor-link" href="#Gode-programmeringsvaner">&#182;</a></h2><p>For å gjøre koden så godt leselig som mulig for andre, er det noen prinsipper som bør følges. Det er lite hensiktsmessig å gå detaljert inn på disse nå, før vi har lært litt mer, men vi tar med de generelle prinsippene som skaperen av Python, Guido van Rossum har laget, som du kan kikke tilbake på etterhvert som du lærer mer:</p>
+<h2 id="Oppgaver">Oppgaver<a class="anchor-link" href="#Oppgaver">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Det er enkelt å konvertere en pandas dataramme til numpy. Vi skal bruke skolegangeksemplet fra forelesning "3 - matplotlib".  Vi henter inn dataene og konverterer dem til numpy slik:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/schooling-gdp.csv&#39;</span><span class="p">)</span>
+<span class="n">schooling</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">schooling</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li>Pen er bedre enn stygt.</li>
-<li>Eksplisitt er bedre enn implisitt.</li>
-<li>Enkelt er bedre enn komplekst.</li>
-<li>Komplekst er bedre enn komplisert.</li>
-<li>Flat er bedre enn nøstet.</li>
-<li>Luftig er bedre enn tett.</li>
-<li>Leselighet betyr noe.</li>
-<li>Spesialtifeller er ikke spesielle nok til å bryte regelene.
-Selv om praktiske hensyn slår renhet.</li>
-<li>Feil bør aldri passere i det stille,
-med mindre de er eksplisitt dempet.</li>
-<li>Når du møter tvilstilfeller, ikke fall for fristelsen å gjette.</li>
-<li>Det bør være én og helst bare én åpenbar måte å gjøre det på,
-selv om den måten kanskje ikke er åpenbar umiddelbart for de som ikke er Nederelendere</li>
-<li>Nå er bedre aldri,
-selv om aldri ofte er bedre enn <em>akkurat</em> nå.</li>
-<li>Om implementeringen er vanskelig å forstå, så er det en dårlig idé. </li>
-<li>Om implementeringen er lett å forstå, så er det en god idé.  </li>
-<li><code>namespaces</code> er en fantastisk idé, -- la oss gjøre mer av det!</li>
+<li>Bytt ut navnet til "Ireland" med "Republic of Ireland" og "United States" med "United States of America"</li>
+<li>Print data for "Luxembourg"</li>
+<li>Print data for "Liberia" ved å referere til nest siste element. </li>
+<li>Print BNP per capita for de tre siste elementene i <code>schooling</code> (ligger i kolonne med indeks 2)</li>
+<li>Print BNP per capita for de tre siste elementene i <code>schooling</code> men hent kolonnen ved å refere til tredje siste kolonne. </li>
+<li>Plukk ut de tre siste kolonnene i <code>schooling</code>, som representerer BNP per capita, skolegang og befolkning, og konverter dem til datatype <code>float</code>. </li>
+<li>Lag et oppslag (dictionary) med de tre siste kolonnene og passende navn som nøkler. Kall det <code>schooling_dict</code>. </li>
+<li>Lag en ny variabel i oppslaget med navn "Total schooling" som er produktet av skolegang og befolkning.</li>
+<li>Lag en ny variabel "Total GDP" som er produktet av BNP per capita og befolkning. </li>
+<li>Lag et scatterplot med de to variablene du nettopp lagde. </li>
+<li>Lag en ny variabel "GDP per schooling" som er BNP per capita delt på skolegang.</li>
+<li><p>Lag et liggende stolpediagram med navn på land og "GDP per schooling". Du bruker da funksjonen <code>plt.barh</code> på denne måten:</p>
+
+<pre><code>plt.barh(names,values)</code></pre>
+<p>Hvor <code>names</code> er en liste med navnene og <code>values</code> er de tilhørende verdiene.</p>
+</li>
+<li><p>Dette blir ikke pent. Velg kun de 20 første landene, og forsøk på nytt.</p>
+</li>
 </ol>
 
 </div>
@@ -13455,8 +13833,7 @@ selv om aldri ofte er bedre enn <em>akkurat</em> nå.</li>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5><span style="color:lightgrey">$<$Forrige</span>     |     <a href="1%20-%20variabler.html">Neste &gt;</a></h5>
-
+<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="3%20-%20matplotlib.html">&lt; Forrige</a>     |     <a href="5%20-%20Sympy.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
 </div>
 </div>
 </div>

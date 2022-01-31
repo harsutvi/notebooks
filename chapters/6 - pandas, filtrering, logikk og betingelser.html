@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>3 - matplotlib</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>6 - Pandas, filtrering, logikk og betingelser</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <style type="text/css">
   pre { line-height: 125%; }
@@ -13,22 +13,22 @@ td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: #ffffcc }
 .highlight { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
@@ -41,15 +41,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .kt { color: #B00040 } /* Keyword.Type */
 .highlight .m { color: #666666 } /* Literal.Number */
 .highlight .s { color: #BA2121 } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .na { color: #687822 } /* Name.Attribute */
 .highlight .nb { color: #008000 } /* Name.Builtin */
 .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
 .highlight .no { color: #880000 } /* Name.Constant */
 .highlight .nd { color: #AA22FF } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
 .highlight .nf { color: #0000FF } /* Name.Function */
-.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nl { color: #767600 } /* Name.Label */
 .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
 .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
 .highlight .nv { color: #19177C } /* Name.Variable */
@@ -66,11 +66,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
 .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
 .highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
@@ -13048,10 +13048,8 @@ div#notebook {
   }
 }
 </style>
-
-
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML-full,Safe"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     init_mathjax = function() {
@@ -13075,11 +13073,6 @@ div#notebook {
                     linebreaks: { 
                     automatic: true 
                     }
-                },
-                "HTML-CSS": {
-                    linebreaks: { 
-                    automatic: true 
-                    }
                 }
             });
         
@@ -13096,23 +13089,29 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="&lt;-Forrige-----|-----Neste-&gt;"><a href="2%20-%20funksjoner.html">&lt; Forrige</a>     |     <a href="4%20-%20lister%2C%20oppslag%20og%20numpy.html">Neste &gt;</a><a class="anchor-link" href="#&lt;-Forrige-----|-----Neste-&gt;">&#182;</a></h5>
+<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="5%20-%20Sympy.html">&lt; Forrige</a>     |     <a href="7%20-%20l&#248;kker.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3---matplotlib">3 - matplotlib<a class="anchor-link" href="#3---matplotlib">&#182;</a></h1>
+<h1 id="6---Pandas,-filtrering,-logikk-og-betingelser">6 - Pandas, filtrering, logikk og betingelser<a class="anchor-link" href="#6---Pandas,-filtrering,-logikk-og-betingelser">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Det er fint å kunne lage funksjoner i Python, men det er enda bedre å <em>se</em> dem. Vi skal nå se på hvordan vi kan tegne resultatet av funksjoner i et diagram ved hjelp av pakken <code>matplotlib</code>.</p>
-<p>Ofte ønsker vil å bruke matplotlib til å vise oss sammenhenger i data vi har hentet inn. Når vi importerer data til Python bruker vi vanligvis pakken <code>pandas</code>. Vi kommer sener tilbake til hvordan vi arbeider med data i <code>pandas</code>, så foreløpig skal vi ikke gjøre noe mer enn å importere og bruke dataene i <code>matplotlib</code>.</p>
-<p>Vi starter derfor med å <em>importere</em> <code>matplotlib</code>, <code>numpy</code> og <code>pandas</code>:</p>
+<h1 id="Logikk-og-betingelser">Logikk og betingelser<a class="anchor-link" href="#Logikk-og-betingelser">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Noe av det vi gjør oftest når vi programmerer er å teste om en betingelse er sann eller usann. Når testen er utført, kan programmet velge riktig vei å gå i fortsettelsen. Slik testing kalles "logikk". Vi har allerede i innledningen vært inne på variabeltypen som avgjør om en test er sann eller usann, typen <code>bool</code>.</p>
+<p>Sann eller usann (<code>True</code> og <code>False</code>) brukes som oftest sammen med en <code>if</code>-betingelse, slik som dette:</p>
 <h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
 </div>
 </div>
@@ -13122,9 +13121,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hei&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hå&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13135,14 +13135,42 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Plotte-tall">Plotte tall<a class="anchor-link" href="#Plotte-tall">&#182;</a></h3>
+<p>Vanligvis vil <code>if</code>-setningen inneholde en test som ikke er helt åpenbar, og som avhenger av input i en funksjon eller en variabel som er definert et annet sted i koden. Her er et eksempel på det første:</p>
+<h4 id="Eskempel-2:">Eskempel 2:<a class="anchor-link" href="#Eskempel-2:">&#182;</a></h4>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">did_I_win</span><span class="p">(</span><span class="n">s0</span><span class="p">,</span><span class="n">s1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s1</span><span class="o">&gt;</span><span class="n">s0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;won!&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;lost&quot;</span> 
+
+<span class="n">PricePaid</span><span class="o">=</span><span class="mi">100</span>
+<span class="n">StockPriceToday</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span><span class="o">*</span><span class="mi">200</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;Bought for: </span><span class="si">{</span><span class="n">PricePaid</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;Worth today: </span><span class="si">{</span><span class="n">StockPriceToday</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;You </span><span class="si">{</span><span class="n">did_I_win</span><span class="p">(</span><span class="n">PricePaid</span><span class="p">,</span><span class="n">StockPriceToday</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi starter med å plotte følgende tre kooridnater: (4,8), (7,2) og (2,6). For å gjøre det lager vi én variabel med x-koordinatene, og én med y-koordiantene. Funksjonen <code>plot</code>lager en figur med linjer mellom hvert av punktene:</p>
+<p>Ofte vil du ønske å sammenligne ulike datasett, for eksempel to numpy-rekker. Dersom du skal ha en <code>if</code>-betingelse, må du imidlertid huske på at for å få ett svar på en sammenligning mellom to numpy-rekker, så må du angi på hvilken måte de skal sammenlignes. I utgangspunktet vil en slik sammenligning bare gi resultatet fra en sammenligning av hvert element i de to rekkene. Resultatet av sammenligningen er altså ikke en bolsk verdi (<code>bool</code>) men en ny rekke. En slik sammenligning vil derfor føre til en feil:</p>
 <h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">&#182;</a></h4>
 </div>
 </div>
@@ -13152,9 +13180,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a was bigger than b&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13165,7 +13195,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi kan legge til punktene, så vi ser dem tydligere, med funksjonen <code>scatter</code>:</p>
+<p>I stedet må vi angi hvordan den elementvise sammenligningen skal sammenfattes i et sant/usant-resultat. Vi kan da velge mellom å kreve at alle elementene er sanne med numpyfunksjonen <code>all()</code>, eller at minst ett av elementene er sanne med<code>any()</code>.</p>
 <h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">&#182;</a></h4>
 </div>
 </div>
@@ -13175,8 +13205,13 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There were elements in a where the corresponding element in b was smaller&#39;</span><span class="p">)</span>
+    
+    
+<span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">101</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="mi">103</span><span class="p">])</span>
+<span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All elements in a was bigger than the corresponding element in b&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13187,7 +13222,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>... og vi kan plotte kun punktene:</p>
+<p>Ofte vil du ha bruk for å bruke flere vilkår for testen, der du enten krever at alle må være sanne, eller at det holder at én er sann, eller en kombinasjon. Det oppnår vi med <code>and</code> og <code>or</code>.</p>
+<p>Et annet nyttig nøkkelord for logiske tester er <code>in</code>. Dette brukes på alt fra å finne ut om et objekt er i en liste eller annen datastruktur, til om en delstreng er i en streng. Her er et eksempel som bruker alle disse nøkkelordene i <code>if</code> og <code>elif</code>-setninger:</p>
 <h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">&#182;</a></h4>
 </div>
 </div>
@@ -13197,7 +13233,19 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animal</span><span class="o">=</span><span class="s1">&#39;lion&#39;</span>
+
+<span class="n">cats</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lion&#39;</span><span class="p">,</span><span class="s1">&#39;tiger&#39;</span><span class="p">,</span><span class="s1">&#39;puma&#39;</span><span class="p">,</span><span class="s1">&#39;lynx&#39;</span><span class="p">]</span>
+<span class="n">mammals</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;human&#39;</span><span class="p">,</span><span class="s1">&#39;bear&#39;</span><span class="p">,</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span><span class="s1">&#39;whale&#39;</span><span class="p">,</span><span class="s1">&#39;mouse&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">cats</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">animal</span> <span class="ow">in</span> <span class="n">cats</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">animal</span> <span class="ow">in</span> <span class="n">mammals</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">animal</span><span class="si">}</span><span class="s2"> is a cat and a mammal&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="p">(</span><span class="ow">not</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">cats</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">animal</span> <span class="ow">in</span> <span class="n">mammals</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">animal</span><span class="si">}</span><span class="s2"> is not a cat, but it is a mammal&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">animal</span> <span class="ow">in</span> <span class="n">cats</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">mammals</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">animal</span><span class="si">}</span><span class="s2"> is a cat, but not a mammal&quot;</span><span class="p">)</span>   
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">animal</span><span class="si">}</span><span class="s2"> is neither a cat nor a mammal&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13208,14 +13256,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Plotte-en-funksjon">Plotte en funksjon<a class="anchor-link" href="#Plotte-en-funksjon">&#182;</a></h3>
+<p>Legg merke til <code>elif</code> over. De er <code>if</code>-setninger som er knyttet til <code>if</code>-setningen over. Koden til en <code>elif</code>-setning kjøres dersom hverken <code>if</code>-setningen eller noen <code>elif</code>-setninger over har blitt tilfredsstilt.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Du kan plotte en funksjon ved å definere en liste med tall, og så definere en funksjonsverdi for hvert element i listen. <code>range</code>-funksjonen har vi vært borte i før, og range(1,50) gir oss en liste over heltall fra 1 til 50. Så regner vi ut logaritmen av disse tallene og setter det inn som y-verdier:</p>
+<h1 id="Eksempel-med-datasett">Eksempel med datasett<a class="anchor-link" href="#Eksempel-med-datasett">&#182;</a></h1><p>Vanligvis vil slike tester ligge inne i kode der det ikke er helt åpenbart hva variabelen du tester er. Dette er illustrert i eksemplet under, der variabelen bestemmes av innholdet i datasettet "schooling-gdp.csv". Vi starter med å hente inn datasettet og plotte BNP per capita mot Utdanning:</p>
 <h4 id="Eksempel-5:">Eksempel 5:<a class="anchor-link" href="#Eksempel-5:">&#182;</a></h4>
 </div>
 </div>
@@ -13225,9 +13274,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/schooling-gdp.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">&#39;BNP_per_capita&#39;</span><span class="p">,</span><span class="s1">&#39;Utdanning&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13238,14 +13287,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Importere-data">Importere data<a class="anchor-link" href="#Importere-data">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Men det er morsommere å jobbe med virkelige data. Import av data til <code>pandas</code> gjøres enkelt med funksjonen <code>read_csv</code>. Dersom du har lastet ned siste versjon av notebooks, ligger den en fil i mappen "data" som heter schooling-gdp.csv. (kilde: <a href="https://ourworldindata.org/grapher/correlation-between-mean-years-of-schooling-and-gdp-per-capita">https://ourworldindata.org/grapher/correlation-between-mean-years-of-schooling-and-gdp-per-capita</a>). Denne filen inneholder data på BNP og utdanningsnivå for endel land i 2010. Den kan du lese inn slik:</p>
+<p>Vi ser at sammenhengen virker mer usikker for når utdanningsnivået og BNP per capita er høyt. Vi kan derfor bruke en <code>if</code>-setning til å kun ta med land med høyt BNP per capita eller høyt utdanningsnivå. Vi ønsker også å kun se på andre land en Norge. Da kan vi for eksempel kjøre denne koden:</p>
 <h4 id="Eksempel-6:">Eksempel 6:<a class="anchor-link" href="#Eksempel-6:">&#182;</a></h4>
 </div>
 </div>
@@ -13255,7 +13297,13 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/schooling-gdp.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">index_list</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">country</span><span class="p">,</span><span class="n">code</span><span class="p">,</span><span class="n">gdp_cap</span><span class="p">,</span><span class="n">edu</span><span class="p">,</span><span class="n">pop</span><span class="p">)</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">gdp_cap</span><span class="o">&gt;</span><span class="mi">20000</span> <span class="ow">and</span> <span class="n">country</span><span class="o">!=</span><span class="s1">&#39;Norway&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">edu</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span>
+        <span class="n">index_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+    
+<span class="n">df_filtered</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">index_list</span><span class="p">)]</span>
+<span class="n">df_filtered</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">&#39;BNP_per_capita&#39;</span><span class="p">,</span><span class="s1">&#39;Utdanning&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13266,8 +13314,35 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La oss nå se på dataene, ved å kjøre en kode med kun navnet på variabelen som holder dataene:</p>
-<h4 id="Eksempel-7:">Eksempel 7:<a class="anchor-link" href="#Eksempel-7:">&#182;</a></h4>
+<p>Her lager vi en liste, og legger til indeksen til hvert element i datarammen <code>df</code> som skal inkluderes. Vi velger så ut radene i datarammen med disse indeksene med <code>dataframe</code>-funksjonen <code>isin()</code>. Funksjonens navn kommer fra <em>is in</em>, så den tester altså om index_list er i datarammen <code>df</code>. Som vi ser, ser det ut til å være er det liten sammenheng mellom BNP per capita og utdanningsnivå for disse observasjonene.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Titlon">Titlon<a class="anchor-link" href="#Titlon">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I eksemplet over leser Pandas dataene fra en fiil, men Pandas kan også hente data direkte fra en database på nettet. Vi skal først se hvordan vi kan hente data fra <code>titlon.uit.no</code>. Dette er en database som inneholder informasjon om aksjer, derviater og obligasjoner handlet på <a href="https://www.euronext.com/en/markets/oslo">Oslo Børs Euronext</a>.</p>
+<p>Det første vi må gjøre er å hente en pakke som kan kommunisere med serveren. Vi skal bruke pymysql. Den er i utgangspunktet ikke installert her på uit's jupyter-server, så det må vi gjøre selv. Det gjør du slik:</p>
+<p>Åpne konsollen og skriv <code>pip install pymysql</code></p>
+<p>For å hente data gjør du følgende:</p>
+<p>På <a href="https://titlon.uit.no/">https://titlon.uit.no/</a> ligger det børsinformasjon fra Oslo Børs. For å hente data fra Titlon gjør du følgende:</p>
+<ol>
+<li>gå inn på <a href="https://titlon.uit.no/">https://titlon.uit.no/</a> </li>
+<li>trykk på "Python"</li>
+<li>logg inn (om du får en feilmelding etter innlogging følger du bare lenken over på nytt)</li>
+<li>Kopierer teksten i tekstboksen</li>
+<li>lim den inn under</li>
+</ol>
+<h4 id="Eksempel-7:">Eksempel 7:<a class="anchor-link" href="#Eksempel-7:">&#182;</a></h4><p>LES INSTRUKSJONENE OVER! KODEN UNDER KAN IKKE KJØRES UTEN VIDERE.</p>
+
 </div>
 </div>
 </div>
@@ -13276,7 +13351,20 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#This code must be pasted from titlon.uit.no each time you want to access the database:</span>
+<span class="kn">import</span> <span class="nn">pymysql</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1">#you may substitute pymysql for pymssql if you prefer the MS SQL client</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">pymysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;titlon.uit.no&#39;</span><span class="p">,</span> 
+		<span class="n">user</span><span class="o">=</span><span class="s2">&quot;user@uit.no&quot;</span><span class="p">,</span> 
+		<span class="n">password</span><span class="o">=</span><span class="s2">&quot;Z!uRJJ92Nk%m&amp;Xn1K&quot;</span><span class="p">,</span> 
+		<span class="n">database</span><span class="o">=</span><span class="s1">&#39;OSE&#39;</span><span class="p">)</span>  
+
+<span class="n">sql</span><span class="o">=</span><span class="s2">&quot;SELECT * FROM equity WHERE Name=&#39;Equinor&#39; ORDER BY `Date`&quot;</span>
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="n">df</span>
+
+	
 </pre></div>
 
     </div>
@@ -13287,8 +13375,16 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ser at vi har fire variabler: Land, Landkode, BNP_per_capita (BNP per innbygger), Utdanning og Befolkning. BNP er "brutto nasjonalprodukt" som måler hvor mye som produseres i et land i løpet av et år. BNP_per_capita viser altså hvor mye hver person i landet produserer hvert år i gjennomsnitt.</p>
-<p>Vi kan hente opp hver serie ved å skrive navnet til variabelen som holder dataene, altså <code>df</code>, etterfulgt av en klammeparentes med navnet på dataserien vi ønsker, for eksempel 'BNP':</p>
+<p>Koden leser inn dataene til en pandas <code>dataframe</code>, eller dataramme. Denne er kalt <code>df</code> her. Om vi ser nærmere på koden, så ser vi at den gjør følgende:</p>
+<ol>
+<li><p>lager et objekt <code>con</code> som representerer forbindelsen med databasen. Denne lages ved å bruke <code>connect()</code>-funksjonen til <code>pymysql</code>, som er en pakke for å hente data fra MySQL-databaser. Input er navn på server, brukernavn, passord (automatisk generert) og navn på database.</p>
+</li>
+<li><p>lager en streng <code>sql</code> med kommandoen til databasen, i SQL-språk</p>
+</li>
+<li>lager en <code>dataframe</code> som kalles <code>df</code> ved å bruke  <code>read_sql_query</code>-funksjonen i pandas</li>
+</ol>
+<p>Før vi fortsetter er det kanskje greit å forklare hva SQL er. SQL er et språk laget spesifikt for å hente ut data fra dataabaser. Nesten alle databaser er SQL-basert. Syntaksen kan virke litt knotete, men kan være lurt å lære seg dette språket. En god SQL-spørring kan spare deg for mye programmering senere. Dette er imidlertid ikke et kurs i SQL, så vi går ikke nærmere inn på denne syntaksen her.</p>
+<p>I tabellen vi henter, over, mangler endel variabler fordi det ikke er plass. For å se navnet på alle variablene kan du bruke <code>keys()</code>-funksjonen til datarammen:</p>
 <h4 id="Eksempel-8:">Eksempel 8:<a class="anchor-link" href="#Eksempel-8:">&#182;</a></h4>
 </div>
 </div>
@@ -13298,7 +13394,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;BNP_per_capita&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13309,7 +13405,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Skal vi plotte data, gjør vi akkurat som i Eksempel 2; vi legger inn x- og y-verdier i plotfunksjonen, og disse verdiene henter vi med klammeparentes etter datavariabelen. Her plotter vi BNP langs x-aksen og utdanning langs y-aksen. Vi bruker <code>scatter</code>-funksjonen, siden det ikke gir noen mening å tegne streker mellom disse punktene:</p>
+<p>En dataframe ligner litt på en oppslagsliste. Du henter frem variabelen du vil bruke ved hjelp av hakeparenteser. I Titlondatabasen er avkastningen <code>lnDeltaP</code>, så la oss ta en kikk på på den:</p>
 <h4 id="Eksempel-9:">Eksempel 9:<a class="anchor-link" href="#Eksempel-9:">&#182;</a></h4>
 </div>
 </div>
@@ -13319,7 +13415,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;BNP_per_capita&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Utdanning&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;lnDeltaP&#39;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13330,7 +13426,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Om vi ser på log-funksjonen i Eksempel 5, så ser vi at fordelingen av punkter ligner litt på den, så la oss legge inn logaritmen som funksjon av BNP. Vi må justere den litt, men som du ser passer den ganske bra! Det ser altså ut til at det er en sammenheng mellom utdanningsnivå og BNP, men sammenhengen blir svakere desto høyere BNP er.</p>
+<p>Det viser seg at i aksjemarkedet, så har aksjene en tendens til å bevege seg i samme retning. Går børsen først ned, så vil det gjelde de aller fleste aksjene på børsen. Gjennomsnittetlig avkastning for alle børsens aksjer måles av <em>børsindeksen</em>. I Titlon er børsindeksen lagt inn som en variabel for hvert selskap under navnet <code>lnDeltaOSEBX</code>. La oss derfor undersøke om det stemmer at det er en nær sammenheng mellom Equinors kurs og børsindeksen, ved hjelp av <code>matplotlib</code>:</p>
 <h4 id="Eksempel-10:">Eksempel 10:<a class="anchor-link" href="#Eksempel-10:">&#182;</a></h4>
 </div>
 </div>
@@ -13340,8 +13436,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;BNP_per_capita&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Utdanning&#39;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>   <span class="n">df</span><span class="p">[</span><span class="s1">&#39;BNP_per_capita&#39;</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;BNP_per_capita&#39;</span><span class="p">]</span><span class="o">+</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">20</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">&#39;lnDeltaP&#39;</span><span class="p">,</span><span class="s1">&#39;lnDeltaOSEBX&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13352,14 +13447,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Eksempel-med-bankinnskudd">Eksempel med bankinnskudd<a class="anchor-link" href="#Eksempel-med-bankinnskudd">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi begynner med å lage funksjonen for et lån fra forrige forelesning. Vi husker at om banken din legger til renten <code>n</code> ganger i året, og renten er <code>r</code>, så er bankinnskuddet på <code>x</code> om <code>T</code> år gitt som  $x\cdot (1+\frac{r}{n})^{T\cdot n}$, som vi kan programmere slik:</p>
+<p>Du kan finne informasjon om andre aksjer enn Equinor om du vil. Koden under kjører en SQL-spørring som henter navnene på alle selskap i databasen etter 2015. Om du vil hente ut et annet selskap, kan du velge blant disse</p>
 <h4 id="Eksempel-11:">Eksempel 11:<a class="anchor-link" href="#Eksempel-11:">&#182;</a></h4>
 </div>
 </div>
@@ -13369,8 +13457,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">account_balance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">r</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql</span><span class="o">=</span><span class="s2">&quot;SELECT distinct Name,ISIN,SecurityId,CompanyId FROM equity WHERE Year(Date)&gt;2015 ORDER BY `Name`&quot;</span>
+<span class="n">companies</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">companies</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13381,8 +13470,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi skal bruke en litt annen fremgangsmåte for å plotte denne funksjonen, enn i eksemplene over. Vi skal først lage et figurobjekt og et akseobjekt med funksjonen <code>fig,ax=plt.subplots()</code>. Vi kan så bruke objektet <code>ax</code> til å lage etiketter til aksene og plotte flere grafer oppå hverandre. Dette er altså en littegran mer avansert bruk av <code>matplotlib</code>. Fordelen er at vi kan legge til nye elementer i eksisterende plot, uten å skrive hele koden på nytt når vi kjører i en annen celle.</p>
-<p>Om renten er 20%=0.2, innskuddet er 100 som forrentes årlig, så kan vi tegne innskuddsfunksjonen for 10 år som</p>
+<h1 id="Lage-graf-med-flere-serier,-der-alle-har-startverdi-100">Lage graf med flere serier, der alle har startverdi 100<a class="anchor-link" href="#Lage-graf-med-flere-serier,-der-alle-har-startverdi-100">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La oss se nærmere på tre av selskapene, og plott dem sammen. Vi bruker en SQL <code>WHERE</code>-betingelse til å begrense utvalget til de tre selskapene som er nevnt og til datoer etter 2000. Så tar vi også med i SQL-setningen en sortering på dato:</p>
 <h4 id="Eksempel-12:">Eksempel 12:<a class="anchor-link" href="#Eksempel-12:">&#182;</a></h4>
 </div>
 </div>
@@ -13392,21 +13487,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#1. Checking developement over 10 years, with 100 data points</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-
-<span class="c1">#2. initiating the plot:</span>
-<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-
-<span class="c1">#3. adding axis lables:</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Verdi bankinnskudd&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Tid T&#39;</span><span class="p">)</span>
-
-<span class="c1">#4. plotting the function:</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>          <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Bankinnskudd, årlig forrentning&#39;</span><span class="p">,</span>    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">)</span>
-
-<span class="c1">#5. adding legend in the upper left corner:</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;SELECT distinct Name,date, AdjustedPrice FROM equity &quot;</span>
+    <span class="s2">&quot;WHERE (Name=&#39;Equinor&#39; OR Name=&#39;Tomra Systems&#39; OR Name=&#39;DNB&#39;) &quot;</span>
+    <span class="s2">&quot;AND `Date`&gt;&#39;2000-01-01&#39;&quot;</span>
+    <span class="s2">&quot;ORDER BY `Date`&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13417,15 +13501,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Det som skjer over er at vi</p>
-<ol>
-<li>Definerer for hvilke verdier vi skal tegne og hvor mange punkter. Her ser vi at vi tegner hundre punkter i intervallet 0 til 10</li>
-<li>Lager to objekter <code>fig</code> og <code>ax</code> som brukes til å tegne grafene. </li>
-<li>Definerer hva som skal være på x og y-aksen</li>
-<li>Plotter ved å sette inn punktene <code>T</code> og funksjonen <code>account_balance(100,0.2,T,1)</code> inn i funksjonen <code>ax.plot</code></li>
-<li>lager ettikett og plasserer den oppe til venstre</li>
-</ol>
-<p>Som i forrige forelesning kan det være interessant å sammenligne ulike hyppigheter for å legge til renter. Vi legger derfor til fire grafer til, i samme figur, med henholdsvis kvartalsvis, månedlig, ukentlig og daglig forrentning:</p>
+<p>Vi kan nå kjøre denne spørringen mot Titlon:</p>
 <h4 id="Eksempel-13:">Eksempel 13:<a class="anchor-link" href="#Eksempel-13:">&#182;</a></h4>
 </div>
 </div>
@@ -13435,13 +13511,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#plotting four graphs with different compounding:</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span>       <span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>          <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Kvartalsvis forrentning&#39;</span><span class="p">,</span>     <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span>       <span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span>         <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Måndedlig forrentning&#39;</span><span class="p">,</span>       <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span>       <span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="mi">52</span><span class="p">),</span>         <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Ukentlig forrentning&#39;</span><span class="p">,</span>        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span>       <span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="mi">365</span><span class="p">),</span>        <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Daglig forrentning&#39;</span><span class="p">,</span>          <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">fig</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 
     </div>
@@ -13452,8 +13523,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Hva synes du, har hyppigheten har det mye å si hvor ofte vi legger til renter?</p>
-<p>For å svare på det kan det være interessant å kobinere grafene med en utregning regne av hva du taper på hyppig forretning. La oss se på differansen mellom daglig og ukentlig, og ukentlig mot årlig:</p>
+<p>Dataene ligger nå i "lengdeformat". Det vil si at selskapene ligger etterhverandre i en lang tabell. Om vi ønsker å sammenligne utviklingen kan det være en fordel å få prisene i hvert selskap i en egen kolonne. Det gjør vi slik:</p>
 <h4 id="Eksempel-14:">Eksempel 14:<a class="anchor-link" href="#Eksempel-14:">&#182;</a></h4>
 </div>
 </div>
@@ -13463,19 +13533,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#printing the nummerical difference between annual and daily compounding:</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;Differansen mellom daglig og ukentlig forrentning i løpet av 20 år er </span><span class="si">{</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span>
-    <span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">365</span><span class="p">)</span><span class="o">-</span><span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">52</span><span class="p">)</span>
-        <span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="si">}</span><span class="s2"></span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;Differansen mellom ukentlig og årlig forrentning i løpet av 20 år er </span><span class="si">{</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span>
-    <span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">52</span><span class="p">)</span><span class="o">-</span><span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-        <span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="si">}</span><span class="s2"></span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;AdjustedPrice&#39;</span><span class="p">)</span>
+<span class="n">df</span>
 </pre></div>
 
     </div>
@@ -13486,8 +13545,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ser altså at å gå fra ukentlig til daglig forrentning ikke har så mye å si, men forskjellen fra ukentlig til årlig er ganske stor.</p>
-<p>I stedet for å regne ut med daglig forrentning kan vi bruke kontinuerlig forrentning. SOm vi husker fra forrige forelesnig, betyr det at vi bruker eksponentialfunksjonen:</p>
+<p>Equinor ble imidlertid ikke børsnotert før i 2001. I alle observasjoner før børsnoteringen står det derfor <code>NaN</code>, hvilket betyr "ingen observasjon". For å kunne sammenligne må alle tre aksjene være observert på hver dato. Vi kan oppnå dette med funksjonen <code>dropna()</code>:</p>
 <h4 id="Eksempel-15:">Eksempel 15:<a class="anchor-link" href="#Eksempel-15:">&#182;</a></h4>
 </div>
 </div>
@@ -13497,9 +13555,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#defining the continous compounding function:</span>
-<span class="k">def</span> <span class="nf">account_balance_exponential</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">T</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">df</span>
 </pre></div>
 
     </div>
@@ -13510,7 +13567,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La oss plotte kontinuerlig og <em>sammenligne</em> med daglig forrentning. Legg merke til første linje, som sørger for at vi starter med "blanke ark".</p>
+<p>Vi ser nå at de tomme cellene er borte. Equinor ble altså børsnotert 18. juni 2001.</p>
+<p>For å kunne sammenligne selskapenes utvikling bedre, bør de starte på samme tidspunkt. For å gjøre det deler vi alle observasjonene på den første. For å dele observasjoner på noe, bruker vi <code>div()</code>-funksjonen til datarammen. Vi skal dele på første rad, som er <code>df.iloc[0]</code>. Så multipliserer vi det hele med 100:</p>
 <h4 id="Eksempel-16:">Eksempel 16:<a class="anchor-link" href="#Eksempel-16:">&#182;</a></h4>
 </div>
 </div>
@@ -13520,19 +13578,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Starting with a blank graph by defining ax and fig again:</span>
-<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-
-<span class="c1">#adding continious compounding to the prevoius plot</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span>       <span class="n">account_balance_exponential</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">T</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Kontinuerlig forrentet&#39;</span><span class="p">,</span>      <span class="n">color</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span>       <span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="mi">365</span><span class="p">),</span>        <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Daglig forrentning&#39;</span><span class="p">,</span>          <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span>
-
-<span class="c1">#printing the nummerical difference between continious and daily compounding:</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;Differansen mellom årlig og kontinuerlig forrentning etter 20 år er </span><span class="si">{</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span>
-   <span class="n">account_balance_exponential</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">-</span> <span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">365</span><span class="p">)</span>
-        <span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="si">}</span><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="n">df</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">df</span>
 </pre></div>
 
     </div>
@@ -13543,24 +13590,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ser at selv om det lønner seg å forrente ofte, er det liten forskjell mellom daglig og kontinuerlig forretning. Likevel benytter vi ofte kontinuerlig forrentning i økonomifaget. Årsaken til det er at eksponenten og logaritmen er mye enklere å jobbe med matematisk enn prosentvis avkastning. Nummerisk er imidlertid forskjellen liten så lenge hyppigheten er høy.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Googling">Googling<a class="anchor-link" href="#Googling">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Det er umulig å huske hvordan alle funksjonene til alle pakkene i Python skal brukes, ikke minst fordi det er en konstant uvikling av slike pakker. Heldigvis lages de fleste pakker på en <em>pytonsk</em> måte, hvilket vil si at funksjoner og objekter fra forskjellige pakker og forfattere skal oppføre seg forutsigbart og ensartet. Helt selvforklarende er imidlertid ingen pakker.</p>
-<p>Den beste måten å finne ut hvordan du skal bruke en pakke, er derfor å google det du lurer på. Dette må gjøres på engelsk, siden stort sett alt av forum og dokumentasjon er på engelsk.</p>
-<p>La oss derfor ta matplotlib som eksempel. La oss si at du har glemt denne forelesningen og derfor skal finne ut hvordan du plotter en linje med matplotlib. Forsøk å google <code>"matplotlib plot function"</code>. I skrivende stund i første treff på Google (det er ikke alltid det første treffet er best), finner du denne koden på <a href="https://scriptverse.academy/tutorials/python-matplotlib-plot-function.html">scriptverse.academy</a>:</p>
+<p>Vi ser nå at alle aksjene starter på 100 den datoen Equinor ble børsnotert. Hvilet selskap har vært det beste å investere i? Hvilket har vært verst?</p>
+<p>Vi kan nå plotte utviklingen. Når vi jobber med pandas, er det best å bruke den innebygde <code>plot()</code>-funksjonen i pakken. Da får vi automatisk riktige etiketter:</p>
 <h4 id="Eksempel-17:">Eksempel 17:<a class="anchor-link" href="#Eksempel-17:">&#182;</a></h4>
 </div>
 </div>
@@ -13570,30 +13601,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># 100 linearly spaced numbers</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-
-<span class="c1"># the function, which is y = x^2 here</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
-
-<span class="c1"># setting the axes at the centre</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
-
-<span class="c1"># plot the function</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-
-<span class="c1"># show the plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13604,7 +13613,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ser umiddelbart at det er endel ting vi ikke trenger for et enkelt plott, så vi sletter alt under kommentaren <code># setting the axes at the centre</code> (frem til <code># plot the function</code>). Vi trenger heller ikke definisjonen av funksjonen under kommentaren <code># the function, which is y = x^2 here</code>, siden vi har definert våre egne funksjoner over, så vi sletter den også.  Så bytter vi ut alle <code>x</code>'er med <code>T</code> og velger å sette inn funksjonen for daglig forretning <code>account_balance(100,0.2,T,365)</code> inn i <code>plot</code>-funksjonen. Tilslutt bytter vi ut startpunktet i <code>linspace</code>-funksjonen med <code>0</code>. Da får vi følgende kode:</p>
+<h1 id="Eurostat">Eurostat<a class="anchor-link" href="#Eurostat">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Eurostat er en veldig nyttig kilde til data. De har et stort utvalg av data på europeiske land. De har laget en egen pakke til python som ikke overraskende heter <code>eurostat</code>. Denne pakken er heller ikke installert i utgangspunktet på jupyter.uit.no. Dere må derfor åpne "Terminal" og kjøre  <code>pip install eurostat</code> for å kjøre den.</p>
+<p>For å se hvilke tabeller som er der, henter vi innholdsfortegnelsen (table of contents) med funksjonen <code>get_toc_df</code>. Det gir oss en <code>pandas</code> dataramme:</p>
 <h4 id="Eksempel-18:">Eksempel 18:<a class="anchor-link" href="#Eksempel-18:">&#182;</a></h4>
 </div>
 </div>
@@ -13614,18 +13631,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#From https://scriptverse.academy/tutorials/python-matplotlib-plot-function.html</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># 100 linearly spaced numbers</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-
-<span class="c1"># plot the function</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">account_balance</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="mi">365</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-
-<span class="c1"># show the plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">eurostat</span>
+<span class="n">toc</span> <span class="o">=</span> <span class="n">eurostat</span><span class="o">.</span><span class="n">get_toc_df</span><span class="p">()</span>
+<span class="n">toc</span>
 </pre></div>
 
     </div>
@@ -13636,22 +13644,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ser altså her at ved å bruke eksempler som vi kan endre på, så kan vi raskt finne ut hvordan en pakke fungerer. Bruker du andres kode, skal det kommenteres i koden.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Eksempel-med-tilbud-og-ettersp&#248;rsel">Eksempel med tilbud og ettersp&#248;rsel<a class="anchor-link" href="#Eksempel-med-tilbud-og-ettersp&#248;rsel">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi definerer først tilbud og etterspørsel slik vi gjorde i forrige forelesning, men med litt andre tall:</p>
+<p>Du kan finne hvor mange tabeller det er med <code>len(toc)</code>, og det er i skrivende stund over ti tusen tabeller. Det blir litt krevende å lete gjennom alle, så vi ønsker derfor å begrense antall tabeller til de som er relevante. Anta at vi ønsker å se på utviklingen i BNP per innbygger for landene som er med i statistikken. Nærmere bestemt, vi ønsker å finne alle tabeller der <code>'GDP per capita'</code> er i tittelen.</p>
+<p>BNP per innbygger er hvor mye hver person i landet i gjennomsnitt produserer i løpet av ett år.</p>
+<p>Vi gjør dette ved å lage følgende "list comprehension": <code>['GDP per capita' in i for i in toc['title']]</code>. Elementene i denne listen er sant (<code>True</code>) dersom 'GDP per capita' er i tittelen, og usant (<code>false</code>) om det ikke er i tittelen.</p>
 <h4 id="Eksempel-19:">Eksempel 19:<a class="anchor-link" href="#Eksempel-19:">&#182;</a></h4>
 </div>
 </div>
@@ -13661,13 +13656,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">supply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">250</span><span class="p">)</span>
-    
-<span class="k">def</span> <span class="nf">demand</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">3000</span><span class="o">/</span><span class="p">(</span><span class="mi">100</span><span class="o">+</span><span class="n">x</span><span class="p">)</span>
-
-<span class="mi">1</span><span class="o">/</span><span class="mf">0.004</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdp_in_toc_list</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GDP per capita&#39;</span> <span class="ow">in</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">toc</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]]</span>
 </pre></div>
 
     </div>
@@ -13678,7 +13667,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi skal nå finne likhet mellom tilbud og etterspørsel grafisk ved å tegne opp begge funksjonene i samme diagram:</p>
+<p>Vi kan så velge de elementene hvor betingelsen er sann ved å sette listen inn i en klammeparentes etter innholdsfortegnelsen, <code>toc[gdp_in_toc_list]</code>. Kun de elementene i innholdsfortegnelsen der det står sant (<code>True</code>) i listen, tas da med.</p>
 <h4 id="Eksempel-20:">Eksempel 20:<a class="anchor-link" href="#Eksempel-20:">&#182;</a></h4>
 </div>
 </div>
@@ -13688,25 +13677,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#drawing 100 points in the interval 0.0 to 100</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-
-<span class="c1">#drawing supply</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">supply</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Tilbud&#39;</span><span class="p">)</span>
-
-<span class="c1">#drawing demand</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">demand</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Etterspørsel&#39;</span><span class="p">)</span>
-
-<span class="c1">#adding legend:</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
-
-<span class="c1">#setting the axis lables</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pris&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Enheter&#39;</span><span class="p">)</span>
-
-<span class="c1">#setting the range of y values (the price) to be between 0 and 30, so that we can more</span>
-<span class="c1">#easily see the equilibrium price</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">32</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collecting only the tables where &#39;GDP per capita&#39; is in the name</span>
+<span class="n">toc_gdp</span><span class="o">=</span><span class="n">toc</span><span class="p">[</span><span class="n">gdp_in_toc_list</span><span class="p">]</span>
+<span class="n">toc_gdp</span>
 </pre></div>
 
     </div>
@@ -13717,72 +13690,315 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Oppgaver">Oppgaver<a class="anchor-link" href="#Oppgaver">&#182;</a></h2>
+<p>La oss nå se på tabellen "Purchasing power adjusted GDP per capita", som har kode 'sdg_10_10'. Da bruker vi funksjonen <code>get_data_df</code> med tabellkoden som argument:</p>
+<h4 id="Eksempel-21:">Eksempel 21:<a class="anchor-link" href="#Eksempel-21:">&#182;</a></h4>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Oppgave-1:">Oppgave 1:<a class="anchor-link" href="#Oppgave-1:">&#182;</a></h4><ol>
-<li>Forsøk å finne prisen og mengden i likevekt (der tilbud=etterspørsel) ved å bruke informasjonen i figuren</li>
-<li>Gjør endringer i tilbud og etterspørselsfunksjonene og finn likevekt for disse. </li>
-</ol>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdp_data</span> <span class="o">=</span> <span class="n">eurostat</span><span class="o">.</span><span class="n">get_data_df</span><span class="p">(</span><span class="s1">&#39;sdg_10_10&#39;</span><span class="p">)</span>
+<span class="n">gdp_data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tabellen inneholder imidlertid endel data vi ikke ønsker å ha med. For det første ønsker vi kun å ta med tilfellene der feltet "na_item" er lik 'EXP_PPS_EU27_2020_HAB', for det andre er her dataene til hvert enkelt land ligger. Dette gjør vi på samme måte som over med listen <code>gdp_data['na_item']=='EXP_PPS_EU27_2020_HAB'</code>, som er sann når "na_item" er lik 'EXP_PPS_EU27_2020_HAB'. Setter vi inn denne listen i klammeparentes etter <code>gdp_data</code> får vi en filtrert liste:</p>
+<h4 id="Eksempel-22:">Eksempel 22:<a class="anchor-link" href="#Eksempel-22:">&#182;</a></h4>
 </div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdp_data</span> <span class="o">=</span> <span class="n">gdp_data</span><span class="p">[</span><span class="n">gdp_data</span><span class="p">[</span><span class="s1">&#39;na_item&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;EXP_PPS_EU27_2020_HAB&#39;</span><span class="p">]</span>
+<span class="n">gdp_data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Oppgave-2:">Oppgave 2:<a class="anchor-link" href="#Oppgave-2:">&#182;</a></h4><p>Finn på noen koordinater selv, som du plotter</p>
+<p>Videre ønsker vi å fjerne de definisjonene av EU vi ikke trenger, som er 'EA18','EA19','EU27_2007','EU27_2020','EA18' og 'EA18'. Vi bruker samme teknikk, vi lager en liste som inneholder <code>True</code> og <code>False</code>, avhengig om en betingelse er oppfylt.</p>
+<p>Feltet vi nå skal filtrere ut fra er "geo\time", som innholder landkodene. Siden vi ikke bare skal sjekke om én streng er i denne kolonnen, men om flere mulige kandidater er det, kan vi ikke bruke "list comprehension" som over. Vi bruker i stedet en pandas-funksjon <code>isin</code> (<em>is in</em>), som tar en liste med "ting" vi ikke vil ha i feltet som argument.</p>
+<h4 id="Eksempel-23:">Eksempel 23:<a class="anchor-link" href="#Eksempel-23:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">unwanted</span><span class="o">=</span><span class="n">gdp_data</span><span class="p">[</span><span class="s1">&#39;geo</span><span class="se">\\</span><span class="s1">time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;EA18&#39;</span><span class="p">,</span><span class="s1">&#39;EA19&#39;</span><span class="p">,</span><span class="s1">&#39;EU27_2007&#39;</span><span class="p">,</span><span class="s1">&#39;EU27_2020&#39;</span><span class="p">,</span><span class="s1">&#39;EA18&#39;</span><span class="p">,</span><span class="s1">&#39;EA18&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Men vi vil ikke ha <code>unwanted</code>, så vi tar kun med tilfellene der <code>unwanted==False</code></p>
+<h4 id="Eksempel-24:">Eksempel 24:<a class="anchor-link" href="#Eksempel-24:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdp_data</span> <span class="o">=</span> <span class="n">gdp_data</span><span class="p">[</span><span class="n">unwanted</span><span class="o">==</span><span class="kc">False</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Angela Merkel akkurat er gått av. Vi ønsker derfor å se på utviklingen i BNP justert for kjøpekraft siden Merkel tiltrådte i 2005.</p>
+<p>Vi ønsker derfor å velge ut kolonnene 2005 til 2020, i tillegg til kolonnen 'geo\time' med landkodene, som skal stå først. Vi gjør det ved å lage en liste med de kolonnene vi ønsker å hente ut fra <code>gdp_data</code>. Vi lager da to lister som vi slår sammen:</p>
+<p>Liste 1: Vi starter med navnet til første kolonne 'geo\time', som vi lager om til en liste med ett element ved hjelp av klammeparenteser: <code>['geo\\time']</code>.</p>
+<p>Liste 2: Vi bruker så den innebygde <code>range()</code> til å generere fra 2005 til 2020, og konverterer resultatet til en liste: <code>list(range(2005,2021)</code>.</p>
+<p>Summen av disse to listene blir da en liste med 'geo\time' først og så årstallene.</p>
+<h4 id="Eksempel-25:">Eksempel 25:<a class="anchor-link" href="#Eksempel-25:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">chosen_columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;geo</span><span class="se">\\</span><span class="s1">time&#39;</span><span class="p">]</span><span class="o">+</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span><span class="mi">2021</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vi kan nå velge ut kun disse kolonnene ved å velge samtlige rader fra gdp_data.loc, og kolonnene angitt av listen:</p>
+<h4 id="Eksempel-26:">Eksempel 26:<a class="anchor-link" href="#Eksempel-26:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdp_data</span><span class="o">=</span><span class="n">gdp_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">chosen_columns</span><span class="p">]</span>
+<span class="n">gdp_data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Så ønsker vi videre å kategorisere observasjonene ut fra landkode, og ikke rekkefølge. Vi setter derfor 'geo\time' som indeks:</p>
+<h4 id="Eksempel-27:">Eksempel 27:<a class="anchor-link" href="#Eksempel-27:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdp_data</span><span class="o">=</span><span class="n">gdp_data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;geo</span><span class="se">\\</span><span class="s1">time&#39;</span><span class="p">)</span>
+<span class="n">gdp_data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vi skal nå "rebasere" tallene slik  at alle starter på 100. Vi må først sørge for at hvert årstall er en observasjon/rad, og ikke en kolonne. Vi gjør det med pandasfunksjonen <code>transpose()</code>. Den bytter om på rader og kolonner:</p>
+<h4 id="Eksempel-28:">Eksempel 28:<a class="anchor-link" href="#Eksempel-28:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdp_data</span><span class="o">=</span><span class="n">gdp_data</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="n">gdp_data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vi kan nå "rebasere". Vi gjør det ved å bruke pandasfunksjonen <code>div()</code>, som deler alle observasjonene på argumentet. Vi ønsker å dele på første rad (år 2005), som er <code>gdp_data.iloc[0]</code>:</p>
+<h4 id="Eksempel-29:">Eksempel 29:<a class="anchor-link" href="#Eksempel-29:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gdp_data</span><span class="o">=</span><span class="n">gdp_data</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">gdp_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">gdp_data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vi kan nå plotte resultatet med <code>plot()</code>-funksjonen i pandas. Vi velger gjennomsiktighet 0.3 og figurstørrelse 20x10. Etikettene plasseres øverst til venstre, uten ramme og i fire kolonner:</p>
+<h4 id="Eksempel-30:">Eksempel 30:<a class="anchor-link" href="#Eksempel-30:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span><span class="o">=</span><span class="n">gdp_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">ncol</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Som nevnt har vi valgt perioden fra 2005 fordi Angela Merkel tiltrådte da. Det kan derfor være en god idé å utheve Tysklands kurve. Vi skal gjøre det ved å øke linjevidden til 5 og ta bort gjennomsiktighet (alpha=1). For at det skal være enkelt å også utheve andre land, lager vi en funksjon som uthever land med et bestemt symbol. <code>ax</code> representerer grafen, og må også være et argument, slik at funksjonen kan operere på den. Her er funksjonen:</p>
+<h4 id="Eksempel-31:">Eksempel 31:<a class="anchor-link" href="#Eksempel-31:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">thick_line</span><span class="p">(</span><span class="n">symbol</span><span class="p">,</span><span class="n">ax</span><span class="p">):</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">_label</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">lines</span><span class="p">]</span>  <span class="c1">#makes a list of symbols in the order of lines in the axis object</span>
+    <span class="n">i</span><span class="o">=</span><span class="n">labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">symbol</span><span class="p">)</span>               <span class="c1">#identifies at which position symbol is located</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>         <span class="c1">#sets the line with of the line at position i to 5 </span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>             <span class="c1">#removes transparancy of the line at position i to 5 </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Funksjonen gjør følgende:</p>
 <ol>
-<li>som punkter</li>
-<li>med linjer mellom</li>
-<li>med både linjer og punkter.</li>
+<li>Lager en liste med symbolene til linjene</li>
+<li>identifiserer hvor i listen <code>symbol</code> befinner seg</li>
+<li>setter linjevidden til denne linjen til 5</li>
+<li>Fjerner gjennomsiktigheten til denne linjen</li>
 </ol>
+<p>Vi kan nå plotte grafen, etter å ha uthevet linjene til 'DE' (Tyskland) 'NO' (Norge) og 'EU28' (EU inkludert Storbritannia):</p>
+<h4 id="Eksempel-32:">Eksempel 32:<a class="anchor-link" href="#Eksempel-32:">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">thick_line</span><span class="p">(</span><span class="s1">&#39;DE&#39;</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">thick_line</span><span class="p">(</span><span class="s1">&#39;NO&#39;</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">thick_line</span><span class="p">(</span><span class="s1">&#39;EU28&#39;</span><span class="p">,</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">ncol</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">figure</span>
+</pre></div>
 
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Oppgaver:">Oppgaver:<a class="anchor-link" href="#Oppgaver:">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Oppgave-3:">Oppgave 3:<a class="anchor-link" href="#Oppgave-3:">&#182;</a></h4><ol>
-<li>Plott BNP_per_capita mot Befolkning</li>
-<li>Plott Utdanning mot Befolkning</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Oppgave-4:">Oppgave 4:<a class="anchor-link" href="#Oppgave-4:">&#182;</a></h4><ol>
-<li>Plot <code>np.log(x)</code></li>
-<li>Plot <code>np.cos(x)</code></li>
-<li>Plot <code>np.sin(x)</code></li>
-<li>Plot <code>np.exp(-x)</code></li>
-<li>Lag en funksjon selv, og plott denne.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Oppgave-5:">Oppgave 5:<a class="anchor-link" href="#Oppgave-5:">&#182;</a></h4><p>En fabrikk produserer $x$ enheter. Kostnaden per enhet er 5 kroner, og i tillegg øker kostnaden med 5 øre per produsert enhet. Hver enhet koster dermed $5+0.05 \cdot x$. Bedriften selger produksjonen $x$ til en pris $p$. Fortjenesten er dermed differansen mellom inntekter $p\cdot x$ og totale kostnader $x \cdot (5+0.05 x)$.</p>
-<p>I alle oppgavene under skal du plotte i intervallet 0 til 100 (<code>x=p=np.linspace(0,100,100)</code>).</p>
 <ol>
-<li>Lag en funksjon <code>cost(x)</code> for totale kostnader, gitt en produksjonsmengde $x$, og </li>
-<li>Lag en funksjon <code>profit(x,p)</code> for fortjenesten, gitt en produksjonsmengde $x$ og pris $p$. </li>
-<li>Sett <code>x</code>til 5 i funksjonen du lagde over i 2., og plott fortjenesten som en funksjon av prisen. </li>
-<li>Sett <code>p</code>til 10 i funksjonen du lagde over i 2., og plott fortjenesten som en funksjon av produsert mengde. </li>
-<li>Hva er optimal produsert mengde?</li>
+<li><p>Hent ut to andre selskap fra titlon, og plott dem med <code>scatter()</code>-funksjonen for å se om det er en sammenheng mellom avkastningene.</p>
+</li>
+<li><p>Én av <code>elif</code>-setningene i Eksempel 4 vil aldri bli tilfredsstilt, uansett hva du setter som <code>animal</code>. Hvorfor?</p>
+</li>
+<li><p>I eksempel 6, hva skjer om du fjerner <code>or edu&gt;10</code> fra koden? Forklar.</p>
+</li>
+<li><p>Hent data for et annet selskap (valgfritt) fra titlon.uit.no, og velg to andre variabler enn i Eksempel 17, og plott dem mot hverandre.</p>
+</li>
+<li><p>Hent en tabell om strømpris i eurostat, og lag en tilsvarende graf som i Eksempel 32 for den. Gjør slik:</p>
+<ol>
+<li>Sjekk hvilke tabeller som er tilgjengelig med <code>toc[['Electricity' in i for i in toc['title']]]</code> og finn koden i feltet 'code' til tabellen "7143 Electricity prices for non-household consumers...". </li>
+<li>Hent tabellen som har denne koden</li>
+<li>Gjør følgende filtrering:
+<pre><code>df=df[(df['tax']=='X_TAX')*
+(df['consom']=='4162906')*
+(df['currency']=='EUR')*
+(df!=0).all(axis=1)]</code></pre>
+</li>
+<li>Lag graf som i Eksempel 32. Velg selv hvilke land dy synes er viktige å utheve. </li>
 </ol>
-<p>Husk å lag etiketter for aksene!</p>
+</li>
+</ol>
 
 </div>
 </div>
@@ -13790,7 +14006,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="&lt;-Forrige-----|-----Neste-&gt;"><a href="2%20-%20funksjoner.html">&lt; Forrige</a>     |     <a href="4%20-%20lister%2C%20oppslag%20og%20numpy.html">Neste &gt;</a><a class="anchor-link" href="#&lt;-Forrige-----|-----Neste-&gt;">&#182;</a></h5>
+<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="5%20-%20Sympy.html">&lt; Forrige</a>     |     <a href="7%20-%20l&#248;kker.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
 </div>
 </div>
 </div>

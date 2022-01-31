@@ -14,11 +14,29 @@ def main():
         fname = os.fsdecode(file)
         print(f"nummerates {fname}")
         if fname.endswith(".ipynb"): 
-            convert(fname)
             recount_and_replace(fname,'#### Eksempel')
             recount_and_replace(fname,'#### Oppgave')
+            replace(fname, '"assets/', '"../assets/')
+            convert(fname)
             
-
+def replace(fname,what, to):
+    f=open(fname)
+    s=f.read()
+    i=1
+    n=0
+    while True:
+        m=re.search(what,s[n:])
+        if m is None:
+            break
+        s=s[:m.start()+n]+to+s[m.end()+n:]
+        n+=m.end()
+        i+=1
+    f.close()
+    if i>1:
+        f=open(fname,'w',newline='')
+        f.write(s)        
+        f.close()
+        
 def recount_and_replace(fname,what):
     if len(what.split(' '))!=2 or not ('#' in what):
         raise RuntimeError(f'what needs to be on the form "#### word", not {what}')
