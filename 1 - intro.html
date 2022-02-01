@@ -13,22 +13,22 @@ td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: #ffffcc }
 .highlight { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #A00000 } /* Generic.Deleted */
 .highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gr { color: #E40000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
@@ -41,15 +41,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .kt { color: #B00040 } /* Keyword.Type */
 .highlight .m { color: #666666 } /* Literal.Number */
 .highlight .s { color: #BA2121 } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .na { color: #687822 } /* Name.Attribute */
 .highlight .nb { color: #008000 } /* Name.Builtin */
 .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
 .highlight .no { color: #880000 } /* Name.Constant */
 .highlight .nd { color: #AA22FF } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
 .highlight .nf { color: #0000FF } /* Name.Function */
-.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nl { color: #767600 } /* Name.Label */
 .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
 .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
 .highlight .nv { color: #19177C } /* Name.Variable */
@@ -66,11 +66,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
 .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
 .highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
@@ -13048,10 +13048,8 @@ div#notebook {
   }
 }
 </style>
-
-
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML-full,Safe"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     init_mathjax = function() {
@@ -13072,11 +13070,6 @@ div#notebook {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
-                    }
-                },
-                "HTML-CSS": {
                     linebreaks: { 
                     automatic: true 
                     }
@@ -13151,7 +13144,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Programmeringsspr&#229;k">Programmeringsspr&#229;k<a class="anchor-link" href="#Programmeringsspr&#229;k">&#182;</a></h2>
+<h2 id="Programmeringsspr%C3%A5k">Programmeringsspr&#229;k<a class="anchor-link" href="#Programmeringsspr%C3%A5k">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13160,7 +13153,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Da de første datamaskinene kom på 40-tallet, måtte brukerne gi maskinene instruksjoner i form av maskinkode. Datamaskiner er binære og forstår kun to tegn; 1 og 0, det vil si "av" og "på". Brukeren måtte derfor forklare maskinen hva den skulle gjøre ved å skrive ned problemet som en lang rekke enere og nuller. Det ble raskt klart at dette var en ekstremt krevende oppgave. Programmeringsspråk ble derfor funnet opp for at mennesker skulle kunne gi instruksjoner til datamaskiner på en forståelig måte.</p>
 <p>Stort sett alle programmeringsspråk henter syntaksen fra engelsk. Koden oversettes så til maskinspråk, noe som kalles å "kompilere" ("compile" på engelsk). Datamaskinen kan så behandle den kompilerte maskinkoden.</p>
-<h2 id="Lav--og-h&#248;yniv&#229;spr&#229;k">Lav- og h&#248;yniv&#229;spr&#229;k<a class="anchor-link" href="#Lav--og-h&#248;yniv&#229;spr&#229;k">&#182;</a></h2><p>Programmeringsspråk deles inn i høynivå- og lavnivåspråk. Forskjellen på høy- og lavnivå er hvor mye støtte språket gir til brukeren. Slik støtte gjør det enklere å programmere, men er kostbart fordi det gir en mindre effektiv kode.</p>
+<h2 id="Lav--og-h%C3%B8yniv%C3%A5spr%C3%A5k">Lav- og h&#248;yniv&#229;spr&#229;k<a class="anchor-link" href="#Lav--og-h%C3%B8yniv%C3%A5spr%C3%A5k">&#182;</a></h2><p>Programmeringsspråk deles inn i høynivå- og lavnivåspråk. Forskjellen på høy- og lavnivå er hvor mye støtte språket gir til brukeren. Slik støtte gjør det enklere å programmere, men er kostbart fordi det gir en mindre effektiv kode.</p>
 
 </div>
 </div>
@@ -13270,7 +13263,7 @@ For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gj�
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hvordan-s&#248;rge-for-at-du-alltid-har-siste-versjon?">Hvordan s&#248;rge for at du alltid har siste versjon?<a class="anchor-link" href="#Hvordan-s&#248;rge-for-at-du-alltid-har-siste-versjon?">&#182;</a></h2>
+<h2 id="Hvordan-s%C3%B8rge-for-at-du-alltid-har-siste-versjon?">Hvordan s&#248;rge for at du alltid har siste versjon?<a class="anchor-link" href="#Hvordan-s%C3%B8rge-for-at-du-alltid-har-siste-versjon?">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13314,7 +13307,7 @@ For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gj�
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#197;pne-notebook-dokument-i-Jupyter">&#197;pne notebook-dokument i Jupyter<a class="anchor-link" href="#&#197;pne-notebook-dokument-i-Jupyter">&#182;</a></h2>
+<h2 id="%C3%85pne-notebook-dokument-i-Jupyter">&#197;pne notebook-dokument i Jupyter<a class="anchor-link" href="#%C3%85pne-notebook-dokument-i-Jupyter">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13367,7 +13360,7 @@ For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gj�
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Alternative-m&#229;ter-&#229;-bruke-Python-p&#229;">Alternative m&#229;ter &#229; bruke Python p&#229;<a class="anchor-link" href="#Alternative-m&#229;ter-&#229;-bruke-Python-p&#229;">&#182;</a></h2>
+<h2 id="Alternative-m%C3%A5ter-%C3%A5-bruke-Python-p%C3%A5">Alternative m&#229;ter &#229; bruke Python p&#229;<a class="anchor-link" href="#Alternative-m%C3%A5ter-%C3%A5-bruke-Python-p%C3%A5">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13385,7 +13378,7 @@ For å lese dette dokumentet interaktivt må du åpne det i Jupyter. Jupyter gj�
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Spr&#229;k">Spr&#229;k<a class="anchor-link" href="#Spr&#229;k">&#182;</a></h2>
+<h2 id="Spr%C3%A5k">Spr&#229;k<a class="anchor-link" href="#Spr%C3%A5k">&#182;</a></h2>
 </div>
 </div>
 </div>

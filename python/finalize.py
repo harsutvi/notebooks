@@ -7,22 +7,22 @@ import os
 import re
 from matplotlib import pyplot as plt
 
-
+JUP_PATH='../jupyter'
 
 def main():    
-    for file in os.listdir():
+    for file in os.listdir(JUP_PATH):
         fname = os.fsdecode(file)
         print(f"nummerates {fname}")
         if fname.endswith(".ipynb"): 
-            convert(fname)
             recount_and_replace(fname,'#### Eksempel')
             recount_and_replace(fname,'#### Oppgave')
-            
+            convert_ipynb_to_html(fname)
+
 
 def recount_and_replace(fname,what):
     if len(what.split(' '))!=2 or not ('#' in what):
         raise RuntimeError(f'what needs to be on the form "#### word", not {what}')
-    f=open(fname)
+    f=open(JUP_PATH+"/"+fname)
     s=f.read()
     i=1
     n=0
@@ -38,7 +38,7 @@ def recount_and_replace(fname,what):
         i+=1
     f.close()
     if i>1:
-        f=open(fname,'w',newline='')
+        f=open(JUP_PATH+"/"+fname,'w',newline='')
         f.write(s)        
         f.close()
 
@@ -57,11 +57,10 @@ def replace_references(s,old,new):
         n+=m.end()
     return s
 
-
-def convert(file):
-    html,res=nb.HTMLExporter(template_name='Classic').from_filename(file)
+def convert_ipynb_to_html(file):
+    html,res=nb.HTMLExporter(template_name='Classic').from_filename(JUP_PATH+"/"+file)
     html=html.replace('.ipynb">','.html">')
-    f=open(file.replace('.ipynb','.html'),'w',encoding="utf-8")
+    f=open("../"+file.replace('.ipynb','.html'),'w',encoding="utf-8")
     f.write(html)
     f.close()
 

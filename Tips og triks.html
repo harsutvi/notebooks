@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>5 - sympy</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Tips og triks</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <style type="text/css">
   pre { line-height: 125%; }
@@ -13089,815 +13089,89 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="4%20-%20lister%2C%20oppslag%20og%20numpy.html">&lt; Forrige</a>     |     <a href="6%20-%20Logikk%2C%20betingelser%2C%20filtrering%20og%20pandas.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="5---Sympy">5 - Sympy<a class="anchor-link" href="#5---Sympy">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Sympy er en veldig nyttig pakke innenfor samfunnsøkonomi. Med den kan vi regne analytisk, det vil si med symboler. I samfunnsøkonomi bruker vi mye matematikk som denne pakken kan hjelpe oss med. Vi starter med et eksempel på utregning av profittmaksimum:</p>
+<h1 id="Tips-og-triks:">Tips og triks:<a class="anchor-link" href="#Tips-og-triks:">&#182;</a></h1><h2 id="1.-Navigere-i-mappestrukturen-med-Terminal:">1. Navigere i mappestrukturen med <em>Terminal</em>:<a class="anchor-link" href="#1.-Navigere-i-mappestrukturen-med-Terminal:">&#182;</a></h2><ol>
+<li>Gå til jupyter.uit.no, trykk på "+" dersom "launcher"-fanen ikke er oppe, og trykk på "Terminal"</li>
+<li><p>For å navigere til en bestemt mappe:</p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Eksempel-med-optimal-mengde-arbeidskraft">Eksempel med optimal mengde arbeidskraft<a class="anchor-link" href="#Eksempel-med-optimal-mengde-arbeidskraft">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Anta at du er bedriftsleder, og lurer på hvor mange medarbeidere du skal ansette. For en gitt mengde arbeidskraft produseres</p>
-<h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">a</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">60</span><span class="o">*</span><span class="n">L</span><span class="o">**</span><span class="n">a</span>
-</pre></div>
+<pre><code>cd &lt;mappenavn&gt;</code></pre>
+<p>der du bytter ut \&lt;mappenavn&gt; med mappen du vil navigere til</p>
+</li>
+<li><p>For å navigere opp ett nivå i mappestrukturen:</p>
 
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>a</code> definerer produktiviteten til de ansatte. Desto høyere <code>a</code> er, desto mer produktive er de ansatte. Vi kan plotte denne funksjonen:</p>
-<h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mf">0.5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Arbeidskraft&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Produksjon&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Som vi ser er produktiviteten avtakende, kurven stiger mindre utover i diagrammet. Det er fordi <code>a</code> er mindre enn én. (Forsøk med andre tall for <code>a</code>!)</p>
-<p>Når produktfunksjonen er definert, kan vi definere fortjenesten til bedriften, eller "profittfunksjonen" som vi gjerne kaller det i samfunnsøkonomi. La oss si at bedriften betaler hver arbeider <code>w</code> tusen kroner, og at faste utgifter er <code>K</code>.</p>
-<p>Fortenesten er pris ganger solgt mengde, <code>p*f(L,a)</code> og kostnadene er lønnskostnader <code>w*L</code> og faste utgifter <code>K</code>. Profittfunksjonen blir da</p>
-<h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">profit</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">K</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">p</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">a</span><span class="p">)</span><span class="o">-</span><span class="n">w</span><span class="o">*</span><span class="n">L</span><span class="o">-</span><span class="n">K</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>La oss se på den grafisk. Dersom prisen per enhet er hundre kroner, lønna er 2 500 per dag og bedriften har 300 000 i faste utgifter per dag, så ser profittfunksjonen slik ut:</p>
-<h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1">#creating the plot</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5000</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;kroner&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Antall ansatte&#39;</span><span class="p">)</span>
-
-
-<span class="c1">#plotting the function</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">profit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mf">0.9</span><span class="p">,</span><span class="mi">2500</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">300000</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Fortjeneste&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi bruker metoden med <code>fig,ax=plt.subplots()</code>, siden vi skal bygge på denne grafen.</p>
-<p>Vi skal nå begynne å bruke sympy. Det første vi må gjøre er å definere hvilke symboler som skal behandles analytisk (altså som symboler og ikke flyttall). Det gjør vi slik:</p>
-<h4 id="Eksempel-5:">Eksempel 5:<a class="anchor-link" href="#Eksempel-5:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
-<span class="n">L</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">K</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;L a w p K&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Med symbolene definert, vil nå vår profittfunksjon vises analytisk når vi bruker de definere symbolene:</p>
-<h4 id="Eksempel-6:">Eksempel 6:<a class="anchor-link" href="#Eksempel-6:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">profit</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">K</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ønsker å finne ut for hvilken arbeidskraft fortjenesten er størst. Det er det høyeste punktet i figuren fra Eksempel 3. På dette punktet har profittfunksjonen ingen stigning, slik at den deriverte er null. For å finne dette punktet må vi først finne den <em>deriverte</em>. Det gjør vi i sympy med funksjonen <code>diff()</code>. Den tar to argumenter. Det første er funksjonen, det andre er den variabel vi ønsker å derivere med hensyn til.</p>
-<p>Som vi ser av figuren i Eksempel 3, så har vi arbeidskraft <code>L</code> langs x-aksen, så det er denne variabelen vi ønsker å derivere med hensyn til. Den deriverte av <code>profitt()</code> med hensyn til <code>L</code> er dermed:</p>
-<h4 id="Eksempel-7:">Eksempel 7:<a class="anchor-link" href="#Eksempel-7:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d_profitt</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">profit</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">K</span><span class="p">),</span><span class="n">L</span><span class="p">)</span>
-<span class="n">d_profitt</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>For å finne punktet der denne deriverte er null, setter vi opp en ligning der den deriverte er null, og løser for den <code>L</code> som tilfredstiller ligningen. En slik ligning kalles "førsteordensbetingelse", eller "first order condition" på engelsk. Vi forkorter den derfor til "foc":</p>
-<h4 id="Eksempel-8:">Eksempel 8:<a class="anchor-link" href="#Eksempel-8:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">foc</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">d_profitt</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">foc</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi kan nå løse førsteordensbetingelsen med funksjonen <code>solve</code>, som ligger i modulen <code>solvers</code>i sympy:</p>
-<h4 id="Eksempel-9:">Eksempel 9:<a class="anchor-link" href="#Eksempel-9:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.solvers</span> <span class="kn">import</span> <span class="n">solve</span>
-<span class="n">L_max</span><span class="o">=</span><span class="n">solve</span><span class="p">(</span><span class="n">foc</span><span class="p">,</span><span class="n">L</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">L_max</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Legg merke til at resultatet ligger i en liste med lengde 1, så vi må hente ut element 0 i listen for å vise resultatet. Vi kan finne hva den analytiske verdien er i maksimum ved å sette <code>L_max</code>inn i profittfunksjonen:</p>
-<h4 id="Eksempel-10:">Eksempel 10:<a class="anchor-link" href="#Eksempel-10:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">profit_max</span><span class="o">=</span><span class="n">profit</span><span class="p">(</span><span class="n">L_max</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">K</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi kan nå beregne de nummeriske verdiene ved å sette inn noen passende tall for de ukjente symbolene. Vi prøver med 0.5 for produktivitet <code>a</code>, 0.3 for lønn <code>w</code>, 1 for prise <code>p</code> og 1 for kapital <code>K</code>. Vi forteller sympy om at vi ønsker å bruke dise verdiene ved å lage et oppslag der hvert av symbolene er nøkkel til hver av de nummeriske verdiene:</p>
-<h4 id="Eksempel-11:">Eksempel 11:<a class="anchor-link" href="#Eksempel-11:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_dict</span><span class="o">=</span><span class="p">{</span><span class="n">a</span><span class="p">:</span><span class="mf">0.9</span><span class="p">,</span><span class="n">w</span><span class="p">:</span><span class="mi">2500</span><span class="p">,</span><span class="n">p</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="n">K</span><span class="p">:</span><span class="mi">300000</span><span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi kan nå finne nummerisk hvor mye arbeidskraft som trengs for å oppnå maksimal fortjeneste:</p>
-<h4 id="Eksempel-12:">Eksempel 12:<a class="anchor-link" href="#Eksempel-12:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L_max</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">num_dict</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Om vi nå legger dette tallet inn for symbol <code>L</code>, kan vi finne hvor stor fortjenesten er i dette punktet. Vi starter med å legge inn verdien for L som gir maksimal fortjeneste:</p>
-<h4 id="Eksempel-13:">Eksempel 13:<a class="anchor-link" href="#Eksempel-13:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_dict</span><span class="p">[</span><span class="n">L</span><span class="p">]</span><span class="o">=</span><span class="n">L_max</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">num_dict</span><span class="p">)</span>
-<span class="n">num_dict</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Med det oppdaterte oppslaget blir fortjenesten</p>
-<h4 id="Eksempel-14:">Eksempel 14:<a class="anchor-link" href="#Eksempel-14:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">profit_max_num</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">profit</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">K</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">num_dict</span><span class="p">))</span>
-<span class="n">profit_max_num</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Med modulene <code>display</code>og <code>Markdown</code>fra <code>IPython</code> (pakken som driver Jupyter), kan vi sette dette in i en pen tabell:</p>
-<h4 id="Eksempel-15:">Eksempel 15:<a class="anchor-link" href="#Eksempel-15:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
-
-<span class="n">tbl</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">|                                 | Desimalverdi                             |  Analytisk verdi              | </span>
-<span class="s2">| :-------------------------------| :----------------------------------------| :-----------------------------| </span>
-<span class="s2">| Optimal mengde arbeidskraft:     | $</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">num_dict</span><span class="p">[</span><span class="n">L</span><span class="p">]),</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">$         |$</span><span class="si">{</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">L_max</span><span class="p">)</span><span class="si">}</span><span class="s2">$            | </span>
-<span class="s2">| Maksimal profitt                | $</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">profit_max_num</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">$    |$</span><span class="si">{</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">profit_max</span><span class="p">)</span><span class="si">}</span><span class="s2">$       | </span>
-
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">tbl</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>La oss nå plotte løstningen. Vi plotter her følgende, i rekkefølge:</p>
-<ol>
-<li>Den opprinnelige profittfunksjonen</li>
-<li>Den horisontale tangenten som tangerer i maksimumspunktet</li>
-<li>En vertikal linje som viser mengden arbeidskraft i optimum. </li>
+<pre><code>cd ..</code></pre>
+</li>
 </ol>
-<p>Legg merke til at vi legger inn verdiene vi har definert i <code>num_dict</code> inn i profittfunksjonen. Generelt er det en god idé i programmering å "hardkode" tall minst mulig. Definer det heller tallet som en variabel eller element i en <code>dict</code>og referer til det senere.</p>
-<h4 id="Eksempel-16:">Eksempel 16:<a class="anchor-link" href="#Eksempel-16:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span>
-        <span class="n">profit_max_num</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span>
-        <span class="n">label</span><span class="o">=</span><span class="s1">&#39;tangent&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">L_max</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">num_dict</span><span class="p">)),</span> 
-          <span class="o">-</span><span class="mi">300000</span><span class="p">,</span> 
-          <span class="n">profit_max_num</span><span class="o">*</span><span class="mf">1.1</span><span class="p">,</span>
-          <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">],</span>
-          <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span>
-          <span class="n">label</span><span class="o">=</span><span class="s1">&#39;optimum&#39;</span><span class="p">)</span>
+<h2 id="2.-Klone-dette-repositoriet:">2. Klone dette repositoriet:<a class="anchor-link" href="#2.-Klone-dette-repositoriet:">&#182;</a></h2>
+<pre><code>git clone https://github.com/uit-sok-1003-h21/notebooks/</code></pre>
+<h2 id="3.-Starte-Jupyter-i-bestemt-mappe-('D:/myfiles'-i-dette-tilfellet):">3. Starte Jupyter i bestemt mappe ('D:/myfiles' i dette tilfellet):<a class="anchor-link" href="#3.-Starte-Jupyter-i-bestemt-mappe-('D:/myfiles'-i-dette-tilfellet):">&#182;</a></h2>
+<pre><code>jupyter notebook --notebook-dir=D:/myfiles</code></pre>
+<h2 id="4.-commit:">4. commit:<a class="anchor-link" href="#4.-commit:">&#182;</a></h2>
+<pre><code>git add .
+git commit -m "text"</code></pre>
+<h2 id="5.-push:">5. push:<a class="anchor-link" href="#5.-push:">&#182;</a></h2>
+<pre><code>git push</code></pre>
+<h2 id="6.-pull:">6. pull:<a class="anchor-link" href="#6.-pull:">&#182;</a></h2>
+<pre><code>git pull</code></pre>
+<ol>
+<li><p>Om filer er endret, og du ønsker å overskrive endringene:</p>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
-<span class="n">fig</span>
-</pre></div>
+<pre><code>git reset --hard
+git pull</code></pre>
+</li>
+<li><p>Om filer er endret, og du ønsker å overskrive endringene, men også ta vare på endringer.</p>
 
-    </div>
-</div>
-</div>
+<pre><code>git stash</code></pre>
+</li>
+</ol>
+<h2 id="7.-Lage-git-repositorie:">7. Lage git-repositorie:<a class="anchor-link" href="#7.-Lage-git-repositorie:">&#182;</a></h2><p><a href="https://uit-sok-1003-h21.github.io/github.html">Se her for en forklaring på hvordan du skal levere arbeidskrav på github</a></p>
+<ol>
+<li>Lag en githubkonto (du trenger ikke bruke din uit-mail, det er valgfritt)</li>
+<li>Logg på <code>jupyter.uit.no</code>, og åpne ny Terminal (+), og naviger dit du vil ha repositoriet på jupyter med <code>cd &lt;mappenavn&gt;</code>.</li>
+<li>Konfigurer git med e-posten til kontoen og ditt brukernavn (bytt ut klammeparentesene med e-posten og brukernavnet til githubkontoen):
+<pre><code>git config --global user.email "&lt;e-post&gt;"
+git config --global user.name "&lt;brukernavn&gt;"</code></pre>
+</li>
+<li>Gå til <strong>Repositories</strong>, trykk <strong>New</strong>, gi repositoriet et navn og velg <strong>Private</strong> eller <strong>Public</strong>. </li>
+<li>Hold denne fanen åpen, for du skal bruke html-adressen til denne siden.</li>
+<li>Sørg for at du har et token. Gå eventuelt til <a href="https://github.com/settings/tokens/new">https://github.com/settings/tokens/new</a> for å generere nytt token. <em>Hold fanen åpen for å ha tokenet tilgjengelig.</em></li>
+<li><p>kjør <code>git clone https://&lt;token&gt;@github.com/&lt;sti&gt;</code> der \&lt;token&gt; er tokenet er det du fikk i 6. og \&lt;sti&gt; er det som kommer etter <strong>github.com/</strong>  i html-adressen i 5.</p>
+<p>Du kan nå redigere repositoriet ditt</p>
+</li>
+</ol>
+<h2 id="8.-Dytte-repositoriet-til-github:">8. Dytte repositoriet til github:<a class="anchor-link" href="#8.-Dytte-repositoriet-til-github:">&#182;</a></h2><ol>
+<li>Naviger til repositoriemappen i Terminal (se avsnitt 1.)</li>
+<li>Kjør i Terminal:
+<pre><code>git add .
+git commit -m "New repository"
+git push</code></pre>
+</li>
+</ol>
+<p>Dersom du får en rettighetsfeil kan du forsøke å legge inn, etter <code>git push</code>, nettadressen som beskrevet i pkt. 7.7 over.</p>
+<h2 id="9.-Installere-stavekontroll-for-i-lokal-Jupyter-notebook:">9. Installere stavekontroll for i lokal Jupyter notebook:<a class="anchor-link" href="#9.-Installere-stavekontroll-for-i-lokal-Jupyter-notebook:">&#182;</a></h2>
+<pre><code>pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+jupyter nbextension enable spellchecker/main</code></pre>
+<p>For å installere norsk stavekontroll:</p>
+<ol>
+<li>gå til <a href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/spellchecker/README.html">https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/spellchecker/README.html</a></li>
+<li>kjør</li>
+</ol>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Eksempel-med-tilbud-og-ettersp%C3%B8rsel">Eksempel med tilbud og ettersp&#248;rsel<a class="anchor-link" href="#Eksempel-med-tilbud-og-ettersp%C3%B8rsel">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I forelesning 3 definerte vi disse tilbuds og etterspørselsfunksjonene:</p>
-<h4 id="Eksempel-17:">Eksempel 17:<a class="anchor-link" href="#Eksempel-17:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">supply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">250</span><span class="p">)</span>
-    
-<span class="k">def</span> <span class="nf">demand</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">3000</span><span class="o">/</span><span class="p">(</span><span class="mi">100</span><span class="o">+</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
+<pre><code>from jupyter_core.paths import jupyter_data_dir
+jupyter_data_dir()</code></pre>
+<p>Resultatet viser stien nenvnt i lenken over.</p>
+<ol>
+<li>Lag en mappe <code>dictionaries</code> under <code>spellchecker</code> i ovvenenvnte sti.</li>
+<li>Kopier <a href="./dictionaries/nb_NO.aff">nb_NO.aff</a> og <a href="./dictionaries/nb_NO.dic">nb_NO.dic</a> fra <code>/instructions/dictionaries</code> mappen i dette repositoriet til mappen du nettopp laget.</li>
+<li>Kopier koden fra nettsiden over til en notebook, bytt ut de_DE med nb_NO, og kjør det.</li>
+</ol>
+<h2 id="10.-Fjerne-en-mappe-og-alt-dets-innhold-(FARLIG!)">10. Fjerne en mappe og alt dets innhold (FARLIG!)<a class="anchor-link" href="#10.-Fjerne-en-mappe-og-alt-dets-innhold-(FARLIG!)">&#182;</a></h2><p>Dersom en mappe har innhold som er vanskelig å fjerne, slik som et git-repositorie, kan det være du må da kjøre en kommando i Terminal for å fjerne mappen. Du må da kjøre en kommando i Terminal for å fjerne mappen. For å fjerne en mappe og alt innholdet, navigerer du til mappen over (se 3.), slik at om du kjører <code>dir</code> så ser du navnet på mappen (samme med eventuelt andre filer og mapper). Du kjører så</p>
 
-    </div>
-</div>
-</div>
+<pre><code>rm -r &lt;navn på mappe du vil ha fjernet&gt;</code></pre>
+<p>Bytt ut ´&lt;navn på mappe du vil ha fjernet&gt;´ med mappen du vil slette.</p>
+<p>MERK at dette sletter mappen FOR EVIG OG ALLTID! Den kan ikke gjenoprettes, så VÆR HELT SIKKER før du gjør dette. Du må være HELT sikker på hvor du er i mappestrukturen i terminal, slik at du ikke sletter noe uforvarende.</p>
+<p>Når du har kjørt kommandoen, vil du få gjentatte spørsmål om du vil slette hver enkelt fil. Trykk <code>y</code> og Enter på hvert spørsmål. </p>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Og vi tegnet dem slik:</p>
-<h4 id="Eksempel-18:">Eksempel 18:<a class="anchor-link" href="#Eksempel-18:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#drawing 100 points in the interval 0.0 to 100</span>
-<span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-
-<span class="c1">#creating the plot</span>
-<span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Pris&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Enheter&#39;</span><span class="p">)</span>
-
-
-<span class="c1">#drawing supply</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">supply</span><span class="p">(</span><span class="n">q</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Tilbud&#39;</span><span class="p">)</span>
-
-<span class="c1">#drawing demand</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">demand</span><span class="p">(</span><span class="n">q</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Etterspørsel&#39;</span><span class="p">)</span>
-
-<span class="c1">#adding legend:</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper center&#39;</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi løste da likevekten grafisk, ved å se sånn cirka hvor tilbud er lik etterspørsel. Med sympy kan vi la python regne ut dette, og konsument og produsentoverskudd. Vi gjør dette ved å definere mengde <code>x</code> som en eksogen variabel, og sette opp ligningen vi trenger, altså at tilbud skal være lik etterspørsel:</p>
-<h4 id="Eksempel-19:">Eksempel 19:<a class="anchor-link" href="#Eksempel-19:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="n">eq_cond</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">demand</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">supply</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="n">eq_cond</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi kan nå løse dette med solve fra sympy, som i forrige eksempel:</p>
-<h4 id="Eksempel-20:">Eksempel 20:<a class="anchor-link" href="#Eksempel-20:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_eq</span><span class="o">=</span><span class="n">solve</span><span class="p">(</span><span class="n">eq_cond</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
-<span class="n">x_eq</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Bare én av disse løsningene er gyldige. De to siste i listen <code>x_eq</code>er såkalte "imaginære tall", det ser vi av <code>I</code>'en. Vi går ikke lenger inn på hva dette er her, men nøyer oss med å si at en likevekt ikke kan være et imaginært tall. Løsningen er altså <code>x_eq[0]</code>. Vi kan sette denne inn i enten tilbuds eller etterspørselfunksjonen for å få likevektsprisen</p>
-<h4 id="Eksempel-21:">Eksempel 21:<a class="anchor-link" href="#Eksempel-21:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p_eq</span><span class="o">=</span><span class="n">demand</span><span class="p">(</span><span class="n">x_eq</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">Likevektspris er </span><span class="si">{</span><span class="n">p_eq</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">Likevektskvantum er </span><span class="si">{</span><span class="n">x_eq</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Etterspørselskurven kan ses på som en rekke med konsumenter med ulik betalingsvilje i fallende rekkefølge. Alle konsumentene som betaler <code>p_eq</code> har dermed et overskudd som er lik differansen mellom <code>p_eq</code> og konsumentens punkt på etterspørselskurven. Summen av alle konsumentenes overskudd kalles konsumentoverskuddet. Dette kan illustreres ved å legge  et skravert område til figuren over</p>
-<h4 id="Eksempel-22:">Eksempel 22:<a class="anchor-link" href="#Eksempel-22:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">float</span><span class="p">(</span><span class="n">x_eq</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="nb">float</span><span class="p">(</span><span class="n">p_eq</span><span class="p">),</span><span class="n">demand</span><span class="p">(</span><span class="n">q</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;pink&quot;</span><span class="p">,</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Konsumentoverskudd&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper center&#39;</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">fig</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Akkrat som at vi kan regnet ut skjæringspunktet med sympy, så kan vi regne ut det skraverte konsumentoverskuddet. Vi bruker da det vi har lært i matematikkurset; arealet under en funksjon er integralet til funksjonen. Vi skal finne arealet under etterspørselsfunksjonen <code>demand(x)</code>, men kun ned til prisen <code>p_eq</code>, så vi integrer differansen <code>demand(x)-p_eq</code>. Dette gjør vi for alle omsatte enheter, altså frem til omsatt kvantum <code>x_eq[0]</code>.</p>
-<p>Vi skal altså integrere  <code>demand(x)-p_eq</code> i intervalet 0 til <code>x_eq[0]</code>. Det kan vi gjøre i sympy slik:</p>
-<h4 id="Eksempel-23:">Eksempel 23:<a class="anchor-link" href="#Eksempel-23:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">consumer_surplus</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">demand</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="nb">float</span><span class="p">(</span><span class="n">p_eq</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">x_eq</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="n">consumer_surplus</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>På samme måte er <em>produsentoverskuddet</em> arealet over tilbuskurven, opp til prisen, altså det gule området i figuren under</p>
-<h4 id="Eksempel-24:">Eksempel 24:<a class="anchor-link" href="#Eksempel-24:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">supply</span><span class="p">(</span><span class="n">q</span><span class="p">),</span><span class="nb">float</span><span class="p">(</span><span class="n">p_eq</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Produsentoverskudd&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x_eq</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">],</span><span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;x_eq[0]&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper center&#39;</span><span class="p">,</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">fig</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi kan regne ut dette område også, som altså er integralet av differansen mellom prisen og tilbudskruven, frem til  <code>x_eq[0]</code>.</p>
-<h4 id="Eksempel-25:">Eksempel 25:<a class="anchor-link" href="#Eksempel-25:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">producer_surplus</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">p_eq</span><span class="o">-</span><span class="n">supply</span><span class="p">(</span><span class="n">x</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">x_eq</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="n">producer_surplus</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Summen av produsentoverskuddet og konsumentoversdkuddet kalles "velferdsgevinsten". Vi kan finne den ved å legge sammen konsument- og produsentoverskudd:</p>
-<h4 id="Eksempel-26:">Eksempel 26:<a class="anchor-link" href="#Eksempel-26:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">producer_surplus</span><span class="o">+</span><span class="n">consumer_surplus</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Eller ved å ta integralet av differansen mellom etterspørsel og tilbud:</p>
-<h4 id="Eksempel-27:">Eksempel 27:<a class="anchor-link" href="#Eksempel-27:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">welfare_surplus</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">demand</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="n">supply</span><span class="p">(</span><span class="n">x</span><span class="p">),(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">x_eq</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="n">welfare_surplus</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi kan nå lage en tabell som oppsumerer resultatene:</p>
-<h4 id="Eksempel-28:">Eksempel 28:<a class="anchor-link" href="#Eksempel-28:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tbl</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">|                     | Verdi                                    |</span>
-<span class="s2">| :-------------------| :----------------------------------------|</span>
-<span class="s2">| Solgt mengde:       | $</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x_eq</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">$           |</span>
-<span class="s2">| Pris:               | $</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">p_eq</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">$              |</span>
-<span class="s2">| Verdiskapning:      | $</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">welfare_surplus</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">$  |</span>
-<span class="s2">| Konsumentoverskudd: | $</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">consumer_surplus</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">$ | </span>
-<span class="s2">| Produsentoverskudd: | $</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">producer_surplus</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">$ | </span>
-<span class="s2">| Velferdsgevinst:    | $</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">welfare_surplus</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">$   | </span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">tbl</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="L%C3%B8se-flere-ligninger-med-flere-ukjente">L&#248;se flere ligninger med flere ukjente<a class="anchor-link" href="#L%C3%B8se-flere-ligninger-med-flere-ukjente">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I eksempel 20 hadde vi én ligning med én ukjent. Det er imidlertid enkelt å løse flere ligninger med flere ukjente. Forskjellen er bare at når det er flere ligninger, så setter vi hver av disse inn i en liste. Som dere vet må det være akkurat like mange ukjente som ligninger, så vi må også sette akkurat like mange variabler inn i en annen liste. Disse to listene utgjør så argumentene i <code>solve()</code> funksjonen. La oss ta et eksempel. Vi begynner med å definere to lister med henholdsvis tre variabler og tre ligninger:</p>
-<h4 id="Eksempel-29:">Eksempel 29:<a class="anchor-link" href="#Eksempel-29:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;x y z&quot;</span><span class="p">)</span>
-<span class="n">symbols</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">]</span>
-<span class="n">equations</span><span class="o">=</span><span class="p">[</span>
-    <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">8</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">z</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span>
-    <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">15</span><span class="o">*</span><span class="n">y</span><span class="o">-</span><span class="mi">14</span><span class="o">*</span><span class="n">z</span><span class="p">,</span><span class="o">-</span><span class="mi">20</span><span class="p">),</span>
-    <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="mi">11</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">6</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="mi">7</span><span class="o">*</span><span class="n">z</span><span class="p">,</span><span class="mi">35</span><span class="p">)</span>
-<span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi setter så disse to listene inn i <code>solve()</code> akkurat som om det var én ligning og én ukjent, og finner svaret:</p>
-<h4 id="Eksempel-30">Eksempel 30<a class="anchor-link" href="#Eksempel-30">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">equations</span><span class="p">,</span><span class="n">symbols</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Arbeiskrav/Oppgaver">Arbeiskrav/Oppgaver<a class="anchor-link" href="#Arbeiskrav/Oppgaver">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Løs oppgavene 15, 16, 17 og 19-22 i "Læresteg" i BED-1007 (<a href="https://uit.instructure.com/courses/24032/files/folder/Arbeidskrav%205%20-%20Sympy">filene ligger også her</a>), ved bruk av Sympy</p>
-<p>Arbeidskravet skal leveres på github! <a href="https://uit-sok-1003-h21.github.io/github.html">Slik gjør du det.</a></p>
-<p>Repositoriet med løsningen på oppgaven SKAL hete "sok_1003_sympy".</p>
-<p>Du trenger ikke gjøre oppgavene a-d i læresteg 20.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="%3C-Forrige-----%7C-----Neste-%3E"><a href="4%20-%20lister%2C%20oppslag%20og%20numpy.html">&lt; Forrige</a>     |     <a href="6%20-%20Logikk%2C%20betingelser%2C%20filtrering%20og%20pandas.html">Neste &gt;</a><a class="anchor-link" href="#%3C-Forrige-----%7C-----Neste-%3E">&#182;</a></h5>
 </div>
 </div>
 </div>
