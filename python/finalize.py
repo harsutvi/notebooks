@@ -10,6 +10,15 @@ from matplotlib import pyplot as plt
 JUP_PATH='../jupyter'
 
 def main():    
+    
+    print("TOC")
+    for file in os.listdir(JUP_PATH):
+        fname = os.fsdecode(file)
+        if fname.endswith(".ipynb"): 
+            print(f"[{fname}]({fname.replace('.ipynb','.ipynb')})")
+            
+            
+    print('Parsing ...')
     for file in os.listdir(JUP_PATH):
         fname = os.fsdecode(file)
         print(f"nummerates {fname}")
