@@ -15,7 +15,7 @@ def main():
     for file in os.listdir(JUP_PATH):
         fname = os.fsdecode(file)
         if fname.endswith(".ipynb"): 
-            print(f"[{fname.replace('.ipynb','.ipynb')}]({fname})\r")
+            print(f"[{fname.replace('.ipynb','.html')}]({fname})\r")
             
             
     print('Parsing ...')
