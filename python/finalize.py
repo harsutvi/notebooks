@@ -15,7 +15,7 @@ def main():
     for file in os.listdir(JUP_PATH):
         fname = os.fsdecode(file)
         if fname.endswith(".ipynb"): 
-            print(f"[{fname}]({fname.replace('.ipynb','.ipynb')})")
+            print(f"[{fname.replace('.ipynb','.ipynb')}]({fname})\r")
             
             
     print('Parsing ...')
@@ -23,15 +23,35 @@ def main():
         fname = os.fsdecode(file)
         print(f"nummerates {fname}")
         if fname.endswith(".ipynb"): 
-            recount_and_replace(fname,'#### Eksempel')
-            recount_and_replace(fname,'#### Oppgave')
-            convert_ipynb_to_html(fname)
+            recount_and_replace(JUP_PATH+"/"+fname,'#### Eksempel')
+            recount_and_replace(JUP_PATH+"/"+fname,'#### Oppgave')
+            html_name="../"+file.replace('.ipynb','.html')
+            convert_ipynb_to_html(JUP_PATH+"/"+fname,html_name)
+            replace(fname.replace('.ipynb','.html'),'"../img/', '"img/')
 
+
+def replace(fname,what, to):
+    f=open(fname)
+    s=f.read()
+    i=1
+    n=0
+    while True:
+        m=re.search(what,s[n:])
+        if m is None:
+            break
+        s=s[:m.start()+n]+to+s[m.end()+n:]
+        n+=m.end()
+        i+=1
+    f.close()
+    if i>1:
+        f=open(fname,'w',newline='')
+        f.write(s)        
+        f.close()
 
 def recount_and_replace(fname,what):
     if len(what.split(' '))!=2 or not ('#' in what):
         raise RuntimeError(f'what needs to be on the form "#### word", not {what}')
-    f=open(JUP_PATH+"/"+fname)
+    f=open(fname)
     s=f.read()
     i=1
     n=0
@@ -47,7 +67,7 @@ def recount_and_replace(fname,what):
         i+=1
     f.close()
     if i>1:
-        f=open(JUP_PATH+"/"+fname,'w',newline='')
+        f=open(fname,'w',newline='')
         f.write(s)        
         f.close()
 
@@ -66,10 +86,10 @@ def replace_references(s,old,new):
         n+=m.end()
     return s
 
-def convert_ipynb_to_html(file):
-    html,res=nb.HTMLExporter(template_name='Classic').from_filename(JUP_PATH+"/"+file)
+def convert_ipynb_to_html(ipynbfile,htmlfile):
+    html,res=nb.HTMLExporter(template_name='Classic').from_filename(ipynbfile)
     html=html.replace('.ipynb">','.html">')
-    f=open("../"+file.replace('.ipynb','.html'),'w',encoding="utf-8")
+    f=open(htmlfile,'w',encoding="utf-8")
     f.write(html)
     f.close()
 
