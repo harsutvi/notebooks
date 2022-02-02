@@ -27,7 +27,7 @@ def main():
             recount_and_replace(JUP_PATH+"/"+fname,'#### Oppgave')
             html_name="../"+file.replace('.ipynb','.html')
             convert_ipynb_to_html(JUP_PATH+"/"+fname,html_name)
-            replace(fname.replace('.ipynb','.html'),'"../img/', '"img/')
+            replace(html_name,'"../img/', '"img/')
 
 
 def replace(fname,what, to):
