@@ -2,7 +2,7 @@
 
 # Forelesningsnotater i python 
 
-## For samfunnsøknomi med datavitenskap ved UiT Norges Arktiske universitet
+## For samfunnsøkonomi med datavitenskap ved UiT Norges Arktiske universitet
 
 
 ## Innhold:
