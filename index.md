@@ -4,8 +4,6 @@
 
 [1 - introduksjon.ipynb](1 - introduksjon.html)
 
-[7 - løkker og simulering.ipynb](7 - løkker og simulering.html)
-
 [2 - funksjoner.ipynb](2 - funksjoner.html)
 
 [3 - matplotlib.ipynb](3 - matplotlib.html)
@@ -15,5 +13,7 @@
 [5 - sympy.ipynb](5 - sympy.html)
 
 [6 - pandas, filtrering, logikk og betingelser.ipynb](6 - pandas, filtrering, logikk og betingelser.html)
+
+[7 - løkker og simulering.ipynb](7 - løkker og simulering.html)
 
 {% include navbar.html %}
