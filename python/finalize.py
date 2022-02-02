@@ -12,10 +12,14 @@ JUP_PATH='../jupyter'
 def main():    
     
     print("TOC")
+    lst=[]
     for file in os.listdir(JUP_PATH):
         fname = os.fsdecode(file)
         if fname.endswith(".ipynb"): 
-            print(f"[{fname}]({fname.replace('.ipynb','.html')})\r")
+            lst.append(f"[{fname}]({fname.replace('.ipynb','.html')})\r")
+    lst.sort()
+    for i in lst:
+        print(i)
             
             
     print('Parsing ...')
