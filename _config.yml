@@ -31,3 +31,5 @@ title: null #Skal stå tom
 markdown: kramdown
 kramdown:
    auto_ids: true
+
+theme: jekyll-theme-slate
