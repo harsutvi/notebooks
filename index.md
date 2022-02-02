@@ -1,3 +1,4 @@
+{% include navbar_open.html %} 
 ---
 layout: default
 ---
