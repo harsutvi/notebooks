@@ -1,4 +1,4 @@
-
+{% include navbar.html %} {% include top-box.html %}
 
 # Forelesningsnotater i python 
 
