@@ -1,3 +1,4 @@
+{% include navbar.html %}
 ## Innhold:
 
 [0 - tips og triks.ipynb](0 - tips og triks.html)
@@ -16,4 +17,4 @@
 
 [7 - løkker og simulering.ipynb](7 - løkker og simulering.html)
 
-{% include navbar.html %}
+
