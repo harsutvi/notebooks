@@ -1664,20 +1664,27 @@ pre code {
   margin-left: auto;
   padding-left: 0px;
   padding-right: 0px;
+  width: 80%;
+  
 }
-@media (min-width: 768px) {
+@media  (max-width: 1000px) {
   .container {
-    width: 768px;
+    width: 60%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
   .container {
-    width: 940px;
+    width: 600px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1140px;
+    width: 800px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1000px;
   }
 }
 .container-fluid {
@@ -1685,6 +1692,55 @@ pre code {
   margin-left: auto;
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.sidenav {
+  width: 300px;
+  position: absolute;
+  z-index: 20;
+  top: -15px;
+  left: 0px;
+  background-color: "white";
+  overflow-x: hidden;
+  padding-top: 60px;
+  white-space: normal;
+  font-family: "Lato", sans-serif;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.sidenav_container {
+
+  position: relative;
+  z-index: 20;
+  left: -330px;
+
+}
+
+.topbanner {
+  background-image: linear-gradient(black, #404040);
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  height:170px;
+}
+.topbanner h1 {
+letter-spacing: -0.5px;
+font-size: 36px;
+  color: white;
+  font-weight:800
+}
+.topbanner h2 {
+letter-spacing: -0.5px;
+  font-size: 22px;
+  color: white;
+  font-weight:200
+}
+.topbanner_container {
+  position:relative;
+  display: inline-block;
+  top:20px;
+  text-align: left;
 }
 .row {
   margin-left: 0px;
@@ -13083,9 +13139,30 @@ div#notebook {
     </script>
     <!-- End of mathjax configuration --></head>
 <body>
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
 
+	<div id="header_wrap" class="topbanner">
+		<div class="topbanner_container">
+			<h1 id="project_title">Python for samfunnsøkonomi</h1>
+			<h2 id="project_tagline">Forelesningsnotater</h2>
+		</div>
+	</div>
+	
+	
+<div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+	<div class="sidenav_container">
+		<div id="mySidenav" class="sidenav">
+			<a href="0 - tips og triks.html">0 - tips og triks.ipynb</a><br>
+			<a href="1 - introduksjon.html">1 - introduksjon.ipynb</a><br>
+			<a href="2 - funksjoner.html">2 - funksjoner.ipynb</a><br>
+			<a href="3 - matplotlib.html">3 - matplotlib.ipynb</a><br>
+			<a href="4 - lister, oppslag og numpy.html">4 - lister, oppslag og numpy.ipynb</a><br>
+			<a href="5 - sympy.html">5 - sympy.ipynb</a><br>
+			<a href="6 - pandas, filtrering, logikk og betingelser.html">6 - pandas, filtrering, logikk og betingelser.ipynb</a><br>
+			<a href="7 - løkker og simulering.html">7 - løkker og simulering.ipynb</a><br>
+<br><br><br>			<a href="https://github.com/espensirnes/notebooks">Gå til repositoriet</a><br>
+		</div>
+	</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">

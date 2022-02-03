@@ -7,17 +7,26 @@ import os
 import re
 from matplotlib import pyplot as plt
 
-JUP_PATH='../jupyter'
+JUP_PATH='../'
+HTML_PATH='../html/'
+ELEMENTS_PATH='../_elements/'
+REPOSITORY_NAME="https://github.com/espensirnes/notebooks"
 
 def main():    
     
     print("TOC")
     lst=[]
+    content_lst=[]
     for file in os.listdir(JUP_PATH):
         fname = os.fsdecode(file)
         if fname.endswith(".ipynb"): 
-            lst.append(f"[{fname}]({fname.replace('.ipynb','.html')})\r")
+            link=fname.replace('.ipynb','.html')
+            text=fname
+            content_lst.append([text,link])
+            if fname.endswith(".ipynb"): 
+                lst.append(f"[{fname}]({text})\r")
     lst.sort()
+    content_lst.sort(key=lambda x:x[0])
     for i in lst:
         print(i)
             
@@ -25,17 +34,20 @@ def main():
     print('Parsing ...')
     for file in os.listdir(JUP_PATH):
         fname = os.fsdecode(file)
-        print(f"nummerates {fname}")
         if fname.endswith(".ipynb"): 
-            recount_and_replace(JUP_PATH+"/"+fname,'#### Eksempel')
-            recount_and_replace(JUP_PATH+"/"+fname,'#### Oppgave')
-            html_name="../"+file.replace('.ipynb','.html')
-            convert_ipynb_to_html(JUP_PATH+"/"+fname,html_name)
-            replace(html_name,'"../img/', '"img/')
+            print(f"nummerates {fname}")
+            replace_all(JUP_PATH+fname,'"../img/', '"img/')
+            recount_and_replace(JUP_PATH+fname,'#### Eksempel')
+            recount_and_replace(JUP_PATH+fname,'#### Oppgave')
+            html_name=HTML_PATH+file.replace('.ipynb','.html')
+            html=convert_ipynb_to_html(JUP_PATH+fname)
+            html=insert_custom_html(html, content_lst)
+            write(html_name,html)
+            replace_all(html_name, '"img/','"../img/')
 
 
-def replace(fname,what, to):
-    f=open(fname)
+def replace_all(fname,what, to):
+    f=open(fname,encoding='utf-8')
     s=f.read()
     i=1
     n=0
@@ -48,14 +60,32 @@ def replace(fname,what, to):
         i+=1
     f.close()
     if i>1:
-        f=open(fname,'w',newline='')
-        f.write(s)        
-        f.close()
+        write(fname,s)
 
+def replace(s,start_str,end_str,to,owerwrite=[False,False]):
+    m0=re.search(start_str,s)
+    if m0 is None:
+        raise RuntimeError(f'Failed to find {start_str}')    
+    m1=re.search(end_str,s[m0.end():])
+    if m1 is None:
+        raise RuntimeError(f'Failed to find {end_str}')
+    if owerwrite[0]:
+        start=m0.start()
+    else:
+        start=m0.end()
+    if owerwrite[1]:
+        end=m1.end()+m0.end()
+    else:
+        end=m1.start()+m0.end()   
+    
+    s=s[:start]+to+s[end:]
+    return s
+    
+    
 def recount_and_replace(fname,what):
     if len(what.split(' '))!=2 or not ('#' in what):
         raise RuntimeError(f'what needs to be on the form "#### word", not {what}')
-    f=open(fname)
+    f=open(fname,encoding='utf-8')
     s=f.read()
     i=1
     n=0
@@ -71,9 +101,7 @@ def recount_and_replace(fname,what):
         i+=1
     f.close()
     if i>1:
-        f=open(fname,'w',newline='')
-        f.write(s)        
-        f.close()
+        write(fname,s)
 
         
 def replace_references(s,old,new):
@@ -90,12 +118,41 @@ def replace_references(s,old,new):
         n+=m.end()
     return s
 
-def convert_ipynb_to_html(ipynbfile,htmlfile):
+def convert_ipynb_to_html(ipynbfile):
     html,res=nb.HTMLExporter(template_name='Classic').from_filename(ipynbfile)
     html=html.replace('.ipynb">','.html">')
-    f=open(htmlfile,'w',encoding="utf-8")
-    f.write(html)
-    f.close()
+    return html
+    
 
+def insert_custom_html(html,content_list):
+    css=read(ELEMENTS_PATH+'css.html')
+    banner=read(ELEMENTS_PATH+'banner.html')
+    html=replace(html, ".container {",".row {", css,[True,False])
+    html=replace(html, "<body>",'<div tabindex="-1"', banner)
+    content='\n\t<div class="sidenav_container">\n\t\t<div id="mySidenav" class="sidenav">\n'
+    for text,link in content_list:
+        content+=f'\t\t\t<a href="{link}">{text}</a><br>\n'
+    content+='<br>'*3
+    content+=f'\t\t\t<a href="{REPOSITORY_NAME}">Gå til repositoriet</a><br>\n'
+    content+='\t\t</div>\n\t</div>\n'
+    html=replace(html, 
+                 '<div class="container" id="notebook-container">',
+                 '<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">', 
+                 content)
+    return html
+    
+    
+
+def write(fname,s):
+    f=open(fname,'w',encoding="utf-8")
+    f.write(s)
+    f.close()    
+    
+def read(fname):
+    f=open(fname,'r',encoding="utf-8")
+    r=f.read()
+    f.close() 
+    return r
+    
 
 main()
