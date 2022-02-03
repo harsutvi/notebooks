@@ -80,11 +80,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+
   </style>
 
 
-
 <style type="text/css">
+
 /*!
 *
 * Twitter Bootstrap
@@ -1659,25 +1661,36 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
+
+
+
+
 .container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 0px;
   padding-right: 0px;
+  width: 80%;
+  
 }
-@media (min-width: 768px) {
+@media  (max-width: 1000px) {
   .container {
-    width: 768px;
+    width: 60%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
   .container {
-    width: 940px;
+    width: 600px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1140px;
+    width: 800px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1000px;
   }
 }
 .container-fluid {
@@ -1686,6 +1699,61 @@ pre code {
   padding-left: 0px;
   padding-right: 0px;
 }
+
+.sidenav {
+  width: 300px;
+  position: absolute;
+  z-index: 20;
+  top: -15px;
+  left: 0px;
+  background-color: "white";
+  overflow-x: hidden;
+  padding-top: 60px;
+  white-space: normal;
+  font-family: "Lato", sans-serif;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.sidenav_container {
+
+  position: relative;
+  z-index: 20;
+  left: -330px;
+
+}
+
+.topbanner {
+  background-image: linear-gradient(black, #404040);
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  height:170px;
+}
+.topbanner h1 {
+letter-spacing: -0.5px;
+font-size: 36px;
+  color: white;
+  font-weight:800
+}
+.topbanner h2 {
+letter-spacing: -0.5px;
+  font-size: 22px;
+  color: white;
+  font-weight:200
+}
+.topbanner_container {
+  position:relative;
+  display: inline-block;
+  top:20px;
+  text-align: left;
+}
+
+
+
+
+
+
 .row {
   margin-left: 0px;
   margin-right: 0px;
@@ -13047,6 +13115,8 @@ div#notebook {
     page-break-inside: avoid;
   }
 }
+
+
 </style>
 <!-- Load mathjax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
@@ -13083,9 +13153,26 @@ div#notebook {
     </script>
     <!-- End of mathjax configuration --></head>
 <body>
+    <div id="header_wrap" class="topbanner">
+		<div class="topbanner_container">
+          <h1 id="project_title">Python for samfunnsøkonomi</h1>
+          <h2 id="project_tagline">Forelesningsnotater</h2>
+		</div>
+    </div>
+	
   <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
 
+
+    <div class="container" id="notebook-container">
+	<div class="sidenav_container">
+		 <div id="mySidenav" class="sidenav">
+		  <a href="https://uit-econ.github.io/">Hovedside bachelor</a><br>
+		  <a href="{{site.webadresse}}" target="blank">Hjem</a><br>
+		  <a href="https://uit-sok-1006-v22.github.io/forelesningsplan.html">Forelesningsplan</a><br>
+		  <a href="https://uit-sok-1006-v22.github.io/innleveringer.html">Innleveringer</a><br>
+		  <a href="https://uit-sok-1006-v22.github.io/seminarplan.html">Seminarer</a><br>
+		</div>
+	</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
