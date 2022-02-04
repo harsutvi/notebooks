@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 JUP_PATH='../'
 HTML_PATH='../html/'
 ELEMENTS_PATH='../_elements/'
-REPOSITORY_NAME="https://github.com/espensirnes/notebooks"
+
 
 def main():    
     
@@ -127,18 +127,18 @@ def convert_ipynb_to_html(ipynbfile):
 def insert_custom_html(html,content_list):
     css=read(ELEMENTS_PATH+'css.html')
     banner=read(ELEMENTS_PATH+'banner.html')
+    content=read(ELEMENTS_PATH+'left_menu_top.html')
+    left_menu=read(ELEMENTS_PATH+'left_menu.html')
     html=replace(html, 
                  'require.min.js"></script>\n',
                  '\n<style type="text/css">', 
                  '<link rel="icon" type="image/x-icon" href="../img/favicon.ico">')        
     html=replace(html, ".container {",".row {", css,[True,False])
     html=replace(html, "<body>",'<div tabindex="-1"', banner)
-    content='\n\t<div class="sidenav_container">\n\t\t<div id="mySidenav" class="sidenav">\n'
+
     for text,link in content_list:
         content+=f'\t\t\t<a href="{link}">{text}</a><br>\n'
-    content+='<br>'*3
-    content+=f'\t\t\t<a href="{REPOSITORY_NAME}">Gå til repositoriet</a><br>\n'
-    content+='\t\t</div>\n\t</div>\n'
+    content+=left_menu
     html=replace(html, 
                  '<div class="container" id="notebook-container">',
                  '<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">', 
