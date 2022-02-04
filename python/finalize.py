@@ -72,11 +72,11 @@ def replace(s,start_str,end_str,to,owerwrite=[False,False]):
     if owerwrite[0]:
         start=m0.start()
     else:
-        start=m0.end()
+        start=m0.end()+1
     if owerwrite[1]:
         end=m1.end()+m0.end()
     else:
-        end=m1.start()+m0.end()   
+        end=m1.start()+m0.end()-1 
     
     s=s[:start]+to+s[end:]
     return s
@@ -139,6 +139,10 @@ def insert_custom_html(html,content_list):
                  '<div class="container" id="notebook-container">',
                  '<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">', 
                  content)
+    html=replace(html, 
+                 '</script>',
+                 '<style type="text/css">', 
+                 '<link rel="icon" type="image/x-icon" href="../img/favicon.ico">')    
     return html
     
     
