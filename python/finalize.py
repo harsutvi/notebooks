@@ -72,11 +72,11 @@ def replace(s,start_str,end_str,to,owerwrite=[False,False]):
     if owerwrite[0]:
         start=m0.start()
     else:
-        start=m0.end()+1
+        start=m0.end()
     if owerwrite[1]:
         end=m1.end()+m0.end()
     else:
-        end=m1.start()+m0.end()-1 
+        end=m1.start()+m0.end()
     
     s=s[:start]+to+s[end:]
     return s
@@ -127,6 +127,10 @@ def convert_ipynb_to_html(ipynbfile):
 def insert_custom_html(html,content_list):
     css=read(ELEMENTS_PATH+'css.html')
     banner=read(ELEMENTS_PATH+'banner.html')
+    html=replace(html, 
+                 'require.min.js"></script>\n',
+                 '\n<style type="text/css">', 
+                 '<link rel="icon" type="image/x-icon" href="../img/favicon.ico">')        
     html=replace(html, ".container {",".row {", css,[True,False])
     html=replace(html, "<body>",'<div tabindex="-1"', banner)
     content='\n\t<div class="sidenav_container">\n\t\t<div id="mySidenav" class="sidenav">\n'
@@ -139,10 +143,7 @@ def insert_custom_html(html,content_list):
                  '<div class="container" id="notebook-container">',
                  '<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">', 
                  content)
-    html=replace(html, 
-                 '</script>',
-                 '<style type="text/css">', 
-                 '<link rel="icon" type="image/x-icon" href="../img/favicon.ico">')    
+
     return html
     
     
