@@ -26,7 +26,7 @@ def main():
             if fname.endswith(".ipynb"): 
                 lst.append(f"[{fname}]({text})\r")
     lst.sort()
-    content_lst.sort(key=lambda x:x[0])
+    content_lst.sort(key=lambda x:int(x[0][0:2]))
     for i in lst:
         print(i)
             
