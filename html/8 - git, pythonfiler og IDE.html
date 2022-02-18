@@ -13189,7 +13189,157 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Kommer ...</p>
+<h1 id="Git">Git<a class="anchor-link" href="#Git">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://github.com/"><img align="right" src="../img/github.png" style="padding:20px;"></a>
+Vi har fra før lært hvordan vi kloner et git-repositorie og hvordan vi dytter endringer dit. Men den kanskje viktigste funksjonen til git er som verktøy for å samarbeide om og koordinere arbeid med kode. I denne forelesningen skal vi se litt nærmere på hvordan vi bruker git til dette.</p>
+<p>For å forstå dette, oppretter vi et enkelt test-repositorie med en tekstfil, som vi kan teste git på.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Opprett-et-nytt-repositorie-med-en-tekstfil">Opprett et nytt repositorie med en tekstfil<a class="anchor-link" href="#Opprett-et-nytt-repositorie-med-en-tekstfil">&#182;</a></h2><p>Start med å opprette et repositorie du kaller "git-test":</p>
+<ol>
+<li>gå til <a href="https://github.com/">https://github.com/</a> og logg eventuelt inn, om du ikke allerede er innlogget</li>
+<li>Trykk New</li>
+<li>Kall repositoriet "git-test"</li>
+</ol>
+<p>Du skal så klone dette repositoriet. Finn en egnet plassering, for eksempel ved å lage en ny mappe med navn "SOK-1005".</p>
+<ol>
+<li>Åpne kommandovinduet</li>
+<li>Skriv inn <code>cd &lt;ønsket plassering&gt;</code>, for eksempel <code>cd SOK-1005</code>. </li>
+<li>Klon repositoriet dit med <code>git clone &lt;url&gt;</code></li>
+</ol>
+<p>Du bytter ut <code>&lt;url&gt;</code> med url-en til ditt nye repositorie (kopier adressen i nettleseren)</p>
+<ol>
+<li><p>Opprett en ny tekstfil i den nye mappen "git-test". I windows og <code>jupyter.uit.no</code> gjør du det ved å høyreklikke i mappen.</p>
+</li>
+<li><p>Åpne tekstfilen og skriv inn tre linjer med følgende tekst:</p>
+
+<pre><code>To be, or not to be, that is the question:
+Whether 'tis nobler in the mind to suffer
+The slings and arrows of outrageous fortune,
+Or to take Arms against a Sea of troubles,
+And by opposing end them?</code></pre>
+</li>
+<li>Dytt endringene til git-hub ved å skrive (HUSK bruk <code>cd</code> + mappenavn for å navigere deg inn i <code>git-test</code>):
+<pre><code>git add .
+git commit -m "added Shakespeare"
+git push</code></pre>
+Blir du bedt om brukernavn/passord, generer du et <a href="https://github.com/settings/tokens">token</a> (husk å merke av for "repo") og bruker det som passord. </li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Konflikt">Konflikt<a class="anchor-link" href="#Konflikt">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Til nå har vi forutsatt at bare én person arbeider med samme repositorie. Hele poenget med git er imidlertid samarbeid, og da oppstår det ofte "konflikt". Vi snakker ikke da om bitter uenighet, men at to personer gjør endringer i samme repositorie på en måte som git ikke klarer å ordne opp i.</p>
+<p>Kort fortalt så klarer git fint å holde rede på at  ulike personer endrer på ulike filer, men når ulike personer endrer samme fil oppstår det konflikt. La os simulere dette med den nye tekstfilen vi har laget.</p>
+<p>Du skal nå ta rollene som begge parter i konflikten.</p>
+<ol>
+<li>Gå til repositoriet på github og endre " 'tis" i teksten til "it is"</li>
+<li>Gå til tekstfilen lokalt, og endre samme del av teksten til "this", og lukk tekstfilen.</li>
+<li>Forplikt den lokale endringen i kommandovinduet med 
+<pre><code>git add .
+git commit -m "Improved Shakespeare"</code></pre>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Konfliktl%C3%B8sning">Konfliktl&#248;sning<a class="anchor-link" href="#Konfliktl%C3%B8sning">&#182;</a></h2><p>Du har nå skapt en konflikt med deg selv. For å løse konflikten må du kjøre</p>
+
+<pre><code>git pull</code></pre>
+<p>Du skal da få en melding om at det er en konflikt du må løse. Åpne tekstfilen lokalt på nytt. Du vil da se at den er endret til noe slikt som dette:</p>
+
+<pre><code>To be, or not to be, that is the question:
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Whether this nobler in the mind to suffer
+=======
+Whether 'it is nobler in the mind to suffer
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 2de43c361c099727ae6f3cabce81a2fb87fe3e48
+The slings and arrows of outrageous fortune,
+Or to take Arms against a Sea of troubles,
+And by opposing end them?</code></pre>
+<p>Partitet mellom <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> og <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 2de43c361c099727ae6f3cabce81a2fb87fe3e48</code> er der konflikten befinner seg. Bytt ut teksten med</p>
+
+<pre><code>To be, or not to be, that is the question:
+Whether it is nobler in the mind to suffer        #" 'tis" means "it is" NOT "this", can I read?
+The slings and arrows of outrageous fortune,
+Or to take Arms against a Sea of troubles,
+And by opposing end them?</code></pre>
+<p>forplikt og dytt endringene til github:</p>
+
+<pre><code>git add .
+git commit -m "Modernized Shakespeare"
+git push</code></pre>
+<p>Du har nå løst konflikten.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Arbeidsflyt-i-git">Arbeidsflyt i git<a class="anchor-link" href="#Arbeidsflyt-i-git">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Følgende arbeidsflyt anbefales for git:</p>
+<ol>
+<li>Kjør følgende kommandoer ofte:
+<pre><code>git add .
+git commit -m "Update"
+git pull</code></pre>
+Da vil din kode hele tiden være oppdatert mot originalkoden på serveren. Dersom du oppdager konflikter, kan du håndtere dem selv eller ta opp konflikten med de andre på prosjektet. Generelt er det en god idé at flere ikke jobber med samme fil samtidig. </li>
+</ol>
+<ol>
+<li>Når det likevel skjer en konflikt, er det forholdsvis enkelt å håndtere i git. Du får beskjed om konflikten etter å ha kjørt <code>git pull</code>, og redigerer filen(e) det gjelder der det er markert.  </li>
+</ol>
+<ol>
+<li>Kjør alltid kommandoene i 1. før du dytter til orginalen på serveren (<code>git push</code>)</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="IDE'er">IDE'er<a class="anchor-link" href="#IDE'er">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Integrated Development Environment (IDE) er et program som hjelper deg å programmere. I motsetning til jupyter, brukes IDE'er til å redigere tekstfiler.</p>
+<p>Jupyter er fint til å redigere korte programsnutter og å hente inn og kjøre ferdigprogrammerte pakker og moduler. Men skal du skrive kode på mer en femten linjer, bør du skrive dem i en tekstfil.</p>
+<p>Når du programmerer i python, oppretter du en normal tekstfil med</p>
 
 </div>
 </div>

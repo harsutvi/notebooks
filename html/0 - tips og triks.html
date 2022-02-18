@@ -13194,15 +13194,50 @@ div#notebook {
 <pre><code>cd ..</code></pre>
 </li>
 </ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.-Klone-dette-repositoriet:">2. Klone dette repositoriet:<a class="anchor-link" href="#2.-Klone-dette-repositoriet:">&#182;</a></h2>
 <pre><code>git clone https://github.com/uit-sok-1003-h21/notebooks/</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="3.-Starte-Jupyter-i-bestemt-mappe-('D:/myfiles'-i-dette-tilfellet):">3. Starte Jupyter i bestemt mappe ('D:/myfiles' i dette tilfellet):<a class="anchor-link" href="#3.-Starte-Jupyter-i-bestemt-mappe-('D:/myfiles'-i-dette-tilfellet):">&#182;</a></h2>
 <pre><code>jupyter notebook --notebook-dir=D:/myfiles</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="4.-commit:">4. commit:<a class="anchor-link" href="#4.-commit:">&#182;</a></h2>
 <pre><code>git add .
 git commit -m "text"</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="5.-push:">5. push:<a class="anchor-link" href="#5.-push:">&#182;</a></h2>
 <pre><code>git push</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="6.-pull:">6. pull:<a class="anchor-link" href="#6.-pull:">&#182;</a></h2>
 <pre><code>git pull</code></pre>
 <ol>
@@ -13216,6 +13251,13 @@ git pull</code></pre>
 <pre><code>git stash</code></pre>
 </li>
 </ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="7.-Lage-git-repositorie:">7. Lage git-repositorie:<a class="anchor-link" href="#7.-Lage-git-repositorie:">&#182;</a></h2><p><a href="https://uit-sok-1003-h21.github.io/github.html">Se her for en forklaring på hvordan du skal levere arbeidskrav på github</a></p>
 <ol>
 <li>Lag en githubkonto (du trenger ikke bruke din uit-mail, det er valgfritt)</li>
@@ -13231,6 +13273,13 @@ git config --global user.name "&lt;brukernavn&gt;"</code></pre>
 <p>Du kan nå redigere repositoriet ditt</p>
 </li>
 </ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="8.-Dytte-repositoriet-til-github:">8. Dytte repositoriet til github:<a class="anchor-link" href="#8.-Dytte-repositoriet-til-github:">&#182;</a></h2><ol>
 <li>Naviger til repositoriemappen i Terminal (se avsnitt 1.)</li>
 <li>Kjør i Terminal:
@@ -13240,6 +13289,13 @@ git push</code></pre>
 </li>
 </ol>
 <p>Dersom du får en rettighetsfeil kan du forsøke å legge inn, etter <code>git push</code>, nettadressen som beskrevet i pkt. 7.7 over.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="9.-Installere-stavekontroll-for-i-lokal-Jupyter-notebook:">9. Installere stavekontroll for i lokal Jupyter notebook:<a class="anchor-link" href="#9.-Installere-stavekontroll-for-i-lokal-Jupyter-notebook:">&#182;</a></h2>
 <pre><code>pip install jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
@@ -13258,6 +13314,13 @@ jupyter_data_dir()</code></pre>
 <li>Kopier <a href="./dictionaries/nb_NO.aff">nb_NO.aff</a> og <a href="./dictionaries/nb_NO.dic">nb_NO.dic</a> fra <code>/instructions/dictionaries</code> mappen i dette repositoriet til mappen du nettopp laget.</li>
 <li>Kopier koden fra nettsiden over til en notebook, bytt ut de_DE med nb_NO, og kjør det.</li>
 </ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="10.-Fjerne-en-mappe-og-alt-dets-innhold-(FARLIG!)">10. Fjerne en mappe og alt dets innhold (FARLIG!)<a class="anchor-link" href="#10.-Fjerne-en-mappe-og-alt-dets-innhold-(FARLIG!)">&#182;</a></h2><p>Dersom en mappe har innhold som er vanskelig å fjerne, slik som et git-repositorie, kan det være du må da kjøre en kommando i Terminal for å fjerne mappen. Du må da kjøre en kommando i Terminal for å fjerne mappen. For å fjerne en mappe og alt innholdet, navigerer du til mappen over (se 3.), slik at om du kjører <code>dir</code> så ser du navnet på mappen (samme med eventuelt andre filer og mapper). Du kjører så</p>
 
 <pre><code>rm -r &lt;navn på mappe du vil ha fjernet&gt;</code></pre>
