@@ -13169,8 +13169,8 @@ div#notebook {
 			<a href="7 - løkker og simulering.html">7 - løkker og simulering.ipynb</a><br>
 			<a href="8 - git, pythonfiler og IDE.html">8 - git, pythonfiler og IDE.ipynb</a><br>
 			<a href="9 - webskraping med python.html">9 - webskraping med python.ipynb</a><br>
-			<a href="10 - interaktive grafer og websider.html">10 - interaktive grafer og websider.ipynb</a><br>
-			<a href="11 - statsmodels.html">11 - statsmodels.ipynb</a><br>
+			<a href="10 - statsmodels.html">10 - statsmodels.ipynb</a><br>
+			<a href="11 - interaktive grafer og websider.html">11 - interaktive grafer og websider.ipynb</a><br>
 			<a href="12 - interaktive kart.html">12 - interaktive kart.ipynb</a><br>
 			<br><br><br>	
 			<a href="https://github.com/espensirnes/notebooks">Gå til repositoriet</a><br>
@@ -13225,7 +13225,7 @@ Vi har fra før lært hvordan vi kloner et git-repositorie og hvordan vi dytter 
 <ol>
 <li><p>Opprett en ny tekstfil i den nye mappen "git-test". I windows og <code>jupyter.uit.no</code> gjør du det ved å høyreklikke i mappen.</p>
 </li>
-<li><p>Åpne tekstfilen og skriv inn tre linjer med følgende tekst:</p>
+<li><p>Åpne tekstfilen og kopier inn følgende linjer med tekst:</p>
 </li>
 </ol>
 
@@ -13312,17 +13312,22 @@ git push</code></pre>
 <p>Git er laget for å samarbeide om kode, som er lagret i vanlige tekstfiler. Formatet til *.ipynb-filene som jupyter lager er også kode, men vi ser den ikke når vi åpner dokumentet i jupyter. Når git setter inn tekst i jupyter-filer, slik som over, vil den blir ubrukelig.</p>
 <p>Den enkleste måten å løse slike situasjoner på, er å avbryte konfliktløsningen, omdøpe det lokale repositoriet og klone det originale fjernrepositoriet på på nytt. Du kan da åpne filen i det gamle klonede repositoriet og din lokale versjon samtidig, og sammenligne. Du kan så endre filen i det klonede repositoriet, eller bytte ut filen i fjernrepositoriet med den nyere lokale filen. Dette gjør du på følgende måte:</p>
 <ol>
-<li>Avbryt konfliktløsningen med <code>git merge --abort</code></li>
-<li>Omdøp eksisterende lokale repositori til noe annet, for eksempel "git-test" til "git-test0".</li>
-<li>Klon fjernrepositoriet på github på nytt (husk "cd .." slik at du befinner deg i mappen over eksempelvis "git-test0")</li>
-<li>Sammenlign filene, gjør endringer eller lagre filen(e) i "git-test0" i det nyklonede repositoriet. </li>
-<li>Forplikt og dytt til github:</li>
+<li><p>Avbryt konfliktløsningen med <code>git merge --abort</code></p>
+</li>
+<li><p>Omdøp eksisterende lokale repositorie til noe annet, for eksempel "git-test" til "git-test0".</p>
+</li>
+<li><p>Klon fjernrepositoriet på github på nytt (husk "cd .." slik at du befinner deg i mappen over eksempelvis "git-test0")</p>
+</li>
+<li><p>Sammenlign filene, gjør endringer eller lagre filen(e) i "git-test0" i det nyklonede repositoriet.</p>
+</li>
+<li><p>Forplikt og dytt til github:</p>
+</li>
 </ol>
 
 <pre><code>git add .
 git commit -m "Fixed Shakespeare"
 git push</code></pre>
-<p>Generelt er det langt mer nøyaktig og sikrere å bruke git-hubs konfliktløsningsmetode enn å selv sammenligne versjoner, men dersom du vet helt sikkert at din lokale versjon er den riktige, eller at det er opplagt hvilke endringer som skal gjøres, kan du bruke metoden over.</p>
+<p>Generelt er det langt mer nøyaktig og sikrere å bruke gits konfliktløsningsmetode enn å selv sammenligne versjoner, men dersom du vet helt sikkert at din lokale versjon er den riktige, eller at det er opplagt hvilke endringer som skal gjøres, kan du bruke metoden over.</p>
 
 </div>
 </div>
@@ -13414,7 +13419,7 @@ Det kan være lurt å passe på at du er i sok-1005-mappen i kommandovinduet, f�
 <p>"run.py" er nå en python-fil, som du kan kjøre pythonkode i. Skriv for eksempel <code>print("Hello World")</code> i filen og trykk ctrl+s for å lagre.</p>
 <p>Før du kan kjøre koden i VSCode, må du konfigurere "debugging" (feilsøking).</p>
 <ol>
-<li>Trykk på  <img src="../img/VSCode_debug.png" alt="Debug-knapp">-knappen </li>
+<li>Trykk på <img src="../img/VSCode_debug.png" alt="run debug">-knappen </li>
 <li>Under "Run and Debug", trykk på "create a launch.json file"</li>
 <li>På spørsmål om hvilken utvidelse (extension) som skal brukes, trykk på "install" under "Python intelliSense" fra Microsoft. </li>
 <li>Velg fanen "run.py" for å komme til bake til fila di. </li>
@@ -13526,7 +13531,7 @@ pip install numpy</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Lim koden inn i "run.py", og legg navnet på funksjonen inn som fjerde argument i<code>blotto.run</code>, slik at det blir <code>blotto.run(6,100,player_strategy, computer_strategy)</code></p>
-<p>Om du ikke selv endrer på din forhåndsdefinerte strategi i spillet, vil du nå se at rollene er snudd om. Nå vinner PC'en nesten alltid. PC'en vinner alltid de tre siste slagmarkene så vidt. Problemet er at PC'en nå vet hva du skal velge. Det kan hjelpe litt å gjøre valgene dine tilfeldige, slik at PC'en ikke kan vite hvilke valg du kommer til å ta. Du kan skape litt tilfeldighet ved å legge følgende inn i strategien over, før <code>assert</code>:</p>
+<p>Om du ikke selv endrer på din forhåndsdefinerte strategi i spillet, vil du nå se at rollene er snudd om. Nå vinner PC'en  alltid de fire siste slagmarkene så vidt. Problemet er at PC'en nå vet hva du skal velge. Det kan hjelpe litt å gjøre valgene dine tilfeldige, slik at PC'en ikke kan vite hvilke valg du kommer til å ta. Du kan skape litt tilfeldighet ved å legge følgende inn i strategien over, før <code>assert</code>:</p>
 
 <pre><code>battalions=battalions[np.random.rand(n_fields).argsort()]</code></pre>
 <p>Denne koden sørge for at plasseringen av battaljonene blir tilfeldig. Du vil nå tape ofte, men ikke alltid.</p>
@@ -13625,6 +13630,15 @@ pip install numpy</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Du kan nå gjøre endringer i både <code>player_strategy</code> og <code>computer_strategy</code> for å finne best mulig strategi, som fungerer mot flest mulig andre strategier!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Bruk-funksjonaliteten-i-IDE'en">Bruk funksjonaliteten i IDE'en<a class="anchor-link" href="#Bruk-funksjonaliteten-i-IDE'en">&#182;</a></h2><p><img src=img/stop_point.png align='right'>
+Når du skal forsøke å lage best mulig strategi, kan det være lurt å benytte seg av mulighetene som ligger i IDE'en. Den store fordelen med en IDE er at du kan stoppe koden, og undersøke variabler under veis. Trykker du i margen til venstre, vil det komme et rødt punkt som indikerer et stoppunkt.</p>
 
 </div>
 </div>
