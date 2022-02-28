@@ -1,0 +1,340 @@
+;Bank;;Navn;Nominell;Sikkerhetsgebyr;Etableringsgebyr;Termin;Effektiv
+1;Statens pensjonskasse;;Boliglån inntil 80 %;1,29;0;0;50;1,36
+2;Landkreditt Bank AS;;Grønt Boliglån;1,55;1000;0;0;1,56
+3;Etne Sparebank;;"Him te Etne" - lånet;1,55;0;0;50;1,62
+4;SpareBank 1 SMN;;Grønt førstehjemslån;1,60;1200;0;60;1,68
+5;SpareBank 1 Nordmøre;;Grønt boliglån;1,60;1200;0;75;1,70
+6;Høland og Setskog Sparebank;;Grønt Boliglån spesial;1,64;0;0;60;1,73
+7;Orkla Sparebank;;Grønt boliglån;1,65;1000;0;60;1,74
+8;KLP Banken AS;;Grønt boliglån medlem;1,70;0;0;35;1,76
+9;Landkreditt Bank AS;;Boliglån 50%;1,75;500;0;0;1,76
+10;Oslo Pensjonsforsikring AS;;Boliglån innenfor 75 %;1,70;0;0;45;1,77
+11;Bulder Bank (Sparebanken Vest);;Boliglån innenfor 50 %;1,78;0;0;0;1,79
+12;Himla Banktjenester (Fana Sparebank);;Boliglån innenfor 75 %;1,80;0;0;0;1,81
+13;Oppdalsbanken;;Grønt boliglån;1,75;1200;0;45;1,82
+14;Cultura Sparebank;;Miljøboliglån 85%;1,75;0;0;50;1,83
+15;Nybygger.no (Sparebanken Øst);;Boliglån 75%;1,81;0;0;0;1,83
+16;SpareBank 1 Lom og Skjåk;;LOfavør Boliglån+ innenfor 50 %;1,75;0;0;50;1,83
+17;SpareBank 1 Lom og Skjåk;;Fjellbanken DNT Boliglån innenfor 50 %;1,75;0;0;50;1,83
+18;SpareBank 1 Sørøst-Norge;;Grønt Boliglån;1,74;1000;0;60;1,83
+19;SpareBank 1 Østlandet;;LOfavør Boliglån +;1,75;1000;0;60;1,84
+20;Handelsbanken NUF;;Juristforbundet Boliglån;1,77;0;0;45;1,84
+21;OBOS-banken AS;;Grønt boliglån;1,79;0;0;35;1,85
+22;KLP Banken AS;;Fritidsbolig medlem;1,80;0;0;35;1,86
+23;KLP Banken AS;;Boliglån medlem - 75%;1,80;0;0;35;1,86
+24;NORDirekte (Skagerrak Sparebank);;Boliglån inntil 50%;1,80;0;0;40;1,86
+25;YS (Nordea Direct);;Boliglån u/50 %;1,79;0;0;50;1,87
+26;Unio (Nordea Direct);;Boliglån u/50 %;1,79;0;0;50;1,87
+27;SpareBank 1 Modum;;Grønt boliglån;1,79;0;0;55;1,87
+28;Soknedal Sparebank;;Boliglån innenfor 75%;1,80;0;0;50;1,88
+29;Aasen Sparebank;;Grønt boliglån;1,80;0;0;50;1,88
+30;Bulder Bank (Sparebanken Vest);;Boliglån innenfor 55 %;1,86;0;0;0;1,88
+31;SpareBank 1 Østlandet;;Grønt boliglån;1,79;1000;0;60;1,88
+32;SpareBank 1 Hallingdal Valdres;;Grønt lån bolig/ fritidsbolig til eget bruk (Krav om energikarakter A);1,80;700;2600;55;1,88
+33;OBOS-banken AS;;OBOS Nyboliglån;1,83;0;0;35;1,89
+34;OBOS-banken AS;;Boliglån Deleie;1,83;0;0;35;1,89
+35;SpareBank 1 Helgeland;;LOfavør Boliglån 50 %;1,80;0;0;60;1,89
+36;Jernbanepersonalets Bank og Forsikring;;Grønt bolig- eller rehabiliteringslån;1,80;1000;0;60;1,89
+37;SpareBank 1 SMN;;LOfavør Boliglån 50 %;1,80;1200;0;60;1,89
+38;Sunndal Sparebank;;Grønt boliglån;1,80;1000;0;65;1,89
+39;SpareBank 1 Nord-Norge;;LOfavør Boliglån innenfor 50 %;1,80;1300;0;65;1,89
+40;SpareBank 1 Nordmøre;;LOfavør boliglån inntil 50%;1,80;1200;0;75;1,91
+41;OBOS-banken AS;;Boliglån medlem 50 %;1,85;0;0;35;1,91
+42;Landkreditt Bank AS;;Fritidsbolig;1,90;1000;0;0;1,92
+43;Landkreditt Bank AS;;Boliglån;1,90;1000;0;0;1,92
+44;Akademikerne (Danske Bank);;Boliglån 80%;1,85;0;0;45;1,92
+45;SpareBank 1 Lom og Skjåk;;LOfavør boliglån over 34 år innenfor 75 %;1,85;0;0;50;1,93
+46;Unio (Nordea Direct);;Boliglån u/75 %;1,85;0;0;50;1,93
+47;YS (Nordea Direct);;Boliglån u/75 %;1,85;0;0;50;1,93
+48;SpareBank 1 Gudbrandsdal;;LOfavør boliglån;1,85;800;0;50;1,93
+49;Grong Sparebank;;Grønt boliglån innenfor 85%;1,85;1200;750;50;1,93
+50;SpareBank 1 SR-Bank;;LOfavør Boliglån 50%;1,84;0;0;60;1,93
+51;Sparebanken Øst;;Grønt boliglån;1,83;1250;0;70;1,93
+52;SpareBank 1 Østlandet;;LOfavør Boliglån;1,85;1000;0;60;1,94
+53;SpareBank 1 SMN;;LOfavør Boliglån 75 %;1,85;1200;0;60;1,94
+54;Norsk Sykepleierforbund (DNB);;Boliglån;1,85;0;0;65;1,95
+55;SpareBank 1 Nordmøre;;LOfavør boliglån (over 34 år);1,85;1200;0;75;1,96
+56;Andebu Sparebank;;Grønt boliglån;1,90;0;0;35;1,96
+57;NORDirekte (Skagerrak Sparebank);;Boliglån inntil 70 %;1,90;0;0;40;1,97
+58;SpareBank 1 Ringerike Hadeland;;Grønt Boliglån;1,89;1000;0;50;1,97
+59;Bulder Bank (Sparebanken Vest);;Boliglån innenfor 60 %;1,96;0;0;0;1,98
+60;Rindal Sparebank;;Grønt boliglån;1,90;0;0;50;1,98
+61;Vekselbanken;;Grønt oppussingslån;1,90;0;0;50;1,98
+62;Vekselbanken;;Grønt bustadlån;1,90;0;0;50;1,98
+63;Melhusbanken;;Grønt boliglån;1,90;1000;2500;50;1,98
+64;Sparebanken Sogn og Fjordane;;Grønt bustadlån;1,89;0;0;60;1,98
+65;SpareBank 1 Sørøst-Norge;;LOfavør Boliglån 34+ inntil 50 %;1,89;1000;0;60;1,98
+66;Lillesands Sparebank;;Grønt lån;1,89;1000;0;60;1,98
+67;Sparebanken Vest;;Grønt Boliglån;1,89;0;0;65;1,99
+68;Totens Sparebank;;Grønt boliglån;1,90;1000;0;60;1,99
+69;SpareBank 1 SMN;;Grønt boliglån 85 %;1,90;1200;0;60;1,99
+70;SpareBank 1 Søre Sunnmøre;;Grønt bustadlån;1,89;1000;0;75;2,00
+71;Sparebanken Møre;;Grønt boliglån;1,90;1000;0;75;2,01
+72;NAL (Nordea Direct);;Boliglån u/50 %;1,95;0;0;50;2,03
+73;NAL (Nordea Direct);;Boliglån u/75 %;1,95;0;0;50;2,03
+74;Bulder Bank (Sparebanken Vest);;Boliglån innenfor 65 %;2,01;0;0;0;2,03
+75;Birkenes Sparebank;;Grønt boliglån;1,95;750;0;50;2,03
+76;Høland og Setskog Sparebank;;Grønt Boliglån;1,94;0;0;60;2,03
+77;SpareBank 1 SR-Bank;;LOfavør Boliglån 75%;1,94;0;0;60;2,03
+78;SpareBank 1 Helgeland;;LOfavør boliglån 75 %;1,94;0;0;60;2,03
+79;KLP Banken AS;;Fritidsbolig øvrige kunder;1,95;0;0;55;2,03
+80;KLP Banken AS;;Boliglån - 75% ordinær;1,95;0;0;55;2,03
+81;Larvikbanken;;Grønt boliglån;1,95;0;0;55;2,03
+82;SpareBank 1 Nord-Norge;;Grønt Boliglån;1,94;1300;0;65;2,04
+83;SpareBank 1 Nord-Norge;;LOfavør Boliglån;1,94;1300;0;65;2,04
+84;Norsk Sykepleierforbund (DNB);;Boliglån 85%;1,95;0;0;65;2,05
+85;Sparebanken Narvik;;Grønt Boliglån;1,99;0;0;35;2,05
+86;OBOS-banken AS;;Boliglån 50 %;2,00;0;0;35;2,06
+87;Bulder Bank (Sparebanken Vest);;Boliglån innenfor 70 %;2,05;0;0;0;2,07
+88;Haugesund Sparebank;;Grønt Boliglån;1,99;1000;1500;50;2,07
+89;SpareBank 1 SR-Bank;;Grønt Boliglån;1,99;0;0;60;2,08
+90;TOBB (DNB);;Grønt boliglån;1,99;0;0;65;2,09
+91;USBL (DNB);;Grønt boliglån;1,99;0;0;65;2,09
+92;Bate boligbyggelag (DNB);;Grønt boliglån;1,99;0;0;65;2,09
+93;DNB Bank ASA;;Grønt boliglån;1,99;1000;0;65;2,09
+94;Sandnes Sparebank;;Grønt boliglån;1,99;0;0;70;2,09
+95;Jæren Sparebank;;Grønt boliglån;1,99;0;0;70;2,09
+96;Østre Agder Sparebank;;Boliglån Eika boligkreditt;1,99;900;1000;70;2,09
+97;Romerike Sparebank;;Grønt boliglån;2,00;0;0;65;2,10
+98;Sunndal Sparebank;;Boliglån 50 prosent;2,00;1000;0;65;2,10
+99;Sbanken ASA;;Boliglån 50 % - lån til fritidsbolig;2,08;0;0;0;2,10
+100;Sbanken ASA;;Boliglån 50 %;2,08;0;0;0;2,10
+101;Sbanken ASA;;Boliglån 60%;2,08;0;0;0;2,10
+102;Sbanken ASA;;Boliglån 75 % - lån til fritidsbolig;2,08;0;0;0;2,10
+103;Sbanken ASA;;Boliglån 75 %;2,08;0;0;0;2,10
+104;Sbanken ASA;;Boliglån 60 % - lån til fritidsbolig;2,08;0;0;0;2,10
+105;SpareBank 1 Søre Sunnmøre;;Grønt bustadlån - Flexilån;1,99;1000;0;75;2,10
+106;Bulder Bank (Sparebanken Vest);;Boliglån innenfor 75 %;2,09;0;0;0;2,11
+107;Etne Sparebank;;Grønt lån;2,05;0;0;50;2,13
+108;Fana Sparebank;;Grønt Boliglån 75 %;2,05;500;0;50;2,13
+109;Hemne Sparebank;;Grønt boliglån;2,05;1000;0;50;2,13
+110;SpareBank 1 Sørøst-Norge;;LOfavør Boliglån 34+ inntil 75 %;2,04;1000;0;60;2,13
+111;Totens Sparebank;;Boliglån innenfor 70 %;2,05;1000;0;60;2,14
+112;Boligkreditt.no (Sparebanken Øst Boligkreditt AS);;Boliglån 50 %;2,14;0;0;0;2,16
+113;BN Bank ASA;;Boliglån Alltid Fornøyd 50 %;2,09;500;0;45;2,17
+114;Totens Sparebank;;Boliglån innenfor 75 % av verdigrunnlag;2,08;1500;0;60;2,17
+115;SpareBank 1 Lom og Skjåk;;Fjellbanken DNT Boliglån innenfor 75 %;2,10;0;0;50;2,18
+116;SpareBank 1 Ringerike Hadeland;;LOfavør 34+ Boliglån;2,10;1000;0;50;2,18
+117;Melhusbanken;;Lån med pant i bolig innenfor 50%;2,10;1000;2500;50;2,18
+118;SpareBank 1 Østfold Akershus;;LOfavør Boliglån - maks belåningsgrad 75%;2,09;0;0;60;2,18
+119;SpareBank 1 SR-Bank;;BOB Boliglån 75%;2,09;1000;0;60;2,18
+120;NORDEA BANK ABP, FILIAL I NORGE;;Grønt Boliglån;2,09;0;0;65;2,19
+121;Aurskog Sparebank;;Grønt boliglån;2,05;2000;0;100;2,19
+122;Skue Sparebank;;Grønt boliglån - Energiklasse A;2,10;0;0;60;2,19
+123;Strømmen Sparebank;;Boliglån;2,10;0;0;65;2,20
+124;SpareBank 1 Søre Sunnmøre;;LOfavør Boliglån;2,09;1000;0;75;2,20
+125;Ørskog Sparebank;;Grønt bustadlån;2,10;1000;0;70;2,21
+126;Sbanken ASA;;Boliglån 85 %;2,19;0;0;0;2,21
+127;Sbanken ASA;;Boliglån 85 % - lån til fritidsbolig;2,19;0;0;0;2,21
+128;SpareBank 1 Modum;;LOfavør boliglån 34+;2,14;0;0;55;2,23
+129;Aasen Sparebank;;Aktiv voksen;2,15;0;0;50;2,23
+130;Soknedal Sparebank;;Boliglån innenfor 85%;2,15;0;0;50;2,23
+131;Fana Sparebank;;75 %-lån;2,15;500;0;50;2,23
+132;Stadsbygd Sparebank;;Grønt Boliglån;2,15;1000;1500;50;2,23
+133;Ørland Sparebank;;Boliglån innenfor 60%;2,15;2000;1000;50;2,23
+134;Romerike Sparebank;;Lokalbidraget lån 50 %;2,15;0;0;65;2,25
+135;Sparebanken Sør;;Grønt boliglån;2,15;1000;0;65;2,25
+136;Din Bank (Sparebanken Øst);;Boliglån 50 %;2,24;0;0;0;2,26
+137;Sparebanken Møre;;Møre Boliglån inntil 50 %;2,15;1000;0;75;2,26
+138;Cultura Sparebank;;Boliglån 75 %;2,20;0;0;50;2,28
+139;SpareBank 1 Østfold Akershus;;LOFavør Boliglån - maks belåning 85%;2,19;0;0;60;2,29
+140;Trøgstad Sparebank;;Grønt rehabiliteringslån;2,19;0;0;65;2,29
+141;Trøgstad Sparebank;;Grønt boliglån;2,19;0;0;65;2,29
+142;Haltdalen Sparebank;;Boliglån 34+;2,20;0;0;60;2,30
+143;Skue Sparebank;;Grønt boliglån - Energiklasse B;2,20;0;0;60;2,30
+144;Orkla Sparebank;;Boliglån;2,20;1000;0;60;2,30
+145;Drangedal Sparebank;;Boliglån 75%;2,20;750;0;65;2,30
+146;OBOS-banken AS;;Boliglån medlem inntil 85 %;2,25;0;0;35;2,32
+147;KLP Banken AS;;Grønt boliglån medlem 85 %;2,25;0;0;35;2,32
+148;Berg Sparebank;;Grønt Boliglån 75%;2,24;1000;0;50;2,32
+149;USBL (DNB);;Boliglån;2,23;0;0;65;2,33
+150;TOBB (DNB);;Boliglån;2,23;0;0;65;2,33
+151;Bate boligbyggelag (DNB);;Boliglån;2,23;0;0;65;2,33
+152;Storebrand Bank ASA;;Boliglån Huseierne;2,25;0;0;50;2,33
+153;Fana Sparebank;;Grønt Boliglån 85 %;2,25;500;0;50;2,33
+154;SpareBank 1 Hallingdal Valdres;;Lofavør Boliglån;2,25;700;2600;55;2,34
+155;NORDEA BANK ABP, FILIAL I NORGE;;Boliglån Premium;2,24;0;0;65;2,34
+156;SpareBank 1 SMN;;Boliglån 50 %;2,25;1200;0;60;2,35
+157;Hjelmeland Sparebank;;Boliglån - 75% EBK;2,30;990;0;35;2,37
+158;Nordea Direct;;Boliglån inntil 50 %;2,29;950;0;50;2,38
+159;Storebrand Bank ASA;;Boliglån Fremtid;2,29;950;0;50;2,38
+160;Hegra Sparebank;;Boliglån - pant i bolig 70%;2,30;0;0;50;2,39
+161;Cultura Sparebank;;Boliglån 85 %;2,30;0;0;50;2,39
+162;Eidsberg Sparebank;;Boliglån;2,30;1000;0;50;2,39
+163;SpareBank 1 SR-Bank;;Boliglån 75%;2,29;0;0;60;2,39
+164;Lillesands Sparebank;;Total Boliglån;2,29;1000;0;60;2,39
+165;SpareBank 1 Østfold Akershus;;Hyttelån over 2 millioner;2,30;0;0;60;2,40
+166;SpareBank 1 Østfold Akershus;;Boliglån over 2 millioner;2,30;0;0;60;2,40
+167;Skue Sparebank;;Boliglån;2,30;0;0;60;2,40
+168;Tinn Sparebank;;Boliglån 75%;2,30;1000;0;60;2,40
+169;Sandnes Sparebank;;Nedbetalingslån innenfor 70 %;2,30;0;0;70;2,41
+170;SpareBank 1 Nordmøre;;Boliglån inntil 50%;2,30;1200;0;75;2,42
+171;KLP Banken AS;;Boliglån medlem - 85%;2,35;0;0;35;2,42
+172;NORDirekte (Skagerrak Sparebank);;Boliglån inntil 80%;2,35;0;0;40;2,42
+173;BN Bank ASA;;Boliglån Alltid Fornøyd 75 %;2,35;500;0;45;2,43
+174;Fana Sparebank;;85 %-lån;2,35;500;0;50;2,44
+175;Birkenes Sparebank;;Ordinært boliglån 75%;2,35;750;0;50;2,44
+176;Birkenes Sparebank;;Ordinært boliglån 60%;2,35;750;0;50;2,44
+177;Birkenes Sparebank;;Ordinært boliglån 85%;2,35;750;0;50;2,44
+178;Flekkefjord Sparebank;;Lån med pant i bolig 75%;2,35;750;0;50;2,44
+179;Askim og Spydeberg Sparebank;;Boliglån innenfor 60%;2,35;1000;0;50;2,44
+180;Sparebanken DIN;;60% flytende rente Eika Boligkreditt;2,34;750;0;60;2,44
+181;Skudenes & Aakra Sparebank;;Boliglån 75 %;2,34;750;1500;60;2,44
+182;Sparebanken Sør;;Boliglån;2,34;1000;0;65;2,45
+183;Aurskog Sparebank;;Boliglån 75 %;2,30;2000;0;100;2,45
+184;Sogn Sparebank;;Bustadlån 60% i Eika Boligkreditt AS;2,35;500;0;60;2,45
+185;Sparebank 68° Nord;;Boliglån;2,35;1000;0;60;2,45
+186;Romsdal Sparebank;;Grønt boliglån innenfor 60%;2,35;1000;2500;60;2,45
+187;Boligkreditt.no (Sparebanken Øst Boligkreditt AS);;Boliglån 75 %;2,44;0;0;0;2,47
+188;Din Bank (Sparebanken Øst);;Boliglån 75%;2,44;0;0;0;2,47
+189;Sparebanken Møre;;Møre Boliglån inntil 75 %;2,35;1000;0;75;2,47
+190;OBOS-banken AS;;Boliglån inntil 85 %;2,40;0;0;35;2,47
+191;Berg Sparebank;;Boliglån 75 %;2,39;1000;0;50;2,48
+192;Marker Sparebank;;Grønt boliglån;2,40;750;0;50;2,49
+193;Valdres Sparebank;;Boliglån inntil 60 %;2,40;750;0;50;2,49
+194;Bjugn Sparebank;;Lån til bolig;2,40;1000;0;50;2,49
+195;Stadsbygd Sparebank;;Boliglån;2,40;1000;1500;50;2,49
+196;SpareBank 1 SR-Bank;;LOfavør Boliglån 85%;2,39;0;0;60;2,49
+197;SpareBank 1 Østlandet;;Boliglån;2,39;1000;0;60;2,49
+198;Jernbanepersonalets Bank og Forsikring;;Boliglån 75%;2,39;1000;0;60;2,49
+199;Skagerrak Sparebank;;Boliglån;2,39;1000;2000;60;2,49
+200;Søgne og Greipstad Sparebank;;Lån med pant i bolig;2,39;1000;0;65;2,50
+201;Romerike Sparebank;;Lokalbidraget lån 75 %;2,40;0;0;65;2,51
+202;Jæren Sparebank;;Boliglån;2,40;0;0;70;2,51
+203;Oslofjord Sparebank;;Boliglån 60%;2,40;0;0;75;2,52
+204;SpareBank 1 Søre Sunnmøre;;Boliglån;2,40;1000;0;75;2,52
+205;Sparebanken Narvik;;Boliglån innenfor 75 %;2,45;500;0;35;2,52
+206;Berg Sparebank;;Grønt Boliglån 85%;2,44;1000;0;50;2,53
+207;Rørosbanken Røros Sparebank;;Grønt boliglån;2,45;0;0;50;2,54
+208;Valdres Sparebank;;Boliglån inntil 75%;2,45;750;0;50;2,54
+209;Nordea Direct;;Boliglån inntil 75 %;2,45;950;0;50;2,54
+210;Haugesund Sparebank;;Boliglån innenfor 75%;2,45;1000;1500;50;2,54
+211;Melhusbanken;;Lån med pant i bolig innenfor 75%;2,45;1000;2500;50;2,54
+212;SpareBank 1 SR-Bank;;BOB Boliglån 85%;2,44;1000;0;60;2,54
+213;SpareBank 1 Hallingdal Valdres;;Boliglån innenfor 85%;2,45;700;2600;55;2,55
+214;SpareBank 1 Hallingdal Valdres;;Lån med pant i fritidsbolig 80%;2,45;700;2600;55;2,55
+215;Selbu Sparebank;;Boliglån;2,45;0;0;60;2,55
+216;Høland og Setskog Sparebank;;Boliglån 60%;2,45;0;0;60;2,55
+217;Sogn Sparebank;;Bustadlån 75%, Sogn Sparebank;2,45;500;0;60;2,55
+218;Evje og Hornnes Sparebank;;Boliglån;2,45;1000;0;60;2,55
+219;Handelsbanken NUF;;Boliglån;2,45;2000;0;60;2,55
+220;Romsdal Sparebank;;Grønt boliglån innenfor 75%;2,45;1000;2500;60;2,55
+221;Sparebanken Øst;;Boliglån 75%;2,44;1250;0;70;2,55
+222;Romerike Sparebank;;Boliglån 50 %;2,45;0;0;65;2,56
+223;NORDEA BANK ABP, FILIAL I NORGE;;Boliglån;2,45;0;0;65;2,56
+224;Romerike Sparebank;;Boliglån med stil 50 %;2,45;0;0;65;2,56
+225;SpareBank 1 Søre Sunnmøre;;Hyttelån;2,45;1000;0;75;2,57
+226;Andebu Sparebank;;Boliglån;2,50;0;0;35;2,57
+227;Voss Sparebank;;Bustadlån 75% Flytande rente;2,49;0;0;50;2,58
+228;SpareBank 1 Lom og Skjåk;;Fjellbanken Hyttelån;2,49;0;0;50;2,58
+229;SpareBank 1 Gudbrandsdal;;Hyttelån;2,49;800;0;50;2,58
+230;SpareBank 1 Gudbrandsdal;;Privat Ekstra Boligkreditt (75% av verdi);2,49;800;0;50;2,58
+231;SpareBank 1 Ringerike Hadeland;;Boliglån;2,49;1000;0;50;2,58
+232;Hegra Sparebank;;Boliglån - pant i bolig 85%;2,50;0;0;50;2,59
+233;Grong Sparebank;;Boliglån;2,50;1200;750;50;2,59
+234;SpareBank 1 SR-Bank;;Boliglån 85%;2,49;0;0;60;2,59
+235;KLP Banken AS;;Boliglån ordinær - 85 %;2,50;0;0;55;2,60
+236;Bien Sparebank ASA;;Boliglån innenfor 75%;2,49;0;0;65;2,60
+237;Spareskillingsbanken;;Boliglån;2,49;1000;0;65;2,60
+238;Trøgstad Sparebank;;Boliglån;2,49;1500;0;65;2,60
+239;Sparebanken Sogn og Fjordane;;Bustadlån inntil 75 %;2,50;0;0;60;2,60
+240;Odal Sparebank;;Boliglån innenfor 60 %;2,50;750;0;60;2,60
+241;SpareBank 1 SMN;;Boliglån 75 %;2,50;1200;0;60;2,60
+242;Romsdal Sparebank;;Boliglån innenfor 60 %;2,50;1000;2500;60;2,60
+243;Nidaros Sparebank;;Boliglån inntil 75 %;2,50;2000;2000;60;2,60
+244;Arendal og Omegns Sparekasse;;Boliglån (innenfor 75 % av verdigrunnlag);2,50;0;0;65;2,61
+245;Romerike Sparebank;;Lokalbidraget lån 85%;2,50;0;0;65;2,61
+246;Sunndal Sparebank;;Boliglån;2,50;1000;0;65;2,61
+247;Oppdalsbanken;;Boliglån innenfor 60%;2,55;1200;0;45;2,64
+248;SpareBank 1 Modum;;Boliglån;2,54;0;0;55;2,64
+249;Marker Sparebank;;Grønt rammelån;2,55;750;0;50;2,64
+250;Flekkefjord Sparebank;;Lån med pant i bolig 85%;2,55;750;0;50;2,64
+251;SpareBank 1 Sørøst-Norge;;Boliglån 85%;2,54;1000;0;60;2,64
+252;Skudenes & Aakra Sparebank;;Boliglån 85 %;2,54;750;1500;60;2,64
+253;Sparebanken Vest;;Boliglån innenfor 75 %;2,54;0;0;65;2,65
+254;DNB Bank ASA;;Boliglån inntil 75 %;2,54;1000;0;65;2,65
+255;SpareBank 1 Nord-Norge;;Boliglån innenfor 75 %;2,54;1300;0;65;2,65
+256;SpareBank 1 Helgeland;;Boliglån;2,55;0;0;60;2,65
+257;Luster Sparebank;;Bustadlån;2,55;750;0;60;2,65
+258;Danske Bank;;Boliglån inntil 80%;2,55;1000;0;60;2,65
+259;Valle Sparebank;;Bustadlån;2,55;1000;0;65;2,66
+260;Blaker Sparebank;;Boliglån innenfor 75%;2,55;0;0;70;2,67
+261;Sparebanken Møre;;Møre Boliglån inntil 85 %;2,55;1000;0;75;2,67
+262;SpareBank 1 Nordmøre;;Hyttelån;2,55;1200;0;75;2,67
+263;Berg Sparebank;;Boliglån 85%;2,59;1000;0;50;2,68
+264;SpareBank 1 Lom og Skjåk;;Boliglån;2,60;0;0;50;2,69
+265;Valdres Sparebank;;Boliglån inntil 85%;2,60;750;0;50;2,69
+266;Etnedal Sparebank;;Boliglån innenfor 60 %;2,60;750;0;50;2,69
+267;Hjelmeland Sparebank;;Boliglån 60%;2,60;990;0;50;2,69
+268;Hemne Sparebank;;Boliglån innenfor 75 %;2,60;1000;0;50;2,69
+269;SpareBank 1 SMN;;Boliglån 85 %;2,60;1200;0;60;2,71
+270;Hjartdal og Gransherad Sparebank;;Boliglån 75%;2,60;1000;2000;60;2,71
+271;Romsdal Sparebank;;Boliglån innenfor 75% av verdi;2,60;1000;2500;60;2,71
+272;Sparebanken Narvik;;Boliglån innenfor 85 %;2,65;500;0;50;2,74
+273;Marker Sparebank;;Boliglån;2,65;750;0;50;2,74
+274;Melhusbanken;;Lån med pant i bolig innenfor 85%;2,65;1000;2500;50;2,74
+275;DNB Bank ASA;;Boliglån inntil 85 %;2,64;1000;0;65;2,75
+276;Rørosbanken Røros Sparebank;;Boliglån 75%;2,65;900;0;65;2,76
+277;Vekselbanken;;Bustadlån innanfor 75%;2,65;0;1000;65;2,76
+278;Vekselbanken;;Hytte - fritidsbustad;2,65;0;1000;65;2,76
+279;Rindal Sparebank;;Boliglån 75 %;2,70;0;0;50;2,80
+280;Etnedal Sparebank;;Boliglån innenfor 80 %;2,70;750;0;50;2,80
+281;SpareBank 1 Østlandet;;Boliglån inntil 85 %;2,69;1000;0;60;2,80
+282;SpareBank 1 Nord-Norge;;Boliglån innenfor 85%;2,69;1300;0;65;2,80
+283;Tolga-Os Sparebank;;Boliglån innenfor 75 % av markedsverdi;2,70;1000;0;60;2,81
+284;SpareBank 1 SMN;;Hyttelån;2,70;1200;0;60;2,81
+285;Romerike Sparebank;;Boliglån 75%;2,70;0;0;65;2,81
+286;Romerike Sparebank;;Boliglån med stil 75 %;2,70;0;0;65;2,81
+287;Tysnes Sparebank;;Boliglån Aktiv Totalkunde- Inntil 85%;2,70;1000;0;65;2,81
+288;Grue Sparebank;;Boliglån;2,75;0;0;50;2,85
+289;Etne Sparebank;;Avdragslån - flytende rente;2,75;0;0;50;2,85
+290;Gildeskål Sparebank;;Boliglån innenfor 60% av boligverdi;2,75;1000;0;50;2,85
+291;Høland og Setskog Sparebank;;Boliglån 85%;2,75;0;0;60;2,86
+292;Sogn Sparebank;;Bustadlån 75%, Sogn Sparebank mellom 1 mill. kr og 2 mill. kr.;2,75;500;0;60;2,86
+293;Romsdal Sparebank;;Grønt boliglån innenfor 85%;2,75;1000;2500;60;2,86
+294;Sandnes Sparebank;;Nedbetalingslån innenfor 85 %;2,75;0;0;70;2,87
+295;Ørskog Sparebank;;Bustadlån;2,75;1000;0;70;2,87
+296;SpareBank 1 Nordmøre;;Boliglån - innenfor 75 % av verdigrunnlag;2,75;1200;0;75;2,88
+297;SpareBank 1 Lom og Skjåk;;Boliglån ordinær;2,80;0;0;50;2,90
+298;Ørland Sparebank;;Boliglån 85%;2,80;2000;1000;50;2,90
+299;Romerike Sparebank;;Boliglån 85%;2,80;0;0;65;2,92
+300;Romerike Sparebank;;Boliglån med stil 85 %;2,80;0;0;65;2,92
+301;Oppdalsbanken;;Boliglån innenfor 85%;2,85;1200;0;45;2,94
+302;Rørosbanken Røros Sparebank;;Klimalån;2,85;0;0;50;2,95
+303;Åfjord Sparebank;;Boliglån 60%;2,85;1000;0;50;2,95
+304;SpareBank 1 SR-Bank;;Hyttelån;2,84;0;0;60;2,95
+305;Skudenes & Aakra Sparebank;;Lån med pant i fritidsbolig;2,84;750;1500;60;2,95
+306;Rørosbanken Røros Sparebank;;Boliglån 85%;2,85;900;0;65;2,97
+307;Etnedal Sparebank;;Boliglån innenfor 85 %;2,90;750;0;50;3,00
+308;Flekkefjord Sparebank;;Lån fritidsbolig;2,90;750;0;50;3,00
+309;Larvikbanken;;Eika boligkreditt ordinær;2,90;0;0;55;3,01
+310;Romsdal Sparebank;;Boliglån innenfor 85%;2,90;1000;2500;60;3,01
+311;SpareBank 1 Nordmøre;;Boliglån inntil 85%;2,90;1200;0;75;3,03
+312;SpareBank 1 Modum;;Sperret innskudd;2,95;0;0;55;3,06
+313;SpareBank 1 Helgeland;;Hyttelån;2,95;0;0;60;3,06
+314;BN Bank ASA;;Boliglån Alltid Fornøyd 85 %;3,00;500;0;45;3,10
+315;SpareBank 1 Modum;;Lån til fritidsbolig;2,99;0;0;55;3,10
+316;SpareBank 1 Sørøst-Norge;;Hyttelån;2,99;1000;0;60;3,11
+317;SpareBank 1 Gudbrandsdal;;Privat Ekstra (75% av verdi);3,10;800;0;50;3,21
+318;Åfjord Sparebank;;Boliglån 85 %;3,10;1000;0;50;3,21
+319;Jernbanepersonalets Bank og Forsikring;;Boliglån over 75%;3,15;1000;0;60;3,27
+320;Nidaros Sparebank;;Boliglån inntil 85%;3,15;2000;2000;60;3,27
+321;Skudenes & Aakra Sparebank;;Utleiebolig;3,19;750;1500;60;3,31
+322;Larvikbanken;;Eika boligkreditt eKunde;3,40;0;0;55;3,52
+323;Lillesands Sparebank;;Boliglån;3,40;1000;0;60;3,53
+324;Larvikbanken;;Boliglån 75 % eKunde;3,50;0;0;55;3,62
+325;Sogn Sparebank;;Bustadlån 85% Sogn Sparebank;3,50;500;0;60;3,63
+326;Larvikbanken;;Boliglån 75% ordinær;3,60;0;0;55;3,73
+327;Odal Sparebank;;Boliglån innenfor 80 %;3,65;750;0;60;3,79
+328;Hjelmeland Sparebank;;Boliglån - 80%;3,75;990;0;50;3,88
+329;Larvikbanken;;Boliglån 85 % eKunde;3,95;0;0;55;4,09
+330;Akademikerne (Danske Bank);;Toppfinansiering;4,00;0;0;45;4,13
+331;Larvikbanken;;Boliglån 85% ordinær;4,05;0;0;55;4,19
+332;Vekselbanken;;Bustadlån innanfor 85%;4,15;0;1000;65;4,31
+333;Bluestep Bank AB (publ), filial Oslo;;Bluestep Boliglån;5,27;0;20000;25;5,43
+334;Bank2 ASA;;Refinansiering;5,73;0;20000;75;5,98
+335;Nordax Bank AB (publ);;Nordax Boliglån;5,99;0;10000;35;6,20
+336;Danske Bank;;Toppfinansiering;6,20;1000;0;45;6,44
+337;INSTABANK ASA;;Lån med sikkerhet;6,70;0;5000;50;6,97
+338;Kraft Bank ASA;;Refinansieringslån med sikkerhet;6,95;0;0;75;7,27
+339;Kraft Bank ASA;;2. prioritetslån;7,50;0;0;75;7,86
