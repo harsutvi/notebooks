@@ -1,0 +1,132 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<html>
+<head>
+<title>Skriv inn fanetittel her!!</title>
+<link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+</head>
+
+<style>
+	.slider {
+	  -webkit-appearance: none;
+	  height: 1px;
+	  background: #c7c7c7;
+	  outline: none;
+	  opacity: 0.5;
+	  -webkit-transition: .2s;
+	  transition: opacity .2s;
+	  width:900;
+	  margin-left:50px;
+	}
+
+	img.slides {
+	  width:1000;
+	}
+
+	.slider:hover {
+	  opacity: 1;
+	}
+
+	.slider::-webkit-slider-thumb {
+	  -webkit-appearance: none;
+	  appearance: none;
+	  width: 85px;
+	  height: 25px;
+	  background: url("img/slidericon.png");
+	  cursor: pointer;
+	}
+
+	.slider::-moz-range-thumb {
+	  width: 85px;
+	  height: 25px;
+	  background:  url("img/slidericon.png");
+	  cursor: pointer;
+	  border: none;
+	}
+	p {
+	  margin-left: 20px;
+	  max-width: 980px;
+	  font-family: "verdana";
+	  text-align: left;
+	  color:#063f5c;
+	  font-size: 1em;
+	  z-index:-2;
+	}
+
+	h1 {
+	  max-width: 1000;
+	  font-family: "verdana";
+	  color:#063f5c;
+	  text-align: center;
+	  font-size: 1.5em
+	}
+</style>
+
+<body>
+	<h1 style="text-align:center">
+		Skriv inn overskrift her!
+	</h1><br>
+	<p class="content">
+		<img class="line" src="img/break_line.png" width=975/><br>
+		Skriv inn tekst her, bruk <br> for å få linjeskift 
+		Dette er før parameterverdien
+		<span id="demo"></span>
+		og dette er etter. 
+		<br><br>
+	</p>
+	
+	Her kommer slideren og bildet. Formateringen er feil fordi teksten er satt utenfor &ltp&gt-taggen
+	<div class="content">
+
+  
+<input type='range' min='0' max='20' value='34' class='slider' id='myRange'><br><br><br><br>
+<img class='slides' src='./img/fig0.png'>
+<img class='slides' src='./img/fig1.png'>
+<img class='slides' src='./img/fig2.png'>
+<img class='slides' src='./img/fig3.png'>
+<img class='slides' src='./img/fig4.png'>
+<img class='slides' src='./img/fig5.png'>
+<img class='slides' src='./img/fig6.png'>
+<img class='slides' src='./img/fig7.png'>
+<img class='slides' src='./img/fig8.png'>
+<img class='slides' src='./img/fig9.png'>
+<img class='slides' src='./img/fig10.png'>
+<img class='slides' src='./img/fig11.png'>
+<img class='slides' src='./img/fig12.png'>
+<img class='slides' src='./img/fig13.png'>
+<img class='slides' src='./img/fig14.png'>
+<img class='slides' src='./img/fig15.png'>
+<img class='slides' src='./img/fig16.png'>
+<img class='slides' src='./img/fig17.png'>
+<img class='slides' src='./img/fig18.png'>
+<img class='slides' src='./img/fig19.png'>
+<img class='slides' src='./img/fig20.png'>
+
+</body>
+<script>
+	var array = JSON.parse('[-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]');    var slideIndex = 1;
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    
+    show_img(slider.value);
+    
+    output.innerHTML = array[slider.value];
+    
+    function show_img(n) {
+      localStorage.swipe_enabled=0;
+      var i;
+      var x = document.getElementsByClassName("slides");
+    
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[n].style.display = "block";  
+      output.innerHTML = array[n];
+    }
+    
+    slider.oninput = function() {
+      show_img(this.value) ;
+    }
+</script>
+</html> 

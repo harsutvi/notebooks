@@ -4,3 +4,6 @@ unused/
 .ipynb_checkpoints/
 *.wpu
 *.wpr
+fig*.png
+world population.html
+BNP_levealder.html
