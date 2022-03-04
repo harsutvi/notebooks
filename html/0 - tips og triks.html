@@ -13160,6 +13160,7 @@ div#notebook {
 		<div id="mySidenav" class="sidenav">
 			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - tips og triks.html">0 - tips og triks.ipynb</a><br>
 			<a href="0 - installasjon.html">0 - installasjon.ipynb</a><br>
+			<a href="0 - Terminal.html">0 - Terminal.ipynb</a><br>
 			<a href="1 - introduksjon.html">1 - introduksjon.ipynb</a><br>
 			<a href="2 - funksjoner.html">2 - funksjoner.ipynb</a><br>
 			<a href="3 - matplotlib.html">3 - matplotlib.ipynb</a><br>
@@ -13170,8 +13171,8 @@ div#notebook {
 			<a href="8 - git, pythonfiler og IDE.html">8 - git, pythonfiler og IDE.ipynb</a><br>
 			<a href="9 - webskraping med python.html">9 - webskraping med python.ipynb</a><br>
 			<a href="10 - statsmodels.html">10 - statsmodels.ipynb</a><br>
-			<a href="11 - interaktive grafer og websider.html">11 - interaktive grafer og websider.ipynb</a><br>
-			<a href="12 - interaktive kart.html">12 - interaktive kart.ipynb</a><br>
+			<a href="11 - interaktive websider.html">11 - interaktive websider.ipynb</a><br>
+			<a href="12 - animasjon med klasse.html">12 - animasjon med klasse.ipynb</a><br>
 			<br><br><br>	
 			<a href="https://github.com/espensirnes/notebooks">Gå til repositoriet</a><br>
 			<br><br>
@@ -13312,7 +13313,7 @@ jupyter_data_dir()</code></pre>
 <p>Resultatet viser stien nenvnt i lenken over.</p>
 <ol>
 <li>Lag en mappe <code>dictionaries</code> under <code>spellchecker</code> i ovvenenvnte sti.</li>
-<li>Kopier <a href="./dictionaries/nb_NO.aff">nb_NO.aff</a> og <a href="./dictionaries/nb_NO.dic">nb_NO.dic</a> fra <code>/instructions/dictionaries</code> mappen i dette repositoriet til mappen du nettopp laget.</li>
+<li>Kopier <a href="res/nb_NO.aff">nb_NO.aff</a> og <a href="res/nb_NO.dic">nb_NO.dic</a> fra <code>res</code> mappen i dette repositoriet til mappen du nettopp laget.</li>
 <li>Kopier koden fra nettsiden over til en notebook, bytt ut de_DE med nb_NO, og kjør det.</li>
 </ol>
 
@@ -13331,6 +13332,49 @@ jupyter_data_dir()</code></pre>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="11.-Installere-geopandas-p%C3%A5-windows">11. Installere geopandas p&#229; windows<a class="anchor-link" href="#11.-Installere-geopandas-p%C3%A5-windows">&#182;</a></h2><p>Geopandas er ikke helt rett frem å installere på windows. Har du en linux eller Mac skal det bare være å kjøre henholdsvis <code>pip install geopandas</code> eller <code>pip3 install geopandas</code>. Du kan kjøre samme kommando på windows, men pakken vil sannsynligvis ikke fungere. Enda verre er det at dersom du gjør det, må du kanskje gå tilbake etterpå og avinstallere såkalte "dependencies", så det beste er å følge følgende oppskrift, uten å forsøke <code>pip install</code> først.</p>
+<p>1) Gå til <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs">https://www.lfd.uci.edu/~gohlke/pythonlibs/</a> og last ned følgende pakker (søk etter dem med ctrl+F, og skriv inn navnene etter tur):</p>
+<ul>
+<li>GDAL, Fiona, pyproj, rtree og shapely</li>
+</ul>
+<p>2) Last alle pakken ned til din "Downloads"-mappe</p>
+<ul>
+<li>Hver pakke har en rekke ulike versjoner. Sørg for at følgende stemmer:<ul>
+<li>velg et versjonsnummer som stemmer med pythonversjonen du bruker. </li>
+<li>velg en pakke med "cp" foran versjonsnummer</li>
+<li>velg riktig antall bit for din maksin, enten 32 eller 64. Stort sett alle maskiner har 64 bit i dag. </li>
+<li>For eksempel har du python 3.8 og en 64bit maskin, velger du for GDAL filen <strong>"GDAL‑3.4.1‑cp38‑cp38‑win_amd64.whl"</strong></li>
+</ul>
+</li>
+</ul>
+<p>3) installer pakkene i rekkefølgen GDAL, Fiona, pyproj, rtree og shapely</p>
+<ul>
+<li>Åpne kommandovinduet med adminrettigheter og naviger med <code>cd</code> til du er i "Dwnloads"-mappen</li>
+<li>"Downloads"-mappen ligger normalt på <strong>C:\Users\<brukernavn>\Downloads</strong></li>
+<li>skriv inn <code>pip install "&lt;navn på pakke&gt;"</code></li>
+<li>for å installere GDAL for python 3.8 og 64 bit skriver du for eksempel: <code>pip install "GDAL‑3.4.1‑cp38‑cp38‑win_amd64.whl"</code></li>
+</ul>
+<p>4) kjør <code>pip install geopandas</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">*</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
