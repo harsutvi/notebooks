@@ -13420,7 +13420,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x1c0280be880&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x210bee80eb0&gt;</pre>
 </div>
 
 </div>
@@ -13458,6 +13458,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
 <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 
@@ -13486,7 +13487,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x1c02a1bc220&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x210c0f7a6d0&gt;</pre>
 </div>
 
 </div>
@@ -13754,7 +13755,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.regression.linear_model</span> <span class="kn">import</span> <span class="n">OLS</span>
@@ -13777,14 +13778,26 @@ div#notebook {
     <div class="prompt"></div>
 
 
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>c:\program files\python38\lib\site-packages\statsmodels\compat\pandas.py:65: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import Int64Index as NumericIndex
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:               life_exp   R-squared:                       0.654
 Model:                            OLS   Adj. R-squared:                  0.652
 Method:                 Least Squares   F-statistic:                     265.2
-Date:                Wed, 02 Mar 2022   Prob (F-statistic):           4.12e-34
-Time:                        10:13:04   Log-Likelihood:                -479.26
+Date:                Tue, 08 Mar 2022   Prob (F-statistic):           4.12e-34
+Time:                        13:46:50   Log-Likelihood:                -479.26
 No. Observations:                 142   AIC:                             962.5
 Df Residuals:                     140   BIC:                             968.4
 Df Model:                           1                                         
@@ -13821,7 +13834,7 @@ Notes:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span><span class="o">.</span><span class="n">params</span>
@@ -13837,7 +13850,7 @@ Notes:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13864,7 +13877,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;gdp_cap&#39;</span><span class="p">])),</span> <span class="nb">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;gdp_cap&#39;</span><span class="p">])),</span> <span class="mi">100</span><span class="p">)</span>
@@ -13885,7 +13898,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13939,7 +13952,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">beta</span><span class="o">=</span><span class="mi">1</span>
@@ -13959,7 +13972,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -13988,28 +14001,28 @@ dtype: float64</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.118503</td>
-      <td>5.973207</td>
+      <td>2.826685</td>
+      <td>5.747467</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3.062684</td>
-      <td>5.505583</td>
+      <td>3.807225</td>
+      <td>5.877917</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.280989</td>
-      <td>5.184833</td>
+      <td>2.087183</td>
+      <td>5.011119</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2.928980</td>
-      <td>5.547465</td>
+      <td>3.169156</td>
+      <td>5.860231</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2.619747</td>
-      <td>5.425952</td>
+      <td>2.788752</td>
+      <td>5.439355</td>
     </tr>
     <tr>
       <th>...</th>
@@ -14018,28 +14031,28 @@ dtype: float64</pre>
     </tr>
     <tr>
       <th>95</th>
-      <td>3.324439</td>
-      <td>5.838910</td>
+      <td>3.013307</td>
+      <td>5.117988</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>2.957866</td>
-      <td>5.905177</td>
+      <td>2.329659</td>
+      <td>5.234857</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>3.499373</td>
-      <td>5.603038</td>
+      <td>3.316186</td>
+      <td>5.373793</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>3.551558</td>
-      <td>5.736756</td>
+      <td>3.014390</td>
+      <td>5.365513</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>2.742896</td>
-      <td>5.625766</td>
+      <td>3.478672</td>
+      <td>5.866059</td>
     </tr>
   </tbody>
 </table>

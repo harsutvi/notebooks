@@ -13215,7 +13215,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
@@ -13266,10 +13266,15 @@ div#notebook {
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;Landkreditt Bank AS&lt;/td&gt;
+&lt;td&gt;SpareBank 1 Nordmøre&lt;/td&gt;
 &lt;td&gt;
-&lt;button class=&#34;popover_info btn btn-none&#34; data-html=&#34;true&#34; data-placement=&#34;left&#34; data-toggle=&#34;tooltip&#34; title=&#34;Nominell: &amp;lt;strong&amp;gt;1,55&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Sikkerhetsgebyr: &amp;lt;strong&amp;gt;1 000&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Etableringsgebyr: &amp;lt;strong&amp;gt;0&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Termingebyr: &amp;lt;strong&amp;gt;0&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Effektiv rente: &amp;lt;strong&amp;gt;1,56&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;Alle som har energimerke A eller B på boligen sin kan søke om Grønt boliglån. 
-I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglige bankkop
+&lt;button class=&#34;popover_info btn btn-none&#34; data-html=&#34;true&#34; data-placement=&#34;left&#34; data-toggle=&#34;tooltip&#34; title=&#34;Nominell: &amp;lt;strong&amp;gt;1,35&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Sikkerhetsgebyr: &amp;lt;strong&amp;gt;1 200&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Etableringsgebyr: &amp;lt;strong&amp;gt;0&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Termingebyr: &amp;lt;strong&amp;gt;75&amp;lt;/strong&amp;gt;&amp;lt;br&amp;gt;Effektiv rente: &amp;lt;strong&amp;gt;1,45&amp;lt;/strong&amp;gt;&#34; type=&#34;button&#34;&gt;
+&lt;i class=&#34;fa fa-info-circle&#34;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;/td&gt;
+&lt;td class=&#34;d-none d-sm-table-cell&#34;&gt;Grønt førstehjemslån&lt;/td&gt;
+&lt;td&gt;1,35&lt;/td&gt;
+&lt;td class=&#34;d-none d-sm-table-cell&#34;&gt;1 200&lt;
 </pre>
 </div>
 </div>
@@ -13288,7 +13293,7 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">html_to_table</span><span class="p">(</span><span class="n">html</span><span class="p">):</span>
@@ -13350,7 +13355,7 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[&#39;&#39;, &#39;Bank&#39;, &#39;&#39;, &#39;Navn&#39;, &#39;Nominell&#39;, &#39;Sikkerhetsgebyr&#39;, &#39;Etableringsgebyr&#39;, &#39;Termin&#39;, &#39;Effektiv&#39;], [&#39;1&#39;, &#39;Landkreditt Bank AS&#39;, &#39;&#39;, &#39;Grønt Boliglån&#39;, &#39;1,55&#39;, &#39;1000&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1,56&#39;], [&#39;2&#39;, &#39;Statens pensjonskasse&#39;, &#39;&#39;, &#39;Boliglån inntil 80 %&#39;, &#39;1,49&#39;, &#39;0&#39;, &#39;0&#39;, &#39;50&#39;, &#39;1,56&#39;], [&#39;3&#39;, &#39;Etne Sparebank&#39;, &#39;&#39;, &#39;&#34;Him te Etne&#34; - lånet&#39;, &#39;1,55&#39;, &#39;0&#39;, &#39;0&#39;, &#39;50&#39;, &#39;1,62&#39;], [&#39;4&#39;, &#39;SpareBank 1 SMN&#39;, &#39;&#39;, &#39;Grønt førstehjemslån&#39;, &#39;1,60&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,68&#39;], [&#39;5&#39;, &#39;SpareBank 1 Nordmøre&#39;, &#39;&#39;, &#39;Grønt boliglån&#39;, &#39;1,60&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;75&#39;, &#39;1,70&#39;], [&#39;6&#39;, &#39;Høland og Setskog Sparebank&#39;, &#39;&#39;, &#39;Grønt Boliglån spesial&#39;, &#39;1,64&#39;, &#39;0&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,73&#39;], [&#39;7&#39;, &#39;Orkla Sparebank&#39;, &#39;&#39;, &#39;Grønt boliglån&#39;, &#39;1,65&#39;, &#39;1000&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,74&#39;], [&#39;8&#39;, &#39;KLP Banken AS&#39;, &#39;&#39;, &#39;Grønt boliglån medlem&#39;, &#39;1,70&#39;, &#39;0&#39;, &#39;0&#39;, &#39;35&#39;, &#39;1,76&#39;], [&#39;9&#39;, &#39;Landkreditt Bank AS&#39;, &#39;&#39;, &#39;Boliglån 50%&#39;, &#39;1,75&#39;, &#39;500&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1,76&#39;], [&#39;10&#39;, &#39;Oslo Pensjonsforsikring AS&#39;, &#39;&#39;, &#39;Boliglån innenfor 75 %&#39;, &#39;1,70&#39;, &#39;0&#39;, &#39;0&#39;, &#39;45&#39;, &#39;1,77&#39;], [&#39;11&#39;, &#39;
+<pre>[[&#39;&#39;, &#39;Bank&#39;, &#39;&#39;, &#39;Navn&#39;, &#39;Nominell&#39;, &#39;Sikkerhetsgebyr&#39;, &#39;Etableringsgebyr&#39;, &#39;Termin&#39;, &#39;Effektiv&#39;], [&#39;1&#39;, &#39;SpareBank 1 Nordmøre&#39;, &#39;&#39;, &#39;Grønt førstehjemslån&#39;, &#39;1,35&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;75&#39;, &#39;1,45&#39;], [&#39;2&#39;, &#39;Landkreditt Bank AS&#39;, &#39;&#39;, &#39;Grønt Boliglån&#39;, &#39;1,55&#39;, &#39;1000&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1,56&#39;], [&#39;3&#39;, &#39;Statens pensjonskasse&#39;, &#39;&#39;, &#39;Boliglån inntil 80 %&#39;, &#39;1,49&#39;, &#39;0&#39;, &#39;0&#39;, &#39;50&#39;, &#39;1,56&#39;], [&#39;4&#39;, &#39;Etne Sparebank&#39;, &#39;&#39;, &#39;&#34;Him te Etne&#34; - lånet&#39;, &#39;1,55&#39;, &#39;0&#39;, &#39;0&#39;, &#39;50&#39;, &#39;1,62&#39;], [&#39;5&#39;, &#39;SpareBank 1 SMN&#39;, &#39;&#39;, &#39;Grønt førstehjemslån&#39;, &#39;1,60&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,68&#39;], [&#39;6&#39;, &#39;SpareBank 1 Nordmøre&#39;, &#39;&#39;, &#39;Grønt boliglån&#39;, &#39;1,60&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;75&#39;, &#39;1,70&#39;], [&#39;7&#39;, &#39;Høland og Setskog Sparebank&#39;, &#39;&#39;, &#39;Grønt Boliglån spesial&#39;, &#39;1,64&#39;, &#39;0&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,73&#39;], [&#39;8&#39;, &#39;Orkla Sparebank&#39;, &#39;&#39;, &#39;Grønt boliglån&#39;, &#39;1,65&#39;, &#39;1000&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,74&#39;], [&#39;9&#39;, &#39;KLP Banken AS&#39;, &#39;&#39;, &#39;Grønt boliglån medlem&#39;, &#39;1,70&#39;, &#39;0&#39;, &#39;0&#39;, &#39;35&#39;, &#39;1,76&#39;], [&#39;10&#39;, &#39;Landkreditt Bank AS&#39;, &#39;&#39;, &#39;Boliglån 50%&#39;, &#39;1,75&#39;, &#39;500&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1,76&#39;], [&#39;11&#39;, &#39;Oslo 
 </pre>
 </div>
 </div>
@@ -13371,7 +13376,7 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -13387,7 +13392,7 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13412,7 +13417,7 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">save_data</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">table</span><span class="p">):</span>
@@ -13440,7 +13445,7 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13457,7 +13462,7 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13494,6 +13499,18 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
     <tr>
       <th>0</th>
       <td>1</td>
+      <td>SpareBank 1 Nordmøre</td>
+      <td>NaN</td>
+      <td>Grønt førstehjemslån</td>
+      <td>1,35</td>
+      <td>1200</td>
+      <td>0</td>
+      <td>75</td>
+      <td>1,45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
       <td>Landkreditt Bank AS</td>
       <td>NaN</td>
       <td>Grønt Boliglån</td>
@@ -13504,8 +13521,8 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
       <td>1,56</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>2</td>
+      <th>2</th>
+      <td>3</td>
       <td>Statens pensjonskasse</td>
       <td>NaN</td>
       <td>Boliglån inntil 80 %</td>
@@ -13516,8 +13533,8 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
       <td>1,56</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>3</td>
+      <th>3</th>
+      <td>4</td>
       <td>Etne Sparebank</td>
       <td>NaN</td>
       <td>Him te Etne - lånet</td>
@@ -13528,8 +13545,8 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
       <td>1,62</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>4</td>
+      <th>4</th>
+      <td>5</td>
       <td>SpareBank 1 SMN</td>
       <td>NaN</td>
       <td>Grønt førstehjemslån</td>
@@ -13538,18 +13555,6 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
       <td>0</td>
       <td>60</td>
       <td>1,68</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>SpareBank 1 Nordmøre</td>
-      <td>NaN</td>
-      <td>Grønt boliglån</td>
-      <td>1,60</td>
-      <td>1200</td>
-      <td>0</td>
-      <td>75</td>
-      <td>1,70</td>
     </tr>
     <tr>
       <th>...</th>
@@ -13564,8 +13569,8 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
       <td>...</td>
     </tr>
     <tr>
-      <th>334</th>
-      <td>335</td>
+      <th>335</th>
+      <td>336</td>
       <td>Nordax Bank AB (publ)</td>
       <td>NaN</td>
       <td>Nordax Boliglån</td>
@@ -13576,8 +13581,8 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
       <td>6,20</td>
     </tr>
     <tr>
-      <th>335</th>
-      <td>336</td>
+      <th>336</th>
+      <td>337</td>
       <td>Danske Bank</td>
       <td>NaN</td>
       <td>Toppfinansiering</td>
@@ -13588,8 +13593,8 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
       <td>6,44</td>
     </tr>
     <tr>
-      <th>336</th>
-      <td>337</td>
+      <th>337</th>
+      <td>338</td>
       <td>INSTABANK ASA</td>
       <td>NaN</td>
       <td>Lån med sikkerhet</td>
@@ -13600,8 +13605,8 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
       <td>6,97</td>
     </tr>
     <tr>
-      <th>337</th>
-      <td>338</td>
+      <th>338</th>
+      <td>339</td>
       <td>Kraft Bank ASA</td>
       <td>NaN</td>
       <td>Refinansieringslån med sikkerhet</td>
@@ -13612,8 +13617,8 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
       <td>7,27</td>
     </tr>
     <tr>
-      <th>338</th>
-      <td>339</td>
+      <th>339</th>
+      <td>340</td>
       <td>Kraft Bank ASA</td>
       <td>NaN</td>
       <td>2. prioritetslån</td>
@@ -13625,7 +13630,7 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
     </tr>
   </tbody>
 </table>
-<p>339 rows × 9 columns</p>
+<p>340 rows × 9 columns</p>
 </div></div>
 
 </div>
@@ -13644,7 +13649,7 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
@@ -13733,7 +13738,7 @@ I Landkreditt Bank er det enkelt å bli kunde, søke lån og utføre alle daglig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://timeplan.uit.no/emne_timeplan.php?sem=22v&amp;module[]=SOK-1005-1&#39;</span>
@@ -13820,7 +13825,7 @@ SOK-1005-1	Forelesning
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
