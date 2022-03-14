@@ -13158,9 +13158,7 @@ div#notebook {
 <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">	<div class="sidenav_container">
 		<div id="mySidenav" class="sidenav">
-			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - tips og triks.html">0 - tips og triks.ipynb</a><br>
-			<a href="0 - installasjon.html">0 - installasjon.ipynb</a><br>
-			<a href="0 - Terminal.html">0 - Terminal.ipynb</a><br>
+			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - installasjon og tips.html">0 - installasjon og tips.ipynb</a><br>
 			<a href="1 - introduksjon.html">1 - introduksjon.ipynb</a><br>
 			<a href="2 - funksjoner.html">2 - funksjoner.ipynb</a><br>
 			<a href="3 - matplotlib.html">3 - matplotlib.ipynb</a><br>
@@ -13191,14 +13189,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="12---animasjon-og-klasse">12 - animasjon og klasse<a class="anchor-link" href="#12---animasjon-og-klasse">&#182;</a></h1>
+<p><span style="color:#9bb1d4;font-size:30px;font-weight:900"> 12 - animasjon og klasse </span></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hva-er-en-klasse-i-python">Hva er en klasse i python<a class="anchor-link" href="#Hva-er-en-klasse-i-python">&#182;</a></h2>
+<h1 id="Hva-er-en-klasse-i-python">Hva er en klasse i python<a class="anchor-link" href="#Hva-er-en-klasse-i-python">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13208,13 +13207,13 @@ div#notebook {
 <p>En "klasse" i bython er et objekt. Python er et objektorientert programmeringsspråk, som de fleste moderne programmerinsspråk er. Hittil har vi imidlertid kjørt programmer som har en begynnelse og en slutt.</p>
 <p>Et objekt er noe som skapes, og er der så lenge programmet kjører. Et objekt kan ha egenskaper (variabler som inneholder tekst, tall, lister eller andre objekter) og funksjoner.</p>
 <p>For å skjønne poenget med objekter er det greit å begynne med et enkelt eksempel. Vi kan for eksempel lage en robot, eller "bot" som det ofte kalles. Vi starter med å definere hva klassen (objekt-typen) skal hete ("Bot") og hva som skal skje når objektet initieres (<code>__init__()</code>-funksjonen).</p>
-
+<h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Bot</span><span class="p">():</span>
@@ -13242,16 +13241,16 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi har nå definert hva slags struktur boten vår skal ha. Da er det tid for å lage en bestemt utgave av 'boten, som vi kan kalle "Leif":</p>
-
+<h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">the_bot_leif</span><span class="o">=</span><span class="n">bot</span><span class="p">(</span><span class="s1">&#39;Leif&#39;</span><span class="p">,</span> <span class="s1">&#39;Good day!&#39;</span><span class="p">,</span> <span class="s1">&#39;I hate&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">the_bot_leif</span><span class="o">=</span><span class="n">Bot</span><span class="p">(</span><span class="s1">&#39;Leif&#39;</span><span class="p">,</span> <span class="s1">&#39;Hello!&#39;</span><span class="p">,</span> <span class="s1">&#39;My name is&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13263,13 +13262,13 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Om du har kjørt koden over, kan du nå teste ut 'boten:</p>
-
+<h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">the_bot_leif</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span><span class="s1">&#39;Hi!&#39;</span><span class="p">)</span>
@@ -13279,23 +13278,30 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Hello!&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">the_bot_leif</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span><span class="s1">&#39;Do you have feelings?&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">the_bot_leif</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span><span class="s1">&#39;What is your name?&#39;</span><span class="p">)</span>
@@ -13305,14 +13311,67 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;My name is Leif&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">the_bot_leif</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span><span class="s1">&#39;Do you have feelings?&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;It is True that I have feelings&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Eksempel-p%C3%A5-animasjon-og-klasse">Eksempel p&#229; animasjon og klasse<a class="anchor-link" href="#Eksempel-p%C3%A5-animasjon-og-klasse">&#182;</a></h2><p>Vi kan for eksempel bruke klasse til å laget et marked, med tilbud, etterspørsel og en likevekt. Denne klassen har en bestemt tilbudsfunksjon, etterspørselsfunksjon og du kan sette en skatt på markedet når du oppretter det.</p>
+<h1 id="Eksempel-p%C3%A5-animasjon-og-klasse">Eksempel p&#229; animasjon og klasse<a class="anchor-link" href="#Eksempel-p%C3%A5-animasjon-og-klasse">&#182;</a></h1><p>Vi kan for eksempel bruke klasse til å laget et marked, med tilbud, etterspørsel og en likevekt. Denne klassen har en bestemt tilbudsfunksjon, etterspørselsfunksjon og du kan sette en skatt på markedet når du oppretter det.</p>
 <p>Som du ser av <code>__init__</code>-funksjonen, så regnes likevekspris og kvantum ut når markedet opprettes, med gitt skatt. Skatten legges til tilbudsfunksjonen, slik at når denne kalles, så vil det være inkludert skatt.</p>
 <p>Til å regne ut likevekt, bruker vi sympy slik vi har lært i <a href="5%20-%20sympy.html">5 - sympy</a>.</p>
-
+<h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13351,7 +13410,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Ved å opprette to markeder, ett med skatt og ett uten, kan vi sammenligne situasjonen. Vi starter med å lage de to markedene, der vi setter en skatt på 10 i det ene markedet:</p>
-
+<h4 id="Eksempel-5:">Eksempel 5:<a class="anchor-link" href="#Eksempel-5:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13374,7 +13433,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi kan nå plotte disse. Vi plotter tilbud og etterspørsel i markedene på samme måte som før i <a href="3%20-%20matplotlib.html">3 - matplotlib</a>, bortsett fra at vi setter det inn i en funksjon.</p>
 <p>Legg merke til at vi først lager et figur- og akseobjekt som vil være uendret, men at innholdet i akseobjektet slettes hver gang vi kaller <code>save_plot</code>. Årsaken til dette er at vi lenger ned skal lage mange figurer. Om vi oppretter et nytt figurobjekt hver gang vil alle figurene trenge plass i minnet til PC'en, noe som vil gi unødvendig stor bruk av maskinens internminne.</p>
-
+<h4 id="Eksempel-6:">Eksempel 6:<a class="anchor-link" href="#Eksempel-6:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13440,7 +13499,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi kan nå plotte markedene, med og uten skatt:</p>
-
+<h4 id="Eksempel-7:">Eksempel 7:<a class="anchor-link" href="#Eksempel-7:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13483,7 +13542,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Om du nå sjekker i mappen 'img' i samme mappe som denne jupyter-filen ligger, vil du finne bildet over.</p>
-<h2 id="Vi-lager-en-dynamisk-nettside">Vi lager en dynamisk nettside<a class="anchor-link" href="#Vi-lager-en-dynamisk-nettside">&#182;</a></h2>
+<h1 id="Vi-lager-en-dynamisk-nettside">Vi lager en dynamisk nettside<a class="anchor-link" href="#Vi-lager-en-dynamisk-nettside">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13493,7 +13552,7 @@ div#notebook {
 <p>Vi skal nå lage en dynamisk nettside, med et skyvelær hvor vi kan velge skattenivå. Funksjonen <code>create_html_file</code> under lager en html-fil i mappen der denne jupyter-filen ligger. Den tar <code>rng</code> som argument, som representerer en etikett som skal vises til hvert bilde vi lager.</p>
 <p>Funksjonen <code>read_file</code> sørger for at <code>create_html_file</code> kan lese to filer "res/html1.txt" og "res/html2.txt" som brukes til å lage html-filen.</p>
 <p>Vi skal ikke gå veldig detaljert inn på hvordan funksjonen under fungerer, men nøye oss med å si at det vil bli en oppgave for denne leksjonen å endre html-kodene i ovennevnte filer.</p>
-
+<h4 id="Eksempel-8:">Eksempel 8:<a class="anchor-link" href="#Eksempel-8:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13541,7 +13600,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi kan nå lage nettsiden vår. Det gjør vi ved å lage 15 ulike skattenivåer i intervallet -30 til 18, og så lage ett plott for hvert nivå, med og uten skatt.</p>
-
+<h4 id="Eksempel-9:">Eksempel 9:<a class="anchor-link" href="#Eksempel-9:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13612,8 +13671,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="En-litt-mer-avansert-figur">En litt mer avansert figur<a class="anchor-link" href="#En-litt-mer-avansert-figur">&#182;</a></h2><p>Vi kan gjøre figuren mer avansert ved å legge til flere elementer fra figuren i <a href="5%20-%20sympy.html">5 - sympy</a>. For markedet kan vi legge til en funksjon som regner ut konsument-, produsent- og velferdsgevinst. Disse legges så til som en egenskap ved markedet (en egenskap med <code>self</code>) etter avrunding:</p>
-
+<h1 id="En-litt-mer-avansert-figur">En litt mer avansert figur<a class="anchor-link" href="#En-litt-mer-avansert-figur">&#182;</a></h1><p>Vi kan gjøre figuren mer avansert ved å legge til flere elementer fra figuren i <a href="5%20-%20sympy.html">5 - sympy</a>. For markedet kan vi legge til en funksjon som regner ut konsument-, produsent- og velferdsgevinst. Disse legges så til som en egenskap ved markedet (en egenskap med <code>self</code>) etter avrunding:</p>
+<h4 id="Eksempel-10:">Eksempel 10:<a class="anchor-link" href="#Eksempel-10:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13661,7 +13720,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Som i <a href="5%20-%20sympy.html">5 - sympy</a> legger vi til fargelegging av velferdsgevinster. Ellers er plottet her indentisk med det tidligere:</p>
-
+<h4 id="Eksempel-11:">Eksempel 11:<a class="anchor-link" href="#Eksempel-11:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13741,7 +13800,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi kan nå lage en ny nettside, med ekstrainformasjonen. Koden under er identisk med den vi kjørte sist:</p>
-
+<h4 id="Eksempel-12:">Eksempel 12:<a class="anchor-link" href="#Eksempel-12:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13804,7 +13863,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Oppgave">Oppgave<a class="anchor-link" href="#Oppgave">&#182;</a></h2>
+<h1 id="Oppgave">Oppgave<a class="anchor-link" href="#Oppgave">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13820,8 +13879,9 @@ div#notebook {
 <li>Sørg for at skatten blir avrundet. </li>
 </ol>
 </li>
-<li><p>Lag en egen nettside basert på den vi nettopp har valgt, men med en annen figur. Du kan for eksempel la skyvelæret endre på et parameter i det første eksemplet i <a href="5%20-%20sympy.html">5 - sympy</a>.</p>
-</li>
+</ol>
+<ol>
+<li>Lag en egen nettside basert på den vi nettopp har valgt, men med en annen figur. Du kan for eksempel la skyvelæret endre på et parameter i det første eksemplet i <a href="5%20-%20sympy.html">5 - sympy</a>. </li>
 </ol>
 
 </div>

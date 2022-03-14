@@ -13158,9 +13158,7 @@ div#notebook {
 <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">	<div class="sidenav_container">
 		<div id="mySidenav" class="sidenav">
-			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - tips og triks.html">0 - tips og triks.ipynb</a><br>
-			<a href="0 - installasjon.html">0 - installasjon.ipynb</a><br>
-			<a href="0 - Terminal.html">0 - Terminal.ipynb</a><br>
+			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - installasjon og tips.html">0 - installasjon og tips.ipynb</a><br>
 			<a href="1 - introduksjon.html">1 - introduksjon.ipynb</a><br>
 			<a href="2 - funksjoner.html">2 - funksjoner.ipynb</a><br>
 			<a href="3 - matplotlib.html">3 - matplotlib.ipynb</a><br>
@@ -13191,17 +13189,18 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="10---statsmodels">10 - statsmodels<a class="anchor-link" href="#10---statsmodels">&#182;</a></h1>
+<p><span style="color:#9bb1d4;font-size:30px;font-weight:900"> 10 - statsmodels </span></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi bruker vanligvis R til økonometri og statistikk. Med mindre du skal gjøre noe veldig avansert, inneholder imidlertid <code>statsmodels</code>-pakken det du trenger for å kjøre en lang rekke statistiske analyser. I denne forelesningen skal vi imidlertid kun se på den enkleste typen regresjon; Minste Kvadraters Metode (Ordinary Least Squares), eller OLS som vi vanligvis kaller det.</p>
-<p>For å bruke <code>statsmodels</code> må vi ha et datasett. Vi skal bruke et datasett som har vært <a href="https://titlon.uit.no/hht/index.php?page=1">brukt på pr-siden</a> til dette studieprogrammet, nemlig et datasett fra <a href="https://www.gapminder.org/answers/how-does-income-relate-to-life-expectancy/">gapminder.com</a>. Datasettet viser sammenhengen mellom BNP og forventet levealder på en illustrerende måte.</p>
+<p>Statsmodels er den mest brukte pakken for å kjøre statistiske analyser i Python. I denne forelesningen skal vi kun se på den enkleste typen regresjon - Minste Kvadraters Metode (Ordinary Least Squares) - eller OLS som vi vanligvis kaller det.</p>
+<h1 id="Gapminder">Gapminder<a class="anchor-link" href="#Gapminder">&#182;</a></h1><p>For å bruke <code>statsmodels</code> må vi ha et datasett. Vi skal bruke et datasett fra <a href="https://www.gapminder.org/answers/how-does-income-relate-to-life-expectancy/">gapminder.com</a>. Datasettet viser sammenhengen mellom BNP og forventet levealder på en illustrerende måte.</p>
 <p>Vi begynner med å laste inn datasettet fra <a href="https://titlon.uit.no/hht/data/gapminder.csv">https://titlon.uit.no/hht/data/gapminder.csv</a>:</p>
-
+<h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13382,7 +13381,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi plotter så forventet antall leveår mot produksjon (BNP) per innbyger, slik vi har lært i <a href="https://espensirnes.github.io/notebooks/html/3%20-%20matplotlib.html">3 -matplotlib</a>:</p>
-
+<h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13448,7 +13447,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Grafisk ser det ut til at forventet levealder øker mye for lavt BNP per innbygger. Det tyder på at det er den prosentvise økningen i BNP som er avgjørende. Altså at en økning i inntekt fra for eksempel hunder kroner dagen til to hundre kroner, har en mye større effekt enn en økning fra kr 2 000 til kr 2 100. Ved å konvertere bnp til log blir den prosentvise økningen konstant langs x-aksen:</p>
-
+<h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13514,13 +13513,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi ser at vi nå får en penere spredning, og det ser ut til å være en sammenheng. Vi skal nå forsøke å tegne en "regessjonslinje" blant prikkene som er slik at avstanden til prikkene er så liten som mulig, i gjennomsnitt. Det er denne metoden som kalles "Minste Kvadraters Metode" eller "Oridnary Least Squares" (OLS), og går ut på å finne den linjen som er slik at summert kvadratet av den vertikale avstanden til alle prikkene, minimeres.</p>
+<h1 id="Regressjon">Regressjon<a class="anchor-link" href="#Regressjon">&#182;</a></h1><p>Vi ser at vi nå får en penere spredning, og det ser ut til å være en sammenheng. Vi skal nå forsøke å tegne en "regessjonslinje" blant prikkene som er slik at avstanden til prikkene er så liten som mulig, i gjennomsnitt. Det er denne metoden som kalles "Minste Kvadraters Metode" eller "Oridnary Least Squares" (OLS), og går ut på å finne den linjen som er slik at summert kvadratet av den vertikale avstanden til alle prikkene, minimeres.</p>
 <p>Vi skal ikke gå så nøye inn på matematikken her, men poenget er altså å finne en linje som passer så godt som mulig til dataene.</p>
 <p>La oss først sørge for at vi har dataene organisert riktig. Vi må først definere y-variablen (vertikal akse) og x-variablene (horisontal akse). Det er ikke sikkert at linjen vi skal tegne bør krysse akkurat i "origo", der x og y-aksene krysser hverandre. Det er tvert i mot lite sannsynlig. Vi må derfor ha med et konstantledd, som angir hvor på y-aksen linjen skal krysse.</p>
 <p>Vi legger til et konstantledd ved å definere en variabel <code>'intercept'</code> lik 1. Linjen vi skal forsøke å finne er gitt ved</p>
 <p>$\alpha+\beta \cdot x$</p>
 <p>Vi skal altså forsøke å finne $\alpha$ og $\beta$ som passer best til de observerte kombinasjonene av x og y. y er forventet antall leveår:</p>
-
+<h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13628,7 +13627,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>... og x er BNP per capita og konstantleddet som alltid er 1:</p>
-
+<h4 id="Eksempel-5:">Eksempel 5:<a class="anchor-link" href="#Eksempel-5:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13748,8 +13747,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vi kan nå estimere hvilke koefisienter $\alpha$ og $\beta$ som passer best til dataene. Da bruker vi <code>OLS</code> fra <code>statsmodels</code>og sette inn y og x:</p>
-<h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
+<h1 id="Estimat">Estimat<a class="anchor-link" href="#Estimat">&#182;</a></h1><p>Vi kan nå estimere hvilke koefisienter $\alpha$ og $\beta$ som passer best til dataene. Da bruker vi <code>OLS</code> fra <code>statsmodels</code>og sette inn y og x:</p>
+<h4 id="Eksempel-6:">Eksempel 6:<a class="anchor-link" href="#Eksempel-6:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13828,7 +13827,7 @@ Notes:
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Over ser vi resultatet av regresjonen. Det vi bør legge spesielt merke til er kolonnen under <code>coef</code>, som viser estimatene. Vi ser at $\alpha=4.9496$ og $\beta=7.2028$. Disse tallene er lagret i res.params:</p>
-
+<h4 id="Eksempel-7:">Eksempel 7:<a class="anchor-link" href="#Eksempel-7:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13871,7 +13870,7 @@ dtype: float64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi kan derfor bruke <code>res.params</code> til å plotte linjen $\alpha+\beta \cdot x$</p>
-
+<h4 id="Eksempel-8:">Eksempel 8:<a class="anchor-link" href="#Eksempel-8:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13928,7 +13927,7 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Signifikans:">Signifikans:<a class="anchor-link" href="#Signifikans:">&#182;</a></h2><p>Det viktigste i resulatet fra regressionen i Eksempel 1 er ikke nødvendigvis koefisientene, selv om de er nødvendige for å tegne en regresionslinje. Enda viktigere er det å vite om helningen like gjerne kunne vært null. I så fall kan vi ikke konkludere med at det er noen sammenheng med variablene. Hovedpoenget med å kjøre en regression er jo vanligvis å undersøke om det er en linær sammenheng. I eksemplet over ønsker vi for eksempel å vite om det er en sammenheng mellom BNP per innbygger og antall leveår.</p>
+<h2 id="Signifikans">Signifikans<a class="anchor-link" href="#Signifikans">&#182;</a></h2><p>Det viktigste i resulatet fra regressionen i Eksempel 6 er ikke nødvendigvis koefisientene, selv om de er nødvendige for å tegne en regresionslinje. Enda viktigere er det å vite om helningen like gjerne kunne vært null. I så fall kan vi ikke konkludere med at det er noen sammenheng med variablene. Hovedpoenget med å kjøre en regression er jo vanligvis å undersøke om det er en linær sammenheng. I eksemplet over ønsker vi for eksempel å vite om det er en sammenheng mellom BNP per innbygger og antall leveår.</p>
 <p>Når en linær sammenheng ikke kan skyldes tilfeldighet kaller vi sammenhengen for <em>signifikant</em>.</p>
 <p>På grunn av ren tilfeldighet er sjeldent helningen i en regresjon null. Vi får derfor ikke noe ut av å se på selve koefisienten om den er null eller ikke. I stedet må vi se på p-verdien. p-verdien angir sannsynligheten for at resultatet skyldes tilfeldighet. Når denne sannsynligheten er mindre enn én prosent, konkluderer vi vanligvis med at resultatet er signifikant.</p>
 

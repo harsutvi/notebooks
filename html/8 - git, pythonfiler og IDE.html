@@ -13158,9 +13158,7 @@ div#notebook {
 <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">	<div class="sidenav_container">
 		<div id="mySidenav" class="sidenav">
-			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - tips og triks.html">0 - tips og triks.ipynb</a><br>
-			<a href="0 - installasjon.html">0 - installasjon.ipynb</a><br>
-			<a href="0 - Terminal.html">0 - Terminal.ipynb</a><br>
+			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - installasjon og tips.html">0 - installasjon og tips.ipynb</a><br>
 			<a href="1 - introduksjon.html">1 - introduksjon.ipynb</a><br>
 			<a href="2 - funksjoner.html">2 - funksjoner.ipynb</a><br>
 			<a href="3 - matplotlib.html">3 - matplotlib.ipynb</a><br>
@@ -13191,14 +13189,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="8---git,-pythonfiler-og-IDE">8 - git, pythonfiler og IDE<a class="anchor-link" href="#8---git,-pythonfiler-og-IDE">&#182;</a></h1>
+<p><span style="color:#9bb1d4;font-size:30px;font-weight:900"> 8 - git, pythonfiler og IDE </span></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Git">Git<a class="anchor-link" href="#Git">&#182;</a></h2>
+<h1 id="Git">Git<a class="anchor-link" href="#Git">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13373,6 +13372,27 @@ git pull</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Dersom-innloggingen-ikke-fungerer">Dersom innloggingen ikke fungerer<a class="anchor-link" href="#Dersom-innloggingen-ikke-fungerer">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En vanlig feil er at innloggingstedaljene som er lagret på maskinen din er utdaterte og feil. Når du bruker git vil ofte innloggingsdetaljene lagres på maskinen. Du kan løse problemet ved å slette detaljene</p>
+<ul>
+<li>på Mac: Finn appen "Keychain Access", finn oppføringen for github, og slett den</li>
+<li>På Windows: Trykk på vindu-knappen, søk og åpne "Credential Manager", finn oppføringen for github og slett den</li>
+</ul>
+<p>Om du må skrive inn passord hver gang du pusher til github, så kan du åpne filen som heter "config" under mappen ".git" i repositoriet lokalt. Du kan åpne den med "notepad" (eller installer <a href="https://notepad-plus-plus.org/downloads/">Notepad++</a>). Her kan du sette inn tokenet etterfulgt av "@" før "github.com" i nettadressen. Altså, om tokenet er "abddefg", brukernavnet er "bruker" og repositoriet heter "mitt_repo", skal adressen i config-filen se slik ut: "<a href="https://abddefg@github.com/bruker/mitt_repo">https://abddefg@github.com/bruker/mitt_repo</a>"</p>
+<p>Du må muligens endre på visningsalternativene i "Windows File Explorer" til å vise skjulte filer og mapper, for å kunne se "config"-filen.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="IDE'er">IDE'er<a class="anchor-link" href="#IDE'er">&#182;</a></h1>
 </div>
 </div>
@@ -13417,7 +13437,7 @@ git pull</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Lag-en-programfil">Lag en programfil<a class="anchor-link" href="#Lag-en-programfil">&#182;</a></h1>
+<h2 id="Lag-en-python-fil">Lag en python-fil<a class="anchor-link" href="#Lag-en-python-fil">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13457,7 +13477,7 @@ pip install numpy</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Forh%C3%A5ndsdefinere-strategier">Forh&#229;ndsdefinere strategier<a class="anchor-link" href="#Forh%C3%A5ndsdefinere-strategier">&#182;</a></h2><p>Du kan legge inn en forhåndsdefinert strategi om du vil slippe å korrigere den i spillet hver gang. før <code>blotto.run()</code> kan du for eksempel bestemme deg for å satse alle troppene på fire av feltene.</p>
 <p>Om du nå limer inn strategien under i "run.py", før <code>blotto.run(6,100)</code>, og bytter ut sistnevnte med <code>blotto.run(6,100,player_strategy)</code>, vil dette bli din utgangsstrategi:</p>
-
+<h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13513,7 +13533,7 @@ pip install numpy</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>PC'en sin strategi i dette spillet er foreløpig ikke veldig smart. Strategien over vil nesten alltid slå PC'en, så la oss hjelpe PC'en med en litt smartere strategi:</p>
-
+<h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13559,7 +13579,7 @@ pip install numpy</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Det er upraktisk og veldig ineffektivt å kjøre <code>blotto.run</code> for å teste strategier. Det er enkelt å lage en funksjon som gir en poengsum for hvor god en strategi er mot en annen. Følgende funksjon returnerer en poengsum på -1 (tap), 0 (uavgjort) eller 1 (seier):</p>
-
+<h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13587,7 +13607,7 @@ pip install numpy</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Å sjekke bare ett spill kan vi imidlertid ikke dra noen konklusjon av. Følgende kode kjører <code>call_battle</code> 100 000 ganger, og returner et score fra -1 (alltid tap) til 1 (alltid seier):</p>
-
+<h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">&#182;</a></h4>
 </div>
 </div>
 </div>

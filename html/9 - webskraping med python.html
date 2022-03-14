@@ -13158,9 +13158,7 @@ div#notebook {
 <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">	<div class="sidenav_container">
 		<div id="mySidenav" class="sidenav">
-			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - tips og triks.html">0 - tips og triks.ipynb</a><br>
-			<a href="0 - installasjon.html">0 - installasjon.ipynb</a><br>
-			<a href="0 - Terminal.html">0 - Terminal.ipynb</a><br>
+			<a href="https://uit-econ.github.io/">Hovedside Bachelor</a><br><br><br>			<a href="0 - installasjon og tips.html">0 - installasjon og tips.ipynb</a><br>
 			<a href="1 - introduksjon.html">1 - introduksjon.ipynb</a><br>
 			<a href="2 - funksjoner.html">2 - funksjoner.ipynb</a><br>
 			<a href="3 - matplotlib.html">3 - matplotlib.ipynb</a><br>
@@ -13191,14 +13189,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="9---webskraping-med-python">9 - webskraping med python<a class="anchor-link" href="#9---webskraping-med-python">&#182;</a></h1>
+<p><span style="color:#9bb1d4;font-size:30px;font-weight:900"> 9 - webskraping med python </span></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Når vi skal skrape nettsider, analyserer vi "kildekoden" som ligger bak nettsiden. I de fleste nettleser kan du enkelt se kildekoden ved å høyreklikke på siden og velge "view page source" eller lignende. I denne leksjonen skal vi begynne med å skrape rentebarometeret til Norsk Famileøkonomi. For å se hva vi skal skrape kan du derfor gå til <a href="https://www.norskfamilie.no/barometre/rentebarometer/">https://www.norskfamilie.no/barometre/rentebarometer/</a>, høyreklikke og velge å se kildekoden.</p>
+<h1 id="HTML-kode">HTML-kode<a class="anchor-link" href="#HTML-kode">&#182;</a></h1><p>Når vi skal skrape nettsider, analyserer vi "kildekoden" som ligger bak nettsiden. I de fleste nettleser kan du enkelt se kildekoden ved å høyreklikke på siden og velge "view page source" eller lignende. I denne leksjonen skal vi begynne med å skrape rentebarometeret til Norsk Famileøkonomi. For å se hva vi skal skrape kan du derfor gå til <a href="https://www.norskfamilie.no/barometre/rentebarometer/">https://www.norskfamilie.no/barometre/rentebarometer/</a>, høyreklikke og velge å se kildekoden.</p>
 <p>Elementer er markert i en nettside med såkalte "html-tagger". For eksempel lager du kursiv på en nettside ved å skrive <code>&lt;i&gt;kursiv&lt;/i&gt;</code>. Denne teksten er skrevet i "markdown", som også forstår html-tagger. <i>Om du leser dette interaktivt i en jupyterfil kan du dobbelklikke her og se at denne setningen er skrevet inne i kursivtagger</i>.</p>
 <p>Når vi skraper websider er innholdet vi er interessert i veldig ofte inne i en tabell. Det er det her også. Gjør et tekstsøk i kildekoden etter "\&lt;table". Det finnes kun én plass i dokumentet, og markerer begynnelsen på tabellen. Søker du én gang til med "\&lt;/table&gt;" finner du hvor tabellen ender.</p>
 <p>I mellom disse taggene er det en god del kode som kanskje ser veldig komplisert ut. Men vi trenger kun å forholde oss til følgende tre typer tagger:</p>
@@ -13209,7 +13208,7 @@ div#notebook {
 </ul>
 <p>For å hente ut innholdet i tabellen må vi altså søke etter disse taggene, etter at vi har identifisere teksten mellom "tabell"-taggene. Det finnes heldigvis et veldig godt verktøy for dette i python, som heter <code>BeutifulSoup</code> (<code>pip install beautifulsoup4</code> i kommandovinduet om det ikke er installert).</p>
 <p>Med dette verktøyet kan du enkelt finne de taggene du ønsker. Vi starter med å finne selve tabellen, etter å ha bruke pakken <code>requests</code> til å laste ned html-filen:</p>
-
+<h4 id="Eksempel-1:">Eksempel 1:<a class="anchor-link" href="#Eksempel-1:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13286,8 +13285,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Det vi får ut med <code>bs.find_all('table')</code> er altså en liste med alle partier i teksten med matchende <code>&lt;table&gt;</code>-<code>&lt;/table&gt;</code>-tagger. I dette dokumentet er det bare én tabell, så listen har bare ett element. Vi må nå søke videre inne i tabellen etter innholdstaggene. Vi bruker samme funksjon til det. Her er to funksjoner som sammen finner innholdstaggene og returnerer en tabell:</p>
-
+<h1 id="F%C3%A5-tak-i-HTML-tabellene">F&#229; tak i HTML-tabellene<a class="anchor-link" href="#F%C3%A5-tak-i-HTML-tabellene">&#182;</a></h1><p>Det vi får ut med <code>bs.find_all('table')</code> er altså en liste med alle partier i teksten med matchende <code>&lt;table&gt;</code>-<code>&lt;/table&gt;</code>-tagger. I dette dokumentet er det bare én tabell, så listen har bare ett element. Vi må nå søke videre inne i tabellen etter innholdstaggene. Vi bruker samme funksjon til det. Her er to funksjoner som sammen finner innholdstaggene og returnerer en tabell:</p>
+<h4 id="Eksempel-2:">Eksempel 2:<a class="anchor-link" href="#Eksempel-2:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13355,7 +13354,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[&#39;&#39;, &#39;Bank&#39;, &#39;&#39;, &#39;Navn&#39;, &#39;Nominell&#39;, &#39;Sikkerhetsgebyr&#39;, &#39;Etableringsgebyr&#39;, &#39;Termin&#39;, &#39;Effektiv&#39;], [&#39;1&#39;, &#39;SpareBank 1 Nordmøre&#39;, &#39;&#39;, &#39;Grønt førstehjemslån&#39;, &#39;1,35&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;75&#39;, &#39;1,45&#39;], [&#39;2&#39;, &#39;Landkreditt Bank AS&#39;, &#39;&#39;, &#39;Grønt Boliglån&#39;, &#39;1,55&#39;, &#39;1000&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1,56&#39;], [&#39;3&#39;, &#39;Statens pensjonskasse&#39;, &#39;&#39;, &#39;Boliglån inntil 80 %&#39;, &#39;1,49&#39;, &#39;0&#39;, &#39;0&#39;, &#39;50&#39;, &#39;1,56&#39;], [&#39;4&#39;, &#39;Etne Sparebank&#39;, &#39;&#39;, &#39;&#34;Him te Etne&#34; - lånet&#39;, &#39;1,55&#39;, &#39;0&#39;, &#39;0&#39;, &#39;50&#39;, &#39;1,62&#39;], [&#39;5&#39;, &#39;SpareBank 1 SMN&#39;, &#39;&#39;, &#39;Grønt førstehjemslån&#39;, &#39;1,60&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,68&#39;], [&#39;6&#39;, &#39;SpareBank 1 Nordmøre&#39;, &#39;&#39;, &#39;Grønt boliglån&#39;, &#39;1,60&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;75&#39;, &#39;1,70&#39;], [&#39;7&#39;, &#39;Høland og Setskog Sparebank&#39;, &#39;&#39;, &#39;Grønt Boliglån spesial&#39;, &#39;1,64&#39;, &#39;0&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,73&#39;], [&#39;8&#39;, &#39;Orkla Sparebank&#39;, &#39;&#39;, &#39;Grønt boliglån&#39;, &#39;1,65&#39;, &#39;1000&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,74&#39;], [&#39;9&#39;, &#39;KLP Banken AS&#39;, &#39;&#39;, &#39;Grønt boliglån medlem&#39;, &#39;1,70&#39;, &#39;0&#39;, &#39;0&#39;, &#39;35&#39;, &#39;1,76&#39;], [&#39;10&#39;, &#39;Landkreditt Bank AS&#39;, &#39;&#39;, &#39;Boliglån 50%&#39;, &#39;1,75&#39;, &#39;500&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1,76&#39;], [&#39;11&#39;, &#39;Oslo 
+<pre>[[&#39;&#39;, &#39;Bank&#39;, &#39;&#39;, &#39;Navn&#39;, &#39;Nominell&#39;, &#39;Sikkerhetsgebyr&#39;, &#39;Etableringsgebyr&#39;, &#39;Termin&#39;, &#39;Effektiv&#39;], [&#39;1&#39;, &#39;SpareBank 1 Nordmøre&#39;, &#39;&#39;, &#39;Grønt førstehjemslån&#39;, &#39;1,35&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;75&#39;, &#39;1,45&#39;], [&#39;2&#39;, &#39;Statens pensjonskasse&#39;, &#39;&#39;, &#39;Boliglån inntil 80 %&#39;, &#39;1,49&#39;, &#39;0&#39;, &#39;0&#39;, &#39;50&#39;, &#39;1,56&#39;], [&#39;3&#39;, &#39;Landkreditt Bank AS&#39;, &#39;&#39;, &#39;Grønt Boliglån&#39;, &#39;1,55&#39;, &#39;1000&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1,56&#39;], [&#39;4&#39;, &#39;Etne Sparebank&#39;, &#39;&#39;, &#39;&#34;Him te Etne&#34; - lånet&#39;, &#39;1,55&#39;, &#39;0&#39;, &#39;0&#39;, &#39;50&#39;, &#39;1,62&#39;], [&#39;5&#39;, &#39;SpareBank 1 SMN&#39;, &#39;&#39;, &#39;Grønt førstehjemslån&#39;, &#39;1,60&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,68&#39;], [&#39;6&#39;, &#39;SpareBank 1 Nordmøre&#39;, &#39;&#39;, &#39;Grønt boliglån&#39;, &#39;1,60&#39;, &#39;1200&#39;, &#39;0&#39;, &#39;75&#39;, &#39;1,70&#39;], [&#39;7&#39;, &#39;Høland og Setskog Sparebank&#39;, &#39;&#39;, &#39;Grønt Boliglån spesial&#39;, &#39;1,64&#39;, &#39;0&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,73&#39;], [&#39;8&#39;, &#39;Orkla Sparebank&#39;, &#39;&#39;, &#39;Grønt boliglån&#39;, &#39;1,65&#39;, &#39;1000&#39;, &#39;0&#39;, &#39;60&#39;, &#39;1,74&#39;], [&#39;9&#39;, &#39;KLP Banken AS&#39;, &#39;&#39;, &#39;Grønt boliglån medlem&#39;, &#39;1,70&#39;, &#39;0&#39;, &#39;0&#39;, &#39;35&#39;, &#39;1,76&#39;], [&#39;10&#39;, &#39;Landkreditt Bank AS&#39;, &#39;&#39;, &#39;Boliglån 50%&#39;, &#39;1,75&#39;, &#39;500&#39;, &#39;0&#39;, &#39;0&#39;, &#39;1,76&#39;], [&#39;11&#39;, &#39;Oslo 
 </pre>
 </div>
 </div>
@@ -13368,9 +13367,9 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Den første funksjonen itererer over tabellceller, mens den andre funksjonen konverterer innholdet fra et bs4-objekt med html-kode til leselig tekst.</p>
-<p>Vi har nå skrapet siden, og hentet ut tabellen. For å gjøre den mer leselig, kan vi lagre den som en fil. Når vi lager filer i python bruker vi den innebygde <code>open</code>-funksjonen. Om vi kaller filen for "rentebarometer.csv", kan vi opprette filen ved å kjøre <code>f=open('rentebarometer.csv','w')</code>. Strengen <code>'w'</code> betyr at vi åpner filen for skriving (<em>writing</em>, i motsetning til lesing/<em>reading</em> markert med <code>'r'</code>. Vi fyller filen med innhold med <code>f.write()</code>.</p>
+<h1 id="Lagre-tabellen">Lagre tabellen<a class="anchor-link" href="#Lagre-tabellen">&#182;</a></h1><p>Vi har nå skrapet siden, og hentet ut tabellen. For å gjøre den mer leselig, kan vi lagre den som en fil. Når vi lager filer i python bruker vi den innebygde <code>open</code>-funksjonen. Om vi kaller filen for "rentebarometer.csv", kan vi opprette filen ved å kjøre <code>f=open('rentebarometer.csv','w')</code>. Strengen <code>'w'</code> betyr at vi åpner filen for skriving (<em>writing</em>, i motsetning til lesing/<em>reading</em> markert med <code>'r'</code>. Vi fyller filen med innhold med <code>f.write()</code>.</p>
 <p>For å skille kolonnene skal vi her bruke semikolon ';'. Python har en enkel måte å konvertere en liste til en streng med skilletegn. En tar utgangspunkt i skilletegnet, og bruker metoden <code>join()</code> på det. For eksempel:</p>
-
+<h4 id="Eksempel-3:">Eksempel 3:<a class="anchor-link" href="#Eksempel-3:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13411,7 +13410,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi kan nå åpne filen for skriving og iterere over rader og skrive dem til filen.</p>
-
+<h4 id="Eksempel-4:">Eksempel 4:<a class="anchor-link" href="#Eksempel-4:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13439,7 +13438,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi kan ta en kikk på dataene med Pandas (<code>encoding='latin1'</code> er for å få med æ,ø,å):</p>
-
+<h4 id="Eksempel-5:">Eksempel 5:<a class="anchor-link" href="#Eksempel-5:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13511,18 +13510,6 @@ div#notebook {
     <tr>
       <th>1</th>
       <td>2</td>
-      <td>Landkreditt Bank AS</td>
-      <td>NaN</td>
-      <td>Grønt Boliglån</td>
-      <td>1,55</td>
-      <td>1000</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1,56</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
       <td>Statens pensjonskasse</td>
       <td>NaN</td>
       <td>Boliglån inntil 80 %</td>
@@ -13530,6 +13517,18 @@ div#notebook {
       <td>0</td>
       <td>0</td>
       <td>50</td>
+      <td>1,56</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Landkreditt Bank AS</td>
+      <td>NaN</td>
+      <td>Grønt Boliglån</td>
+      <td>1,55</td>
+      <td>1000</td>
+      <td>0</td>
+      <td>0</td>
       <td>1,56</td>
     </tr>
     <tr>
@@ -13642,8 +13641,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La oss sette sammen dette til én kode, som du kan lagre i en fil om du vil:</p>
-
+<h1 id="En-funksjon-som-skraper-alle-tabeller-p%C3%A5-en-side">En funksjon som skraper alle tabeller p&#229; en side<a class="anchor-link" href="#En-funksjon-som-skraper-alle-tabeller-p%C3%A5-en-side">&#182;</a></h1><p>Vi kan sammenfatte stegene over i én funksjon, som anvender</p>
+<h4 id="Eksempel-6:">Eksempel 6:<a class="anchor-link" href="#Eksempel-6:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13666,61 +13665,6 @@ div#notebook {
     <span class="c1">#saving it:</span>
     <span class="n">save_data</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">table</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">table</span>
- 
-
-<span class="k">def</span> <span class="nf">save_data</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">table</span><span class="p">):</span>
-    <span class="s2">&quot;Saves table to file_name&quot;</span>
-    <span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">table</span><span class="p">:</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">fetch_html_tables</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="s2">&quot;Returns a list of tables in the html of url&quot;</span>
-    <span class="n">page</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-    <span class="n">bs</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-    <span class="n">tables</span><span class="o">=</span><span class="n">bs</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">tables</span>
-
-<span class="k">def</span> <span class="nf">html_to_table</span><span class="p">(</span><span class="n">html</span><span class="p">):</span>
-    <span class="s2">&quot;Returns the table defined in html as a list&quot;</span>
-    <span class="c1">#defining the table:</span>
-    <span class="n">table</span><span class="o">=</span><span class="p">[]</span>
-    <span class="c1">#iterating over all rows</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">):</span>
-        <span class="n">r</span><span class="o">=</span><span class="p">[]</span>
-        <span class="c1">#finding all cells in each row:</span>
-        <span class="n">cells</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)</span>
-        
-        <span class="c1">#if no cells are found, look for headings</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cells</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-            <span class="n">cells</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;th&#39;</span><span class="p">)</span>
-            
-        <span class="c1">#iterate over cells:</span>
-        <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">cells</span><span class="p">:</span>
-            <span class="n">cell</span><span class="o">=</span><span class="nb">format</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
-            <span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
-        
-        <span class="c1">#append the row to t:</span>
-        <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">table</span>
-
-<span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="n">cell</span><span class="p">):</span>
-    <span class="s2">&quot;Returns a string after converting bs4 object cell to clean text&quot;</span>
-    <span class="k">if</span> <span class="n">cell</span><span class="o">.</span><span class="n">content</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">s</span><span class="o">=</span><span class="n">cell</span><span class="o">.</span><span class="n">text</span>
-    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">content</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">s</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">content</span><span class="p">])</span>
-        
-    <span class="c1">#here you can add additional characters/strings you want to </span>
-    <span class="c1">#remove, change punctuations or format the string in other</span>
-    <span class="c1">#ways:</span>
-    <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\xa0</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">s</span>
 </pre></div>
 
     </div>
@@ -13732,7 +13676,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Med denne koden kan vi nå skrape hvilken som helst nettside med tabeller vi ønsker å få tak i. For eksempel om vi ønsker å hente timeplanen til kurset:</p>
-
+<h4 id="Eksempel-7:">Eksempel 7:<a class="anchor-link" href="#Eksempel-7:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13807,7 +13751,11 @@ SOK-1005-1	Forelesning
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="%C3%98velse:">&#216;velse:<a class="anchor-link" href="#%C3%98velse:">&#182;</a></h4><p>Resultatet vises ved å lage en tabluatorseparert streng fordi filen ikke kan åpnes med pandas. Grunnen til det er at radene her her ulikt antall kolonner. Vi ser også at det trengs litt arbeid her for å organisere dataene bedre. Det kan du gjøre ved å redigere i funksjonene <code>html_to_table</code> og <code>format</code>.</p>
+<h1 id="N%C3%A5r-nettsiden-ikke-er-%22vennligsinnet%22">N&#229;r nettsiden ikke er "vennligsinnet"<a class="anchor-link" href="#N%C3%A5r-nettsiden-ikke-er-%22vennligsinnet%22">&#182;</a></h1><p>Det er ikke alle nettsideeiere som synes det er greit at vi skraper nettsidene deres. For ordens skyld så er det altså helt lovlig å skrape nettsider. Når noen legger ut data på en nettside har de offentliggjort dataene, og kan ikke bestemme hvordan dataene skal leses. Dette gjelder selv om de legger ut beskjed om noe annet.</p>
+<p>Det som kanskje <em>kan</em> være ulovlig, er å videreformidle dataene kommersielt.</p>
+<p>Når nettsiden er vanskelig å skrape, er <em>selenium</em> av google en veldig nyttig pakke. Med den kan koden din opptre som en vanlig bruker. Så lenge du kan se dataene på skjermen din, bør det da i prinsippet være mulig å skrape enhver side.</p>
+<p>Vi har ikke tid til å gå inn på bruken av selenium i dette kurset, men her er en kode som bruker selenium til å skrape <a href="https://www.nordpoolgroup.com/Market-data1/Dayahead/Area-Prices/NO/Monthly/?view=table">nordpool.no</a>. De er ikke spesielt interessert i at vi gjør det, om du forsøker å skrape flere ganger kommer det opp en advarsel om at det er ulovlig, som altså ikke medfører riktighet.</p>
+<p><a href="./res/scraping_nordpool.py">Her er imidlertid en kode som gjøre det mulig å skrape Nordpools nettsider med selenium</a></p>
 
 </div>
 </div>
@@ -13815,114 +13763,10 @@ SOK-1005-1	Forelesning
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="N%C3%A5r-nettsiden-ikke-er-%22vennligsinnet%22">N&#229;r nettsiden ikke er "vennligsinnet"<a class="anchor-link" href="#N%C3%A5r-nettsiden-ikke-er-%22vennligsinnet%22">&#182;</a></h2><p>Det er ikke alle nettsideeiere som synes det er greit at vi skraper nettsidene deres. For ordens skyld så er det altså helt lovlig å skrape nettsider. Når noen legger ut data på en nettside har de offentliggjort dataene, og kan ikke bestemme hvordan dataene skal leses. Dette gjelder selv om de legger ut beskjed om noe annet.</p>
-<p>Det som kanskje <em>kan</em> være ulovlig, er å videreformidle dataene i kommersiell. Når nettsiden er vanskelig å skrape, er <em>selenium</em> av google en veldig nyttig pakke. Med den kan koden din opptre som en vanlig bruker. Så lenge du kan se dataene på skjermen din, bør det da i prinsippet være mulig å skrape enhver side.</p>
-<p>Vi har ikke tid til å gå inn på bruken av selenium i dette kurset, men her er en kode som bruker selenium til å skrape <a href="https://www.nordpoolgroup.com/Market-data1/Dayahead/Area-Prices/NO/Monthly/?view=table">nordpool.no</a>. De er ikke spesielt interessert i at vi gjør det, om du forsøker å skrape flere ganger kommer det opp en advarsel om at det er ulovlig, som altså ikke medfører riktighet.</p>
-<p>Her er imidlertid en kode som gjøre det mulig å skrape Nordpools nettsider med selenium (må kjøres som en fil):</p>
+<h1 id="Oppgave">Oppgave<a class="anchor-link" href="#Oppgave">&#182;</a></h1><p>Resultatet vises ved å lage en tabluatorseparert streng fordi filen ikke kan åpnes med pandas. Grunnen til det er at radene her her ulikt antall kolonner. Vi ser også at det trengs litt arbeid her for å organisere dataene bedre. Det kan du gjøre ved å redigere i funksjonene <code>html_to_table</code> og <code>format</code>.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
-<span class="kn">from</span> <span class="nn">webdriver_manager.chrome</span> <span class="kn">import</span> <span class="n">ChromeDriverManager</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="k">def</span> <span class="nf">scrape</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="c1">#get the html from the url</span>
-    <span class="n">html</span><span class="o">=</span><span class="n">get_page</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-
-    <span class="c1">#read it with BS</span>
-    <span class="n">bs</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
-
-    <span class="c1">#extract all tables and put in array t</span>
-    <span class="n">tables</span><span class="o">=</span><span class="n">bs</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>
-    <span class="n">t</span><span class="o">=</span><span class="p">[]</span>
-    <span class="k">for</span> <span class="n">tbl</span> <span class="ow">in</span> <span class="n">tables</span><span class="p">:</span>
-        <span class="n">t</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">html_to_table</span><span class="p">(</span><span class="n">tbl</span><span class="p">))</span>
-
-
-    <span class="c1">#save the result:</span>
-    <span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;table.csv&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="n">a</span><span class="o">=</span><span class="mi">0</span>
-
-<span class="k">def</span> <span class="nf">get_page</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;returns a specific part of the web site. For some reason </span>
-<span class="sd">    BS cannot easily extract the second table, which is the one with data</span>
-<span class="sd">    which we are interested in&quot;&quot;&quot;</span>
-    <span class="c1">#open the url in browser</span>
-    <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">ChromeDriverManager</span><span class="p">()</span><span class="o">.</span><span class="n">install</span><span class="p">())</span>
-    <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-
-    <span class="c1">#sometimes the page is not loaded properly, so repeating until we have fetched a </span>
-    <span class="c1">#postive length string:</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
-        <span class="n">s</span><span class="o">=</span><span class="n">find_string_between</span><span class="p">(</span><span class="n">driver</span><span class="o">.</span><span class="n">page_source</span><span class="p">,</span> <span class="s1">&#39;&lt;table id=&quot;datatable&quot;&gt;&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;/tfoot&gt;&lt;/table&gt;&#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
-            <span class="k">break</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">s</span>	
-
-<span class="k">def</span> <span class="nf">html_to_table</span><span class="p">(</span><span class="n">tbl</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Extracts the table from a table found with BS&quot;&quot;&quot;</span>
-
-    <span class="c1">#initiates the list object that will be returned:</span>
-    <span class="n">a</span><span class="o">=</span><span class="p">[]</span>
-    <span class="c1">#iterates over all table rows:</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">tbl</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">):</span>
-        <span class="c1">#initiates the current row to be added to a:</span>
-        <span class="n">r</span><span class="o">=</span><span class="p">[]</span>
-
-        <span class="c1">#identifies all cells in row:</span>
-        <span class="n">cells</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)</span>
-        <span class="c1">#if there were no normal cells, there might be header cells:</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cells</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-            <span class="n">cells</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;th&#39;</span><span class="p">)</span>
-
-        <span class="c1">#iterate over cells </span>
-        <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">cells</span><span class="p">:</span>
-            <span class="n">cell</span><span class="o">=</span><span class="nb">format</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
-            <span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
-        <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">a</span>
-
-
-<span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="n">cell</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Returns the text of cell&quot;&quot;&quot;</span>
-
-    <span class="k">if</span> <span class="n">cell</span><span class="o">.</span><span class="n">content</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">cell</span><span class="o">.</span><span class="n">text</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">content</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-    <span class="n">s</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">content</span><span class="p">])</span>
-
-    <span class="c1">#if there is unwanted contents, replace it here:</span>
-    <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\xa0</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">s</span>
-
-<span class="k">def</span> <span class="nf">find_string_between</span><span class="p">(</span><span class="n">string</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="s2">&quot;returns the substring of string between expressions a and b&quot;</span> 
-    <span class="n">a</span><span class="o">=</span><span class="n">string</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="n">b</span><span class="o">=</span><span class="n">string</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">string</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">]</span>
-
-<span class="c1">#scrape(&#39;https://www.nordpoolgroup.com/Market-data1/Dayahead/Area-Prices/NO/Monthly/?view=table&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
