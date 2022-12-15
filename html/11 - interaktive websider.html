@@ -13132,12 +13132,12 @@ div#notebook {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -13406,7 +13406,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x1f58a8dd970&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x2840793ea30&gt;</pre>
 </div>
 
 </div>
@@ -13658,7 +13658,8 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">pop</span><span class="p">:</span> <span class="n">pop</span><span class="o">**</span><span class="mf">0.5</span><span class="o">/</span><span class="mi">300</span><span class="p">)</span>
-<span class="n">g</span><span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;India&#39;</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;India&#39;</span><span class="p">])</span>
+<span class="n">g</span>
 </pre></div>
 
     </div>
@@ -13671,11 +13672,11 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt"></div>
 
 
 
-<div class="output_html rendered_html output_subarea output_execute_result"><div>
+<div class="output_html rendered_html output_subarea "><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -13723,6 +13724,181 @@ div#notebook {
 
 </div>
 
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>population</th>
+      <th>continent</th>
+      <th>life_exp</th>
+      <th>gdp_cap</th>
+      <th>continent_no</th>
+      <th>colors</th>
+      <th>size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>Afghanistan</td>
+      <td>2007</td>
+      <td>31889923</td>
+      <td>Asia</td>
+      <td>43.828</td>
+      <td>974.580338</td>
+      <td>Asia</td>
+      <td>#2792E1</td>
+      <td>18.823721</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Albania</td>
+      <td>2007</td>
+      <td>3600523</td>
+      <td>Europe</td>
+      <td>76.423</td>
+      <td>5937.029526</td>
+      <td>Europa</td>
+      <td>#BC27E1</td>
+      <td>6.325015</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Algeria</td>
+      <td>2007</td>
+      <td>33333216</td>
+      <td>Africa</td>
+      <td>72.301</td>
+      <td>6223.367465</td>
+      <td>Afrika</td>
+      <td>#E14827</td>
+      <td>19.244975</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Angola</td>
+      <td>2007</td>
+      <td>12420476</td>
+      <td>Africa</td>
+      <td>42.731</td>
+      <td>4797.231267</td>
+      <td>Afrika</td>
+      <td>#E14827</td>
+      <td>11.747565</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>Argentina</td>
+      <td>2007</td>
+      <td>40301927</td>
+      <td>Americas</td>
+      <td>75.320</td>
+      <td>12779.379640</td>
+      <td>Sør/Nord-Amerika</td>
+      <td>#84E127</td>
+      <td>21.161266</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1655</th>
+      <td>Vietnam</td>
+      <td>2007</td>
+      <td>85262356</td>
+      <td>Asia</td>
+      <td>74.249</td>
+      <td>2441.576404</td>
+      <td>Asia</td>
+      <td>#2792E1</td>
+      <td>30.779206</td>
+    </tr>
+    <tr>
+      <th>1667</th>
+      <td>West Bank and Gaza</td>
+      <td>2007</td>
+      <td>4018332</td>
+      <td>Asia</td>
+      <td>73.422</td>
+      <td>3025.349798</td>
+      <td>Asia</td>
+      <td>#2792E1</td>
+      <td>6.681926</td>
+    </tr>
+    <tr>
+      <th>1679</th>
+      <td>Yemen, Rep.</td>
+      <td>2007</td>
+      <td>22211743</td>
+      <td>Asia</td>
+      <td>62.698</td>
+      <td>2280.769906</td>
+      <td>Asia</td>
+      <td>#2792E1</td>
+      <td>15.709779</td>
+    </tr>
+    <tr>
+      <th>1691</th>
+      <td>Zambia</td>
+      <td>2007</td>
+      <td>11746035</td>
+      <td>Africa</td>
+      <td>42.384</td>
+      <td>1271.211593</td>
+      <td>Afrika</td>
+      <td>#E14827</td>
+      <td>11.424163</td>
+    </tr>
+    <tr>
+      <th>1703</th>
+      <td>Zimbabwe</td>
+      <td>2007</td>
+      <td>12311143</td>
+      <td>Africa</td>
+      <td>43.487</td>
+      <td>469.709298</td>
+      <td>Afrika</td>
+      <td>#E14827</td>
+      <td>11.695746</td>
+    </tr>
+  </tbody>
+</table>
+<p>142 rows × 9 columns</p>
+</div></div>
+
+</div>
+
 </div>
 </div>
 
@@ -13731,7 +13907,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi ser over at for India blir for eksempel størrelsen da 111 piksler.</p>
-<p>Til sist definerer vi variablene som skal poppe opp når vi holder pekeren over en prikk. For å få norsk tusenskilletegn, med mellomrom, kan vi gjøre slik:</p>
+<p>Til sist var målsettingen i punkt 4 å lage interaktivitet ved å få hvert datapunkt til å vise ytterligere informasjon når vi holder pekeren over. Vi starter med å definerer variablene som skal poppe opp. For å få norsk tusenskilletegn, med mellomrom, kan vi gjøre slik:</p>
 <h4 id="Eksempel-5:">Eksempel 5:<a class="anchor-link" href="#Eksempel-5:">&#182;</a></h4>
 </div>
 </div>
@@ -14027,7 +14203,7 @@ div#notebook {
 </li>
 <li><p><code>x_axis_type = "log"</code> har samme effekt som å konvertere BNP til log i <a href="10%20-%20statsmodels.html">10 - statsmodels</a>, men med den forskjell at det er benevningen på aksen og ikke selve variabelen som konverteres.</p>
 </li>
-<li><p>Så defineres at det at grafen skal ha verktøytips ("tooltips"). Det vil si at det popper opp en forklaring når vi holder musen over et område. Denne funksjonaliteten defineres med argumentet <code>tools = "hoover"</code>.</p>
+<li><p>Så defineres at det at grafen skal ha verktøytips ("tooltips"). Det vil si at det popper opp en forklaring når vi holder musen over et område, som nevnt i punkt 4. . Denne funksjonaliteten defineres med argumentet <code>tools = "hoover"</code>.</p>
 </li>
 <li><p>I det neste argumentet defineres hva som skal vises som tips. Pekeren skal åpne en boks med en liten liste med navn på land, BNP/Innbygger, forventet levealder og befolkning. Dette oppnås med argumentet <code>tooltips</code>. Hvert element i listen er en <code>tuple</code> med tekst som skal vises, og hilken kolonne dataene skal hentes fra. For eksempel betyr <code>("Land","@country")</code> at på den første linjen skal teksten "Land" vises, og informasjonen skal hentes fra kolonnen "country" i datasettet.</p>
 </li>
@@ -14075,7 +14251,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vi kan nå definere hva slags plott vi skal ha. Vi skal ha et scatter-plott som i <a href="10%20-%20statsmodels.html">10 - statsmodels</a>, men dette blir altså interaktivt. Vi bruker da funksjonen <code>scatter</code>.</p>
 <p>Det første som må angis i <code>scatter</code> er datasettet, som altså er <code>g</code> her. Så angis at vi skal ha <code>gdp_cap</code> langs x-aksen og <code>life_exp</code> langs y-aksen.</p>
-<p>Til sist angivs størrelse, farge og hvilen kollonne som definerer fargeetikettnavn. Til sist angis at prikkene skal være 20% gjennomsiktig.</p>
+<p>Til sist angis størrelse, farge og hvilen kollonne som definerer fargeetikettnavn. Til sist angis at prikkene skal være 20% gjennomsiktig.</p>
 <h4 id="Eksempel-8:">Eksempel 8:<a class="anchor-link" href="#Eksempel-8:">&#182;</a></h4>
 </div>
 </div>
@@ -14135,9 +14311,9 @@ div#notebook {
 
 
 
-<div id="4dc57e88-e800-49c0-a1e8-75005b87f3df" class="output_subarea output_javascript ">
+<div id="bd0bbafb-9f7e-49e6-b1ab-2d58f8044a0f" class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#4dc57e88-e800-49c0-a1e8-75005b87f3df');
+var element = $('#bd0bbafb-9f7e-49e6-b1ab-2d58f8044a0f');
 
 (function(root) {
   function now() {
@@ -14445,7 +14621,7 @@ var element = $('#4dc57e88-e800-49c0-a1e8-75005b87f3df');
 
 
 
-  <div class="bk-root" id="86b18040-2a3b-4c96-9de0-0762a042074d" data-root-id="1002"></div>
+  <div class="bk-root" id="fabd8d14-034f-48f6-a8b4-913dd4c0a535" data-root-id="1002"></div>
 </div>
 
 </div>
@@ -14458,14 +14634,14 @@ var element = $('#4dc57e88-e800-49c0-a1e8-75005b87f3df');
 
 
 
-<div id="ad304433-c3cb-4c73-89a2-de2f170f1f8a" class="output_subarea output_javascript ">
+<div id="60c4dd7e-6185-4601-a7a2-da5f2b1b2461" class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#ad304433-c3cb-4c73-89a2-de2f170f1f8a');
+var element = $('#60c4dd7e-6185-4601-a7a2-da5f2b1b2461');
 (function(root) {
   function embed_document(root) {
     
-  const docs_json = {"f070d6a2-2809-458b-8cc5-e693e793295e":{"defs":[],"roots":{"references":[{"attributes":{"below":[{"id":"1013"}],"center":[{"id":"1016"},{"id":"1020"},{"id":"1040"}],"height":580,"left":[{"id":"1017"}],"renderers":[{"id":"1029"}],"title":{"id":"1003"},"toolbar":{"id":"1022"},"width":980,"x_range":{"id":"1005"},"x_scale":{"id":"1009"},"y_range":{"id":"1007"},"y_scale":{"id":"1011"}},"id":"1002","subtype":"Figure","type":"Plot"},{"attributes":{"axis":{"id":"1017"},"coordinates":null,"dimension":1,"group":null,"ticker":null},"id":"1020","type":"Grid"},{"attributes":{},"id":"1011","type":"LinearScale"},{"attributes":{"coordinates":null,"data_source":{"id":"1024"},"glyph":{"id":"1026"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"1028"},"nonselection_glyph":{"id":"1027"},"view":{"id":"1030"}},"id":"1029","type":"GlyphRenderer"},{"attributes":{},"id":"1034","type":"AllLabels"},{"attributes":{"ticker":null},"id":"1036","type":"LogTickFormatter"},{"attributes":{"source":{"id":"1024"}},"id":"1030","type":"CDSView"},{"attributes":{"axis_label":"Forventet antall leve\u00e5r","coordinates":null,"formatter":{"id":"1033"},"group":null,"major_label_policy":{"id":"1034"},"ticker":{"id":"1018"}},"id":"1017","type":"LinearAxis"},{"attributes":{"coordinates":null,"group":null,"text":"Levealder og BNP per innbygger"},"id":"1003","type":"Title"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.2},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.2},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1028","type":"Scatter"},{"attributes":{},"id":"1018","type":"BasicTicker"},{"attributes":{"data":{"colors":["#2792E1","#BC27E1","#E14827","#E14827","#84E127","#E04A6C","#BC27E1","#2792E1","#2792E1","#BC27E1","#E14827","#84E127","#BC27E1","#E14827","#84E127","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#84E127","#E14827","#E14827","#84E127","#2792E1","#84E127","#E14827","#E14827","#E14827","#84E127","#E14827","#BC27E1","#84E127","#BC27E1","#BC27E1","#E14827","#84E127","#84E127","#E14827","#84E127","#E14827","#E14827","#E14827","#BC27E1","#BC27E1","#E14827","#E14827","#BC27E1","#E14827","#BC27E1","#84E127","#E14827","#E14827","#84E127","#84E127","#2792E1","#BC27E1","#BC27E1","#2792E1","#2792E1","#2792E1","#2792E1","#BC27E1","#2792E1","#BC27E1","#84E127","#2792E1","#2792E1","#E14827","#2792E1","#2792E1","#2792E1","#2792E1","#E14827","#E14827","#E14827","#E14827","#E14827","#2792E1","#E14827","#E14827","#E14827","#84E127","#2792E1","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#2792E1","#BC27E1","#E04A6C","#84E127","#E14827","#E14827","#BC27E1","#2792E1","#2792E1","#84E127","#84E127","#84E127","#2792E1","#BC27E1","#BC27E1","#84E127","#E14827","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#BC27E1","#E14827","#2792E1","#BC27E1","#BC27E1","#E14827","#E14827","#BC27E1","#2792E1","#E14827","#E14827","#BC27E1","#BC27E1","#2792E1","#2792E1","#E14827","#2792E1","#E14827","#84E127","#E14827","#BC27E1","#E14827","#BC27E1","#84E127","#84E127","#84E127","#2792E1","#2792E1","#2792E1","#E14827","#E14827"],"continent":["Asia","Europe","Africa","Africa","Americas","Oceania","Europe","Asia","Asia","Europe","Africa","Americas","Europe","Africa","Americas","Europe","Africa","Africa","Asia","Africa","Americas","Africa","Africa","Americas","Asia","Americas","Africa","Africa","Africa","Americas","Africa","Europe","Americas","Europe","Europe","Africa","Americas","Americas","Africa","Americas","Africa","Africa","Africa","Europe","Europe","Africa","Africa","Europe","Africa","Europe","Americas","Africa","Africa","Americas","Americas","Asia","Europe","Europe","Asia","Asia","Asia","Asia","Europe","Asia","Europe","Americas","Asia","Asia","Africa","Asia","Asia","Asia","Asia","Africa","Africa","Africa","Africa","Africa","Asia","Africa","Africa","Africa","Americas","Asia","Europe","Africa","Africa","Asia","Africa","Asia","Europe","Oceania","Americas","Africa","Africa","Europe","Asia","Asia","Americas","Americas","Americas","Asia","Europe","Europe","Americas","Africa","Europe","Africa","Africa","Asia","Africa","Europe","Africa","Asia","Europe","Europe","Africa","Africa","Europe","Asia","Africa","Africa","Europe","Europe","Asia","Asia","Africa","Asia","Africa","Americas","Africa","Europe","Africa","Europe","Americas","Americas","Americas","Asia","Asia","Asia","Africa","Africa"],"continent_no":["Asia","Europa","Afrika","Afrika","S\u00f8r/Nord-Amerika","Oseania","Europa","Asia","Asia","Europa","Afrika","S\u00f8r/Nord-Amerika","Europa","Afrika","S\u00f8r/Nord-Amerika","Europa","Afrika","Afrika","Asia","Afrika","S\u00f8r/Nord-Amerika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Asia","S\u00f8r/Nord-Amerika","Afrika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Afrika","Europa","S\u00f8r/Nord-Amerika","Europa","Europa","Afrika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Afrika","S\u00f8r/Nord-Amerika","Afrika","Afrika","Afrika","Europa","Europa","Afrika","Afrika","Europa","Afrika","Europa","S\u00f8r/Nord-Amerika","Afrika","Afrika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Europa","Europa","Asia","Asia","Asia","Asia","Europa","Asia","Europa","S\u00f8r/Nord-Amerika","Asia","Asia","Afrika","Asia","Asia","Asia","Asia","Afrika","Afrika","Afrika","Afrika","Afrika","Asia","Afrika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Asia","Europa","Afrika","Afrika","Asia","Afrika","Asia","Europa","Oseania","S\u00f8r/Nord-Amerika","Afrika","Afrika","Europa","Asia","Asia","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Europa","Europa","S\u00f8r/Nord-Amerika","Afrika","Europa","Afrika","Afrika","Asia","Afrika","Europa","Afrika","Asia","Europa","Europa","Afrika","Afrika","Europa","Asia","Afrika","Afrika","Europa","Europa","Asia","Asia","Afrika","Asia","Afrika","S\u00f8r/Nord-Amerika","Afrika","Europa","Afrika","Europa","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Asia","Asia","Afrika","Afrika"],"country":["Afghanistan","Albania","Algeria","Angola","Argentina","Australia","Austria","Bahrain","Bangladesh","Belgium","Benin","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo, Dem. Rep.","Congo, Rep.","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Czech Republic","Denmark","Djibouti","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Ethiopia","Finland","France","Gabon","Gambia","Germany","Ghana","Greece","Guatemala","Guinea","Guinea-Bissau","Haiti","Honduras","Hong Kong, China","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kenya","Korea, Dem. Rep.","Korea, Rep.","Kuwait","Lebanon","Lesotho","Liberia","Libya","Madagascar","Malawi","Malaysia","Mali","Mauritania","Mauritius","Mexico","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Panama","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Reunion","Romania","Rwanda","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Sierra Leone","Singapore","Slovak Republic","Slovenia","Somalia","South Africa","Spain","Sri Lanka","Sudan","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tanzania","Thailand","Togo","Trinidad and Tobago","Tunisia","Turkey","Uganda","United Kingdom","United States","Uruguay","Venezuela","Vietnam","West Bank and Gaza","Yemen, Rep.","Zambia","Zimbabwe"],"gdp_cap":{"__ndarray__":"54R1iKR0jkBiFASPBzG3QG2tLxJeT7hApWlQNDu9skAgJAuYsPXIQOiHEcJr0OBAWMoyxM+j4UDGpwAYAxndQPLPDOIDvZVAb7vQXJNz4EAOar+1I4WWQJzB3y9G3K1A8nhafkwWvUDboswG7YzIQGkAb4HmtMFAzzEge2XcxEDb2y3JIQSTQKHhg40h4XpAat/cXx3HmkAWNZiGYeifQAexM4Xnu+FAZJEm3iEQhkDiP91AQaCaQIY41sXRuclA0V0SZx1fs0D67laWlF67QBI+Stsu0Y5ANsjJadRYcUCMD7OXHWGsQKlNnNyH1sJAWTFcHQAjmEAVxhaCnI3MQIGzlCwNesFAH7qgvlNM1kCxbVFmzTnhQKon84/2RKBAHEC/71+Jt0Dk9ssnQ9m6QKSK4lUuzbVArrzkf1pgtkBoke18C73HQM0Iysj0CoRAkQfH0XGWhUD5oGez4jbgQHbgnBGBwd1AIVnABD7LyUCOc5tw/4WHQL5Nf/aXat9A1GAahm++lEB47j1cmuTaQLQh/8wMQrRAcXkH0zt1jUCe8BKc2hmCQBAiGXKMxpJABpylZKm4q0Byv0NRn2XjQEJ4tHE8ltFAC2MLQZmq4UCzX3e6ayijQIDuy5lNqatAqYdodNuqxkBtVRLZD3exQCxlGeJ/3ONAbqMBvNHs2EC8lpAPbubbQOm12VjhmLxAi1QYWwTq3kDdek0PdqexQO3Vx0P/3JZAK2owDUPkmEARGVbxCM3WQEgbR6xfGedAd4TTgoduxEAVGohlU4WYQHXmHhIe6HlAxjNo6L+Mx0Ay/+ibFFOQQFKgqp3MuodAXCBB8dNRyEAKn62DU0qQQOZ1xCGbLJxANSkF3X5mxUBBDkqYyWTHQEzBGmeLL6hAS+fDs/ISwkCOHr+3WditQL3HmSZ8vYlAAAAAAACAjUC7YkZ4D8uyQEjfpGlwDZFAlufB3b334UAEHEKVQJjYQFJEhlWkeqVASgeQRmpdg0DeVKTC6HefQFZl3xWmGehAmGn7VwzL1UCwrDQp5VukQHui68KXKMNA4KKTpdZMsECIf9jS5/C8QLWpukf27KhAogvqW/YOzkBVTRB1aQfUQKJ6a2At4NJA3Qn2Xx/2vUDT2cngPBzFQAOrjyy1+IpAZof4h735mEAPRYE+tSXVQA+dnnfjwZpAWyOCcUQdw0DmJO93U/SKQKJinL/lBOdAYHZPHpQ90kByxFp8ECrZQAW4augg8YxAhnMNM9QawkAwKqkTRCXcQJ6xL9kwBK9AK97IPMpUpEANbmsLe6GxQP+ye/J3iOBAGH0FaU1Q4kBMio9PjFiwQI4ev7eRC9xA4UIewe1NkUCGr691ZSK9QKof5XHCl4tAdF5jlyCW0UBkzF1L7LS7QJIIjWAjhcBAF35wPoWBkEDj32dcaDbgQOv/HOb0+ORAMJ5BQ7u5xEBblNkg50vGQJHSbB4nE6NAajS5GLOip0D9hR4xitGhQEDc1avY3JNA1+n2SFlbfUA=","dtype":"float64","order":"little","shape":[142]},"gdp_capNOK":["8 673","52 839","55 387","42 695","113 736","306 474","321 525","265 184","12 382","299 864","12 827","34 017","66 272","111 871","80 685","95 059","10 831","3 827","15 252","18 174","323 241","6 283","15 166","117 227","44 136","62 358","8 776","2 470","32 329","85 841","13 748","130 111","79 638","203 216","313 977","18 534","53 625","61 172","49 672","50 982","108 171","5 708","6 148","295 543","271 183","117 537","6 699","286 316","11 815","245 091","46 155","8 389","5 155","10 694","31 580","353 552","160 279","322 009","21 824","31 511","103 290","39 792","362 016","227 157","254 270","65 155","281 739","40 223","13 022","14 178","207 798","421 032","93 103","13 967","3 689","107 311","9 298","6 758","110 819","9 278","16 048","97 517","106 600","27 552","82 359","33 999","7 330","8 401","42 818","9 713","327 501","224 146","24 468","5 515","17 924","439 278","198 614","23 192","87 301","37 138","65 939","28 395","136 970","182 535","172 025","68 264","96 195","7 681","14 226","192 728","15 241","87 100","7 676","419 574","166 236","229 337","8 242","82 499","256 507","35 333","23 161","40 169","301 351","333 807","37 242","255 592","9 856","66 379","7 858","160 275","63 127","75 278","9 401","295 509","382 269","94 442","101 600","21 730","26 925","20 298","11 313","4 180"],"index":[11,23,35,47,59,71,83,95,107,119,131,143,155,167,179,191,203,215,227,239,251,263,275,287,299,311,323,335,347,359,371,383,395,407,419,431,443,455,467,479,491,503,515,527,539,551,563,575,587,599,611,623,635,647,659,671,683,695,707,719,731,743,755,767,779,791,803,815,827,839,851,863,875,887,899,911,923,935,947,959,971,983,995,1007,1019,1031,1043,1055,1067,1079,1091,1103,1115,1127,1139,1151,1163,1175,1187,1199,1211,1223,1235,1247,1259,1271,1283,1295,1307,1319,1331,1343,1355,1367,1379,1391,1403,1415,1427,1439,1451,1463,1475,1487,1499,1511,1523,1535,1547,1559,1571,1583,1595,1607,1619,1631,1643,1655,1667,1679,1691,1703],"life_exp":{"__ndarray__":"RIts5/vpRUBQjZduEhtTQCUGgZVDE1JAIbByaJFdRUAUrkfhetRSQNejcD0KT1RAkxgEVg71U0BxPQrXo+hSQIcW2c73A1BATmIQWDncU0B3vp8aL11MQPp+arx0Y1BASgwCK4e2UkB3vp8aL11JQClcj8L1GFJAuB6F61FAUkD2KFyPwiVKQArXo3A9ykhABoGVQ4vcTUDXo3A9CjdJQG8Sg8DKKVRAAiuHFtleRkAX2c73U1NJQAisHFpko1NAL90kBoE9UkA3iUFg5ThSQH0/NV66SVBAQmDl0CI7R0Dwp8ZLN6lLQDVeukkMslNARIts5/spSEAdWmQ73+9SQLbz/dR4kVNAyXa+nxofU0Boke18P5VTQGiR7Xw/ZUtA16NwPQoPUkBWDi2ynb9SQBKDwMqh1VFA1XjpJjH4UUAnMQisHMpJQIXrUbgeBU1A8KfGSzd5SkB56SYxCNRTQDVeukkMKlRArkfhehReTEDTTWIQWLlNQESLbOf72VNAiUFg5dACTkD0/dR46d5TQH9qvHSTkFFAN4lBYOUATECLbOf7qTFHQGiR7Xw/dU5A6SYxCKyMUUBaZDvfT41UQBKDwMqhVVJAnMQgsHJwVEDpJjEIrCxQQJqZmZmZqVFABFYOLbK9UUD2KFyPwsVNQHE9CtejuFNASOF6FK4vVEBt5/up8SJUQD81XrpJJFJAO99PjZemVEAK16NwPSJSQK5H4XoUDktAXrpJDALTUEAdWmQ736dTQBKDwMqhZVNAZDvfT43/UUCyne+nxktFQBBYObTI1kZAsHJoke18UkBiEFg5tLhNQBBYObTIJkhAgZVDi2yPUkCyne+nxjtLQNEi2/l+ClBAJQaBlUMzUkAUrkfhegxTQAisHFpks1BAmG4Sg8CiUkDRItv5fspRQNEi2/l+CkVARrbz/dQIT0CHFtnO93NKQBSuR+F65E9AVOOlm8TwU0CTGARWDg1UQKjGSzeJOVJA5dAi2/luTEDLoUW2821HQAaBlUOLDFRAKVyPwvXoUkD0/dR46V5QQO58PzVe4lJA46WbxCDwUUBt5/up8dpRQHnpJjEI7FFAeekmMQjkUkCDwMqhRYZTQDm0yHa+r1NAPzVeukkcU0BYObTIdh5SQOXQItv5HkdAbxKDwMphUEB9PzVeujFSQA4tsp3vh09A46WbxCCAUkBiEFg5tEhFQJHtfD81/lNA30+Nl26qUkAlBoGVQ3tTQDEIrBxaFEhACKwcWmSrSEBOYhBYOTxUQNNNYhBYGVJAukkMAitHTUBYObTIds5DQH9qvHSTOFRAvp8aL91sVED+1HjpJolSQJqZmZmZmVNAGQRWDi1CSkCBlUOLbKdRQPYoXI/CNU1AI9v5fmp0UUBQjZduEntSQH0/NV668VFATDeJQWDFSUAzMzMzM9tTQHNoke18j1NAf2q8dJMYU0ArhxbZzm9SQA4tsp3vj1JAXrpJDAJbUkDTTWIQWFlPQP7UeOkmMUVAdZMYBFa+RUA=","dtype":"float64","order":"little","shape":[142]},"life_exp_rnd":[43,76,72,42,75,81,79,75,64,79,56,65,74,50,72,73,52,49,59,50,80,44,50,78,72,72,65,46,55,78,48,75,78,76,78,54,72,74,71,71,51,58,52,79,80,56,59,79,60,79,70,56,46,60,70,82,73,81,64,70,70,59,78,80,80,72,82,72,54,67,78,77,71,42,45,73,59,48,74,54,64,72,76,66,74,71,42,62,52,63,79,80,72,56,46,80,75,65,75,71,71,71,75,78,78,76,72,46,65,72,63,74,42,79,74,77,48,49,80,72,58,39,80,81,74,78,52,70,58,69,73,71,51,79,78,76,73,74,73,62,42,43],"pop_mill_str":["31","3","33","12","40","20","8","0","150","10","8","9","4","1","190","7","14","8","14","17","33","4","10","16","1,318","44","0","64","3","4","18","4","11","10","5","0","9","13","80","6","0","4","76","5","61","1","1","82","22","10","12","9","1","8","7","6","9","0","1,110","223","69","27","4","6","58","2","127","6","35","23","49","2","3","2","3","6","19","13","24","12","3","1","108","2","0","33","19","47","2","28","16","4","5","12","135","4","3","169","3","6","28","91","38","10","3","0","22","8","0","27","12","10","6","4","5","2","9","43","40","20","42","1","9","7","19","23","38","65","5","1","10","71","29","60","301","3","26","85","4","22","11","12"],"population":[31889923,3600523,33333216,12420476,40301927,20434176,8199783,708573,150448339,10392226,8078314,9119152,4552198,1639131,190010647,7322858,14326203,8390505,14131858,17696293,33390141,4369038,10238807,16284741,1318683096,44227550,710960,64606759,3800610,4133884,18013409,4493312,11416987,10228744,5468120,496374,9319622,13755680,80264543,6939688,551201,4906585,76511887,5238460,61083916,1454867,1688359,82400996,22873338,10706290,12572928,9947814,1472041,8502814,7483763,6980412,9956108,301931,1110396331,223547000,69453570,27499638,4109086,6426679,58147733,2780132,127467972,6053193,35610177,23301725,49044790,2505559,3921278,2012649,3193942,6036914,19167654,13327079,24821286,12031795,3270065,1250882,108700891,2874127,684736,33757175,19951656,47761980,2055080,28901790,16570613,4115771,5675356,12894865,135031164,4627926,3204897,169270617,3242173,6667147,28674757,91077287,38518241,10642836,3942491,798094,22276056,8860588,199579,27601038,12267493,10150265,6144562,4553009,5447502,2009245,9118773,43997828,40448191,20378239,42292929,1133066,9031088,7554661,19314747,23174294,38139640,65068149,5701579,1056608,10276158,71158647,29170398,60776238,301139947,3447496,26084662,85262356,4018332,22211743,11746035,12311143],"size":{"__ndarray__":"7ZGWY9/SMkCrmCCo0EwZQNtQMrC2PjNALFnB3sB+J0Bkoou+SCk1QPJ81J7YIi5Az5CRvRUXI0Dmgv7Sd3IGQO7bzLhhcURA9ERG9cZ9JUDLKfKCwPIiQJJjAdvHISRAYKNSsaVyHEBFt7KNChIRQPaBxOFb+UZAwyLbgV8KIkBd5K12ujspQLsLlvKXTyNACX45bcMPKUCFD16ebQssQHaoPyzrQjNAzc4H8aHeG0CnN4rjA1UlQLcJnr4k5ypAP2lg6upCXkBEqWGc/So2QHfdxpwjfAZAQjs1aPPKOkCBSOZ7WP4ZQKHGjFn5GxtAhWL0THhLLECO9n8HZEMcQDTnQliphiZAVG1jtlRSJUCPn3Udvi0fQAf9FKelyQJAbmzOHR9aJEBwWVfey7koQPEANOwN3T1A6BTPy+uPIUCD8CjuUMwDQKZWrIrPiB1A4V76wTIoPUAaU7oxVIQeQEDVxD1UDTpAT82RAhcVEEA+Z1GwLVMRQGBAjwIiQj5AKfm9QlHiL0DxhAkLS9AlQCX30dmNoydAmkUTatoGJUD73F2XUS0QQKn42LWRcCNAokeeStY8IkA58ULrF50hQFGP4sAYCSVAq3use0RO/T/BhGjN0sRbQCAbUjhN60hATSQODZTHO0AONZBn43oxQA8y85IgBxtAvxzQhY3mIEAPyPp7EGs5QHzK8JFMOxZAnZDvyyPRQkCSakDa82YgQIGxUiw05DNA+/ks4TIXMECeoH0REFg3QC+3h2zzGhVA0UbqIChnGkDqTx1JbOoSQNLLnYMs1BdAOV+MdU1hIEA408bO7y8tQCUVLl1nVihAQmL8mGObMEAs5C3S5B8nQCYsN7RwHBhA3ie+OiPTDUCaBo4pamBBQOH2ZKC1mhZADKbjrvsQBkDatoUT8l0zQF7E6Bc3xy1ALDdN62MJN0BCwfB9Mx0TQJC6CYiN6zFAvysmv1QjK0AMKovVwAwbQJTqQQCWwx9AptR0iIrwJ0A3Nhyo/V1DQIDKSfn4rhxAyL1LY6DeF0CKKbQUG69FQDRF41oPAhhA6gMczcA2IUDk/HO8f9kxQMvZpLy8zz9A0OaJWgywNEDsyuBVuL8lQM6FoSZqeRpA1fyloK3SB0CiUkj6CncvQK9zJLUw2CNAKVs8wYbT9z+DZ46BIYMxQMLfCcaYWSdAEra68Vk9JUCzvUAqhoYgQNIgHMJLcxxAaA4rNq4eH0D9l2uFU+YSQKMzK3CsISRAxf9JtzscNkDU/mkAGzM1QMtuoo9HGC5Axt3o3XutNUDa8eI3r2IMQHdwvM7VCCRAZvvxdeZSIkAg96dGjUwtQB5qlH7rCzBAATA3yfSVNEBlDAIdZuM6QP7hRq1Z1h9A75DVmjppC0BffFeL914lQKa5w95XHjxAsAWjTdIAMkBDGEThgvw5QBEb01Ic7ExACAZ+IK/BGEDpOMPjPQYxQDrKZwh6xz5AL0Z5xkq6GkBg/JoaaGsvQNgkLOQr2SZALJuN1jhkJ0A=","dtype":"float64","order":"little","shape":[142]},"year":[2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007]},"selected":{"id":"1039"},"selection_policy":{"id":"1038"}},"id":"1024","type":"ColumnDataSource"},{"attributes":{"num_minor_ticks":10},"id":"1014","type":"LogTicker"},{"attributes":{},"id":"1005","type":"DataRange1d"},{"attributes":{"label":{"field":"continent_no"},"renderers":[{"id":"1029"}]},"id":"1041","type":"LegendItem"},{"attributes":{},"id":"1038","type":"UnionRenderers"},{"attributes":{"tools":[{"id":"1021"}]},"id":"1022","type":"Toolbar"},{"attributes":{},"id":"1033","type":"BasicTickFormatter"},{"attributes":{},"id":"1039","type":"Selection"},{"attributes":{"callback":null,"tooltips":[["Land","@country"],["BNP/innbygger","@gdp_capNOK"],["Forventet alder","@life_exp_rnd"],["Befolkning","@pop_mill_str"]]},"id":"1021","type":"HoverTool"},{"attributes":{"axis":{"id":"1013"},"coordinates":null,"group":null,"ticker":null},"id":"1016","type":"Grid"},{"attributes":{},"id":"1037","type":"AllLabels"},{"attributes":{"fill_alpha":{"value":0.8},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.8},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.8},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1026","type":"Scatter"},{"attributes":{},"id":"1009","type":"LogScale"},{"attributes":{"coordinates":null,"group":null,"items":[{"id":"1041"}]},"id":"1040","type":"Legend"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.1},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.1},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1027","type":"Scatter"},{"attributes":{},"id":"1007","type":"DataRange1d"},{"attributes":{"axis_label":"BNP per innbygger (NOK)","coordinates":null,"formatter":{"id":"1036"},"group":null,"major_label_policy":{"id":"1037"},"ticker":{"id":"1014"}},"id":"1013","type":"LogAxis"}],"root_ids":["1002"]},"title":"Bokeh Application","version":"2.4.2"}};
-  const render_items = [{"docid":"f070d6a2-2809-458b-8cc5-e693e793295e","root_ids":["1002"],"roots":{"1002":"86b18040-2a3b-4c96-9de0-0762a042074d"}}];
+  const docs_json = {"70587558-416d-499e-8839-ef13508760c5":{"defs":[],"roots":{"references":[{"attributes":{"below":[{"id":"1013"}],"center":[{"id":"1016"},{"id":"1020"},{"id":"1040"}],"height":580,"left":[{"id":"1017"}],"renderers":[{"id":"1029"}],"title":{"id":"1003"},"toolbar":{"id":"1022"},"width":980,"x_range":{"id":"1005"},"x_scale":{"id":"1009"},"y_range":{"id":"1007"},"y_scale":{"id":"1011"}},"id":"1002","subtype":"Figure","type":"Plot"},{"attributes":{"axis_label":"Forventet antall leve\u00e5r","coordinates":null,"formatter":{"id":"1033"},"group":null,"major_label_policy":{"id":"1034"},"ticker":{"id":"1018"}},"id":"1017","type":"LinearAxis"},{"attributes":{"num_minor_ticks":10},"id":"1014","type":"LogTicker"},{"attributes":{"axis":{"id":"1013"},"coordinates":null,"group":null,"ticker":null},"id":"1016","type":"Grid"},{"attributes":{},"id":"1018","type":"BasicTicker"},{"attributes":{"data":{"colors":["#2792E1","#BC27E1","#E14827","#E14827","#84E127","#E04A6C","#BC27E1","#2792E1","#2792E1","#BC27E1","#E14827","#84E127","#BC27E1","#E14827","#84E127","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#84E127","#E14827","#E14827","#84E127","#2792E1","#84E127","#E14827","#E14827","#E14827","#84E127","#E14827","#BC27E1","#84E127","#BC27E1","#BC27E1","#E14827","#84E127","#84E127","#E14827","#84E127","#E14827","#E14827","#E14827","#BC27E1","#BC27E1","#E14827","#E14827","#BC27E1","#E14827","#BC27E1","#84E127","#E14827","#E14827","#84E127","#84E127","#2792E1","#BC27E1","#BC27E1","#2792E1","#2792E1","#2792E1","#2792E1","#BC27E1","#2792E1","#BC27E1","#84E127","#2792E1","#2792E1","#E14827","#2792E1","#2792E1","#2792E1","#2792E1","#E14827","#E14827","#E14827","#E14827","#E14827","#2792E1","#E14827","#E14827","#E14827","#84E127","#2792E1","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#2792E1","#BC27E1","#E04A6C","#84E127","#E14827","#E14827","#BC27E1","#2792E1","#2792E1","#84E127","#84E127","#84E127","#2792E1","#BC27E1","#BC27E1","#84E127","#E14827","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#BC27E1","#E14827","#2792E1","#BC27E1","#BC27E1","#E14827","#E14827","#BC27E1","#2792E1","#E14827","#E14827","#BC27E1","#BC27E1","#2792E1","#2792E1","#E14827","#2792E1","#E14827","#84E127","#E14827","#BC27E1","#E14827","#BC27E1","#84E127","#84E127","#84E127","#2792E1","#2792E1","#2792E1","#E14827","#E14827"],"continent":["Asia","Europe","Africa","Africa","Americas","Oceania","Europe","Asia","Asia","Europe","Africa","Americas","Europe","Africa","Americas","Europe","Africa","Africa","Asia","Africa","Americas","Africa","Africa","Americas","Asia","Americas","Africa","Africa","Africa","Americas","Africa","Europe","Americas","Europe","Europe","Africa","Americas","Americas","Africa","Americas","Africa","Africa","Africa","Europe","Europe","Africa","Africa","Europe","Africa","Europe","Americas","Africa","Africa","Americas","Americas","Asia","Europe","Europe","Asia","Asia","Asia","Asia","Europe","Asia","Europe","Americas","Asia","Asia","Africa","Asia","Asia","Asia","Asia","Africa","Africa","Africa","Africa","Africa","Asia","Africa","Africa","Africa","Americas","Asia","Europe","Africa","Africa","Asia","Africa","Asia","Europe","Oceania","Americas","Africa","Africa","Europe","Asia","Asia","Americas","Americas","Americas","Asia","Europe","Europe","Americas","Africa","Europe","Africa","Africa","Asia","Africa","Europe","Africa","Asia","Europe","Europe","Africa","Africa","Europe","Asia","Africa","Africa","Europe","Europe","Asia","Asia","Africa","Asia","Africa","Americas","Africa","Europe","Africa","Europe","Americas","Americas","Americas","Asia","Asia","Asia","Africa","Africa"],"continent_no":["Asia","Europa","Afrika","Afrika","S\u00f8r/Nord-Amerika","Oseania","Europa","Asia","Asia","Europa","Afrika","S\u00f8r/Nord-Amerika","Europa","Afrika","S\u00f8r/Nord-Amerika","Europa","Afrika","Afrika","Asia","Afrika","S\u00f8r/Nord-Amerika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Asia","S\u00f8r/Nord-Amerika","Afrika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Afrika","Europa","S\u00f8r/Nord-Amerika","Europa","Europa","Afrika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Afrika","S\u00f8r/Nord-Amerika","Afrika","Afrika","Afrika","Europa","Europa","Afrika","Afrika","Europa","Afrika","Europa","S\u00f8r/Nord-Amerika","Afrika","Afrika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Europa","Europa","Asia","Asia","Asia","Asia","Europa","Asia","Europa","S\u00f8r/Nord-Amerika","Asia","Asia","Afrika","Asia","Asia","Asia","Asia","Afrika","Afrika","Afrika","Afrika","Afrika","Asia","Afrika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Asia","Europa","Afrika","Afrika","Asia","Afrika","Asia","Europa","Oseania","S\u00f8r/Nord-Amerika","Afrika","Afrika","Europa","Asia","Asia","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Europa","Europa","S\u00f8r/Nord-Amerika","Afrika","Europa","Afrika","Afrika","Asia","Afrika","Europa","Afrika","Asia","Europa","Europa","Afrika","Afrika","Europa","Asia","Afrika","Afrika","Europa","Europa","Asia","Asia","Afrika","Asia","Afrika","S\u00f8r/Nord-Amerika","Afrika","Europa","Afrika","Europa","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Asia","Asia","Afrika","Afrika"],"country":["Afghanistan","Albania","Algeria","Angola","Argentina","Australia","Austria","Bahrain","Bangladesh","Belgium","Benin","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo, Dem. Rep.","Congo, Rep.","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Czech Republic","Denmark","Djibouti","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Ethiopia","Finland","France","Gabon","Gambia","Germany","Ghana","Greece","Guatemala","Guinea","Guinea-Bissau","Haiti","Honduras","Hong Kong, China","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kenya","Korea, Dem. Rep.","Korea, Rep.","Kuwait","Lebanon","Lesotho","Liberia","Libya","Madagascar","Malawi","Malaysia","Mali","Mauritania","Mauritius","Mexico","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Panama","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Reunion","Romania","Rwanda","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Sierra Leone","Singapore","Slovak Republic","Slovenia","Somalia","South Africa","Spain","Sri Lanka","Sudan","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tanzania","Thailand","Togo","Trinidad and Tobago","Tunisia","Turkey","Uganda","United Kingdom","United States","Uruguay","Venezuela","Vietnam","West Bank and Gaza","Yemen, Rep.","Zambia","Zimbabwe"],"gdp_cap":{"__ndarray__":"54R1iKR0jkBiFASPBzG3QG2tLxJeT7hApWlQNDu9skAgJAuYsPXIQOiHEcJr0OBAWMoyxM+j4UDGpwAYAxndQPLPDOIDvZVAb7vQXJNz4EAOar+1I4WWQJzB3y9G3K1A8nhafkwWvUDboswG7YzIQGkAb4HmtMFAzzEge2XcxEDb2y3JIQSTQKHhg40h4XpAat/cXx3HmkAWNZiGYeifQAexM4Xnu+FAZJEm3iEQhkDiP91AQaCaQIY41sXRuclA0V0SZx1fs0D67laWlF67QBI+Stsu0Y5ANsjJadRYcUCMD7OXHWGsQKlNnNyH1sJAWTFcHQAjmEAVxhaCnI3MQIGzlCwNesFAH7qgvlNM1kCxbVFmzTnhQKon84/2RKBAHEC/71+Jt0Dk9ssnQ9m6QKSK4lUuzbVArrzkf1pgtkBoke18C73HQM0Iysj0CoRAkQfH0XGWhUD5oGez4jbgQHbgnBGBwd1AIVnABD7LyUCOc5tw/4WHQL5Nf/aXat9A1GAahm++lEB47j1cmuTaQLQh/8wMQrRAcXkH0zt1jUCe8BKc2hmCQBAiGXKMxpJABpylZKm4q0Byv0NRn2XjQEJ4tHE8ltFAC2MLQZmq4UCzX3e6ayijQIDuy5lNqatAqYdodNuqxkBtVRLZD3exQCxlGeJ/3ONAbqMBvNHs2EC8lpAPbubbQOm12VjhmLxAi1QYWwTq3kDdek0PdqexQO3Vx0P/3JZAK2owDUPkmEARGVbxCM3WQEgbR6xfGedAd4TTgoduxEAVGohlU4WYQHXmHhIe6HlAxjNo6L+Mx0Ay/+ibFFOQQFKgqp3MuodAXCBB8dNRyEAKn62DU0qQQOZ1xCGbLJxANSkF3X5mxUBBDkqYyWTHQEzBGmeLL6hAS+fDs/ISwkCOHr+3WditQL3HmSZ8vYlAAAAAAACAjUC7YkZ4D8uyQEjfpGlwDZFAlufB3b334UAEHEKVQJjYQFJEhlWkeqVASgeQRmpdg0DeVKTC6HefQFZl3xWmGehAmGn7VwzL1UCwrDQp5VukQHui68KXKMNA4KKTpdZMsECIf9jS5/C8QLWpukf27KhAogvqW/YOzkBVTRB1aQfUQKJ6a2At4NJA3Qn2Xx/2vUDT2cngPBzFQAOrjyy1+IpAZof4h735mEAPRYE+tSXVQA+dnnfjwZpAWyOCcUQdw0DmJO93U/SKQKJinL/lBOdAYHZPHpQ90kByxFp8ECrZQAW4augg8YxAhnMNM9QawkAwKqkTRCXcQJ6xL9kwBK9AK97IPMpUpEANbmsLe6GxQP+ye/J3iOBAGH0FaU1Q4kBMio9PjFiwQI4ev7eRC9xA4UIewe1NkUCGr691ZSK9QKof5XHCl4tAdF5jlyCW0UBkzF1L7LS7QJIIjWAjhcBAF35wPoWBkEDj32dcaDbgQOv/HOb0+ORAMJ5BQ7u5xEBblNkg50vGQJHSbB4nE6NAajS5GLOip0D9hR4xitGhQEDc1avY3JNA1+n2SFlbfUA=","dtype":"float64","order":"little","shape":[142]},"gdp_capNOK":["8 673","52 839","55 387","42 695","113 736","306 474","321 525","265 184","12 382","299 864","12 827","34 017","66 272","111 871","80 685","95 059","10 831","3 827","15 252","18 174","323 241","6 283","15 166","117 227","44 136","62 358","8 776","2 470","32 329","85 841","13 748","130 111","79 638","203 216","313 977","18 534","53 625","61 172","49 672","50 982","108 171","5 708","6 148","295 543","271 183","117 537","6 699","286 316","11 815","245 091","46 155","8 389","5 155","10 694","31 580","353 552","160 279","322 009","21 824","31 511","103 290","39 792","362 016","227 157","254 270","65 155","281 739","40 223","13 022","14 178","207 798","421 032","93 103","13 967","3 689","107 311","9 298","6 758","110 819","9 278","16 048","97 517","106 600","27 552","82 359","33 999","7 330","8 401","42 818","9 713","327 501","224 146","24 468","5 515","17 924","439 278","198 614","23 192","87 301","37 138","65 939","28 395","136 970","182 535","172 025","68 264","96 195","7 681","14 226","192 728","15 241","87 100","7 676","419 574","166 236","229 337","8 242","82 499","256 507","35 333","23 161","40 169","301 351","333 807","37 242","255 592","9 856","66 379","7 858","160 275","63 127","75 278","9 401","295 509","382 269","94 442","101 600","21 730","26 925","20 298","11 313","4 180"],"index":[11,23,35,47,59,71,83,95,107,119,131,143,155,167,179,191,203,215,227,239,251,263,275,287,299,311,323,335,347,359,371,383,395,407,419,431,443,455,467,479,491,503,515,527,539,551,563,575,587,599,611,623,635,647,659,671,683,695,707,719,731,743,755,767,779,791,803,815,827,839,851,863,875,887,899,911,923,935,947,959,971,983,995,1007,1019,1031,1043,1055,1067,1079,1091,1103,1115,1127,1139,1151,1163,1175,1187,1199,1211,1223,1235,1247,1259,1271,1283,1295,1307,1319,1331,1343,1355,1367,1379,1391,1403,1415,1427,1439,1451,1463,1475,1487,1499,1511,1523,1535,1547,1559,1571,1583,1595,1607,1619,1631,1643,1655,1667,1679,1691,1703],"life_exp":{"__ndarray__":"RIts5/vpRUBQjZduEhtTQCUGgZVDE1JAIbByaJFdRUAUrkfhetRSQNejcD0KT1RAkxgEVg71U0BxPQrXo+hSQIcW2c73A1BATmIQWDncU0B3vp8aL11MQPp+arx0Y1BASgwCK4e2UkB3vp8aL11JQClcj8L1GFJAuB6F61FAUkD2KFyPwiVKQArXo3A9ykhABoGVQ4vcTUDXo3A9CjdJQG8Sg8DKKVRAAiuHFtleRkAX2c73U1NJQAisHFpko1NAL90kBoE9UkA3iUFg5ThSQH0/NV66SVBAQmDl0CI7R0Dwp8ZLN6lLQDVeukkMslNARIts5/spSEAdWmQ73+9SQLbz/dR4kVNAyXa+nxofU0Boke18P5VTQGiR7Xw/ZUtA16NwPQoPUkBWDi2ynb9SQBKDwMqh1VFA1XjpJjH4UUAnMQisHMpJQIXrUbgeBU1A8KfGSzd5SkB56SYxCNRTQDVeukkMKlRArkfhehReTEDTTWIQWLlNQESLbOf72VNAiUFg5dACTkD0/dR46d5TQH9qvHSTkFFAN4lBYOUATECLbOf7qTFHQGiR7Xw/dU5A6SYxCKyMUUBaZDvfT41UQBKDwMqhVVJAnMQgsHJwVEDpJjEIrCxQQJqZmZmZqVFABFYOLbK9UUD2KFyPwsVNQHE9CtejuFNASOF6FK4vVEBt5/up8SJUQD81XrpJJFJAO99PjZemVEAK16NwPSJSQK5H4XoUDktAXrpJDALTUEAdWmQ736dTQBKDwMqhZVNAZDvfT43/UUCyne+nxktFQBBYObTI1kZAsHJoke18UkBiEFg5tLhNQBBYObTIJkhAgZVDi2yPUkCyne+nxjtLQNEi2/l+ClBAJQaBlUMzUkAUrkfhegxTQAisHFpks1BAmG4Sg8CiUkDRItv5fspRQNEi2/l+CkVARrbz/dQIT0CHFtnO93NKQBSuR+F65E9AVOOlm8TwU0CTGARWDg1UQKjGSzeJOVJA5dAi2/luTEDLoUW2821HQAaBlUOLDFRAKVyPwvXoUkD0/dR46V5QQO58PzVe4lJA46WbxCDwUUBt5/up8dpRQHnpJjEI7FFAeekmMQjkUkCDwMqhRYZTQDm0yHa+r1NAPzVeukkcU0BYObTIdh5SQOXQItv5HkdAbxKDwMphUEB9PzVeujFSQA4tsp3vh09A46WbxCCAUkBiEFg5tEhFQJHtfD81/lNA30+Nl26qUkAlBoGVQ3tTQDEIrBxaFEhACKwcWmSrSEBOYhBYOTxUQNNNYhBYGVJAukkMAitHTUBYObTIds5DQH9qvHSTOFRAvp8aL91sVED+1HjpJolSQJqZmZmZmVNAGQRWDi1CSkCBlUOLbKdRQPYoXI/CNU1AI9v5fmp0UUBQjZduEntSQH0/NV668VFATDeJQWDFSUAzMzMzM9tTQHNoke18j1NAf2q8dJMYU0ArhxbZzm9SQA4tsp3vj1JAXrpJDAJbUkDTTWIQWFlPQP7UeOkmMUVAdZMYBFa+RUA=","dtype":"float64","order":"little","shape":[142]},"life_exp_rnd":[43,76,72,42,75,81,79,75,64,79,56,65,74,50,72,73,52,49,59,50,80,44,50,78,72,72,65,46,55,78,48,75,78,76,78,54,72,74,71,71,51,58,52,79,80,56,59,79,60,79,70,56,46,60,70,82,73,81,64,70,70,59,78,80,80,72,82,72,54,67,78,77,71,42,45,73,59,48,74,54,64,72,76,66,74,71,42,62,52,63,79,80,72,56,46,80,75,65,75,71,71,71,75,78,78,76,72,46,65,72,63,74,42,79,74,77,48,49,80,72,58,39,80,81,74,78,52,70,58,69,73,71,51,79,78,76,73,74,73,62,42,43],"pop_mill_str":["31","3","33","12","40","20","8","0","150","10","8","9","4","1","190","7","14","8","14","17","33","4","10","16","1,318","44","0","64","3","4","18","4","11","10","5","0","9","13","80","6","0","4","76","5","61","1","1","82","22","10","12","9","1","8","7","6","9","0","1,110","223","69","27","4","6","58","2","127","6","35","23","49","2","3","2","3","6","19","13","24","12","3","1","108","2","0","33","19","47","2","28","16","4","5","12","135","4","3","169","3","6","28","91","38","10","3","0","22","8","0","27","12","10","6","4","5","2","9","43","40","20","42","1","9","7","19","23","38","65","5","1","10","71","29","60","301","3","26","85","4","22","11","12"],"population":[31889923,3600523,33333216,12420476,40301927,20434176,8199783,708573,150448339,10392226,8078314,9119152,4552198,1639131,190010647,7322858,14326203,8390505,14131858,17696293,33390141,4369038,10238807,16284741,1318683096,44227550,710960,64606759,3800610,4133884,18013409,4493312,11416987,10228744,5468120,496374,9319622,13755680,80264543,6939688,551201,4906585,76511887,5238460,61083916,1454867,1688359,82400996,22873338,10706290,12572928,9947814,1472041,8502814,7483763,6980412,9956108,301931,1110396331,223547000,69453570,27499638,4109086,6426679,58147733,2780132,127467972,6053193,35610177,23301725,49044790,2505559,3921278,2012649,3193942,6036914,19167654,13327079,24821286,12031795,3270065,1250882,108700891,2874127,684736,33757175,19951656,47761980,2055080,28901790,16570613,4115771,5675356,12894865,135031164,4627926,3204897,169270617,3242173,6667147,28674757,91077287,38518241,10642836,3942491,798094,22276056,8860588,199579,27601038,12267493,10150265,6144562,4553009,5447502,2009245,9118773,43997828,40448191,20378239,42292929,1133066,9031088,7554661,19314747,23174294,38139640,65068149,5701579,1056608,10276158,71158647,29170398,60776238,301139947,3447496,26084662,85262356,4018332,22211743,11746035,12311143],"size":{"__ndarray__":"7ZGWY9/SMkCrmCCo0EwZQNtQMrC2PjNALFnB3sB+J0Bkoou+SCk1QPJ81J7YIi5Az5CRvRUXI0Dmgv7Sd3IGQO7bzLhhcURA9ERG9cZ9JUDLKfKCwPIiQJJjAdvHISRAYKNSsaVyHEBFt7KNChIRQPaBxOFb+UZAwyLbgV8KIkBd5K12ujspQLsLlvKXTyNACX45bcMPKUCFD16ebQssQHaoPyzrQjNAzc4H8aHeG0CnN4rjA1UlQLcJnr4k5ypAP2lg6upCXkBEqWGc/So2QHfdxpwjfAZAQjs1aPPKOkCBSOZ7WP4ZQKHGjFn5GxtAhWL0THhLLECO9n8HZEMcQDTnQliphiZAVG1jtlRSJUCPn3Udvi0fQAf9FKelyQJAbmzOHR9aJEBwWVfey7koQPEANOwN3T1A6BTPy+uPIUCD8CjuUMwDQKZWrIrPiB1A4V76wTIoPUAaU7oxVIQeQEDVxD1UDTpAT82RAhcVEEA+Z1GwLVMRQGBAjwIiQj5AKfm9QlHiL0DxhAkLS9AlQCX30dmNoydAmkUTatoGJUD73F2XUS0QQKn42LWRcCNAokeeStY8IkA58ULrF50hQFGP4sAYCSVAq3use0RO/T/BhGjN0sRbQCAbUjhN60hATSQODZTHO0AONZBn43oxQA8y85IgBxtAvxzQhY3mIEAPyPp7EGs5QHzK8JFMOxZAnZDvyyPRQkCSakDa82YgQIGxUiw05DNA+/ks4TIXMECeoH0REFg3QC+3h2zzGhVA0UbqIChnGkDqTx1JbOoSQNLLnYMs1BdAOV+MdU1hIEA408bO7y8tQCUVLl1nVihAQmL8mGObMEAs5C3S5B8nQCYsN7RwHBhA3ie+OiPTDUCaBo4pamBBQOH2ZKC1mhZADKbjrvsQBkDatoUT8l0zQF7E6Bc3xy1ALDdN62MJN0BCwfB9Mx0TQJC6CYiN6zFAvysmv1QjK0AMKovVwAwbQJTqQQCWwx9AptR0iIrwJ0A3Nhyo/V1DQIDKSfn4rhxAyL1LY6DeF0CKKbQUG69FQDRF41oPAhhA6gMczcA2IUDk/HO8f9kxQMvZpLy8zz9A0OaJWgywNEDsyuBVuL8lQM6FoSZqeRpA1fyloK3SB0CiUkj6CncvQK9zJLUw2CNAKVs8wYbT9z+DZ46BIYMxQMLfCcaYWSdAEra68Vk9JUCzvUAqhoYgQNIgHMJLcxxAaA4rNq4eH0D9l2uFU+YSQKMzK3CsISRAxf9JtzscNkDU/mkAGzM1QMtuoo9HGC5Axt3o3XutNUDa8eI3r2IMQHdwvM7VCCRAZvvxdeZSIkAg96dGjUwtQB5qlH7rCzBAATA3yfSVNEBlDAIdZuM6QP7hRq1Z1h9A75DVmjppC0BffFeL914lQKa5w95XHjxAsAWjTdIAMkBDGEThgvw5QBEb01Ic7ExACAZ+IK/BGEDpOMPjPQYxQDrKZwh6xz5AL0Z5xkq6GkBg/JoaaGsvQNgkLOQr2SZALJuN1jhkJ0A=","dtype":"float64","order":"little","shape":[142]},"year":[2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007]},"selected":{"id":"1039"},"selection_policy":{"id":"1038"}},"id":"1024","type":"ColumnDataSource"},{"attributes":{"coordinates":null,"data_source":{"id":"1024"},"glyph":{"id":"1026"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"1028"},"nonselection_glyph":{"id":"1027"},"view":{"id":"1030"}},"id":"1029","type":"GlyphRenderer"},{"attributes":{"axis_label":"BNP per innbygger (NOK)","coordinates":null,"formatter":{"id":"1036"},"group":null,"major_label_policy":{"id":"1037"},"ticker":{"id":"1014"}},"id":"1013","type":"LogAxis"},{"attributes":{"ticker":null},"id":"1036","type":"LogTickFormatter"},{"attributes":{},"id":"1005","type":"DataRange1d"},{"attributes":{"tools":[{"id":"1021"}]},"id":"1022","type":"Toolbar"},{"attributes":{"coordinates":null,"group":null,"text":"Levealder og BNP per innbygger"},"id":"1003","type":"Title"},{"attributes":{"label":{"field":"continent_no"},"renderers":[{"id":"1029"}]},"id":"1041","type":"LegendItem"},{"attributes":{"callback":null,"tooltips":[["Land","@country"],["BNP/innbygger","@gdp_capNOK"],["Forventet alder","@life_exp_rnd"],["Befolkning","@pop_mill_str"]]},"id":"1021","type":"HoverTool"},{"attributes":{},"id":"1039","type":"Selection"},{"attributes":{"source":{"id":"1024"}},"id":"1030","type":"CDSView"},{"attributes":{},"id":"1038","type":"UnionRenderers"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.1},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.1},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1027","type":"Scatter"},{"attributes":{},"id":"1037","type":"AllLabels"},{"attributes":{},"id":"1034","type":"AllLabels"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.2},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.2},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1028","type":"Scatter"},{"attributes":{},"id":"1033","type":"BasicTickFormatter"},{"attributes":{},"id":"1009","type":"LogScale"},{"attributes":{},"id":"1007","type":"DataRange1d"},{"attributes":{"axis":{"id":"1017"},"coordinates":null,"dimension":1,"group":null,"ticker":null},"id":"1020","type":"Grid"},{"attributes":{},"id":"1011","type":"LinearScale"},{"attributes":{"fill_alpha":{"value":0.8},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.8},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.8},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1026","type":"Scatter"},{"attributes":{"coordinates":null,"group":null,"items":[{"id":"1041"}]},"id":"1040","type":"Legend"}],"root_ids":["1002"]},"title":"Bokeh Application","version":"2.4.2"}};
+  const render_items = [{"docid":"70587558-416d-499e-8839-ef13508760c5","root_ids":["1002"],"roots":{"1002":"fabd8d14-034f-48f6-a8b4-913dd4c0a535"}}];
   root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
 
   }
@@ -14506,6 +14682,14 @@ var element = $('#ad304433-c3cb-4c73-89a2-de2f170f1f8a');
 <li><code>output_file("BNP_levealder.html")</code> angir at html-filen som skal lagres skal hete "BNP_levealder.html"</li>
 <li><code>show(p)</code> genererer html-filen og visning</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Om du ønsker å legge denne grafen inn i en annen webside kan du for eksempel bruke iframes. <a href="https://www.w3schools.com/tags/tag_iframe.asp">Her er et eksmpel på hvordan du gjør det fra W3Schools</a></p>
 
 </div>
 </div>
@@ -14574,9 +14758,9 @@ var element = $('#ad304433-c3cb-4c73-89a2-de2f170f1f8a');
 
 
 
-<div id="30117787-684e-49ac-a122-51bc079d5ebd" class="output_subarea output_javascript ">
+<div id="8d2c85df-7adc-4319-b7e3-526e1050be79" class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#30117787-684e-49ac-a122-51bc079d5ebd');
+var element = $('#8d2c85df-7adc-4319-b7e3-526e1050be79');
 
 (function(root) {
   function now() {
@@ -14884,7 +15068,7 @@ var element = $('#30117787-684e-49ac-a122-51bc079d5ebd');
 
 
 
-  <div class="bk-root" id="476afbbb-7149-4e66-ac82-04cfd3c0be03" data-root-id="1002"></div>
+  <div class="bk-root" id="9edf2680-588f-4989-8f79-b9d1f8990ee7" data-root-id="1002"></div>
 </div>
 
 </div>
@@ -14897,14 +15081,14 @@ var element = $('#30117787-684e-49ac-a122-51bc079d5ebd');
 
 
 
-<div id="7b0a7a81-c048-4d01-9484-52118accb000" class="output_subarea output_javascript ">
+<div id="0fc25304-7155-446e-b0f6-045455bf19d6" class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
+var element = $('#0fc25304-7155-446e-b0f6-045455bf19d6');
 (function(root) {
   function embed_document(root) {
     
-  const docs_json = {"6a3d7974-c492-405f-ae17-a81b0633bba2":{"defs":[],"roots":{"references":[{"attributes":{"below":[{"id":"1013"}],"center":[{"id":"1016"},{"id":"1020"},{"id":"1040"}],"height":580,"left":[{"id":"1017"}],"outline_line_alpha":0,"renderers":[{"id":"1029"}],"title":{"id":"1003"},"toolbar":{"id":"1022"},"width":980,"x_range":{"id":"1005"},"x_scale":{"id":"1009"},"y_range":{"id":"1007"},"y_scale":{"id":"1011"}},"id":"1002","subtype":"Figure","type":"Plot"},{"attributes":{"axis":{"id":"1017"},"coordinates":null,"dimension":1,"grid_line_alpha":0,"group":null,"ticker":null},"id":"1020","type":"Grid"},{"attributes":{},"id":"1011","type":"LinearScale"},{"attributes":{"coordinates":null,"data_source":{"id":"1024"},"glyph":{"id":"1026"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"1028"},"nonselection_glyph":{"id":"1027"},"view":{"id":"1030"}},"id":"1029","type":"GlyphRenderer"},{"attributes":{},"id":"1034","type":"AllLabels"},{"attributes":{"ticker":null},"id":"1036","type":"LogTickFormatter"},{"attributes":{"source":{"id":"1024"}},"id":"1030","type":"CDSView"},{"attributes":{"axis_label":"Forventet antall leve\u00e5r","coordinates":null,"formatter":{"id":"1033"},"group":null,"major_label_policy":{"id":"1034"},"ticker":{"id":"1018"}},"id":"1017","type":"LinearAxis"},{"attributes":{"coordinates":null,"group":null,"text":"Levealder og BNP per innbygger"},"id":"1003","type":"Title"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.2},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.2},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1028","type":"Scatter"},{"attributes":{},"id":"1018","type":"BasicTicker"},{"attributes":{"data":{"colors":["#2792E1","#BC27E1","#E14827","#E14827","#84E127","#E04A6C","#BC27E1","#2792E1","#2792E1","#BC27E1","#E14827","#84E127","#BC27E1","#E14827","#84E127","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#84E127","#E14827","#E14827","#84E127","#2792E1","#84E127","#E14827","#E14827","#E14827","#84E127","#E14827","#BC27E1","#84E127","#BC27E1","#BC27E1","#E14827","#84E127","#84E127","#E14827","#84E127","#E14827","#E14827","#E14827","#BC27E1","#BC27E1","#E14827","#E14827","#BC27E1","#E14827","#BC27E1","#84E127","#E14827","#E14827","#84E127","#84E127","#2792E1","#BC27E1","#BC27E1","#2792E1","#2792E1","#2792E1","#2792E1","#BC27E1","#2792E1","#BC27E1","#84E127","#2792E1","#2792E1","#E14827","#2792E1","#2792E1","#2792E1","#2792E1","#E14827","#E14827","#E14827","#E14827","#E14827","#2792E1","#E14827","#E14827","#E14827","#84E127","#2792E1","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#2792E1","#BC27E1","#E04A6C","#84E127","#E14827","#E14827","#BC27E1","#2792E1","#2792E1","#84E127","#84E127","#84E127","#2792E1","#BC27E1","#BC27E1","#84E127","#E14827","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#BC27E1","#E14827","#2792E1","#BC27E1","#BC27E1","#E14827","#E14827","#BC27E1","#2792E1","#E14827","#E14827","#BC27E1","#BC27E1","#2792E1","#2792E1","#E14827","#2792E1","#E14827","#84E127","#E14827","#BC27E1","#E14827","#BC27E1","#84E127","#84E127","#84E127","#2792E1","#2792E1","#2792E1","#E14827","#E14827"],"continent":["Asia","Europe","Africa","Africa","Americas","Oceania","Europe","Asia","Asia","Europe","Africa","Americas","Europe","Africa","Americas","Europe","Africa","Africa","Asia","Africa","Americas","Africa","Africa","Americas","Asia","Americas","Africa","Africa","Africa","Americas","Africa","Europe","Americas","Europe","Europe","Africa","Americas","Americas","Africa","Americas","Africa","Africa","Africa","Europe","Europe","Africa","Africa","Europe","Africa","Europe","Americas","Africa","Africa","Americas","Americas","Asia","Europe","Europe","Asia","Asia","Asia","Asia","Europe","Asia","Europe","Americas","Asia","Asia","Africa","Asia","Asia","Asia","Asia","Africa","Africa","Africa","Africa","Africa","Asia","Africa","Africa","Africa","Americas","Asia","Europe","Africa","Africa","Asia","Africa","Asia","Europe","Oceania","Americas","Africa","Africa","Europe","Asia","Asia","Americas","Americas","Americas","Asia","Europe","Europe","Americas","Africa","Europe","Africa","Africa","Asia","Africa","Europe","Africa","Asia","Europe","Europe","Africa","Africa","Europe","Asia","Africa","Africa","Europe","Europe","Asia","Asia","Africa","Asia","Africa","Americas","Africa","Europe","Africa","Europe","Americas","Americas","Americas","Asia","Asia","Asia","Africa","Africa"],"continent_no":["Asia","Europa","Afrika","Afrika","S\u00f8r/Nord-Amerika","Oseania","Europa","Asia","Asia","Europa","Afrika","S\u00f8r/Nord-Amerika","Europa","Afrika","S\u00f8r/Nord-Amerika","Europa","Afrika","Afrika","Asia","Afrika","S\u00f8r/Nord-Amerika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Asia","S\u00f8r/Nord-Amerika","Afrika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Afrika","Europa","S\u00f8r/Nord-Amerika","Europa","Europa","Afrika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Afrika","S\u00f8r/Nord-Amerika","Afrika","Afrika","Afrika","Europa","Europa","Afrika","Afrika","Europa","Afrika","Europa","S\u00f8r/Nord-Amerika","Afrika","Afrika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Europa","Europa","Asia","Asia","Asia","Asia","Europa","Asia","Europa","S\u00f8r/Nord-Amerika","Asia","Asia","Afrika","Asia","Asia","Asia","Asia","Afrika","Afrika","Afrika","Afrika","Afrika","Asia","Afrika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Asia","Europa","Afrika","Afrika","Asia","Afrika","Asia","Europa","Oseania","S\u00f8r/Nord-Amerika","Afrika","Afrika","Europa","Asia","Asia","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Europa","Europa","S\u00f8r/Nord-Amerika","Afrika","Europa","Afrika","Afrika","Asia","Afrika","Europa","Afrika","Asia","Europa","Europa","Afrika","Afrika","Europa","Asia","Afrika","Afrika","Europa","Europa","Asia","Asia","Afrika","Asia","Afrika","S\u00f8r/Nord-Amerika","Afrika","Europa","Afrika","Europa","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Asia","Asia","Afrika","Afrika"],"country":["Afghanistan","Albania","Algeria","Angola","Argentina","Australia","Austria","Bahrain","Bangladesh","Belgium","Benin","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo, Dem. Rep.","Congo, Rep.","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Czech Republic","Denmark","Djibouti","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Ethiopia","Finland","France","Gabon","Gambia","Germany","Ghana","Greece","Guatemala","Guinea","Guinea-Bissau","Haiti","Honduras","Hong Kong, China","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kenya","Korea, Dem. Rep.","Korea, Rep.","Kuwait","Lebanon","Lesotho","Liberia","Libya","Madagascar","Malawi","Malaysia","Mali","Mauritania","Mauritius","Mexico","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Panama","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Reunion","Romania","Rwanda","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Sierra Leone","Singapore","Slovak Republic","Slovenia","Somalia","South Africa","Spain","Sri Lanka","Sudan","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tanzania","Thailand","Togo","Trinidad and Tobago","Tunisia","Turkey","Uganda","United Kingdom","United States","Uruguay","Venezuela","Vietnam","West Bank and Gaza","Yemen, Rep.","Zambia","Zimbabwe"],"gdp_cap":{"__ndarray__":"54R1iKR0jkBiFASPBzG3QG2tLxJeT7hApWlQNDu9skAgJAuYsPXIQOiHEcJr0OBAWMoyxM+j4UDGpwAYAxndQPLPDOIDvZVAb7vQXJNz4EAOar+1I4WWQJzB3y9G3K1A8nhafkwWvUDboswG7YzIQGkAb4HmtMFAzzEge2XcxEDb2y3JIQSTQKHhg40h4XpAat/cXx3HmkAWNZiGYeifQAexM4Xnu+FAZJEm3iEQhkDiP91AQaCaQIY41sXRuclA0V0SZx1fs0D67laWlF67QBI+Stsu0Y5ANsjJadRYcUCMD7OXHWGsQKlNnNyH1sJAWTFcHQAjmEAVxhaCnI3MQIGzlCwNesFAH7qgvlNM1kCxbVFmzTnhQKon84/2RKBAHEC/71+Jt0Dk9ssnQ9m6QKSK4lUuzbVArrzkf1pgtkBoke18C73HQM0Iysj0CoRAkQfH0XGWhUD5oGez4jbgQHbgnBGBwd1AIVnABD7LyUCOc5tw/4WHQL5Nf/aXat9A1GAahm++lEB47j1cmuTaQLQh/8wMQrRAcXkH0zt1jUCe8BKc2hmCQBAiGXKMxpJABpylZKm4q0Byv0NRn2XjQEJ4tHE8ltFAC2MLQZmq4UCzX3e6ayijQIDuy5lNqatAqYdodNuqxkBtVRLZD3exQCxlGeJ/3ONAbqMBvNHs2EC8lpAPbubbQOm12VjhmLxAi1QYWwTq3kDdek0PdqexQO3Vx0P/3JZAK2owDUPkmEARGVbxCM3WQEgbR6xfGedAd4TTgoduxEAVGohlU4WYQHXmHhIe6HlAxjNo6L+Mx0Ay/+ibFFOQQFKgqp3MuodAXCBB8dNRyEAKn62DU0qQQOZ1xCGbLJxANSkF3X5mxUBBDkqYyWTHQEzBGmeLL6hAS+fDs/ISwkCOHr+3WditQL3HmSZ8vYlAAAAAAACAjUC7YkZ4D8uyQEjfpGlwDZFAlufB3b334UAEHEKVQJjYQFJEhlWkeqVASgeQRmpdg0DeVKTC6HefQFZl3xWmGehAmGn7VwzL1UCwrDQp5VukQHui68KXKMNA4KKTpdZMsECIf9jS5/C8QLWpukf27KhAogvqW/YOzkBVTRB1aQfUQKJ6a2At4NJA3Qn2Xx/2vUDT2cngPBzFQAOrjyy1+IpAZof4h735mEAPRYE+tSXVQA+dnnfjwZpAWyOCcUQdw0DmJO93U/SKQKJinL/lBOdAYHZPHpQ90kByxFp8ECrZQAW4augg8YxAhnMNM9QawkAwKqkTRCXcQJ6xL9kwBK9AK97IPMpUpEANbmsLe6GxQP+ye/J3iOBAGH0FaU1Q4kBMio9PjFiwQI4ev7eRC9xA4UIewe1NkUCGr691ZSK9QKof5XHCl4tAdF5jlyCW0UBkzF1L7LS7QJIIjWAjhcBAF35wPoWBkEDj32dcaDbgQOv/HOb0+ORAMJ5BQ7u5xEBblNkg50vGQJHSbB4nE6NAajS5GLOip0D9hR4xitGhQEDc1avY3JNA1+n2SFlbfUA=","dtype":"float64","order":"little","shape":[142]},"gdp_capNOK":["8 673","52 839","55 387","42 695","113 736","306 474","321 525","265 184","12 382","299 864","12 827","34 017","66 272","111 871","80 685","95 059","10 831","3 827","15 252","18 174","323 241","6 283","15 166","117 227","44 136","62 358","8 776","2 470","32 329","85 841","13 748","130 111","79 638","203 216","313 977","18 534","53 625","61 172","49 672","50 982","108 171","5 708","6 148","295 543","271 183","117 537","6 699","286 316","11 815","245 091","46 155","8 389","5 155","10 694","31 580","353 552","160 279","322 009","21 824","31 511","103 290","39 792","362 016","227 157","254 270","65 155","281 739","40 223","13 022","14 178","207 798","421 032","93 103","13 967","3 689","107 311","9 298","6 758","110 819","9 278","16 048","97 517","106 600","27 552","82 359","33 999","7 330","8 401","42 818","9 713","327 501","224 146","24 468","5 515","17 924","439 278","198 614","23 192","87 301","37 138","65 939","28 395","136 970","182 535","172 025","68 264","96 195","7 681","14 226","192 728","15 241","87 100","7 676","419 574","166 236","229 337","8 242","82 499","256 507","35 333","23 161","40 169","301 351","333 807","37 242","255 592","9 856","66 379","7 858","160 275","63 127","75 278","9 401","295 509","382 269","94 442","101 600","21 730","26 925","20 298","11 313","4 180"],"index":[11,23,35,47,59,71,83,95,107,119,131,143,155,167,179,191,203,215,227,239,251,263,275,287,299,311,323,335,347,359,371,383,395,407,419,431,443,455,467,479,491,503,515,527,539,551,563,575,587,599,611,623,635,647,659,671,683,695,707,719,731,743,755,767,779,791,803,815,827,839,851,863,875,887,899,911,923,935,947,959,971,983,995,1007,1019,1031,1043,1055,1067,1079,1091,1103,1115,1127,1139,1151,1163,1175,1187,1199,1211,1223,1235,1247,1259,1271,1283,1295,1307,1319,1331,1343,1355,1367,1379,1391,1403,1415,1427,1439,1451,1463,1475,1487,1499,1511,1523,1535,1547,1559,1571,1583,1595,1607,1619,1631,1643,1655,1667,1679,1691,1703],"life_exp":{"__ndarray__":"RIts5/vpRUBQjZduEhtTQCUGgZVDE1JAIbByaJFdRUAUrkfhetRSQNejcD0KT1RAkxgEVg71U0BxPQrXo+hSQIcW2c73A1BATmIQWDncU0B3vp8aL11MQPp+arx0Y1BASgwCK4e2UkB3vp8aL11JQClcj8L1GFJAuB6F61FAUkD2KFyPwiVKQArXo3A9ykhABoGVQ4vcTUDXo3A9CjdJQG8Sg8DKKVRAAiuHFtleRkAX2c73U1NJQAisHFpko1NAL90kBoE9UkA3iUFg5ThSQH0/NV66SVBAQmDl0CI7R0Dwp8ZLN6lLQDVeukkMslNARIts5/spSEAdWmQ73+9SQLbz/dR4kVNAyXa+nxofU0Boke18P5VTQGiR7Xw/ZUtA16NwPQoPUkBWDi2ynb9SQBKDwMqh1VFA1XjpJjH4UUAnMQisHMpJQIXrUbgeBU1A8KfGSzd5SkB56SYxCNRTQDVeukkMKlRArkfhehReTEDTTWIQWLlNQESLbOf72VNAiUFg5dACTkD0/dR46d5TQH9qvHSTkFFAN4lBYOUATECLbOf7qTFHQGiR7Xw/dU5A6SYxCKyMUUBaZDvfT41UQBKDwMqhVVJAnMQgsHJwVEDpJjEIrCxQQJqZmZmZqVFABFYOLbK9UUD2KFyPwsVNQHE9CtejuFNASOF6FK4vVEBt5/up8SJUQD81XrpJJFJAO99PjZemVEAK16NwPSJSQK5H4XoUDktAXrpJDALTUEAdWmQ736dTQBKDwMqhZVNAZDvfT43/UUCyne+nxktFQBBYObTI1kZAsHJoke18UkBiEFg5tLhNQBBYObTIJkhAgZVDi2yPUkCyne+nxjtLQNEi2/l+ClBAJQaBlUMzUkAUrkfhegxTQAisHFpks1BAmG4Sg8CiUkDRItv5fspRQNEi2/l+CkVARrbz/dQIT0CHFtnO93NKQBSuR+F65E9AVOOlm8TwU0CTGARWDg1UQKjGSzeJOVJA5dAi2/luTEDLoUW2821HQAaBlUOLDFRAKVyPwvXoUkD0/dR46V5QQO58PzVe4lJA46WbxCDwUUBt5/up8dpRQHnpJjEI7FFAeekmMQjkUkCDwMqhRYZTQDm0yHa+r1NAPzVeukkcU0BYObTIdh5SQOXQItv5HkdAbxKDwMphUEB9PzVeujFSQA4tsp3vh09A46WbxCCAUkBiEFg5tEhFQJHtfD81/lNA30+Nl26qUkAlBoGVQ3tTQDEIrBxaFEhACKwcWmSrSEBOYhBYOTxUQNNNYhBYGVJAukkMAitHTUBYObTIds5DQH9qvHSTOFRAvp8aL91sVED+1HjpJolSQJqZmZmZmVNAGQRWDi1CSkCBlUOLbKdRQPYoXI/CNU1AI9v5fmp0UUBQjZduEntSQH0/NV668VFATDeJQWDFSUAzMzMzM9tTQHNoke18j1NAf2q8dJMYU0ArhxbZzm9SQA4tsp3vj1JAXrpJDAJbUkDTTWIQWFlPQP7UeOkmMUVAdZMYBFa+RUA=","dtype":"float64","order":"little","shape":[142]},"life_exp_rnd":[43,76,72,42,75,81,79,75,64,79,56,65,74,50,72,73,52,49,59,50,80,44,50,78,72,72,65,46,55,78,48,75,78,76,78,54,72,74,71,71,51,58,52,79,80,56,59,79,60,79,70,56,46,60,70,82,73,81,64,70,70,59,78,80,80,72,82,72,54,67,78,77,71,42,45,73,59,48,74,54,64,72,76,66,74,71,42,62,52,63,79,80,72,56,46,80,75,65,75,71,71,71,75,78,78,76,72,46,65,72,63,74,42,79,74,77,48,49,80,72,58,39,80,81,74,78,52,70,58,69,73,71,51,79,78,76,73,74,73,62,42,43],"pop_mill_str":["31","3","33","12","40","20","8","0","150","10","8","9","4","1","190","7","14","8","14","17","33","4","10","16","1,318","44","0","64","3","4","18","4","11","10","5","0","9","13","80","6","0","4","76","5","61","1","1","82","22","10","12","9","1","8","7","6","9","0","1,110","223","69","27","4","6","58","2","127","6","35","23","49","2","3","2","3","6","19","13","24","12","3","1","108","2","0","33","19","47","2","28","16","4","5","12","135","4","3","169","3","6","28","91","38","10","3","0","22","8","0","27","12","10","6","4","5","2","9","43","40","20","42","1","9","7","19","23","38","65","5","1","10","71","29","60","301","3","26","85","4","22","11","12"],"population":[31889923,3600523,33333216,12420476,40301927,20434176,8199783,708573,150448339,10392226,8078314,9119152,4552198,1639131,190010647,7322858,14326203,8390505,14131858,17696293,33390141,4369038,10238807,16284741,1318683096,44227550,710960,64606759,3800610,4133884,18013409,4493312,11416987,10228744,5468120,496374,9319622,13755680,80264543,6939688,551201,4906585,76511887,5238460,61083916,1454867,1688359,82400996,22873338,10706290,12572928,9947814,1472041,8502814,7483763,6980412,9956108,301931,1110396331,223547000,69453570,27499638,4109086,6426679,58147733,2780132,127467972,6053193,35610177,23301725,49044790,2505559,3921278,2012649,3193942,6036914,19167654,13327079,24821286,12031795,3270065,1250882,108700891,2874127,684736,33757175,19951656,47761980,2055080,28901790,16570613,4115771,5675356,12894865,135031164,4627926,3204897,169270617,3242173,6667147,28674757,91077287,38518241,10642836,3942491,798094,22276056,8860588,199579,27601038,12267493,10150265,6144562,4553009,5447502,2009245,9118773,43997828,40448191,20378239,42292929,1133066,9031088,7554661,19314747,23174294,38139640,65068149,5701579,1056608,10276158,71158647,29170398,60776238,301139947,3447496,26084662,85262356,4018332,22211743,11746035,12311143],"size":{"__ndarray__":"7ZGWY9/SMkCrmCCo0EwZQNtQMrC2PjNALFnB3sB+J0Bkoou+SCk1QPJ81J7YIi5Az5CRvRUXI0Dmgv7Sd3IGQO7bzLhhcURA9ERG9cZ9JUDLKfKCwPIiQJJjAdvHISRAYKNSsaVyHEBFt7KNChIRQPaBxOFb+UZAwyLbgV8KIkBd5K12ujspQLsLlvKXTyNACX45bcMPKUCFD16ebQssQHaoPyzrQjNAzc4H8aHeG0CnN4rjA1UlQLcJnr4k5ypAP2lg6upCXkBEqWGc/So2QHfdxpwjfAZAQjs1aPPKOkCBSOZ7WP4ZQKHGjFn5GxtAhWL0THhLLECO9n8HZEMcQDTnQliphiZAVG1jtlRSJUCPn3Udvi0fQAf9FKelyQJAbmzOHR9aJEBwWVfey7koQPEANOwN3T1A6BTPy+uPIUCD8CjuUMwDQKZWrIrPiB1A4V76wTIoPUAaU7oxVIQeQEDVxD1UDTpAT82RAhcVEEA+Z1GwLVMRQGBAjwIiQj5AKfm9QlHiL0DxhAkLS9AlQCX30dmNoydAmkUTatoGJUD73F2XUS0QQKn42LWRcCNAokeeStY8IkA58ULrF50hQFGP4sAYCSVAq3use0RO/T/BhGjN0sRbQCAbUjhN60hATSQODZTHO0AONZBn43oxQA8y85IgBxtAvxzQhY3mIEAPyPp7EGs5QHzK8JFMOxZAnZDvyyPRQkCSakDa82YgQIGxUiw05DNA+/ks4TIXMECeoH0REFg3QC+3h2zzGhVA0UbqIChnGkDqTx1JbOoSQNLLnYMs1BdAOV+MdU1hIEA408bO7y8tQCUVLl1nVihAQmL8mGObMEAs5C3S5B8nQCYsN7RwHBhA3ie+OiPTDUCaBo4pamBBQOH2ZKC1mhZADKbjrvsQBkDatoUT8l0zQF7E6Bc3xy1ALDdN62MJN0BCwfB9Mx0TQJC6CYiN6zFAvysmv1QjK0AMKovVwAwbQJTqQQCWwx9AptR0iIrwJ0A3Nhyo/V1DQIDKSfn4rhxAyL1LY6DeF0CKKbQUG69FQDRF41oPAhhA6gMczcA2IUDk/HO8f9kxQMvZpLy8zz9A0OaJWgywNEDsyuBVuL8lQM6FoSZqeRpA1fyloK3SB0CiUkj6CncvQK9zJLUw2CNAKVs8wYbT9z+DZ46BIYMxQMLfCcaYWSdAEra68Vk9JUCzvUAqhoYgQNIgHMJLcxxAaA4rNq4eH0D9l2uFU+YSQKMzK3CsISRAxf9JtzscNkDU/mkAGzM1QMtuoo9HGC5Axt3o3XutNUDa8eI3r2IMQHdwvM7VCCRAZvvxdeZSIkAg96dGjUwtQB5qlH7rCzBAATA3yfSVNEBlDAIdZuM6QP7hRq1Z1h9A75DVmjppC0BffFeL914lQKa5w95XHjxAsAWjTdIAMkBDGEThgvw5QBEb01Ic7ExACAZ+IK/BGEDpOMPjPQYxQDrKZwh6xz5AL0Z5xkq6GkBg/JoaaGsvQNgkLOQr2SZALJuN1jhkJ0A=","dtype":"float64","order":"little","shape":[142]},"year":[2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007]},"selected":{"id":"1039"},"selection_policy":{"id":"1038"}},"id":"1024","type":"ColumnDataSource"},{"attributes":{"num_minor_ticks":10},"id":"1014","type":"LogTicker"},{"attributes":{},"id":"1005","type":"DataRange1d"},{"attributes":{"label":{"field":"continent_no"},"renderers":[{"id":"1029"}]},"id":"1041","type":"LegendItem"},{"attributes":{},"id":"1038","type":"UnionRenderers"},{"attributes":{"tools":[{"id":"1021"}]},"id":"1022","type":"Toolbar"},{"attributes":{},"id":"1033","type":"BasicTickFormatter"},{"attributes":{},"id":"1039","type":"Selection"},{"attributes":{"callback":null,"tooltips":[["Land","@country"],["BNP/innbygger","@gdp_capNOK"],["Forventet alder","@life_exp_rnd"],["Befolkning","@pop_mill_str"]]},"id":"1021","type":"HoverTool"},{"attributes":{"axis":{"id":"1013"},"coordinates":null,"grid_line_alpha":0,"group":null,"ticker":null},"id":"1016","type":"Grid"},{"attributes":{},"id":"1037","type":"AllLabels"},{"attributes":{"fill_alpha":{"value":0.8},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.8},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.8},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1026","type":"Scatter"},{"attributes":{},"id":"1009","type":"LogScale"},{"attributes":{"border_line_alpha":0,"coordinates":null,"group":null,"items":[{"id":"1041"}],"location":"top_left"},"id":"1040","type":"Legend"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.1},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.1},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1027","type":"Scatter"},{"attributes":{},"id":"1007","type":"DataRange1d"},{"attributes":{"axis_label":"BNP per innbygger (NOK)","coordinates":null,"formatter":{"id":"1036"},"group":null,"major_label_overrides":{"1000":"1k","10000":"10k","100000":"100k"},"major_label_policy":{"id":"1037"},"ticker":{"id":"1014"}},"id":"1013","type":"LogAxis"}],"root_ids":["1002"]},"title":"Bokeh Application","version":"2.4.2"}};
-  const render_items = [{"docid":"6a3d7974-c492-405f-ae17-a81b0633bba2","root_ids":["1002"],"roots":{"1002":"476afbbb-7149-4e66-ac82-04cfd3c0be03"}}];
+  const docs_json = {"5dabbe55-272f-4d20-a188-dfb1b453d704":{"defs":[],"roots":{"references":[{"attributes":{"below":[{"id":"1013"}],"center":[{"id":"1016"},{"id":"1020"},{"id":"1040"}],"height":580,"left":[{"id":"1017"}],"outline_line_alpha":0,"renderers":[{"id":"1029"}],"title":{"id":"1003"},"toolbar":{"id":"1022"},"width":980,"x_range":{"id":"1005"},"x_scale":{"id":"1009"},"y_range":{"id":"1007"},"y_scale":{"id":"1011"}},"id":"1002","subtype":"Figure","type":"Plot"},{"attributes":{"axis_label":"Forventet antall leve\u00e5r","coordinates":null,"formatter":{"id":"1033"},"group":null,"major_label_policy":{"id":"1034"},"ticker":{"id":"1018"}},"id":"1017","type":"LinearAxis"},{"attributes":{"num_minor_ticks":10},"id":"1014","type":"LogTicker"},{"attributes":{"axis":{"id":"1013"},"coordinates":null,"grid_line_alpha":0,"group":null,"ticker":null},"id":"1016","type":"Grid"},{"attributes":{},"id":"1018","type":"BasicTicker"},{"attributes":{"data":{"colors":["#2792E1","#BC27E1","#E14827","#E14827","#84E127","#E04A6C","#BC27E1","#2792E1","#2792E1","#BC27E1","#E14827","#84E127","#BC27E1","#E14827","#84E127","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#84E127","#E14827","#E14827","#84E127","#2792E1","#84E127","#E14827","#E14827","#E14827","#84E127","#E14827","#BC27E1","#84E127","#BC27E1","#BC27E1","#E14827","#84E127","#84E127","#E14827","#84E127","#E14827","#E14827","#E14827","#BC27E1","#BC27E1","#E14827","#E14827","#BC27E1","#E14827","#BC27E1","#84E127","#E14827","#E14827","#84E127","#84E127","#2792E1","#BC27E1","#BC27E1","#2792E1","#2792E1","#2792E1","#2792E1","#BC27E1","#2792E1","#BC27E1","#84E127","#2792E1","#2792E1","#E14827","#2792E1","#2792E1","#2792E1","#2792E1","#E14827","#E14827","#E14827","#E14827","#E14827","#2792E1","#E14827","#E14827","#E14827","#84E127","#2792E1","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#2792E1","#BC27E1","#E04A6C","#84E127","#E14827","#E14827","#BC27E1","#2792E1","#2792E1","#84E127","#84E127","#84E127","#2792E1","#BC27E1","#BC27E1","#84E127","#E14827","#BC27E1","#E14827","#E14827","#2792E1","#E14827","#BC27E1","#E14827","#2792E1","#BC27E1","#BC27E1","#E14827","#E14827","#BC27E1","#2792E1","#E14827","#E14827","#BC27E1","#BC27E1","#2792E1","#2792E1","#E14827","#2792E1","#E14827","#84E127","#E14827","#BC27E1","#E14827","#BC27E1","#84E127","#84E127","#84E127","#2792E1","#2792E1","#2792E1","#E14827","#E14827"],"continent":["Asia","Europe","Africa","Africa","Americas","Oceania","Europe","Asia","Asia","Europe","Africa","Americas","Europe","Africa","Americas","Europe","Africa","Africa","Asia","Africa","Americas","Africa","Africa","Americas","Asia","Americas","Africa","Africa","Africa","Americas","Africa","Europe","Americas","Europe","Europe","Africa","Americas","Americas","Africa","Americas","Africa","Africa","Africa","Europe","Europe","Africa","Africa","Europe","Africa","Europe","Americas","Africa","Africa","Americas","Americas","Asia","Europe","Europe","Asia","Asia","Asia","Asia","Europe","Asia","Europe","Americas","Asia","Asia","Africa","Asia","Asia","Asia","Asia","Africa","Africa","Africa","Africa","Africa","Asia","Africa","Africa","Africa","Americas","Asia","Europe","Africa","Africa","Asia","Africa","Asia","Europe","Oceania","Americas","Africa","Africa","Europe","Asia","Asia","Americas","Americas","Americas","Asia","Europe","Europe","Americas","Africa","Europe","Africa","Africa","Asia","Africa","Europe","Africa","Asia","Europe","Europe","Africa","Africa","Europe","Asia","Africa","Africa","Europe","Europe","Asia","Asia","Africa","Asia","Africa","Americas","Africa","Europe","Africa","Europe","Americas","Americas","Americas","Asia","Asia","Asia","Africa","Africa"],"continent_no":["Asia","Europa","Afrika","Afrika","S\u00f8r/Nord-Amerika","Oseania","Europa","Asia","Asia","Europa","Afrika","S\u00f8r/Nord-Amerika","Europa","Afrika","S\u00f8r/Nord-Amerika","Europa","Afrika","Afrika","Asia","Afrika","S\u00f8r/Nord-Amerika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Asia","S\u00f8r/Nord-Amerika","Afrika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Afrika","Europa","S\u00f8r/Nord-Amerika","Europa","Europa","Afrika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Afrika","S\u00f8r/Nord-Amerika","Afrika","Afrika","Afrika","Europa","Europa","Afrika","Afrika","Europa","Afrika","Europa","S\u00f8r/Nord-Amerika","Afrika","Afrika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Europa","Europa","Asia","Asia","Asia","Asia","Europa","Asia","Europa","S\u00f8r/Nord-Amerika","Asia","Asia","Afrika","Asia","Asia","Asia","Asia","Afrika","Afrika","Afrika","Afrika","Afrika","Asia","Afrika","Afrika","Afrika","S\u00f8r/Nord-Amerika","Asia","Europa","Afrika","Afrika","Asia","Afrika","Asia","Europa","Oseania","S\u00f8r/Nord-Amerika","Afrika","Afrika","Europa","Asia","Asia","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Europa","Europa","S\u00f8r/Nord-Amerika","Afrika","Europa","Afrika","Afrika","Asia","Afrika","Europa","Afrika","Asia","Europa","Europa","Afrika","Afrika","Europa","Asia","Afrika","Afrika","Europa","Europa","Asia","Asia","Afrika","Asia","Afrika","S\u00f8r/Nord-Amerika","Afrika","Europa","Afrika","Europa","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","S\u00f8r/Nord-Amerika","Asia","Asia","Asia","Afrika","Afrika"],"country":["Afghanistan","Albania","Algeria","Angola","Argentina","Australia","Austria","Bahrain","Bangladesh","Belgium","Benin","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo, Dem. Rep.","Congo, Rep.","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Czech Republic","Denmark","Djibouti","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Ethiopia","Finland","France","Gabon","Gambia","Germany","Ghana","Greece","Guatemala","Guinea","Guinea-Bissau","Haiti","Honduras","Hong Kong, China","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kenya","Korea, Dem. Rep.","Korea, Rep.","Kuwait","Lebanon","Lesotho","Liberia","Libya","Madagascar","Malawi","Malaysia","Mali","Mauritania","Mauritius","Mexico","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Panama","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Reunion","Romania","Rwanda","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Sierra Leone","Singapore","Slovak Republic","Slovenia","Somalia","South Africa","Spain","Sri Lanka","Sudan","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tanzania","Thailand","Togo","Trinidad and Tobago","Tunisia","Turkey","Uganda","United Kingdom","United States","Uruguay","Venezuela","Vietnam","West Bank and Gaza","Yemen, Rep.","Zambia","Zimbabwe"],"gdp_cap":{"__ndarray__":"54R1iKR0jkBiFASPBzG3QG2tLxJeT7hApWlQNDu9skAgJAuYsPXIQOiHEcJr0OBAWMoyxM+j4UDGpwAYAxndQPLPDOIDvZVAb7vQXJNz4EAOar+1I4WWQJzB3y9G3K1A8nhafkwWvUDboswG7YzIQGkAb4HmtMFAzzEge2XcxEDb2y3JIQSTQKHhg40h4XpAat/cXx3HmkAWNZiGYeifQAexM4Xnu+FAZJEm3iEQhkDiP91AQaCaQIY41sXRuclA0V0SZx1fs0D67laWlF67QBI+Stsu0Y5ANsjJadRYcUCMD7OXHWGsQKlNnNyH1sJAWTFcHQAjmEAVxhaCnI3MQIGzlCwNesFAH7qgvlNM1kCxbVFmzTnhQKon84/2RKBAHEC/71+Jt0Dk9ssnQ9m6QKSK4lUuzbVArrzkf1pgtkBoke18C73HQM0Iysj0CoRAkQfH0XGWhUD5oGez4jbgQHbgnBGBwd1AIVnABD7LyUCOc5tw/4WHQL5Nf/aXat9A1GAahm++lEB47j1cmuTaQLQh/8wMQrRAcXkH0zt1jUCe8BKc2hmCQBAiGXKMxpJABpylZKm4q0Byv0NRn2XjQEJ4tHE8ltFAC2MLQZmq4UCzX3e6ayijQIDuy5lNqatAqYdodNuqxkBtVRLZD3exQCxlGeJ/3ONAbqMBvNHs2EC8lpAPbubbQOm12VjhmLxAi1QYWwTq3kDdek0PdqexQO3Vx0P/3JZAK2owDUPkmEARGVbxCM3WQEgbR6xfGedAd4TTgoduxEAVGohlU4WYQHXmHhIe6HlAxjNo6L+Mx0Ay/+ibFFOQQFKgqp3MuodAXCBB8dNRyEAKn62DU0qQQOZ1xCGbLJxANSkF3X5mxUBBDkqYyWTHQEzBGmeLL6hAS+fDs/ISwkCOHr+3WditQL3HmSZ8vYlAAAAAAACAjUC7YkZ4D8uyQEjfpGlwDZFAlufB3b334UAEHEKVQJjYQFJEhlWkeqVASgeQRmpdg0DeVKTC6HefQFZl3xWmGehAmGn7VwzL1UCwrDQp5VukQHui68KXKMNA4KKTpdZMsECIf9jS5/C8QLWpukf27KhAogvqW/YOzkBVTRB1aQfUQKJ6a2At4NJA3Qn2Xx/2vUDT2cngPBzFQAOrjyy1+IpAZof4h735mEAPRYE+tSXVQA+dnnfjwZpAWyOCcUQdw0DmJO93U/SKQKJinL/lBOdAYHZPHpQ90kByxFp8ECrZQAW4augg8YxAhnMNM9QawkAwKqkTRCXcQJ6xL9kwBK9AK97IPMpUpEANbmsLe6GxQP+ye/J3iOBAGH0FaU1Q4kBMio9PjFiwQI4ev7eRC9xA4UIewe1NkUCGr691ZSK9QKof5XHCl4tAdF5jlyCW0UBkzF1L7LS7QJIIjWAjhcBAF35wPoWBkEDj32dcaDbgQOv/HOb0+ORAMJ5BQ7u5xEBblNkg50vGQJHSbB4nE6NAajS5GLOip0D9hR4xitGhQEDc1avY3JNA1+n2SFlbfUA=","dtype":"float64","order":"little","shape":[142]},"gdp_capNOK":["8 673","52 839","55 387","42 695","113 736","306 474","321 525","265 184","12 382","299 864","12 827","34 017","66 272","111 871","80 685","95 059","10 831","3 827","15 252","18 174","323 241","6 283","15 166","117 227","44 136","62 358","8 776","2 470","32 329","85 841","13 748","130 111","79 638","203 216","313 977","18 534","53 625","61 172","49 672","50 982","108 171","5 708","6 148","295 543","271 183","117 537","6 699","286 316","11 815","245 091","46 155","8 389","5 155","10 694","31 580","353 552","160 279","322 009","21 824","31 511","103 290","39 792","362 016","227 157","254 270","65 155","281 739","40 223","13 022","14 178","207 798","421 032","93 103","13 967","3 689","107 311","9 298","6 758","110 819","9 278","16 048","97 517","106 600","27 552","82 359","33 999","7 330","8 401","42 818","9 713","327 501","224 146","24 468","5 515","17 924","439 278","198 614","23 192","87 301","37 138","65 939","28 395","136 970","182 535","172 025","68 264","96 195","7 681","14 226","192 728","15 241","87 100","7 676","419 574","166 236","229 337","8 242","82 499","256 507","35 333","23 161","40 169","301 351","333 807","37 242","255 592","9 856","66 379","7 858","160 275","63 127","75 278","9 401","295 509","382 269","94 442","101 600","21 730","26 925","20 298","11 313","4 180"],"index":[11,23,35,47,59,71,83,95,107,119,131,143,155,167,179,191,203,215,227,239,251,263,275,287,299,311,323,335,347,359,371,383,395,407,419,431,443,455,467,479,491,503,515,527,539,551,563,575,587,599,611,623,635,647,659,671,683,695,707,719,731,743,755,767,779,791,803,815,827,839,851,863,875,887,899,911,923,935,947,959,971,983,995,1007,1019,1031,1043,1055,1067,1079,1091,1103,1115,1127,1139,1151,1163,1175,1187,1199,1211,1223,1235,1247,1259,1271,1283,1295,1307,1319,1331,1343,1355,1367,1379,1391,1403,1415,1427,1439,1451,1463,1475,1487,1499,1511,1523,1535,1547,1559,1571,1583,1595,1607,1619,1631,1643,1655,1667,1679,1691,1703],"life_exp":{"__ndarray__":"RIts5/vpRUBQjZduEhtTQCUGgZVDE1JAIbByaJFdRUAUrkfhetRSQNejcD0KT1RAkxgEVg71U0BxPQrXo+hSQIcW2c73A1BATmIQWDncU0B3vp8aL11MQPp+arx0Y1BASgwCK4e2UkB3vp8aL11JQClcj8L1GFJAuB6F61FAUkD2KFyPwiVKQArXo3A9ykhABoGVQ4vcTUDXo3A9CjdJQG8Sg8DKKVRAAiuHFtleRkAX2c73U1NJQAisHFpko1NAL90kBoE9UkA3iUFg5ThSQH0/NV66SVBAQmDl0CI7R0Dwp8ZLN6lLQDVeukkMslNARIts5/spSEAdWmQ73+9SQLbz/dR4kVNAyXa+nxofU0Boke18P5VTQGiR7Xw/ZUtA16NwPQoPUkBWDi2ynb9SQBKDwMqh1VFA1XjpJjH4UUAnMQisHMpJQIXrUbgeBU1A8KfGSzd5SkB56SYxCNRTQDVeukkMKlRArkfhehReTEDTTWIQWLlNQESLbOf72VNAiUFg5dACTkD0/dR46d5TQH9qvHSTkFFAN4lBYOUATECLbOf7qTFHQGiR7Xw/dU5A6SYxCKyMUUBaZDvfT41UQBKDwMqhVVJAnMQgsHJwVEDpJjEIrCxQQJqZmZmZqVFABFYOLbK9UUD2KFyPwsVNQHE9CtejuFNASOF6FK4vVEBt5/up8SJUQD81XrpJJFJAO99PjZemVEAK16NwPSJSQK5H4XoUDktAXrpJDALTUEAdWmQ736dTQBKDwMqhZVNAZDvfT43/UUCyne+nxktFQBBYObTI1kZAsHJoke18UkBiEFg5tLhNQBBYObTIJkhAgZVDi2yPUkCyne+nxjtLQNEi2/l+ClBAJQaBlUMzUkAUrkfhegxTQAisHFpks1BAmG4Sg8CiUkDRItv5fspRQNEi2/l+CkVARrbz/dQIT0CHFtnO93NKQBSuR+F65E9AVOOlm8TwU0CTGARWDg1UQKjGSzeJOVJA5dAi2/luTEDLoUW2821HQAaBlUOLDFRAKVyPwvXoUkD0/dR46V5QQO58PzVe4lJA46WbxCDwUUBt5/up8dpRQHnpJjEI7FFAeekmMQjkUkCDwMqhRYZTQDm0yHa+r1NAPzVeukkcU0BYObTIdh5SQOXQItv5HkdAbxKDwMphUEB9PzVeujFSQA4tsp3vh09A46WbxCCAUkBiEFg5tEhFQJHtfD81/lNA30+Nl26qUkAlBoGVQ3tTQDEIrBxaFEhACKwcWmSrSEBOYhBYOTxUQNNNYhBYGVJAukkMAitHTUBYObTIds5DQH9qvHSTOFRAvp8aL91sVED+1HjpJolSQJqZmZmZmVNAGQRWDi1CSkCBlUOLbKdRQPYoXI/CNU1AI9v5fmp0UUBQjZduEntSQH0/NV668VFATDeJQWDFSUAzMzMzM9tTQHNoke18j1NAf2q8dJMYU0ArhxbZzm9SQA4tsp3vj1JAXrpJDAJbUkDTTWIQWFlPQP7UeOkmMUVAdZMYBFa+RUA=","dtype":"float64","order":"little","shape":[142]},"life_exp_rnd":[43,76,72,42,75,81,79,75,64,79,56,65,74,50,72,73,52,49,59,50,80,44,50,78,72,72,65,46,55,78,48,75,78,76,78,54,72,74,71,71,51,58,52,79,80,56,59,79,60,79,70,56,46,60,70,82,73,81,64,70,70,59,78,80,80,72,82,72,54,67,78,77,71,42,45,73,59,48,74,54,64,72,76,66,74,71,42,62,52,63,79,80,72,56,46,80,75,65,75,71,71,71,75,78,78,76,72,46,65,72,63,74,42,79,74,77,48,49,80,72,58,39,80,81,74,78,52,70,58,69,73,71,51,79,78,76,73,74,73,62,42,43],"pop_mill_str":["31","3","33","12","40","20","8","0","150","10","8","9","4","1","190","7","14","8","14","17","33","4","10","16","1,318","44","0","64","3","4","18","4","11","10","5","0","9","13","80","6","0","4","76","5","61","1","1","82","22","10","12","9","1","8","7","6","9","0","1,110","223","69","27","4","6","58","2","127","6","35","23","49","2","3","2","3","6","19","13","24","12","3","1","108","2","0","33","19","47","2","28","16","4","5","12","135","4","3","169","3","6","28","91","38","10","3","0","22","8","0","27","12","10","6","4","5","2","9","43","40","20","42","1","9","7","19","23","38","65","5","1","10","71","29","60","301","3","26","85","4","22","11","12"],"population":[31889923,3600523,33333216,12420476,40301927,20434176,8199783,708573,150448339,10392226,8078314,9119152,4552198,1639131,190010647,7322858,14326203,8390505,14131858,17696293,33390141,4369038,10238807,16284741,1318683096,44227550,710960,64606759,3800610,4133884,18013409,4493312,11416987,10228744,5468120,496374,9319622,13755680,80264543,6939688,551201,4906585,76511887,5238460,61083916,1454867,1688359,82400996,22873338,10706290,12572928,9947814,1472041,8502814,7483763,6980412,9956108,301931,1110396331,223547000,69453570,27499638,4109086,6426679,58147733,2780132,127467972,6053193,35610177,23301725,49044790,2505559,3921278,2012649,3193942,6036914,19167654,13327079,24821286,12031795,3270065,1250882,108700891,2874127,684736,33757175,19951656,47761980,2055080,28901790,16570613,4115771,5675356,12894865,135031164,4627926,3204897,169270617,3242173,6667147,28674757,91077287,38518241,10642836,3942491,798094,22276056,8860588,199579,27601038,12267493,10150265,6144562,4553009,5447502,2009245,9118773,43997828,40448191,20378239,42292929,1133066,9031088,7554661,19314747,23174294,38139640,65068149,5701579,1056608,10276158,71158647,29170398,60776238,301139947,3447496,26084662,85262356,4018332,22211743,11746035,12311143],"size":{"__ndarray__":"7ZGWY9/SMkCrmCCo0EwZQNtQMrC2PjNALFnB3sB+J0Bkoou+SCk1QPJ81J7YIi5Az5CRvRUXI0Dmgv7Sd3IGQO7bzLhhcURA9ERG9cZ9JUDLKfKCwPIiQJJjAdvHISRAYKNSsaVyHEBFt7KNChIRQPaBxOFb+UZAwyLbgV8KIkBd5K12ujspQLsLlvKXTyNACX45bcMPKUCFD16ebQssQHaoPyzrQjNAzc4H8aHeG0CnN4rjA1UlQLcJnr4k5ypAP2lg6upCXkBEqWGc/So2QHfdxpwjfAZAQjs1aPPKOkCBSOZ7WP4ZQKHGjFn5GxtAhWL0THhLLECO9n8HZEMcQDTnQliphiZAVG1jtlRSJUCPn3Udvi0fQAf9FKelyQJAbmzOHR9aJEBwWVfey7koQPEANOwN3T1A6BTPy+uPIUCD8CjuUMwDQKZWrIrPiB1A4V76wTIoPUAaU7oxVIQeQEDVxD1UDTpAT82RAhcVEEA+Z1GwLVMRQGBAjwIiQj5AKfm9QlHiL0DxhAkLS9AlQCX30dmNoydAmkUTatoGJUD73F2XUS0QQKn42LWRcCNAokeeStY8IkA58ULrF50hQFGP4sAYCSVAq3use0RO/T/BhGjN0sRbQCAbUjhN60hATSQODZTHO0AONZBn43oxQA8y85IgBxtAvxzQhY3mIEAPyPp7EGs5QHzK8JFMOxZAnZDvyyPRQkCSakDa82YgQIGxUiw05DNA+/ks4TIXMECeoH0REFg3QC+3h2zzGhVA0UbqIChnGkDqTx1JbOoSQNLLnYMs1BdAOV+MdU1hIEA408bO7y8tQCUVLl1nVihAQmL8mGObMEAs5C3S5B8nQCYsN7RwHBhA3ie+OiPTDUCaBo4pamBBQOH2ZKC1mhZADKbjrvsQBkDatoUT8l0zQF7E6Bc3xy1ALDdN62MJN0BCwfB9Mx0TQJC6CYiN6zFAvysmv1QjK0AMKovVwAwbQJTqQQCWwx9AptR0iIrwJ0A3Nhyo/V1DQIDKSfn4rhxAyL1LY6DeF0CKKbQUG69FQDRF41oPAhhA6gMczcA2IUDk/HO8f9kxQMvZpLy8zz9A0OaJWgywNEDsyuBVuL8lQM6FoSZqeRpA1fyloK3SB0CiUkj6CncvQK9zJLUw2CNAKVs8wYbT9z+DZ46BIYMxQMLfCcaYWSdAEra68Vk9JUCzvUAqhoYgQNIgHMJLcxxAaA4rNq4eH0D9l2uFU+YSQKMzK3CsISRAxf9JtzscNkDU/mkAGzM1QMtuoo9HGC5Axt3o3XutNUDa8eI3r2IMQHdwvM7VCCRAZvvxdeZSIkAg96dGjUwtQB5qlH7rCzBAATA3yfSVNEBlDAIdZuM6QP7hRq1Z1h9A75DVmjppC0BffFeL914lQKa5w95XHjxAsAWjTdIAMkBDGEThgvw5QBEb01Ic7ExACAZ+IK/BGEDpOMPjPQYxQDrKZwh6xz5AL0Z5xkq6GkBg/JoaaGsvQNgkLOQr2SZALJuN1jhkJ0A=","dtype":"float64","order":"little","shape":[142]},"year":[2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007,2007]},"selected":{"id":"1039"},"selection_policy":{"id":"1038"}},"id":"1024","type":"ColumnDataSource"},{"attributes":{"coordinates":null,"data_source":{"id":"1024"},"glyph":{"id":"1026"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"1028"},"nonselection_glyph":{"id":"1027"},"view":{"id":"1030"}},"id":"1029","type":"GlyphRenderer"},{"attributes":{"axis_label":"BNP per innbygger (NOK)","coordinates":null,"formatter":{"id":"1036"},"group":null,"major_label_overrides":{"1000":"1k","10000":"10k","100000":"100k"},"major_label_policy":{"id":"1037"},"ticker":{"id":"1014"}},"id":"1013","type":"LogAxis"},{"attributes":{"ticker":null},"id":"1036","type":"LogTickFormatter"},{"attributes":{},"id":"1005","type":"DataRange1d"},{"attributes":{"tools":[{"id":"1021"}]},"id":"1022","type":"Toolbar"},{"attributes":{"coordinates":null,"group":null,"text":"Levealder og BNP per innbygger"},"id":"1003","type":"Title"},{"attributes":{"label":{"field":"continent_no"},"renderers":[{"id":"1029"}]},"id":"1041","type":"LegendItem"},{"attributes":{"callback":null,"tooltips":[["Land","@country"],["BNP/innbygger","@gdp_capNOK"],["Forventet alder","@life_exp_rnd"],["Befolkning","@pop_mill_str"]]},"id":"1021","type":"HoverTool"},{"attributes":{},"id":"1039","type":"Selection"},{"attributes":{"source":{"id":"1024"}},"id":"1030","type":"CDSView"},{"attributes":{},"id":"1038","type":"UnionRenderers"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.1},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.1},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1027","type":"Scatter"},{"attributes":{},"id":"1037","type":"AllLabels"},{"attributes":{},"id":"1034","type":"AllLabels"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.2},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.2},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1028","type":"Scatter"},{"attributes":{},"id":"1033","type":"BasicTickFormatter"},{"attributes":{},"id":"1009","type":"LogScale"},{"attributes":{},"id":"1007","type":"DataRange1d"},{"attributes":{"axis":{"id":"1017"},"coordinates":null,"dimension":1,"grid_line_alpha":0,"group":null,"ticker":null},"id":"1020","type":"Grid"},{"attributes":{},"id":"1011","type":"LinearScale"},{"attributes":{"fill_alpha":{"value":0.8},"fill_color":{"field":"colors"},"hatch_alpha":{"value":0.8},"hatch_color":{"field":"colors"},"line_alpha":{"value":0.8},"line_color":{"field":"colors"},"size":{"field":"size"},"x":{"field":"gdp_cap"},"y":{"field":"life_exp"}},"id":"1026","type":"Scatter"},{"attributes":{"border_line_alpha":0,"coordinates":null,"group":null,"items":[{"id":"1041"}],"location":"top_left"},"id":"1040","type":"Legend"}],"root_ids":["1002"]},"title":"Bokeh Application","version":"2.4.2"}};
+  const render_items = [{"docid":"5dabbe55-272f-4d20-a188-dfb1b453d704","root_ids":["1002"],"roots":{"1002":"9edf2680-588f-4989-8f79-b9d1f8990ee7"}}];
   root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
 
   }
@@ -15604,6 +15788,14 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Setningen <code>geodata=geodata.to_crs('epsg:4326')</code> sørger for at koordinatsystemet som tromsø kommune bruker, konverteres til det som brukes av <code>folium</code>, som er kartpakken vi skal benytte her.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Sammesl%C3%A5ing-av-dataene">Sammesl&#229;ing av dataene<a class="anchor-link" href="#Sammesl%C3%A5ing-av-dataene">&#182;</a></h2>
 </div>
 </div>
@@ -15648,10 +15840,10 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
 
 <span class="n">geodata_merged</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 
-<span class="n">geodata_merged</span><span class="o">=</span><span class="n">geodata_merged</span><span class="p">[[</span><span class="s1">&#39;Bydel&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">,</span> <span class="s1">&#39;Inntekt&#39;</span><span class="p">,</span> <span class="s1">&#39;Formue&#39;</span><span class="p">,</span> <span class="s1">&#39;Skatt&#39;</span><span class="p">,</span>
+<span class="n">geodata_merged</span><span class="o">=</span><span class="n">geodata_merged</span><span class="p">[[</span><span class="s1">&#39;Bydel&#39;</span><span class="p">,</span> <span class="s1">&#39;Inntekt&#39;</span><span class="p">,</span> <span class="s1">&#39;Formue&#39;</span><span class="p">,</span> <span class="s1">&#39;Skatt&#39;</span><span class="p">,</span>
        <span class="s1">&#39;Alder&#39;</span><span class="p">,</span> <span class="s1">&#39;Skattepliktige&#39;</span><span class="p">,</span> <span class="s1">&#39;Andel med høyere utdanning&#39;</span><span class="p">,</span> <span class="s1">&#39;Rødhet&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;ApSVR&#39;</span><span class="p">,</span> <span class="s1">&#39;HFrp&#39;</span><span class="p">,</span> <span class="s1">&#39;Mynter&#39;</span><span class="p">,</span> <span class="s1">&#39;Lat&#39;</span><span class="p">,</span> <span class="s1">&#39;Lon&#39;</span><span class="p">,</span><span class="s1">&#39;OBJTYPE&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;GEOMETRITY&#39;</span><span class="p">]]</span>
+       <span class="s1">&#39;ApSVR&#39;</span><span class="p">,</span> <span class="s1">&#39;HFrp&#39;</span><span class="p">,</span> <span class="s1">&#39;Mynter&#39;</span><span class="p">,</span> <span class="s1">&#39;Lat&#39;</span><span class="p">,</span> <span class="s1">&#39;Lon&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;GEOMETRITY&#39;</span><span class="p">,</span>  <span class="s1">&#39;geometry&#39;</span><span class="p">]]</span>
 <span class="n">geodata_merged</span>
 </pre></div>
 
@@ -15688,7 +15880,6 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
     <tr style="text-align: right;">
       <th></th>
       <th>Bydel</th>
-      <th>geometry</th>
       <th>Inntekt</th>
       <th>Formue</th>
       <th>Skatt</th>
@@ -15701,15 +15892,14 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <th>Mynter</th>
       <th>Lat</th>
       <th>Lon</th>
-      <th>OBJTYPE</th>
       <th>GEOMETRITY</th>
+      <th>geometry</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>Malangshalvøya</td>
-      <td>POLYGON ((18.47644 69.52988, 18.51169 69.53640...</td>
       <td>251 949</td>
       <td>479 646</td>
       <td>80 005</td>
@@ -15722,13 +15912,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>3</td>
       <td>69.513294</td>
       <td>18.749502</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((18.47644 69.52988, 18.51169 69.53640...</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Ringvassøy</td>
-      <td>POLYGON ((18.63313 69.90560, 18.66172 69.92736...</td>
       <td>256 291</td>
       <td>462 820</td>
       <td>84 786</td>
@@ -15741,13 +15930,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>3</td>
       <td>69.887738</td>
       <td>18.981047</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((18.63313 69.90560, 18.66172 69.92736...</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Sommarøy</td>
-      <td>POLYGON ((17.70497 69.69430, 17.95871 69.70466...</td>
       <td>262 471</td>
       <td>499 655</td>
       <td>79 266</td>
@@ -15760,13 +15948,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>4</td>
       <td>69.620089</td>
       <td>18.022543</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((17.70497 69.69430, 17.95871 69.70466...</td>
     </tr>
     <tr>
       <th>3</th>
       <td>Hamna</td>
-      <td>POLYGON ((19.03735 69.73702, 19.04254 69.72157...</td>
       <td>354 089</td>
       <td>394 295</td>
       <td>125 517</td>
@@ -15779,13 +15966,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>1</td>
       <td>69.708994</td>
       <td>18.981154</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((19.03735 69.73702, 19.04254 69.72157...</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Kattfjord</td>
-      <td>POLYGON ((18.16256 69.71271, 18.18350 69.71413...</td>
       <td>237 737</td>
       <td>473 271</td>
       <td>75 624</td>
@@ -15798,13 +15984,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>3</td>
       <td>69.622966</td>
       <td>18.307996</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((18.16256 69.71271, 18.18350 69.71413...</td>
     </tr>
     <tr>
       <th>5</th>
       <td>Kroken</td>
-      <td>POLYGON ((19.11535 69.77302, 19.23057 69.78766...</td>
       <td>277 682</td>
       <td>369 369</td>
       <td>92 059</td>
@@ -15817,13 +16002,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>1</td>
       <td>69.684100</td>
       <td>19.072100</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((19.11535 69.77302, 19.23057 69.78766...</td>
     </tr>
     <tr>
       <th>6</th>
       <td>Stakkevollan</td>
-      <td>POLYGON ((19.04254 69.72157, 19.04927 69.70125...</td>
       <td>278 337</td>
       <td>444 617</td>
       <td>93 479</td>
@@ -15836,13 +16020,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>2</td>
       <td>69.694375</td>
       <td>19.009411</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((19.04254 69.72157, 19.04927 69.70125...</td>
     </tr>
     <tr>
       <th>7</th>
       <td>Tromsdalen</td>
-      <td>POLYGON ((18.96265 69.64267, 18.96535 69.64391...</td>
       <td>319 239</td>
       <td>507 815</td>
       <td>108 823</td>
@@ -15855,13 +16038,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>4</td>
       <td>69.632760</td>
       <td>19.054253</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((18.96265 69.64267, 18.96535 69.64391...</td>
     </tr>
     <tr>
       <th>8</th>
       <td>Sentrum</td>
-      <td>POLYGON ((18.89095 69.67118, 18.90664 69.67316...</td>
       <td>336 127</td>
       <td>593 756</td>
       <td>117 468</td>
@@ -15874,13 +16056,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>6</td>
       <td>69.660230</td>
       <td>18.953578</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((18.89095 69.67118, 18.90664 69.67316...</td>
     </tr>
     <tr>
       <th>9</th>
       <td>Ramfjord</td>
-      <td>POLYGON ((19.00396 69.60616, 19.01408 69.60478...</td>
       <td>252 236</td>
       <td>459 362</td>
       <td>76 676</td>
@@ -15893,13 +16074,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>3</td>
       <td>69.561400</td>
       <td>19.182000</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((19.00396 69.60616, 19.01408 69.60478...</td>
     </tr>
     <tr>
       <th>10</th>
       <td>Bjerkaker</td>
-      <td>POLYGON ((18.87773 69.67139, 18.89095 69.67118...</td>
       <td>355 654</td>
       <td>677 004</td>
       <td>125 076</td>
@@ -15912,13 +16092,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>8</td>
       <td>69.642929</td>
       <td>18.905919</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((18.87773 69.67139, 18.89095 69.67118...</td>
     </tr>
     <tr>
       <th>11</th>
       <td>Mortensnes</td>
-      <td>POLYGON ((18.91094 69.69540, 18.92013 69.69317...</td>
       <td>320 395</td>
       <td>543 649</td>
       <td>109 871</td>
@@ -15931,13 +16110,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>5</td>
       <td>69.679948</td>
       <td>18.922906</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((18.91094 69.69540, 18.92013 69.69317...</td>
     </tr>
     <tr>
       <th>12</th>
       <td>Kvaløysletta</td>
-      <td>POLYGON ((18.67713 69.80725, 18.70790 69.81266...</td>
       <td>338 632</td>
       <td>504 744</td>
       <td>117 810</td>
@@ -15950,13 +16128,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>4</td>
       <td>69.688400</td>
       <td>18.856900</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((18.67713 69.80725, 18.70790 69.81266...</td>
     </tr>
     <tr>
       <th>13</th>
       <td>Kaldfjord</td>
-      <td>POLYGON ((17.61461 70.07425, 17.95152 70.00742...</td>
       <td>300 249</td>
       <td>469 818</td>
       <td>101 027</td>
@@ -15969,13 +16146,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>3</td>
       <td>69.675000</td>
       <td>18.756800</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((17.61461 70.07425, 17.95152 70.00742...</td>
     </tr>
     <tr>
       <th>14</th>
       <td>Lakselvbukt</td>
-      <td>POLYGON ((19.77584 69.63801, 19.77752 69.62877...</td>
       <td>240 095</td>
       <td>614 059</td>
       <td>69 575</td>
@@ -15988,13 +16164,12 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>6</td>
       <td>69.460350</td>
       <td>19.729821</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((19.77584 69.63801, 19.77752 69.62877...</td>
     </tr>
     <tr>
       <th>15</th>
       <td>Vengsøy/Skogvi</td>
-      <td>POLYGON ((17.61461 70.07425, 17.80525 70.16842...</td>
       <td>246 956</td>
       <td>752 275</td>
       <td>79 509</td>
@@ -16007,8 +16182,8 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
       <td>10</td>
       <td>69.835900</td>
       <td>18.577100</td>
-      <td>Valgkrets</td>
       <td>10</td>
+      <td>POLYGON ((17.61461 70.07425, 17.80525 70.16842...</td>
     </tr>
   </tbody>
 </table>
@@ -16050,10 +16225,30 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
 <span class="n">tromso</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;tromso.html&#39;</span><span class="p">)</span>
 
 <span class="c1">#Open the html in new tab</span>
-<span class="c1">#webbrowser.open(&#39;tromso.html&#39;)</span>
+<span class="n">webbrowser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;tromso.html&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -16445,7 +16640,7 @@ var element = $('#7b0a7a81-c048-4d01-9484-52118accb000');
 
 
 
- 
+
 
 
 </html>

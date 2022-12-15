@@ -13132,12 +13132,12 @@ div#notebook {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -13541,8 +13541,13 @@ git config --global user.name "&lt;brukernavn&gt;"</code></pre>
 <li>Gå til <strong>Repositories</strong>, trykk <strong>New</strong>, gi repositoriet et navn og velg <strong>Private</strong> eller <strong>Public</strong>. </li>
 <li>Hold denne fanen åpen, for du skal bruke html-adressen til denne siden.</li>
 <li>Sørg for at du har et token. Gå eventuelt til <a href="https://github.com/settings/tokens/new">https://github.com/settings/tokens/new</a> for å generere nytt token. <em>Hold fanen åpen for å ha tokenet tilgjengelig.</em></li>
-<li><p>kjør <code>git clone https://&lt;token&gt;@github.com/&lt;sti&gt;</code> der \&lt;token&gt; er tokenet er det du fikk i 6. og \&lt;sti&gt; er det som kommer etter <strong>github.com/</strong>  i html-adressen i 5.</p>
+<li><p>kjør <code>git clone https://&lt;token&gt;@github.com/&lt;sti&gt;</code> der \&lt;token&gt; er tokenet er det du fikk i 6. og \&lt;sti&gt; er det som kommer etter <strong>github.com/</strong>  i html-adressen i 5.
+ <br><br>For eksempel, om du tokenet ditt er ghp_gZEdaf9879 og</p>
 <p>Du kan nå redigere repositoriet ditt</p>
+</li>
+<li><p>Om du glemte å legge inn tokenet da du klonet, kan du legge det inn etterpå med denne kommandoen:</p>
+
+<pre><code>git remote set-url origin https://&lt;token&gt;@github.com/&lt;sti&gt;</code></pre>
 </li>
 </ol>
 
@@ -13665,7 +13670,7 @@ jupyter_data_dir()</code></pre>
 
 
 
- 
+
 
 
 </html>
