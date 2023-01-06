@@ -6,14 +6,25 @@ import nbconvert as nb
 import os
 import re
 from matplotlib import pyplot as plt
-
-JUP_PATH='../'
-HTML_PATH='../html/'
-ELEMENTS_PATH='../_elements/'
+import shutil
 
 
-def main():    
-    
+
+
+
+
+
+def main(): 
+    jup_path='../'
+    html_path='../html/'
+    elements_path='../_elements/'
+    cp = os.path.split(os.getcwd())[-1]
+    if cp == 'notebooks':
+        jup_path.replace('../', '')
+        html_path.replace('../', '')
+        elements_path.replace('../', '')
+    shutil.rmtree(html_path)
+    os.mkdir(html_path)
     print("TOC")
     lst=[]
     content_lst=[]
@@ -32,16 +43,16 @@ def main():
             
             
     print('Parsing ...')
-    for file in os.listdir(JUP_PATH):
+    for file in os.listdir(jup_path):
         fname = os.fsdecode(file)
         if fname.endswith(".ipynb") and (not 'Untitled' in fname):  
             print(f"nummerates {fname}")
-            replace_all(JUP_PATH+fname,'"../img/', '"img/')
-            recount_and_replace(JUP_PATH+fname,'#### Eksempel')
-            recount_and_replace(JUP_PATH+fname,'#### Oppgave')
-            html_name=HTML_PATH+file.replace('.ipynb','.html')
-            html=convert_ipynb_to_html(JUP_PATH+fname)
-            html=insert_custom_html(html, content_lst)
+            replace_all(jup_path+fname,'"../img/', '"img/')
+            recount_and_replace(jup_path+fname,'#### Eksempel')
+            recount_and_replace(jup_path+fname,'#### Oppgave')
+            html_name=html_path+file.replace('.ipynb','.html')
+            html=convert_ipynb_to_html(jup_path+fname)
+            html=insert_custom_html(html, content_lst, elements_path)
             write(html_name,html)
             replace_all(html_name, '"img/','"../img/')
 
@@ -124,11 +135,11 @@ def convert_ipynb_to_html(ipynbfile):
     return html
     
 
-def insert_custom_html(html,content_list):
-    css=read(ELEMENTS_PATH+'css.html')
-    banner=read(ELEMENTS_PATH+'banner.html')
-    content=read(ELEMENTS_PATH+'left_menu_top.html')
-    left_menu=read(ELEMENTS_PATH+'left_menu.html')
+def insert_custom_html(html,content_list, elements_path):
+    css=read(elements_path+'css.html')
+    banner=read(elements_path+'banner.html')
+    content=read(elements_path+'left_menu_top.html')
+    left_menu=read(elements_path+'left_menu.html')
     html=replace(html, 
                  'require.min.js"></script>\n',
                  '\n<style type="text/css">', 
