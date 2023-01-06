@@ -20,9 +20,10 @@ def main():
     elements_path='../_elements/'
     cp = os.path.split(os.getcwd())[-1]
     if cp == 'notebooks':
-        jup_path.replace('../', '')
-        html_path.replace('../', '')
-        elements_path.replace('../', '')
+        jup_path = jup_path.replace('../', '')
+        html_path = html_path.replace('../', '')
+        elements_path = elements_path.replace('../', '')
+
     shutil.rmtree(html_path)
     os.mkdir(html_path)
     print("TOC")
