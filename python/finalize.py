@@ -20,16 +20,20 @@ def main():
     elements_path='../_elements/'
     cp = os.path.split(os.getcwd())[-1]
     if cp == 'notebooks':
-        jup_path = jup_path.replace('../', '')
-        html_path = html_path.replace('../', '')
-        elements_path = elements_path.replace('../', '')
+        jup_path =  ""
+        html_path = "html/"
+        elements_path = "_elements/"
 
     shutil.rmtree(html_path)
     os.mkdir(html_path)
     print("TOC")
     lst=[]
     content_lst=[]
-    for file in os.listdir(JUP_PATH):
+    if jup_path=='':
+        f = os.listdir()
+    else:
+        f = os.listdir(jup_path)
+    for file in f:
         fname = os.fsdecode(file)
         if fname.endswith(".ipynb") and (not 'Untitled' in fname): 
             link=fname.replace('.ipynb','.html')
@@ -44,7 +48,7 @@ def main():
             
             
     print('Parsing ...')
-    for file in os.listdir(jup_path):
+    for file in f:
         fname = os.fsdecode(file)
         if fname.endswith(".ipynb") and (not 'Untitled' in fname):  
             print(f"nummerates {fname}")
